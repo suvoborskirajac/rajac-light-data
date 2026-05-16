@@ -1,0 +1,48 @@
+name: Build Rajac light pollution data
+
+on:
+  workflow_dispatch:
+    inputs:
+      months:
+        description: 'Number of latest complete months to process'
+        required: false
+        default: '12'
+  schedule:
+    - cron: '0 3 5 * *'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build VIIRS monthly results
+        env:
+          GEE_PROJECT: def-epigram-414409
+          GEE_SERVICE_ACCOUNT_JSON: ${{ secrets.GEE_SERVICE_ACCOUNT_JSON }}
+          MONTHS_BACK: ${{ github.event.inputs.months || '12' }}
+        run: python processor.py --months "$MONTHS_BACK"
+
+      - name: Commit generated JSON results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/results/*.json
+          if git diff --staged --quiet; then
+            echo "No result changes to commit."
+          else
+            git commit -m "Update Rajac light pollution data"
+            git push
+          fi
