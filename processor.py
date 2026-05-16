@@ -1,10 +1,14 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""GitHub Actions processor for Rajac Light Pollution Monitor.
+"""PIO Rajac light pollution processor for GitHub Actions.
 
-Outputs static JSON files into public/results/:
-- index.json
-- YYYY-MM.json for each processed month
+Creates static JSON files for the WordPress viewer:
+- public/results/index.json
+- public/results/YYYY-MM.json
+
+Default dataset is NOAA monthly VIIRS DNB stray-light corrected composite
+(NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG), because it is already monthly,
+stable for this first phase, and contains average radiance + cloud-free coverage.
 """
 from __future__ import annotations
 
@@ -12,21 +16,39 @@ import argparse
 import json
 import math
 import os
+import sys
 import tempfile
 from dataclasses import dataclass
-from datetime import date, datetime, timedelta
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Dict, Iterable, List, Optional, Tuple
 
 import ee
 
 ROOT = Path(__file__).resolve().parent
 BOUNDARY = ROOT / "public" / "boundaries" / "pio-rajac.geojson"
 RESULTS = ROOT / "public" / "results"
-DATASET = "NASA/VIIRS/002/VNP46A2"
-BAND = "Gap_Filled_DNB_BRDF_Corrected_NTL"
-SCALE_M = 500
 
+DATASETS = {
+    "monthly-vcmsl": {
+        "id": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG",
+        "band": "avg_rad",
+        "coverage_band": "cf_cvg",
+        "scale_m": 463.83,
+        "label": "NOAA VIIRS DNB Monthly V1 VCMSLCFG",
+        "source": "NOAA / EOG VIIRS DNB monthly cloud-free composite, stray-light corrected",
+        "unit": "nW/cm²/sr",
+    },
+    "black-marble-daily": {
+        "id": "NASA/VIIRS/002/VNP46A2",
+        "band": "Gap_Filled_DNB_BRDF_Corrected_NTL",
+        "coverage_band": None,
+        "scale_m": 500.0,
+        "label": "NASA Black Marble VNP46A2 daily monthly mean",
+        "source": "NASA Black Marble / VIIRS VNP46A2 daily mean composite",
+        "unit": "nW/cm²/sr",
+    },
+}
 
 @dataclass
 class Period:
@@ -36,6 +58,10 @@ class Period:
     end: str
 
 
+def log(msg: str) -> None:
+    print(msg, flush=True)
+
+
 def load_json(path: Path) -> Any:
     with path.open("r", encoding="utf-8") as f:
         return json.load(f)
@@ -43,46 +69,51 @@ def load_json(path: Path) -> Any:
 
 def write_json(path: Path, data: Any) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("w", encoding="utf-8") as f:
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    with tmp.open("w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2, allow_nan=False)
+    tmp.replace(path)
 
 
-def prev_month_start(d: date) -> date:
+def previous_month_start(d: date) -> date:
     first = date(d.year, d.month, 1)
     prev_last = first - timedelta(days=1)
     return date(prev_last.year, prev_last.month, 1)
 
 
-def last_n_complete_months(n: int) -> List[Period]:
+def month_after(d: date) -> date:
+    if d.month == 12:
+        return date(d.year + 1, 1, 1)
+    return date(d.year, d.month + 1, 1)
+
+
+def period_from_month_start(start: date) -> Period:
+    end = month_after(start)
+    return Period(
+        id=f"{start.year}-{start.month:02d}",
+        label=f"{start.month:02d}/{start.year}",
+        start=start.isoformat(),
+        end=end.isoformat(),
+    )
+
+
+def latest_candidate_periods(n: int, extra_back: int = 8) -> List[Period]:
     cursor = date.today().replace(day=1)
     periods: List[Period] = []
-    for _ in range(max(1, n)):
-        start = prev_month_start(cursor)
-        end = cursor
-        periods.append(
-            Period(
-                id=f"{start.year}-{start.month:02d}",
-                label=f"{start.month:02d}/{start.year}",
-                start=start.isoformat(),
-                end=end.isoformat(),
-            )
-        )
+    for _ in range(max(1, n + extra_back)):
+        start = previous_month_start(cursor)
+        periods.append(period_from_month_start(start))
         cursor = start
     return periods
 
 
 def geojson_to_ee_geometry(gj: Dict[str, Any]) -> ee.Geometry:
     if gj.get("type") == "FeatureCollection":
-        geoms = [
-            feat.get("geometry")
-            for feat in gj.get("features", [])
-            if feat.get("geometry")
-        ]
+        geoms = [feat.get("geometry") for feat in gj.get("features", []) if feat.get("geometry")]
         if not geoms:
             raise ValueError("GeoJSON FeatureCollection nema geometrije.")
         if len(geoms) == 1:
             return ee.Geometry(geoms[0])
-
         polys: List[Any] = []
         for geom in geoms:
             if geom.get("type") == "Polygon":
@@ -90,14 +121,45 @@ def geojson_to_ee_geometry(gj: Dict[str, Any]) -> ee.Geometry:
             elif geom.get("type") == "MultiPolygon":
                 polys.extend(geom["coordinates"])
         return ee.Geometry.MultiPolygon(polys)
-
     if gj.get("type") == "Feature":
         return ee.Geometry(gj["geometry"])
-
     return ee.Geometry(gj)
 
 
+def init_ee() -> None:
+    project = os.environ.get("GEE_PROJECT", "def-epigram-414409").strip()
+    secret = os.environ.get("GEE_SERVICE_ACCOUNT_JSON", "").strip()
+    if not secret:
+        raise RuntimeError("Nedostaje GitHub secret GEE_SERVICE_ACCOUNT_JSON. Bez njega se ne mogu izračunati stvarni satelitski rezultati.")
+    try:
+        key = json.loads(secret)
+    except json.JSONDecodeError as exc:
+        raise RuntimeError("GEE_SERVICE_ACCOUNT_JSON nije validan JSON tekst.") from exc
+    email = key.get("client_email")
+    if not email:
+        raise RuntimeError("Service-account JSON nema client_email.")
+    with tempfile.NamedTemporaryFile("w", encoding="utf-8", suffix=".json", delete=False) as tmp:
+        json.dump(key, tmp)
+        tmp_path = tmp.name
+    credentials = ee.ServiceAccountCredentials(email, key_file=tmp_path)
+    ee.Initialize(credentials, project=project)
+    log(f"Earth Engine initialized for project: {project}; service account: {email}")
+
+
+def safe_round(v: Any, ndigits: int = 4) -> Optional[float]:
+    if v is None:
+        return None
+    try:
+        x = float(v)
+        if math.isnan(x) or math.isinf(x):
+            return None
+        return round(x, ndigits)
+    except Exception:
+        return None
+
+
 def classify_value(value: float) -> str:
+    # Conservative thresholds for rural VIIRS DNB radiance around protected landscapes.
     if value <= 0.15:
         return "врло ниско"
     if value <= 0.35:
@@ -120,68 +182,56 @@ def lonlat_bbox_from_center(lon: float, lat: float, scale_m: float) -> List[floa
     ]
 
 
-def init_ee() -> None:
-    project = os.environ.get("GEE_PROJECT", "def-epigram-414409").strip()
-    secret = os.environ.get("GEE_SERVICE_ACCOUNT_JSON", "").strip()
+def image_collection_for_period(dataset: Dict[str, Any], period: Period, region: ee.Geometry) -> ee.ImageCollection:
+    return ee.ImageCollection(dataset["id"]).filterDate(period.start, period.end).filterBounds(region)
 
-    if not secret:
-        raise RuntimeError("Nedostaje GitHub secret GEE_SERVICE_ACCOUNT_JSON.")
 
+def has_images(dataset: Dict[str, Any], period: Period, region: ee.Geometry) -> bool:
     try:
-        key = json.loads(secret)
-    except json.JSONDecodeError as exc:
-        raise RuntimeError("GEE_SERVICE_ACCOUNT_JSON nije validan JSON tekst.") from exc
-
-    email = key.get("client_email")
-    if not email:
-        raise RuntimeError("Service account JSON nema client_email.")
-
-    with tempfile.NamedTemporaryFile(
-        "w", encoding="utf-8", suffix=".json", delete=False
-    ) as tmp:
-        json.dump(key, tmp)
-        tmp_path = tmp.name
-
-    credentials = ee.ServiceAccountCredentials(email, key_file=tmp_path)
-    ee.Initialize(credentials, project=project)
+        size = image_collection_for_period(dataset, period, region).size().getInfo()
+        return int(size or 0) > 0
+    except Exception as exc:
+        log(f"WARN: Ne mogu da proverim dostupnost za {period.id}: {exc}")
+        return False
 
 
-def build_masked_composite(period: Period, region: ee.Geometry) -> ee.Image:
-    collection = (
-        ee.ImageCollection(DATASET)
-        .filterDate(period.start, period.end)
-        .filterBounds(region)
-    )
+def select_available_periods(dataset: Dict[str, Any], region: ee.Geometry, months: int) -> List[Period]:
+    chosen: List[Period] = []
+    for period in latest_candidate_periods(months, extra_back=10):
+        if has_images(dataset, period, region):
+            chosen.append(period)
+            log(f"Selected available month: {period.id}")
+        else:
+            log(f"Skipped unavailable month: {period.id}")
+        if len(chosen) >= months:
+            break
+    if not chosen:
+        raise RuntimeError("Nijedan mesečni period nije dostupan u Earth Engine kolekciji za izabrani dataset.")
+    return chosen
 
-    def mask_image(img):
-        ntl = img.select(BAND)
+
+def build_monthly_image(dataset: Dict[str, Any], period: Period, region: ee.Geometry) -> ee.Image:
+    coll = image_collection_for_period(dataset, period, region)
+    band = dataset["band"]
+    if dataset["id"] == "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG":
+        img = ee.Image(coll.first())
+        radiance = img.select(band).rename(band)
+        coverage = img.select(dataset["coverage_band"])
+        # cf_cvg >= 1 keeps actual observed cloud-free pixels and removes no-data cells.
+        return radiance.updateMask(coverage.gte(1)).clip(region)
+
+    def mask_black_marble(img):
+        ntl = img.select(band)
         quality = img.select("Mandatory_Quality_Flag").lte(1)
         no_snow = img.select("Snow_Flag").eq(0)
         cloud_qf = img.select("QF_Cloud_Mask")
         cloud_state = cloud_qf.rightShift(6).bitwiseAnd(3).lte(1)
-        return (
-            ntl.updateMask(quality)
-            .updateMask(no_snow)
-            .updateMask(cloud_state)
-            .copyProperties(img, ["system:time_start"])
-        )
+        return ntl.updateMask(quality).updateMask(no_snow).updateMask(cloud_state).copyProperties(img, ["system:time_start"])
 
-    return collection.map(mask_image).mean().clip(region).rename(BAND)
+    return coll.map(mask_black_marble).mean().clip(region).rename(band)
 
 
-def safe_round(v: Any, ndigits: int = 4) -> Optional[float]:
-    if v is None:
-        return None
-    try:
-        x = float(v)
-        if math.isnan(x) or math.isinf(x):
-            return None
-        return round(x, ndigits)
-    except Exception:
-        return None
-
-
-def reduce_stats(image: ee.Image, geom: ee.Geometry) -> Dict[str, Any]:
+def reduce_stats(image: ee.Image, geom: ee.Geometry, band: str, scale_m: float) -> Dict[str, Any]:
     reducer = (
         ee.Reducer.minMax()
         .combine(ee.Reducer.mean(), sharedInputs=True)
@@ -190,21 +240,17 @@ def reduce_stats(image: ee.Image, geom: ee.Geometry) -> Dict[str, Any]:
         .combine(ee.Reducer.count(), sharedInputs=True)
         .combine(ee.Reducer.sum(), sharedInputs=True)
     )
-
-    info = (
-        image.reduceRegion(
-            reducer=reducer,
-            geometry=geom,
-            scale=SCALE_M,
-            maxPixels=1_000_000,
-            bestEffort=True,
-            tileScale=4,
-        ).getInfo()
-        or {}
-    )
+    info = image.reduceRegion(
+        reducer=reducer,
+        geometry=geom,
+        scale=scale_m,
+        maxPixels=1_000_000,
+        bestEffort=True,
+        tileScale=4,
+    ).getInfo() or {}
 
     def pick(suffix: str):
-        return info.get(f"{BAND}_{suffix}") if f"{BAND}_{suffix}" in info else info.get(suffix)
+        return info.get(f"{band}_{suffix}") if f"{band}_{suffix}" in info else info.get(suffix)
 
     return {
         "min": safe_round(pick("min")),
@@ -217,33 +263,31 @@ def reduce_stats(image: ee.Image, geom: ee.Geometry) -> Dict[str, Any]:
     }
 
 
-def sample_pixels(image: ee.Image, geom: ee.Geometry) -> List[Dict[str, Any]]:
-    fc = image.sample(region=geom, scale=SCALE_M, geometries=True, tileScale=4)
+def sample_pixels(image: ee.Image, geom: ee.Geometry, band: str, scale_m: float) -> List[Dict[str, Any]]:
+    fc = image.sample(region=geom, scale=scale_m, geometries=True, tileScale=4)
     data = fc.getInfo()
     features = data.get("features", []) if isinstance(data, dict) else []
-
     pixels: List[Dict[str, Any]] = []
     for i, feat in enumerate(features, 1):
-        val = (feat.get("properties") or {}).get(BAND)
+        props = feat.get("properties") or {}
+        val = props.get(band)
         coords = (feat.get("geometry") or {}).get("coordinates") or []
-
         if val is None or len(coords) < 2:
             continue
-
         lon, lat = float(coords[0]), float(coords[1])
         value = float(val)
-
-        pixels.append(
-            {
-                "id": f"px-{i:04d}",
-                "lon": round(lon, 6),
-                "lat": round(lat, 6),
-                "bbox": lonlat_bbox_from_center(lon, lat, SCALE_M),
-                "value": round(value, 4),
-                "class": classify_value(value),
-            }
-        )
-
+        if not math.isfinite(value):
+            continue
+        pixels.append({
+            "id": f"px-{i:04d}",
+            "lon": round(lon, 6),
+            "lat": round(lat, 6),
+            "bbox": lonlat_bbox_from_center(lon, lat, scale_m),
+            "value": round(value, 4),
+            "class": classify_value(value),
+        })
+    # Stable order for viewer/statistics.
+    pixels.sort(key=lambda p: (p["lat"], p["lon"]))
     return pixels
 
 
@@ -253,119 +297,108 @@ def bearing_from_peak(lon: float, lat: float, peak: Tuple[float, float]) -> floa
 
 def compute_direction_summary(pixels: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     peak = (20.224918, 44.136333)
-
     targets = {
         "Љиг": (20.238, 44.226),
         "Мионица": (20.081, 44.252),
         "Ваљево": (19.890, 44.270),
         "Ибарска магистрала": (20.218, 44.170),
     }
-
     out = []
     for name, target in targets.items():
         tb = bearing_from_peak(target[0], target[1], peak)
         selected = []
-
         for p in pixels:
             b = bearing_from_peak(float(p["lon"]), float(p["lat"]), peak)
             diff = abs((b - tb + 180) % 360 - 180)
-
             if diff <= 35:
                 selected.append(p)
-
         if selected:
             vals = [float(p["value"]) for p in selected]
-            out.append(
-                {
-                    "name": name,
-                    "bearing": round(tb, 1),
-                    "pixels": len(vals),
-                    "mean": round(sum(vals) / len(vals), 4),
-                    "max": round(max(vals), 4),
-                }
-            )
-
+            out.append({
+                "name": name,
+                "bearing": round(tb, 1),
+                "pixels": len(vals),
+                "mean": round(sum(vals) / len(vals), 4),
+                "max": round(max(vals), 4),
+            })
     return out
 
 
-def build_result(period: Period, region: ee.Geometry) -> Dict[str, Any]:
-    image = build_masked_composite(period, region)
-    stats = reduce_stats(image, region)
-    pixels = sample_pixels(image, region)
-
+def build_result(dataset: Dict[str, Any], period: Period, region: ee.Geometry) -> Dict[str, Any]:
+    band = dataset["band"]
+    scale_m = float(dataset["scale_m"])
+    image = build_monthly_image(dataset, period, region)
+    stats = reduce_stats(image, region, band, scale_m)
+    pixels = sample_pixels(image, region, band, scale_m)
+    if stats["count"] <= 0 or not pixels:
+        raise RuntimeError(f"Period {period.id} nema validne piksele u granici PIO Rajac.")
     return {
         "ok": True,
         "meta": {
             "id": period.id,
             "label": period.label,
-            "source": "NASA Black Marble / VIIRS VNP46A2",
-            "dataset": DATASET,
-            "band": BAND,
-            "scale_m": SCALE_M,
+            "source": dataset["source"],
+            "dataset": dataset["id"],
+            "band": band,
+            "unit": dataset["unit"],
+            "scale_m": scale_m,
             "date_start": period.start,
             "date_end": period.end,
-            "created_at": datetime.utcnow().isoformat(timespec="seconds") + "Z",
+            "created_at": datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z"),
             "placeholder": False,
-            "interpretation": (
-                "Vrednosti su noćna radijansa u nW/cm²/sr, a ne SQM mag/arcsec². "
-                "Javni heatmap prikaz je izglađena vizuelizacija."
-            ),
+            "interpretation": "Vrednosti su satelitska noćna radijansa u nW/cm²/sr, a ne SQM mag/arcsec². Javni heatmap prikaz je izglađena vizuelizacija; sirovi pikseli ostaju u JSON-u za statistiku.",
         },
-        "stats": {
-            "overall": stats,
-            "directions": compute_direction_summary(pixels),
-        },
+        "stats": {"overall": stats, "directions": compute_direction_summary(pixels)},
         "pixels": pixels,
     }
 
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--months", type=int, default=12)
+    parser.add_argument("--months", type=int, default=12, help="Number of latest available complete months to process.")
+    parser.add_argument("--dataset", choices=sorted(DATASETS.keys()), default="monthly-vcmsl")
     args = parser.parse_args()
 
+    if not BOUNDARY.exists():
+        raise RuntimeError(f"Nedostaje granica: {BOUNDARY}")
+
+    dataset = DATASETS[args.dataset]
     RESULTS.mkdir(parents=True, exist_ok=True)
 
-    # Earth Engine mora biti inicijalizovan pre kreiranja ee.Geometry objekta.
     init_ee()
-
     boundary = load_json(BOUNDARY)
     region = geojson_to_ee_geometry(boundary)
+    periods = select_available_periods(dataset, region, max(1, args.months))
 
-    periods = last_n_complete_months(args.months)
     index_periods = []
-
     for period in periods:
-        print(f"Processing {period.id}...")
-        result = build_result(period, region)
+        log(f"Processing {period.id} from {dataset['id']}...")
+        result = build_result(dataset, period, region)
         write_json(RESULTS / f"{period.id}.json", result)
-        index_periods.append(
-            {
-                "id": period.id,
-                "label": period.label,
-                "source": "NASA Black Marble VNP46A2",
-            }
-        )
-        print(f"OK {period.id}: {len(result['pixels'])} pixels")
+        index_periods.append({
+            "id": period.id,
+            "label": period.label,
+            "source": dataset["label"],
+            "dataset": dataset["id"],
+        })
+        log(f"OK {period.id}: {len(result['pixels'])} pixels, mean={result['stats']['overall']['mean']}, max={result['stats']['overall']['max']}")
 
     index = {
         "ok": True,
         "latest": periods[0].id,
         "periods": index_periods,
-        "updated_at": datetime.utcnow().isoformat(timespec="seconds") + "Z",
-        "coverage": {
-            "count": len(index_periods),
-            "first": periods[0].id,
-            "last": periods[-1].id,
-        },
-        "note": "Generated by GitHub Actions processor for PIO Rajac light pollution monitor.",
+        "updated_at": datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z"),
+        "coverage": {"count": len(index_periods), "first": periods[-1].id, "last": periods[0].id},
+        "note": "Generated by GitHub Actions processor for PIO Rajac light pollution monitor. These are real satellite-derived VIIRS nighttime radiance JSON results.",
     }
-
     write_json(RESULTS / "index.json", index)
-    print(f"DONE: {len(periods)} periods written to {RESULTS}")
-
+    log(f"DONE: {len(periods)} periods written to {RESULTS}")
     return 0
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    try:
+        raise SystemExit(main())
+    except Exception as exc:
+        print(f"ERROR: {exc}", file=sys.stderr, flush=True)
+        raise
