@@ -1,0 +1,2 @@
+earthengine-api>=0.1.395
+google-auth>=2.0.0
