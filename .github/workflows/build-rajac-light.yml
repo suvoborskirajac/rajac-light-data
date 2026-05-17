@@ -33,7 +33,7 @@ jobs:
           GEE_PROJECT: deft-epigram-414409
           GEE_SERVICE_ACCOUNT_JSON: ${{ secrets.GEE_SERVICE_ACCOUNT_JSON }}
           MONTHS_BACK: ${{ github.event.inputs.months || '12' }}
-        run: python processor.py --months "$MONTHS_BACK" --dataset monthly-vcmsl
+        run: python processor.py --months "$MONTHS_BACK" --dataset monthly-vcmsl --yearly --yearly-from 2013
 
       - name: Show generated results
         if: always()
