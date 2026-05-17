@@ -97,6 +97,20 @@ def period_from_month_start(start: date) -> Period:
     )
 
 
+def yearly_period(year: int) -> Period:
+    return Period(
+        id=f"{year}",
+        label=f"{year}. (годишњи просек)",
+        start=f"{year}-01-01",
+        end=f"{year + 1}-01-01",
+    )
+
+
+def yearly_candidate_periods(start_year: int, end_year: int) -> List[Period]:
+    """Years from end_year down to start_year, newest first."""
+    return [yearly_period(y) for y in range(end_year, start_year - 1, -1)]
+
+
 def latest_candidate_periods(n: int, extra_back: int = 8) -> List[Period]:
     cursor = date.today().replace(day=1)
     periods: List[Period] = []
@@ -127,7 +141,7 @@ def geojson_to_ee_geometry(gj: Dict[str, Any]) -> ee.Geometry:
 
 
 def init_ee() -> None:
-    project = os.environ.get("GEE_PROJECT", "def-epigram-414409").strip()
+    project = os.environ.get("GEE_PROJECT", "deft-epigram-414409").strip()
     secret = os.environ.get("GEE_SERVICE_ACCOUNT_JSON", "").strip()
     if not secret:
         raise RuntimeError("Nedostaje GitHub secret GEE_SERVICE_ACCOUNT_JSON. Bez njega se ne mogu izračunati stvarni satelitski rezultati.")
@@ -211,6 +225,7 @@ def select_available_periods(dataset: Dict[str, Any], region: ee.Geometry, month
 
 
 def build_monthly_image(dataset: Dict[str, Any], period: Period, region: ee.Geometry) -> ee.Image:
+    """Build an image for a single calendar month."""
     coll = image_collection_for_period(dataset, period, region)
     band = dataset["band"]
     if dataset["id"] == "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG":
@@ -229,6 +244,22 @@ def build_monthly_image(dataset: Dict[str, Any], period: Period, region: ee.Geom
         return ntl.updateMask(quality).updateMask(no_snow).updateMask(cloud_state).copyProperties(img, ["system:time_start"])
 
     return coll.map(mask_black_marble).mean().clip(region).rename(band)
+
+
+def build_yearly_image(dataset: Dict[str, Any], period: Period, region: ee.Geometry) -> ee.Image:
+    """Build an image for a full calendar year (mean of 12 cloud-masked monthly composites)."""
+    coll = image_collection_for_period(dataset, period, region)
+    band = dataset["band"]
+    if dataset["id"] == "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG":
+        cov_band = dataset["coverage_band"]
+
+        def mask_month(img):
+            return img.select(band).updateMask(img.select(cov_band).gte(1))
+
+        return coll.map(mask_month).mean().clip(region).rename(band)
+
+    # Black Marble (and any other future dataset) — same masking, just mean over the year.
+    return build_monthly_image(dataset, period, region)
 
 
 def reduce_stats(image: ee.Image, geom: ee.Geometry, band: str, scale_m: float) -> Dict[str, Any]:
@@ -291,43 +322,32 @@ def sample_pixels(image: ee.Image, geom: ee.Geometry, band: str, scale_m: float)
     return pixels
 
 
-def bearing_from_peak(lon: float, lat: float, peak: Tuple[float, float]) -> float:
-    return math.degrees(math.atan2(lon - peak[0], lat - peak[1])) % 360
-
-
-def compute_direction_summary(pixels: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-    peak = (20.224918, 44.136333)
-    targets = {
-        "Љиг": (20.238, 44.226),
-        "Мионица": (20.081, 44.252),
-        "Ваљево": (19.890, 44.270),
-        "Ибарска магистрала": (20.218, 44.170),
-    }
+def compute_hotspots(pixels: List[Dict[str, Any]], top_n: int = 5) -> List[Dict[str, Any]]:
+    """Top-N pixels with highest radiance inside the PIO boundary.
+    These are real, geographically located hotspots — no inference about
+    where the light originates from, just where it is brightest *within* PIO.
+    """
+    ranked = sorted(pixels, key=lambda p: float(p.get("value") or 0), reverse=True)
     out = []
-    for name, target in targets.items():
-        tb = bearing_from_peak(target[0], target[1], peak)
-        selected = []
-        for p in pixels:
-            b = bearing_from_peak(float(p["lon"]), float(p["lat"]), peak)
-            diff = abs((b - tb + 180) % 360 - 180)
-            if diff <= 35:
-                selected.append(p)
-        if selected:
-            vals = [float(p["value"]) for p in selected]
-            out.append({
-                "name": name,
-                "bearing": round(tb, 1),
-                "pixels": len(vals),
-                "mean": round(sum(vals) / len(vals), 4),
-                "max": round(max(vals), 4),
-            })
+    for i, p in enumerate(ranked[:top_n], 1):
+        out.append({
+            "rank": i,
+            "lon": p["lon"],
+            "lat": p["lat"],
+            "value": p["value"],
+            "class": p["class"],
+        })
     return out
 
 
-def build_result(dataset: Dict[str, Any], period: Period, region: ee.Geometry) -> Dict[str, Any]:
+def build_result(dataset: Dict[str, Any], period: Period, region: ee.Geometry, kind: str = "monthly") -> Dict[str, Any]:
+    """kind: 'monthly' or 'yearly' — selects the image-building strategy."""
     band = dataset["band"]
     scale_m = float(dataset["scale_m"])
-    image = build_monthly_image(dataset, period, region)
+    if kind == "yearly":
+        image = build_yearly_image(dataset, period, region)
+    else:
+        image = build_monthly_image(dataset, period, region)
     stats = reduce_stats(image, region, band, scale_m)
     pixels = sample_pixels(image, region, band, scale_m)
     if stats["count"] <= 0 or not pixels:
@@ -337,6 +357,7 @@ def build_result(dataset: Dict[str, Any], period: Period, region: ee.Geometry) -
         "meta": {
             "id": period.id,
             "label": period.label,
+            "kind": kind,
             "source": dataset["source"],
             "dataset": dataset["id"],
             "band": band,
@@ -348,7 +369,7 @@ def build_result(dataset: Dict[str, Any], period: Period, region: ee.Geometry) -
             "placeholder": False,
             "interpretation": "Vrednosti su satelitska noćna radijansa u nW/cm²/sr, a ne SQM mag/arcsec². Javni heatmap prikaz je izglađena vizuelizacija; sirovi pikseli ostaju u JSON-u za statistiku.",
         },
-        "stats": {"overall": stats, "directions": compute_direction_summary(pixels)},
+        "stats": {"overall": stats, "hotspots": compute_hotspots(pixels, top_n=5)},
         "pixels": pixels,
     }
 
@@ -357,6 +378,9 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--months", type=int, default=12, help="Number of latest available complete months to process.")
     parser.add_argument("--dataset", choices=sorted(DATASETS.keys()), default="monthly-vcmsl")
+    parser.add_argument("--yearly", action="store_true", help="Also generate yearly averaged composites.")
+    parser.add_argument("--yearly-from", type=int, default=2013, help="Earliest year to include in yearly composites (default 2013, when VCMSLCFG has full coverage).")
+    parser.add_argument("--yearly-to", type=int, default=date.today().year - 1, help="Latest year to include (defaults to last complete calendar year).")
     args = parser.parse_args()
 
     if not BOUNDARY.exists():
@@ -368,31 +392,65 @@ def main() -> int:
     init_ee()
     boundary = load_json(BOUNDARY)
     region = geojson_to_ee_geometry(boundary)
-    periods = select_available_periods(dataset, region, max(1, args.months))
 
+    # --- Monthly composites ---
+    periods = select_available_periods(dataset, region, max(1, args.months))
     index_periods = []
     for period in periods:
-        log(f"Processing {period.id} from {dataset['id']}...")
-        result = build_result(dataset, period, region)
+        log(f"Processing month {period.id} from {dataset['id']}...")
+        result = build_result(dataset, period, region, kind="monthly")
         write_json(RESULTS / f"{period.id}.json", result)
         index_periods.append({
             "id": period.id,
             "label": period.label,
             "source": dataset["label"],
             "dataset": dataset["id"],
+            "kind": "monthly",
         })
         log(f"OK {period.id}: {len(result['pixels'])} pixels, mean={result['stats']['overall']['mean']}, max={result['stats']['overall']['max']}")
+
+    # --- Yearly composites (optional) ---
+    index_yearly: List[Dict[str, Any]] = []
+    if args.yearly:
+        candidates = yearly_candidate_periods(args.yearly_from, args.yearly_to)
+        for year_period in candidates:
+            if not has_images(dataset, year_period, region):
+                log(f"Skipped year {year_period.id} (no images in collection)")
+                continue
+            log(f"Processing year {year_period.id} from {dataset['id']}...")
+            try:
+                result = build_result(dataset, year_period, region, kind="yearly")
+            except RuntimeError as exc:
+                log(f"WARN year {year_period.id}: {exc}")
+                continue
+            write_json(RESULTS / f"{year_period.id}.json", result)
+            index_yearly.append({
+                "id": year_period.id,
+                "label": year_period.label,
+                "source": dataset["label"],
+                "dataset": dataset["id"],
+                "kind": "yearly",
+            })
+            log(f"OK year {year_period.id}: {len(result['pixels'])} pixels, mean={result['stats']['overall']['mean']}, max={result['stats']['overall']['max']}")
 
     index = {
         "ok": True,
         "latest": periods[0].id,
         "periods": index_periods,
+        "yearlyPeriods": index_yearly,
         "updated_at": datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z"),
-        "coverage": {"count": len(index_periods), "first": periods[-1].id, "last": periods[0].id},
+        "coverage": {
+            "count": len(index_periods),
+            "first": periods[-1].id,
+            "last": periods[0].id,
+            "yearlyCount": len(index_yearly),
+            "yearlyFirst": index_yearly[-1]["id"] if index_yearly else None,
+            "yearlyLast": index_yearly[0]["id"] if index_yearly else None,
+        },
         "note": "Generated by GitHub Actions processor for PIO Rajac light pollution monitor. These are real satellite-derived VIIRS nighttime radiance JSON results.",
     }
     write_json(RESULTS / "index.json", index)
-    log(f"DONE: {len(periods)} periods written to {RESULTS}")
+    log(f"DONE: {len(periods)} monthly + {len(index_yearly)} yearly periods written to {RESULTS}")
     return 0
 
 
