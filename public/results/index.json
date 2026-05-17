@@ -6,80 +6,181 @@
       "id": "2026-04",
       "label": "04/2026",
       "source": "NOAA VIIRS DNB Monthly V1 VCMSLCFG",
-      "dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG"
+      "dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG",
+      "kind": "monthly"
     },
     {
       "id": "2026-03",
       "label": "03/2026",
       "source": "NOAA VIIRS DNB Monthly V1 VCMSLCFG",
-      "dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG"
+      "dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG",
+      "kind": "monthly"
     },
     {
       "id": "2026-02",
       "label": "02/2026",
       "source": "NOAA VIIRS DNB Monthly V1 VCMSLCFG",
-      "dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG"
+      "dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG",
+      "kind": "monthly"
     },
     {
       "id": "2026-01",
       "label": "01/2026",
       "source": "NOAA VIIRS DNB Monthly V1 VCMSLCFG",
-      "dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG"
+      "dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG",
+      "kind": "monthly"
     },
     {
       "id": "2025-12",
       "label": "12/2025",
       "source": "NOAA VIIRS DNB Monthly V1 VCMSLCFG",
-      "dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG"
+      "dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG",
+      "kind": "monthly"
     },
     {
       "id": "2025-11",
       "label": "11/2025",
       "source": "NOAA VIIRS DNB Monthly V1 VCMSLCFG",
-      "dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG"
+      "dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG",
+      "kind": "monthly"
     },
     {
       "id": "2025-10",
       "label": "10/2025",
       "source": "NOAA VIIRS DNB Monthly V1 VCMSLCFG",
-      "dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG"
+      "dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG",
+      "kind": "monthly"
     },
     {
       "id": "2025-09",
       "label": "09/2025",
       "source": "NOAA VIIRS DNB Monthly V1 VCMSLCFG",
-      "dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG"
+      "dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG",
+      "kind": "monthly"
     },
     {
       "id": "2025-08",
       "label": "08/2025",
       "source": "NOAA VIIRS DNB Monthly V1 VCMSLCFG",
-      "dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG"
+      "dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG",
+      "kind": "monthly"
     },
     {
       "id": "2025-07",
       "label": "07/2025",
       "source": "NOAA VIIRS DNB Monthly V1 VCMSLCFG",
-      "dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG"
+      "dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG",
+      "kind": "monthly"
     },
     {
       "id": "2025-06",
       "label": "06/2025",
       "source": "NOAA VIIRS DNB Monthly V1 VCMSLCFG",
-      "dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG"
+      "dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG",
+      "kind": "monthly"
     },
     {
       "id": "2025-05",
       "label": "05/2025",
       "source": "NOAA VIIRS DNB Monthly V1 VCMSLCFG",
-      "dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG"
+      "dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG",
+      "kind": "monthly"
     }
   ],
-  "updated_at": "2026-05-17T08:27:29Z",
+  "yearlyPeriods": [
+    {
+      "id": "2025",
+      "label": "2025. (годишњи просек)",
+      "source": "NOAA VIIRS DNB Monthly V1 VCMSLCFG",
+      "dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG",
+      "kind": "yearly"
+    },
+    {
+      "id": "2024",
+      "label": "2024. (годишњи просек)",
+      "source": "NOAA VIIRS DNB Monthly V1 VCMSLCFG",
+      "dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG",
+      "kind": "yearly"
+    },
+    {
+      "id": "2023",
+      "label": "2023. (годишњи просек)",
+      "source": "NOAA VIIRS DNB Monthly V1 VCMSLCFG",
+      "dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG",
+      "kind": "yearly"
+    },
+    {
+      "id": "2022",
+      "label": "2022. (годишњи просек)",
+      "source": "NOAA VIIRS DNB Monthly V1 VCMSLCFG",
+      "dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG",
+      "kind": "yearly"
+    },
+    {
+      "id": "2021",
+      "label": "2021. (годишњи просек)",
+      "source": "NOAA VIIRS DNB Monthly V1 VCMSLCFG",
+      "dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG",
+      "kind": "yearly"
+    },
+    {
+      "id": "2020",
+      "label": "2020. (годишњи просек)",
+      "source": "NOAA VIIRS DNB Monthly V1 VCMSLCFG",
+      "dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG",
+      "kind": "yearly"
+    },
+    {
+      "id": "2019",
+      "label": "2019. (годишњи просек)",
+      "source": "NOAA VIIRS DNB Monthly V1 VCMSLCFG",
+      "dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG",
+      "kind": "yearly"
+    },
+    {
+      "id": "2018",
+      "label": "2018. (годишњи просек)",
+      "source": "NOAA VIIRS DNB Monthly V1 VCMSLCFG",
+      "dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG",
+      "kind": "yearly"
+    },
+    {
+      "id": "2017",
+      "label": "2017. (годишњи просек)",
+      "source": "NOAA VIIRS DNB Monthly V1 VCMSLCFG",
+      "dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG",
+      "kind": "yearly"
+    },
+    {
+      "id": "2016",
+      "label": "2016. (годишњи просек)",
+      "source": "NOAA VIIRS DNB Monthly V1 VCMSLCFG",
+      "dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG",
+      "kind": "yearly"
+    },
+    {
+      "id": "2015",
+      "label": "2015. (годишњи просек)",
+      "source": "NOAA VIIRS DNB Monthly V1 VCMSLCFG",
+      "dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG",
+      "kind": "yearly"
+    },
+    {
+      "id": "2014",
+      "label": "2014. (годишњи просек)",
+      "source": "NOAA VIIRS DNB Monthly V1 VCMSLCFG",
+      "dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG",
+      "kind": "yearly"
+    }
+  ],
+  "updated_at": "2026-05-17T09:55:08Z",
   "coverage": {
     "count": 12,
     "first": "2025-05",
-    "last": "2026-04"
+    "last": "2026-04",
+    "yearlyCount": 12,
+    "yearlyFirst": "2014",
+    "yearlyLast": "2025"
   },
   "note": "Generated by GitHub Actions processor for PIO Rajac light pollution monitor. These are real satellite-derived VIIRS nighttime radiance JSON results."
 }

@@ -3,6 +3,7 @@
   "meta": {
     "id": "2026-01",
     "label": "01/2026",
+    "kind": "monthly",
     "source": "NOAA / EOG VIIRS DNB monthly cloud-free composite, stray-light corrected",
     "dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG",
     "band": "avg_rad",
@@ -10,7 +11,7 @@
     "scale_m": 463.83,
     "date_start": "2026-01-01",
     "date_end": "2026-02-01",
-    "created_at": "2026-05-17T08:27:22Z",
+    "created_at": "2026-05-17T09:54:39Z",
     "placeholder": false,
     "interpretation": "Vrednosti su satelitska noćna radijansa u nW/cm²/sr, a ne SQM mag/arcsec². Javni heatmap prikaz je izglađena vizuelizacija; sirovi pikseli ostaju u JSON-u za statistiku."
   },
@@ -24,34 +25,41 @@
       "count": 163,
       "sum": 125.6415
     },
-    "directions": [
+    "hotspots": [
       {
-        "name": "Љиг",
-        "bearing": 8.3,
-        "pixels": 9,
-        "mean": 0.7622,
-        "max": 0.91
+        "rank": 1,
+        "lon": 20.245308,
+        "lat": 44.141748,
+        "value": 6.85,
+        "class": "високо"
       },
       {
-        "name": "Мионица",
-        "bearing": 308.8,
-        "pixels": 34,
-        "mean": 0.7888,
-        "max": 1.04
+        "rank": 2,
+        "lon": 20.249475,
+        "lat": 44.141748,
+        "value": 5.29,
+        "class": "високо"
       },
       {
-        "name": "Ваљево",
-        "bearing": 291.8,
-        "pixels": 48,
-        "mean": 0.8013,
-        "max": 1.04
+        "rank": 3,
+        "lon": 20.249475,
+        "lat": 44.137581,
+        "value": 4.68,
+        "class": "високо"
       },
       {
-        "name": "Ибарска магистрала",
-        "bearing": 348.4,
-        "pixels": 7,
-        "mean": 0.7171,
-        "max": 0.77
+        "rank": 4,
+        "lon": 20.245308,
+        "lat": 44.137581,
+        "value": 4.35,
+        "class": "високо"
+      },
+      {
+        "rank": 5,
+        "lon": 20.245308,
+        "lat": 44.145915,
+        "value": 3.39,
+        "class": "високо"
       }
     ]
   },
