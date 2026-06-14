@@ -11,7 +11,7 @@
     "scale_m": 463.83,
     "date_start": "2023-01-01",
     "date_end": "2024-01-01",
-    "created_at": "2026-06-13T18:36:32Z",
+    "created_at": "2026-06-14T07:32:13Z",
     "placeholder": false,
     "interpretation": "Vrednosti su satelitska noćna radijansa u nW/cm²/sr, a ne SQM mag/arcsec². Javni heatmap prikaz je izglađena vizuelizacija; sirovi pikseli ostaju u JSON-u za statistiku."
   },
