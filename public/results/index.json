@@ -15,76 +15,6 @@
       "source": "NOAA VIIRS DNB Monthly V1 VCMSLCFG",
       "dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG",
       "kind": "monthly"
-    },
-    {
-      "id": "2026-02",
-      "label": "02/2026",
-      "source": "NOAA VIIRS DNB Monthly V1 VCMSLCFG",
-      "dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG",
-      "kind": "monthly"
-    },
-    {
-      "id": "2026-01",
-      "label": "01/2026",
-      "source": "NOAA VIIRS DNB Monthly V1 VCMSLCFG",
-      "dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG",
-      "kind": "monthly"
-    },
-    {
-      "id": "2025-12",
-      "label": "12/2025",
-      "source": "NOAA VIIRS DNB Monthly V1 VCMSLCFG",
-      "dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG",
-      "kind": "monthly"
-    },
-    {
-      "id": "2025-11",
-      "label": "11/2025",
-      "source": "NOAA VIIRS DNB Monthly V1 VCMSLCFG",
-      "dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG",
-      "kind": "monthly"
-    },
-    {
-      "id": "2025-10",
-      "label": "10/2025",
-      "source": "NOAA VIIRS DNB Monthly V1 VCMSLCFG",
-      "dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG",
-      "kind": "monthly"
-    },
-    {
-      "id": "2025-09",
-      "label": "09/2025",
-      "source": "NOAA VIIRS DNB Monthly V1 VCMSLCFG",
-      "dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG",
-      "kind": "monthly"
-    },
-    {
-      "id": "2025-08",
-      "label": "08/2025",
-      "source": "NOAA VIIRS DNB Monthly V1 VCMSLCFG",
-      "dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG",
-      "kind": "monthly"
-    },
-    {
-      "id": "2025-07",
-      "label": "07/2025",
-      "source": "NOAA VIIRS DNB Monthly V1 VCMSLCFG",
-      "dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG",
-      "kind": "monthly"
-    },
-    {
-      "id": "2025-06",
-      "label": "06/2025",
-      "source": "NOAA VIIRS DNB Monthly V1 VCMSLCFG",
-      "dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG",
-      "kind": "monthly"
-    },
-    {
-      "id": "2025-05",
-      "label": "05/2025",
-      "source": "NOAA VIIRS DNB Monthly V1 VCMSLCFG",
-      "dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG",
-      "kind": "monthly"
     }
   ],
   "yearlyPeriods": [
@@ -173,10 +103,10 @@
       "kind": "yearly"
     }
   ],
-  "updated_at": "2026-06-18T16:10:25Z",
+  "updated_at": "2026-06-20T08:53:53Z",
   "coverage": {
-    "count": 12,
-    "first": "2025-05",
+    "count": 2,
+    "first": "2026-03",
     "last": "2026-04",
     "yearlyCount": 12,
     "yearlyFirst": "2014",
