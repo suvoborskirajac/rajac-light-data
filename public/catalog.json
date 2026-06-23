@@ -1,0 +1,38 @@
+{
+  "ok": true,
+  "updated_at": "2026-06-23T10:45:43Z",
+  "dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG",
+  "unit": "nW/cm²/sr",
+  "areas": [
+    {
+      "slug": "pio-rajac",
+      "name": "ПИО Рајац",
+      "group": "Заштићена подручја",
+      "public_url": "https://piorajac.rs/monitoring-svetlosno-zagadjenje/",
+      "results": "public/sites/pio-rajac/results/index.json",
+      "latest": "2026-04",
+      "periods_count": 28,
+      "yearly_count": 12
+    },
+    {
+      "slug": "prokuplje",
+      "name": "Општина Прокупље",
+      "group": "БеоВидео",
+      "public_url": "https://piorajac.rs/beovideo/",
+      "results": "public/sites/prokuplje/results/index.json",
+      "latest": "2026-04",
+      "periods_count": 28,
+      "yearly_count": 12
+    },
+    {
+      "slug": "zvezdara",
+      "name": "Градска општина Звездара",
+      "group": "БеоВидео",
+      "public_url": "https://piorajac.rs/beovideo/",
+      "results": "public/sites/zvezdara/results/index.json",
+      "latest": "2026-04",
+      "periods_count": 28,
+      "yearly_count": 12
+    }
+  ]
+}
