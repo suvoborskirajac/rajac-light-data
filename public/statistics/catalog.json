@@ -1,0 +1,24 @@
+{
+  "ok": true,
+  "created_at": "2026-06-23T12:10:29Z",
+  "areas": [
+    {
+      "slug": "pio-rajac",
+      "name": "ПИО Рајац",
+      "statistics": "public/sites/pio-rajac/statistics/summary.json",
+      "observatory": false
+    },
+    {
+      "slug": "prokuplje",
+      "name": "Општина Прокупље",
+      "statistics": "public/sites/prokuplje/statistics/summary.json",
+      "observatory": true
+    },
+    {
+      "slug": "zvezdara",
+      "name": "Градска општина Звездара",
+      "statistics": "public/sites/zvezdara/statistics/summary.json",
+      "observatory": true
+    }
+  ]
+}

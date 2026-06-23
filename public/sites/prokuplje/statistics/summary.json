@@ -1,0 +1,2636 @@
+{
+  "ok": true,
+  "created_at": "2026-06-23T12:10:28Z",
+  "area": {
+    "slug": "prokuplje",
+    "name": "Општина Прокупље",
+    "group": "БеоВидео",
+    "public_url": "https://piorajac.rs/beovideo/"
+  },
+  "unit": "nW/cm²/sr",
+  "scale": {
+    "absolute_min": 0.02,
+    "absolute_max": 65.78,
+    "visual_min": 0.1302,
+    "visual_max": 10.8233,
+    "method": "p01–p99 из свих пиксела свих периода изабраног подручја; екстреми се не губе у статистици"
+  },
+  "coverage": {
+    "monthly_count": 28,
+    "yearly_count": 12,
+    "monthly_first": "2024-01",
+    "monthly_last": "2026-04",
+    "yearly_first": "2014",
+    "yearly_last": "2025"
+  },
+  "monthly": [
+    {
+      "id": "2026-04",
+      "label": "04/2026",
+      "kind": "monthly",
+      "date_start": "2026-04-01",
+      "date_end": "2026-05-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/prokuplje/results/2026-04.json",
+      "stats": {
+        "min": 0.16,
+        "max": 49.66,
+        "mean": 0.9824,
+        "median": 0.3643,
+        "p90": 1.6051,
+        "count": 5091,
+        "sum": 4755.4269,
+        "p75": 0.76,
+        "p95": 2.61,
+        "std": 2.7534
+      },
+      "pixel_count": 4843,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1302,
+          "to": 2.2688,
+          "count": 4539,
+          "pct": 93.72
+        },
+        {
+          "class": "ниско",
+          "from": 2.2688,
+          "to": 4.4074,
+          "count": 199,
+          "pct": 4.11
+        },
+        {
+          "class": "умерено",
+          "from": 4.4074,
+          "to": 6.5461,
+          "count": 37,
+          "pct": 0.76
+        },
+        {
+          "class": "повишено",
+          "from": 6.5461,
+          "to": 8.6847,
+          "count": 15,
+          "pct": 0.31
+        },
+        {
+          "class": "високо",
+          "from": 8.6847,
+          "to": 10.8233,
+          "count": 53,
+          "pct": 1.09
+        }
+      ]
+    },
+    {
+      "id": "2026-03",
+      "label": "03/2026",
+      "kind": "monthly",
+      "date_start": "2026-03-01",
+      "date_end": "2026-04-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/prokuplje/results/2026-03.json",
+      "stats": {
+        "min": 0.16,
+        "max": 9.43,
+        "mean": 0.7851,
+        "median": 0.5946,
+        "p90": 1.1568,
+        "count": 2026,
+        "sum": 1510.4816,
+        "p75": 0.8125,
+        "p95": 1.78,
+        "std": 0.7623
+      },
+      "pixel_count": 1920,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1302,
+          "to": 2.2688,
+          "count": 1863,
+          "pct": 97.03
+        },
+        {
+          "class": "ниско",
+          "from": 2.2688,
+          "to": 4.4074,
+          "count": 35,
+          "pct": 1.82
+        },
+        {
+          "class": "умерено",
+          "from": 4.4074,
+          "to": 6.5461,
+          "count": 13,
+          "pct": 0.68
+        },
+        {
+          "class": "повишено",
+          "from": 6.5461,
+          "to": 8.6847,
+          "count": 8,
+          "pct": 0.42
+        },
+        {
+          "class": "високо",
+          "from": 8.6847,
+          "to": 10.8233,
+          "count": 1,
+          "pct": 0.05
+        }
+      ]
+    },
+    {
+      "id": "2026-02",
+      "label": "02/2026",
+      "kind": "monthly",
+      "date_start": "2026-02-01",
+      "date_end": "2026-03-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/prokuplje/results/2026-02.json",
+      "stats": {
+        "min": 0.14,
+        "max": 43.9,
+        "mean": 0.7843,
+        "median": 0.3868,
+        "p90": 1.1031,
+        "count": 5091,
+        "sum": 3796.4251,
+        "p75": 0.64,
+        "p95": 1.67,
+        "std": 1.985
+      },
+      "pixel_count": 4843,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1302,
+          "to": 2.2688,
+          "count": 4671,
+          "pct": 96.45
+        },
+        {
+          "class": "ниско",
+          "from": 2.2688,
+          "to": 4.4074,
+          "count": 111,
+          "pct": 2.29
+        },
+        {
+          "class": "умерено",
+          "from": 4.4074,
+          "to": 6.5461,
+          "count": 15,
+          "pct": 0.31
+        },
+        {
+          "class": "повишено",
+          "from": 6.5461,
+          "to": 8.6847,
+          "count": 9,
+          "pct": 0.19
+        },
+        {
+          "class": "високо",
+          "from": 8.6847,
+          "to": 10.8233,
+          "count": 37,
+          "pct": 0.76
+        }
+      ]
+    },
+    {
+      "id": "2026-01",
+      "label": "01/2026",
+      "kind": "monthly",
+      "date_start": "2026-01-01",
+      "date_end": "2026-02-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/prokuplje/results/2026-01.json",
+      "stats": {
+        "min": 0.39,
+        "max": 45.85,
+        "mean": 1.3203,
+        "median": 0.8462,
+        "p90": 2.1143,
+        "count": 5091,
+        "sum": 6391.2676,
+        "p75": 1.11,
+        "p95": 3.029,
+        "std": 2.7617
+      },
+      "pixel_count": 4843,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1302,
+          "to": 2.2688,
+          "count": 4440,
+          "pct": 91.68
+        },
+        {
+          "class": "ниско",
+          "from": 2.2688,
+          "to": 4.4074,
+          "count": 273,
+          "pct": 5.64
+        },
+        {
+          "class": "умерено",
+          "from": 4.4074,
+          "to": 6.5461,
+          "count": 53,
+          "pct": 1.09
+        },
+        {
+          "class": "повишено",
+          "from": 6.5461,
+          "to": 8.6847,
+          "count": 20,
+          "pct": 0.41
+        },
+        {
+          "class": "високо",
+          "from": 8.6847,
+          "to": 10.8233,
+          "count": 57,
+          "pct": 1.18
+        }
+      ]
+    },
+    {
+      "id": "2025-12",
+      "label": "12/2025",
+      "kind": "monthly",
+      "date_start": "2025-12-01",
+      "date_end": "2026-01-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/prokuplje/results/2025-12.json",
+      "stats": {
+        "min": 0.17,
+        "max": 47.13,
+        "mean": 0.9977,
+        "median": 0.3704,
+        "p90": 1.6132,
+        "count": 5091,
+        "sum": 4829.7043,
+        "p75": 0.85,
+        "p95": 2.658,
+        "std": 2.4504
+      },
+      "pixel_count": 4843,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1302,
+          "to": 2.2688,
+          "count": 4530,
+          "pct": 93.54
+        },
+        {
+          "class": "ниско",
+          "from": 2.2688,
+          "to": 4.4074,
+          "count": 203,
+          "pct": 4.19
+        },
+        {
+          "class": "умерено",
+          "from": 4.4074,
+          "to": 6.5461,
+          "count": 42,
+          "pct": 0.87
+        },
+        {
+          "class": "повишено",
+          "from": 6.5461,
+          "to": 8.6847,
+          "count": 16,
+          "pct": 0.33
+        },
+        {
+          "class": "високо",
+          "from": 8.6847,
+          "to": 10.8233,
+          "count": 52,
+          "pct": 1.07
+        }
+      ]
+    },
+    {
+      "id": "2025-11",
+      "label": "11/2025",
+      "kind": "monthly",
+      "date_start": "2025-11-01",
+      "date_end": "2025-12-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/prokuplje/results/2025-11.json",
+      "stats": {
+        "min": 0.36,
+        "max": 54.69,
+        "mean": 1.2495,
+        "median": 0.6103,
+        "p90": 2.1096,
+        "count": 5091,
+        "sum": 6048.4895,
+        "p75": 0.925,
+        "p95": 3.12,
+        "std": 2.9738
+      },
+      "pixel_count": 4843,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1302,
+          "to": 2.2688,
+          "count": 4440,
+          "pct": 91.68
+        },
+        {
+          "class": "ниско",
+          "from": 2.2688,
+          "to": 4.4074,
+          "count": 249,
+          "pct": 5.14
+        },
+        {
+          "class": "умерено",
+          "from": 4.4074,
+          "to": 6.5461,
+          "count": 63,
+          "pct": 1.3
+        },
+        {
+          "class": "повишено",
+          "from": 6.5461,
+          "to": 8.6847,
+          "count": 27,
+          "pct": 0.56
+        },
+        {
+          "class": "високо",
+          "from": 8.6847,
+          "to": 10.8233,
+          "count": 64,
+          "pct": 1.32
+        }
+      ]
+    },
+    {
+      "id": "2025-10",
+      "label": "10/2025",
+      "kind": "monthly",
+      "date_start": "2025-10-01",
+      "date_end": "2025-11-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/prokuplje/results/2025-10.json",
+      "stats": {
+        "min": 0.32,
+        "max": 41.32,
+        "mean": 1.0369,
+        "median": 0.5762,
+        "p90": 1.6328,
+        "count": 5091,
+        "sum": 5019.293,
+        "p75": 0.83,
+        "p95": 2.56,
+        "std": 2.3474
+      },
+      "pixel_count": 4843,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1302,
+          "to": 2.2688,
+          "count": 4552,
+          "pct": 93.99
+        },
+        {
+          "class": "ниско",
+          "from": 2.2688,
+          "to": 4.4074,
+          "count": 196,
+          "pct": 4.05
+        },
+        {
+          "class": "умерено",
+          "from": 4.4074,
+          "to": 6.5461,
+          "count": 33,
+          "pct": 0.68
+        },
+        {
+          "class": "повишено",
+          "from": 6.5461,
+          "to": 8.6847,
+          "count": 17,
+          "pct": 0.35
+        },
+        {
+          "class": "високо",
+          "from": 8.6847,
+          "to": 10.8233,
+          "count": 45,
+          "pct": 0.93
+        }
+      ]
+    },
+    {
+      "id": "2025-09",
+      "label": "09/2025",
+      "kind": "monthly",
+      "date_start": "2025-09-01",
+      "date_end": "2025-10-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/prokuplje/results/2025-09.json",
+      "stats": {
+        "min": 0.24,
+        "max": 52.85,
+        "mean": 1.1239,
+        "median": 0.5979,
+        "p90": 1.8524,
+        "count": 5091,
+        "sum": 5440.406,
+        "p75": 0.89,
+        "p95": 3.039,
+        "std": 2.7909
+      },
+      "pixel_count": 4843,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1302,
+          "to": 2.2688,
+          "count": 4471,
+          "pct": 92.32
+        },
+        {
+          "class": "ниско",
+          "from": 2.2688,
+          "to": 4.4074,
+          "count": 240,
+          "pct": 4.96
+        },
+        {
+          "class": "умерено",
+          "from": 4.4074,
+          "to": 6.5461,
+          "count": 56,
+          "pct": 1.16
+        },
+        {
+          "class": "повишено",
+          "from": 6.5461,
+          "to": 8.6847,
+          "count": 21,
+          "pct": 0.43
+        },
+        {
+          "class": "високо",
+          "from": 8.6847,
+          "to": 10.8233,
+          "count": 55,
+          "pct": 1.14
+        }
+      ]
+    },
+    {
+      "id": "2025-08",
+      "label": "08/2025",
+      "kind": "monthly",
+      "date_start": "2025-08-01",
+      "date_end": "2025-09-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/prokuplje/results/2025-08.json",
+      "stats": {
+        "min": 0.31,
+        "max": 42.44,
+        "mean": 1.203,
+        "median": 0.5831,
+        "p90": 1.8456,
+        "count": 5091,
+        "sum": 5823.3474,
+        "p75": 1.01,
+        "p95": 3.198,
+        "std": 2.566
+      },
+      "pixel_count": 4843,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1302,
+          "to": 2.2688,
+          "count": 4443,
+          "pct": 91.74
+        },
+        {
+          "class": "ниско",
+          "from": 2.2688,
+          "to": 4.4074,
+          "count": 253,
+          "pct": 5.22
+        },
+        {
+          "class": "умерено",
+          "from": 4.4074,
+          "to": 6.5461,
+          "count": 65,
+          "pct": 1.34
+        },
+        {
+          "class": "повишено",
+          "from": 6.5461,
+          "to": 8.6847,
+          "count": 27,
+          "pct": 0.56
+        },
+        {
+          "class": "високо",
+          "from": 8.6847,
+          "to": 10.8233,
+          "count": 55,
+          "pct": 1.14
+        }
+      ]
+    },
+    {
+      "id": "2025-07",
+      "label": "07/2025",
+      "kind": "monthly",
+      "date_start": "2025-07-01",
+      "date_end": "2025-08-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/prokuplje/results/2025-07.json",
+      "stats": {
+        "min": 0.27,
+        "max": 46.3,
+        "mean": 1.2293,
+        "median": 0.5836,
+        "p90": 2.0999,
+        "count": 5091,
+        "sum": 5950.7594,
+        "p75": 1.03,
+        "p95": 3.319,
+        "std": 2.6434
+      },
+      "pixel_count": 4843,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1302,
+          "to": 2.2688,
+          "count": 4412,
+          "pct": 91.1
+        },
+        {
+          "class": "ниско",
+          "from": 2.2688,
+          "to": 4.4074,
+          "count": 287,
+          "pct": 5.93
+        },
+        {
+          "class": "умерено",
+          "from": 4.4074,
+          "to": 6.5461,
+          "count": 58,
+          "pct": 1.2
+        },
+        {
+          "class": "повишено",
+          "from": 6.5461,
+          "to": 8.6847,
+          "count": 34,
+          "pct": 0.7
+        },
+        {
+          "class": "високо",
+          "from": 8.6847,
+          "to": 10.8233,
+          "count": 52,
+          "pct": 1.07
+        }
+      ]
+    },
+    {
+      "id": "2025-06",
+      "label": "06/2025",
+      "kind": "monthly",
+      "date_start": "2025-06-01",
+      "date_end": "2025-07-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/prokuplje/results/2025-06.json",
+      "stats": {
+        "min": 0.39,
+        "max": 43.02,
+        "mean": 1.2269,
+        "median": 0.6077,
+        "p90": 1.86,
+        "count": 5091,
+        "sum": 5938.8547,
+        "p75": 1.03,
+        "p95": 3.038,
+        "std": 2.5487
+      },
+      "pixel_count": 4843,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1302,
+          "to": 2.2688,
+          "count": 4471,
+          "pct": 92.32
+        },
+        {
+          "class": "ниско",
+          "from": 2.2688,
+          "to": 4.4074,
+          "count": 251,
+          "pct": 5.18
+        },
+        {
+          "class": "умерено",
+          "from": 4.4074,
+          "to": 6.5461,
+          "count": 44,
+          "pct": 0.91
+        },
+        {
+          "class": "повишено",
+          "from": 6.5461,
+          "to": 8.6847,
+          "count": 28,
+          "pct": 0.58
+        },
+        {
+          "class": "високо",
+          "from": 8.6847,
+          "to": 10.8233,
+          "count": 49,
+          "pct": 1.01
+        }
+      ]
+    },
+    {
+      "id": "2025-05",
+      "label": "05/2025",
+      "kind": "monthly",
+      "date_start": "2025-05-01",
+      "date_end": "2025-06-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/prokuplje/results/2025-05.json",
+      "stats": {
+        "min": 0.27,
+        "max": 50.92,
+        "mean": 1.1959,
+        "median": 0.5893,
+        "p90": 1.8731,
+        "count": 5091,
+        "sum": 5788.8554,
+        "p75": 0.96,
+        "p95": 3.16,
+        "std": 2.7839
+      },
+      "pixel_count": 4843,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1302,
+          "to": 2.2688,
+          "count": 4438,
+          "pct": 91.64
+        },
+        {
+          "class": "ниско",
+          "from": 2.2688,
+          "to": 4.4074,
+          "count": 262,
+          "pct": 5.41
+        },
+        {
+          "class": "умерено",
+          "from": 4.4074,
+          "to": 6.5461,
+          "count": 58,
+          "pct": 1.2
+        },
+        {
+          "class": "повишено",
+          "from": 6.5461,
+          "to": 8.6847,
+          "count": 28,
+          "pct": 0.58
+        },
+        {
+          "class": "високо",
+          "from": 8.6847,
+          "to": 10.8233,
+          "count": 57,
+          "pct": 1.18
+        }
+      ]
+    },
+    {
+      "id": "2025-04",
+      "label": "04/2025",
+      "kind": "monthly",
+      "date_start": "2025-04-01",
+      "date_end": "2025-05-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/prokuplje/results/2025-04.json",
+      "stats": {
+        "min": 0.07,
+        "max": 47.11,
+        "mean": 1.1266,
+        "median": 0.3907,
+        "p90": 1.8669,
+        "count": 5091,
+        "sum": 5453.6616,
+        "p75": 0.885,
+        "p95": 3.139,
+        "std": 2.885
+      },
+      "pixel_count": 4843,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1302,
+          "to": 2.2688,
+          "count": 4456,
+          "pct": 92.01
+        },
+        {
+          "class": "ниско",
+          "from": 2.2688,
+          "to": 4.4074,
+          "count": 238,
+          "pct": 4.91
+        },
+        {
+          "class": "умерено",
+          "from": 4.4074,
+          "to": 6.5461,
+          "count": 62,
+          "pct": 1.28
+        },
+        {
+          "class": "повишено",
+          "from": 6.5461,
+          "to": 8.6847,
+          "count": 25,
+          "pct": 0.52
+        },
+        {
+          "class": "високо",
+          "from": 8.6847,
+          "to": 10.8233,
+          "count": 62,
+          "pct": 1.28
+        }
+      ]
+    },
+    {
+      "id": "2025-03",
+      "label": "03/2025",
+      "kind": "monthly",
+      "date_start": "2025-03-01",
+      "date_end": "2025-04-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/prokuplje/results/2025-03.json",
+      "stats": {
+        "min": 0.16,
+        "max": 55.87,
+        "mean": 1.0912,
+        "median": 0.3262,
+        "p90": 1.8605,
+        "count": 5091,
+        "sum": 5282.0406,
+        "p75": 0.85,
+        "p95": 3.199,
+        "std": 3.1433
+      },
+      "pixel_count": 4843,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1302,
+          "to": 2.2688,
+          "count": 4436,
+          "pct": 91.6
+        },
+        {
+          "class": "ниско",
+          "from": 2.2688,
+          "to": 4.4074,
+          "count": 247,
+          "pct": 5.1
+        },
+        {
+          "class": "умерено",
+          "from": 4.4074,
+          "to": 6.5461,
+          "count": 69,
+          "pct": 1.42
+        },
+        {
+          "class": "повишено",
+          "from": 6.5461,
+          "to": 8.6847,
+          "count": 26,
+          "pct": 0.54
+        },
+        {
+          "class": "високо",
+          "from": 8.6847,
+          "to": 10.8233,
+          "count": 65,
+          "pct": 1.34
+        }
+      ]
+    },
+    {
+      "id": "2025-02",
+      "label": "02/2025",
+      "kind": "monthly",
+      "date_start": "2025-02-01",
+      "date_end": "2025-03-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/prokuplje/results/2025-02.json",
+      "stats": {
+        "min": 0.16,
+        "max": 59.5,
+        "mean": 1.0682,
+        "median": 0.3836,
+        "p90": 1.8677,
+        "count": 5026,
+        "sum": 5111.4762,
+        "p75": 0.81,
+        "p95": 2.94,
+        "std": 2.889
+      },
+      "pixel_count": 4786,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1302,
+          "to": 2.2688,
+          "count": 4433,
+          "pct": 92.62
+        },
+        {
+          "class": "ниско",
+          "from": 2.2688,
+          "to": 4.4074,
+          "count": 221,
+          "pct": 4.62
+        },
+        {
+          "class": "умерено",
+          "from": 4.4074,
+          "to": 6.5461,
+          "count": 60,
+          "pct": 1.25
+        },
+        {
+          "class": "повишено",
+          "from": 6.5461,
+          "to": 8.6847,
+          "count": 24,
+          "pct": 0.5
+        },
+        {
+          "class": "високо",
+          "from": 8.6847,
+          "to": 10.8233,
+          "count": 48,
+          "pct": 1.0
+        }
+      ]
+    },
+    {
+      "id": "2025-01",
+      "label": "01/2025",
+      "kind": "monthly",
+      "date_start": "2025-01-01",
+      "date_end": "2025-02-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/prokuplje/results/2025-01.json",
+      "stats": {
+        "min": 0.24,
+        "max": 54.04,
+        "mean": 1.3044,
+        "median": 0.5865,
+        "p90": 2.0946,
+        "count": 5091,
+        "sum": 6314.1368,
+        "p75": 1.0,
+        "p95": 3.629,
+        "std": 3.4
+      },
+      "pixel_count": 4843,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1302,
+          "to": 2.2688,
+          "count": 4384,
+          "pct": 90.52
+        },
+        {
+          "class": "ниско",
+          "from": 2.2688,
+          "to": 4.4074,
+          "count": 274,
+          "pct": 5.66
+        },
+        {
+          "class": "умерено",
+          "from": 4.4074,
+          "to": 6.5461,
+          "count": 83,
+          "pct": 1.71
+        },
+        {
+          "class": "повишено",
+          "from": 6.5461,
+          "to": 8.6847,
+          "count": 35,
+          "pct": 0.72
+        },
+        {
+          "class": "високо",
+          "from": 8.6847,
+          "to": 10.8233,
+          "count": 67,
+          "pct": 1.38
+        }
+      ]
+    },
+    {
+      "id": "2024-12",
+      "label": "12/2024",
+      "kind": "monthly",
+      "date_start": "2024-12-01",
+      "date_end": "2025-01-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/prokuplje/results/2024-12.json",
+      "stats": {
+        "min": 0.26,
+        "max": 52.3,
+        "mean": 1.0979,
+        "median": 0.5773,
+        "p90": 1.6304,
+        "count": 5091,
+        "sum": 5314.3305,
+        "p75": 0.83,
+        "p95": 2.949,
+        "std": 2.9475
+      },
+      "pixel_count": 4843,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1302,
+          "to": 2.2688,
+          "count": 4511,
+          "pct": 93.14
+        },
+        {
+          "class": "ниско",
+          "from": 2.2688,
+          "to": 4.4074,
+          "count": 209,
+          "pct": 4.32
+        },
+        {
+          "class": "умерено",
+          "from": 4.4074,
+          "to": 6.5461,
+          "count": 49,
+          "pct": 1.01
+        },
+        {
+          "class": "повишено",
+          "from": 6.5461,
+          "to": 8.6847,
+          "count": 17,
+          "pct": 0.35
+        },
+        {
+          "class": "високо",
+          "from": 8.6847,
+          "to": 10.8233,
+          "count": 57,
+          "pct": 1.18
+        }
+      ]
+    },
+    {
+      "id": "2024-11",
+      "label": "11/2024",
+      "kind": "monthly",
+      "date_start": "2024-11-01",
+      "date_end": "2024-12-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/prokuplje/results/2024-11.json",
+      "stats": {
+        "min": 0.32,
+        "max": 53.48,
+        "mean": 1.3122,
+        "median": 0.5889,
+        "p90": 2.1118,
+        "count": 5091,
+        "sum": 6351.9013,
+        "p75": 1.02,
+        "p95": 3.26,
+        "std": 3.1596
+      },
+      "pixel_count": 4843,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1302,
+          "to": 2.2688,
+          "count": 4401,
+          "pct": 90.87
+        },
+        {
+          "class": "ниско",
+          "from": 2.2688,
+          "to": 4.4074,
+          "count": 281,
+          "pct": 5.8
+        },
+        {
+          "class": "умерено",
+          "from": 4.4074,
+          "to": 6.5461,
+          "count": 66,
+          "pct": 1.36
+        },
+        {
+          "class": "повишено",
+          "from": 6.5461,
+          "to": 8.6847,
+          "count": 30,
+          "pct": 0.62
+        },
+        {
+          "class": "високо",
+          "from": 8.6847,
+          "to": 10.8233,
+          "count": 65,
+          "pct": 1.34
+        }
+      ]
+    },
+    {
+      "id": "2024-10",
+      "label": "10/2024",
+      "kind": "monthly",
+      "date_start": "2024-10-01",
+      "date_end": "2024-11-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/prokuplje/results/2024-10.json",
+      "stats": {
+        "min": 0.33,
+        "max": 51.43,
+        "mean": 1.2603,
+        "median": 0.5807,
+        "p90": 2.1137,
+        "count": 5091,
+        "sum": 6100.7535,
+        "p75": 0.99,
+        "p95": 3.389,
+        "std": 3.1164
+      },
+      "pixel_count": 4843,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1302,
+          "to": 2.2688,
+          "count": 4410,
+          "pct": 91.06
+        },
+        {
+          "class": "ниско",
+          "from": 2.2688,
+          "to": 4.4074,
+          "count": 269,
+          "pct": 5.55
+        },
+        {
+          "class": "умерено",
+          "from": 4.4074,
+          "to": 6.5461,
+          "count": 66,
+          "pct": 1.36
+        },
+        {
+          "class": "повишено",
+          "from": 6.5461,
+          "to": 8.6847,
+          "count": 36,
+          "pct": 0.74
+        },
+        {
+          "class": "високо",
+          "from": 8.6847,
+          "to": 10.8233,
+          "count": 62,
+          "pct": 1.28
+        }
+      ]
+    },
+    {
+      "id": "2024-09",
+      "label": "09/2024",
+      "kind": "monthly",
+      "date_start": "2024-09-01",
+      "date_end": "2024-10-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/prokuplje/results/2024-09.json",
+      "stats": {
+        "min": 0.28,
+        "max": 44.45,
+        "mean": 1.1369,
+        "median": 0.5873,
+        "p90": 1.8706,
+        "count": 5091,
+        "sum": 5503.3133,
+        "p75": 0.94,
+        "p95": 2.858,
+        "std": 2.4759
+      },
+      "pixel_count": 4843,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1302,
+          "to": 2.2688,
+          "count": 4479,
+          "pct": 92.48
+        },
+        {
+          "class": "ниско",
+          "from": 2.2688,
+          "to": 4.4074,
+          "count": 237,
+          "pct": 4.89
+        },
+        {
+          "class": "умерено",
+          "from": 4.4074,
+          "to": 6.5461,
+          "count": 47,
+          "pct": 0.97
+        },
+        {
+          "class": "повишено",
+          "from": 6.5461,
+          "to": 8.6847,
+          "count": 25,
+          "pct": 0.52
+        },
+        {
+          "class": "високо",
+          "from": 8.6847,
+          "to": 10.8233,
+          "count": 55,
+          "pct": 1.14
+        }
+      ]
+    },
+    {
+      "id": "2024-08",
+      "label": "08/2024",
+      "kind": "monthly",
+      "date_start": "2024-08-01",
+      "date_end": "2024-09-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/prokuplje/results/2024-08.json",
+      "stats": {
+        "min": 0.38,
+        "max": 48.87,
+        "mean": 1.2156,
+        "median": 0.5754,
+        "p90": 1.8655,
+        "count": 5091,
+        "sum": 5884.4061,
+        "p75": 0.98,
+        "p95": 3.1,
+        "std": 2.7339
+      },
+      "pixel_count": 4843,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1302,
+          "to": 2.2688,
+          "count": 4442,
+          "pct": 91.72
+        },
+        {
+          "class": "ниско",
+          "from": 2.2688,
+          "to": 4.4074,
+          "count": 260,
+          "pct": 5.37
+        },
+        {
+          "class": "умерено",
+          "from": 4.4074,
+          "to": 6.5461,
+          "count": 57,
+          "pct": 1.18
+        },
+        {
+          "class": "повишено",
+          "from": 6.5461,
+          "to": 8.6847,
+          "count": 27,
+          "pct": 0.56
+        },
+        {
+          "class": "високо",
+          "from": 8.6847,
+          "to": 10.8233,
+          "count": 57,
+          "pct": 1.18
+        }
+      ]
+    },
+    {
+      "id": "2024-07",
+      "label": "07/2024",
+      "kind": "monthly",
+      "date_start": "2024-07-01",
+      "date_end": "2024-08-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/prokuplje/results/2024-07.json",
+      "stats": {
+        "min": 0.24,
+        "max": 42.92,
+        "mean": 1.1751,
+        "median": 0.5971,
+        "p90": 1.8628,
+        "count": 5091,
+        "sum": 5688.291,
+        "p75": 1.01,
+        "p95": 2.969,
+        "std": 2.4206
+      },
+      "pixel_count": 4843,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1302,
+          "to": 2.2688,
+          "count": 4464,
+          "pct": 92.17
+        },
+        {
+          "class": "ниско",
+          "from": 2.2688,
+          "to": 4.4074,
+          "count": 253,
+          "pct": 5.22
+        },
+        {
+          "class": "умерено",
+          "from": 4.4074,
+          "to": 6.5461,
+          "count": 51,
+          "pct": 1.05
+        },
+        {
+          "class": "повишено",
+          "from": 6.5461,
+          "to": 8.6847,
+          "count": 21,
+          "pct": 0.43
+        },
+        {
+          "class": "високо",
+          "from": 8.6847,
+          "to": 10.8233,
+          "count": 54,
+          "pct": 1.12
+        }
+      ]
+    },
+    {
+      "id": "2024-06",
+      "label": "06/2024",
+      "kind": "monthly",
+      "date_start": "2024-06-01",
+      "date_end": "2024-07-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/prokuplje/results/2024-06.json",
+      "stats": {
+        "min": 0.57,
+        "max": 50.37,
+        "mean": 1.5065,
+        "median": 0.8296,
+        "p90": 2.3664,
+        "count": 5091,
+        "sum": 7292.2437,
+        "p75": 1.24,
+        "p95": 3.59,
+        "std": 2.9231
+      },
+      "pixel_count": 4843,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1302,
+          "to": 2.2688,
+          "count": 4334,
+          "pct": 89.49
+        },
+        {
+          "class": "ниско",
+          "from": 2.2688,
+          "to": 4.4074,
+          "count": 331,
+          "pct": 6.83
+        },
+        {
+          "class": "умерено",
+          "from": 4.4074,
+          "to": 6.5461,
+          "count": 84,
+          "pct": 1.73
+        },
+        {
+          "class": "повишено",
+          "from": 6.5461,
+          "to": 8.6847,
+          "count": 25,
+          "pct": 0.52
+        },
+        {
+          "class": "високо",
+          "from": 8.6847,
+          "to": 10.8233,
+          "count": 69,
+          "pct": 1.42
+        }
+      ]
+    },
+    {
+      "id": "2024-05",
+      "label": "05/2024",
+      "kind": "monthly",
+      "date_start": "2024-05-01",
+      "date_end": "2024-06-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/prokuplje/results/2024-05.json",
+      "stats": {
+        "min": 0.2,
+        "max": 52.01,
+        "mean": 1.2156,
+        "median": 0.5935,
+        "p90": 1.8478,
+        "count": 5091,
+        "sum": 5884.1617,
+        "p75": 0.95,
+        "p95": 3.178,
+        "std": 3.0442
+      },
+      "pixel_count": 4843,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1302,
+          "to": 2.2688,
+          "count": 4446,
+          "pct": 91.8
+        },
+        {
+          "class": "ниско",
+          "from": 2.2688,
+          "to": 4.4074,
+          "count": 253,
+          "pct": 5.22
+        },
+        {
+          "class": "умерено",
+          "from": 4.4074,
+          "to": 6.5461,
+          "count": 54,
+          "pct": 1.12
+        },
+        {
+          "class": "повишено",
+          "from": 6.5461,
+          "to": 8.6847,
+          "count": 30,
+          "pct": 0.62
+        },
+        {
+          "class": "високо",
+          "from": 8.6847,
+          "to": 10.8233,
+          "count": 60,
+          "pct": 1.24
+        }
+      ]
+    },
+    {
+      "id": "2024-04",
+      "label": "04/2024",
+      "kind": "monthly",
+      "date_start": "2024-04-01",
+      "date_end": "2024-05-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/prokuplje/results/2024-04.json",
+      "stats": {
+        "min": 0.22,
+        "max": 61.51,
+        "mean": 1.2488,
+        "median": 0.5984,
+        "p90": 2.1135,
+        "count": 5091,
+        "sum": 6044.8617,
+        "p75": 0.92,
+        "p95": 3.708,
+        "std": 3.4138
+      },
+      "pixel_count": 4843,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1302,
+          "to": 2.2688,
+          "count": 4385,
+          "pct": 90.54
+        },
+        {
+          "class": "ниско",
+          "from": 2.2688,
+          "to": 4.4074,
+          "count": 276,
+          "pct": 5.7
+        },
+        {
+          "class": "умерено",
+          "from": 4.4074,
+          "to": 6.5461,
+          "count": 80,
+          "pct": 1.65
+        },
+        {
+          "class": "повишено",
+          "from": 6.5461,
+          "to": 8.6847,
+          "count": 28,
+          "pct": 0.58
+        },
+        {
+          "class": "високо",
+          "from": 8.6847,
+          "to": 10.8233,
+          "count": 74,
+          "pct": 1.53
+        }
+      ]
+    },
+    {
+      "id": "2024-03",
+      "label": "03/2024",
+      "kind": "monthly",
+      "date_start": "2024-03-01",
+      "date_end": "2024-04-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/prokuplje/results/2024-03.json",
+      "stats": {
+        "min": 0.02,
+        "max": 62.7,
+        "mean": 1.4117,
+        "median": 0.6001,
+        "p90": 2.3651,
+        "count": 5091,
+        "sum": 6833.6105,
+        "p75": 1.07,
+        "p95": 4.148,
+        "std": 3.6526
+      },
+      "pixel_count": 4843,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1302,
+          "to": 2.2688,
+          "count": 4306,
+          "pct": 88.91
+        },
+        {
+          "class": "ниско",
+          "from": 2.2688,
+          "to": 4.4074,
+          "count": 312,
+          "pct": 6.44
+        },
+        {
+          "class": "умерено",
+          "from": 4.4074,
+          "to": 6.5461,
+          "count": 96,
+          "pct": 1.98
+        },
+        {
+          "class": "повишено",
+          "from": 6.5461,
+          "to": 8.6847,
+          "count": 49,
+          "pct": 1.01
+        },
+        {
+          "class": "високо",
+          "from": 8.6847,
+          "to": 10.8233,
+          "count": 80,
+          "pct": 1.65
+        }
+      ]
+    },
+    {
+      "id": "2024-02",
+      "label": "02/2024",
+      "kind": "monthly",
+      "date_start": "2024-02-01",
+      "date_end": "2024-03-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/prokuplje/results/2024-02.json",
+      "stats": {
+        "min": 0.19,
+        "max": 65.78,
+        "mean": 1.3147,
+        "median": 0.6697,
+        "p90": 2.2318,
+        "count": 5091,
+        "sum": 6363.916,
+        "p75": 0.97,
+        "p95": 3.889,
+        "std": 3.6763
+      },
+      "pixel_count": 4843,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1302,
+          "to": 2.2688,
+          "count": 4348,
+          "pct": 89.78
+        },
+        {
+          "class": "ниско",
+          "from": 2.2688,
+          "to": 4.4074,
+          "count": 283,
+          "pct": 5.84
+        },
+        {
+          "class": "умерено",
+          "from": 4.4074,
+          "to": 6.5461,
+          "count": 92,
+          "pct": 1.9
+        },
+        {
+          "class": "повишено",
+          "from": 6.5461,
+          "to": 8.6847,
+          "count": 39,
+          "pct": 0.81
+        },
+        {
+          "class": "високо",
+          "from": 8.6847,
+          "to": 10.8233,
+          "count": 81,
+          "pct": 1.67
+        }
+      ]
+    },
+    {
+      "id": "2024-01",
+      "label": "01/2024",
+      "kind": "monthly",
+      "date_start": "2024-01-01",
+      "date_end": "2024-02-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/prokuplje/results/2024-01.json",
+      "stats": {
+        "min": 0.14,
+        "max": 47.68,
+        "mean": 1.2777,
+        "median": 0.5994,
+        "p90": 2.1053,
+        "count": 5091,
+        "sum": 6185.0285,
+        "p75": 1.0,
+        "p95": 3.649,
+        "std": 2.8903
+      },
+      "pixel_count": 4843,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1302,
+          "to": 2.2688,
+          "count": 4383,
+          "pct": 90.5
+        },
+        {
+          "class": "ниско",
+          "from": 2.2688,
+          "to": 4.4074,
+          "count": 279,
+          "pct": 5.76
+        },
+        {
+          "class": "умерено",
+          "from": 4.4074,
+          "to": 6.5461,
+          "count": 88,
+          "pct": 1.82
+        },
+        {
+          "class": "повишено",
+          "from": 6.5461,
+          "to": 8.6847,
+          "count": 26,
+          "pct": 0.54
+        },
+        {
+          "class": "високо",
+          "from": 8.6847,
+          "to": 10.8233,
+          "count": 67,
+          "pct": 1.38
+        }
+      ]
+    }
+  ],
+  "yearly": [
+    {
+      "id": "2014",
+      "label": "2014. (годишњи просек)",
+      "kind": "yearly",
+      "date_start": "2014-01-01",
+      "date_end": "2015-01-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/prokuplje/results/2014.json",
+      "stats": {
+        "min": 0.1339,
+        "max": 42.9603,
+        "mean": 0.6416,
+        "median": 0.2025,
+        "p90": 0.8841,
+        "count": 5082,
+        "sum": 3105.6825,
+        "p75": 0.3954,
+        "p95": 1.4879,
+        "std": 2.261
+      },
+      "pixel_count": 4842,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1302,
+          "to": 2.2688,
+          "count": 4707,
+          "pct": 97.21
+        },
+        {
+          "class": "ниско",
+          "from": 2.2688,
+          "to": 4.4074,
+          "count": 47,
+          "pct": 0.97
+        },
+        {
+          "class": "умерено",
+          "from": 4.4074,
+          "to": 6.5461,
+          "count": 26,
+          "pct": 0.54
+        },
+        {
+          "class": "повишено",
+          "from": 6.5461,
+          "to": 8.6847,
+          "count": 13,
+          "pct": 0.27
+        },
+        {
+          "class": "високо",
+          "from": 8.6847,
+          "to": 10.8233,
+          "count": 49,
+          "pct": 1.01
+        }
+      ]
+    },
+    {
+      "id": "2015",
+      "label": "2015. (годишњи просек)",
+      "kind": "yearly",
+      "date_start": "2015-01-01",
+      "date_end": "2016-01-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/prokuplje/results/2015.json",
+      "stats": {
+        "min": 0.0802,
+        "max": 42.6447,
+        "mean": 0.5174,
+        "median": 0.161,
+        "p90": 0.3356,
+        "count": 5082,
+        "sum": 2504.5146,
+        "p75": 0.2539,
+        "p95": 1.0514,
+        "std": 2.2662
+      },
+      "pixel_count": 4842,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1302,
+          "to": 2.2688,
+          "count": 4730,
+          "pct": 97.69
+        },
+        {
+          "class": "ниско",
+          "from": 2.2688,
+          "to": 4.4074,
+          "count": 31,
+          "pct": 0.64
+        },
+        {
+          "class": "умерено",
+          "from": 4.4074,
+          "to": 6.5461,
+          "count": 17,
+          "pct": 0.35
+        },
+        {
+          "class": "повишено",
+          "from": 6.5461,
+          "to": 8.6847,
+          "count": 15,
+          "pct": 0.31
+        },
+        {
+          "class": "високо",
+          "from": 8.6847,
+          "to": 10.8233,
+          "count": 49,
+          "pct": 1.01
+        }
+      ]
+    },
+    {
+      "id": "2016",
+      "label": "2016. (годишњи просек)",
+      "kind": "yearly",
+      "date_start": "2016-01-01",
+      "date_end": "2017-01-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/prokuplje/results/2016.json",
+      "stats": {
+        "min": 0.0539,
+        "max": 45.382,
+        "mean": 0.5836,
+        "median": 0.15,
+        "p90": 0.6103,
+        "count": 5082,
+        "sum": 2824.7231,
+        "p75": 0.2786,
+        "p95": 1.3824,
+        "std": 2.5529
+      },
+      "pixel_count": 4842,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1302,
+          "to": 2.2688,
+          "count": 4703,
+          "pct": 97.13
+        },
+        {
+          "class": "ниско",
+          "from": 2.2688,
+          "to": 4.4074,
+          "count": 52,
+          "pct": 1.07
+        },
+        {
+          "class": "умерено",
+          "from": 4.4074,
+          "to": 6.5461,
+          "count": 13,
+          "pct": 0.27
+        },
+        {
+          "class": "повишено",
+          "from": 6.5461,
+          "to": 8.6847,
+          "count": 16,
+          "pct": 0.33
+        },
+        {
+          "class": "високо",
+          "from": 8.6847,
+          "to": 10.8233,
+          "count": 58,
+          "pct": 1.2
+        }
+      ]
+    },
+    {
+      "id": "2017",
+      "label": "2017. (годишњи просек)",
+      "kind": "yearly",
+      "date_start": "2017-01-01",
+      "date_end": "2018-01-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/prokuplje/results/2017.json",
+      "stats": {
+        "min": 0.2662,
+        "max": 45.9954,
+        "mean": 0.8651,
+        "median": 0.3603,
+        "p90": 1.1175,
+        "count": 5082,
+        "sum": 4187.6024,
+        "p75": 0.547,
+        "p95": 2.0119,
+        "std": 2.6597
+      },
+      "pixel_count": 4842,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1302,
+          "to": 2.2688,
+          "count": 4624,
+          "pct": 95.5
+        },
+        {
+          "class": "ниско",
+          "from": 2.2688,
+          "to": 4.4074,
+          "count": 114,
+          "pct": 2.35
+        },
+        {
+          "class": "умерено",
+          "from": 4.4074,
+          "to": 6.5461,
+          "count": 26,
+          "pct": 0.54
+        },
+        {
+          "class": "повишено",
+          "from": 6.5461,
+          "to": 8.6847,
+          "count": 17,
+          "pct": 0.35
+        },
+        {
+          "class": "високо",
+          "from": 8.6847,
+          "to": 10.8233,
+          "count": 61,
+          "pct": 1.26
+        }
+      ]
+    },
+    {
+      "id": "2018",
+      "label": "2018. (годишњи просек)",
+      "kind": "yearly",
+      "date_start": "2018-01-01",
+      "date_end": "2019-01-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/prokuplje/results/2018.json",
+      "stats": {
+        "min": 0.225,
+        "max": 47.1,
+        "mean": 0.863,
+        "median": 0.3376,
+        "p90": 1.1124,
+        "count": 5082,
+        "sum": 4177.4092,
+        "p75": 0.5575,
+        "p95": 2.3125,
+        "std": 2.5913
+      },
+      "pixel_count": 4842,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1302,
+          "to": 2.2688,
+          "count": 4595,
+          "pct": 94.9
+        },
+        {
+          "class": "ниско",
+          "from": 2.2688,
+          "to": 4.4074,
+          "count": 144,
+          "pct": 2.97
+        },
+        {
+          "class": "умерено",
+          "from": 4.4074,
+          "to": 6.5461,
+          "count": 23,
+          "pct": 0.48
+        },
+        {
+          "class": "повишено",
+          "from": 6.5461,
+          "to": 8.6847,
+          "count": 20,
+          "pct": 0.41
+        },
+        {
+          "class": "високо",
+          "from": 8.6847,
+          "to": 10.8233,
+          "count": 60,
+          "pct": 1.24
+        }
+      ]
+    },
+    {
+      "id": "2019",
+      "label": "2019. (годишњи просек)",
+      "kind": "yearly",
+      "date_start": "2019-01-01",
+      "date_end": "2020-01-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/prokuplje/results/2019.json",
+      "stats": {
+        "min": 0.2383,
+        "max": 50.4058,
+        "mean": 1.0465,
+        "median": 0.3481,
+        "p90": 1.605,
+        "count": 5082,
+        "sum": 5065.5744,
+        "p75": 0.6967,
+        "p95": 3.0859,
+        "std": 3.1152
+      },
+      "pixel_count": 4842,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1302,
+          "to": 2.2688,
+          "count": 4496,
+          "pct": 92.85
+        },
+        {
+          "class": "ниско",
+          "from": 2.2688,
+          "to": 4.4074,
+          "count": 208,
+          "pct": 4.3
+        },
+        {
+          "class": "умерено",
+          "from": 4.4074,
+          "to": 6.5461,
+          "count": 44,
+          "pct": 0.91
+        },
+        {
+          "class": "повишено",
+          "from": 6.5461,
+          "to": 8.6847,
+          "count": 18,
+          "pct": 0.37
+        },
+        {
+          "class": "високо",
+          "from": 8.6847,
+          "to": 10.8233,
+          "count": 76,
+          "pct": 1.57
+        }
+      ]
+    },
+    {
+      "id": "2020",
+      "label": "2020. (годишњи просек)",
+      "kind": "yearly",
+      "date_start": "2020-01-01",
+      "date_end": "2021-01-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/prokuplje/results/2020.json",
+      "stats": {
+        "min": 0.2867,
+        "max": 50.2742,
+        "mean": 1.1313,
+        "median": 0.3886,
+        "p90": 1.8673,
+        "count": 5082,
+        "sum": 5476.1881,
+        "p75": 0.7921,
+        "p95": 3.1367,
+        "std": 3.0873
+      },
+      "pixel_count": 4842,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1302,
+          "to": 2.2688,
+          "count": 4449,
+          "pct": 91.88
+        },
+        {
+          "class": "ниско",
+          "from": 2.2688,
+          "to": 4.4074,
+          "count": 242,
+          "pct": 5.0
+        },
+        {
+          "class": "умерено",
+          "from": 4.4074,
+          "to": 6.5461,
+          "count": 59,
+          "pct": 1.22
+        },
+        {
+          "class": "повишено",
+          "from": 6.5461,
+          "to": 8.6847,
+          "count": 16,
+          "pct": 0.33
+        },
+        {
+          "class": "високо",
+          "from": 8.6847,
+          "to": 10.8233,
+          "count": 76,
+          "pct": 1.57
+        }
+      ]
+    },
+    {
+      "id": "2021",
+      "label": "2021. (годишњи просек)",
+      "kind": "yearly",
+      "date_start": "2021-01-01",
+      "date_end": "2022-01-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/prokuplje/results/2021.json",
+      "stats": {
+        "min": 0.3492,
+        "max": 56.99,
+        "mean": 1.3041,
+        "median": 0.598,
+        "p90": 2.1221,
+        "count": 5082,
+        "sum": 6312.5446,
+        "p75": 0.9604,
+        "p95": 3.7775,
+        "std": 3.2807
+      },
+      "pixel_count": 4842,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1302,
+          "to": 2.2688,
+          "count": 4369,
+          "pct": 90.23
+        },
+        {
+          "class": "ниско",
+          "from": 2.2688,
+          "to": 4.4074,
+          "count": 277,
+          "pct": 5.72
+        },
+        {
+          "class": "умерено",
+          "from": 4.4074,
+          "to": 6.5461,
+          "count": 85,
+          "pct": 1.76
+        },
+        {
+          "class": "повишено",
+          "from": 6.5461,
+          "to": 8.6847,
+          "count": 29,
+          "pct": 0.6
+        },
+        {
+          "class": "високо",
+          "from": 8.6847,
+          "to": 10.8233,
+          "count": 82,
+          "pct": 1.69
+        }
+      ]
+    },
+    {
+      "id": "2022",
+      "label": "2022. (годишњи просек)",
+      "kind": "yearly",
+      "date_start": "2022-01-01",
+      "date_end": "2023-01-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/prokuplje/results/2022.json",
+      "stats": {
+        "min": 0.3525,
+        "max": 52.61,
+        "mean": 1.2056,
+        "median": 0.6042,
+        "p90": 1.8817,
+        "count": 5082,
+        "sum": 5835.776,
+        "p75": 0.9356,
+        "p95": 3.2539,
+        "std": 3.0174
+      },
+      "pixel_count": 4842,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1302,
+          "to": 2.2688,
+          "count": 4424,
+          "pct": 91.37
+        },
+        {
+          "class": "ниско",
+          "from": 2.2688,
+          "to": 4.4074,
+          "count": 268,
+          "pct": 5.53
+        },
+        {
+          "class": "умерено",
+          "from": 4.4074,
+          "to": 6.5461,
+          "count": 52,
+          "pct": 1.07
+        },
+        {
+          "class": "повишено",
+          "from": 6.5461,
+          "to": 8.6847,
+          "count": 34,
+          "pct": 0.7
+        },
+        {
+          "class": "високо",
+          "from": 8.6847,
+          "to": 10.8233,
+          "count": 64,
+          "pct": 1.32
+        }
+      ]
+    },
+    {
+      "id": "2023",
+      "label": "2023. (годишњи просек)",
+      "kind": "yearly",
+      "date_start": "2023-01-01",
+      "date_end": "2024-01-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/prokuplje/results/2023.json",
+      "stats": {
+        "min": 0.4067,
+        "max": 56.5067,
+        "mean": 1.2899,
+        "median": 0.5798,
+        "p90": 2.1245,
+        "count": 5082,
+        "sum": 6243.8697,
+        "p75": 1.01,
+        "p95": 3.4505,
+        "std": 3.0998
+      },
+      "pixel_count": 4842,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1302,
+          "to": 2.2688,
+          "count": 4382,
+          "pct": 90.5
+        },
+        {
+          "class": "ниско",
+          "from": 2.2688,
+          "to": 4.4074,
+          "count": 303,
+          "pct": 6.26
+        },
+        {
+          "class": "умерено",
+          "from": 4.4074,
+          "to": 6.5461,
+          "count": 55,
+          "pct": 1.14
+        },
+        {
+          "class": "повишено",
+          "from": 6.5461,
+          "to": 8.6847,
+          "count": 31,
+          "pct": 0.64
+        },
+        {
+          "class": "високо",
+          "from": 8.6847,
+          "to": 10.8233,
+          "count": 71,
+          "pct": 1.47
+        }
+      ]
+    },
+    {
+      "id": "2024",
+      "label": "2024. (годишњи просек)",
+      "kind": "yearly",
+      "date_start": "2024-01-01",
+      "date_end": "2025-01-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/prokuplje/results/2024.json",
+      "stats": {
+        "min": 0.395,
+        "max": 51.2875,
+        "mean": 1.2601,
+        "median": 0.5806,
+        "p90": 2.1049,
+        "count": 5082,
+        "sum": 6099.5346,
+        "p75": 1.0102,
+        "p95": 3.3657,
+        "std": 2.9756
+      },
+      "pixel_count": 4842,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1302,
+          "to": 2.2688,
+          "count": 4403,
+          "pct": 90.93
+        },
+        {
+          "class": "ниско",
+          "from": 2.2688,
+          "to": 4.4074,
+          "count": 286,
+          "pct": 5.91
+        },
+        {
+          "class": "умерено",
+          "from": 4.4074,
+          "to": 6.5461,
+          "count": 61,
+          "pct": 1.26
+        },
+        {
+          "class": "повишено",
+          "from": 6.5461,
+          "to": 8.6847,
+          "count": 29,
+          "pct": 0.6
+        },
+        {
+          "class": "високо",
+          "from": 8.6847,
+          "to": 10.8233,
+          "count": 63,
+          "pct": 1.3
+        }
+      ]
+    },
+    {
+      "id": "2025",
+      "label": "2025. (годишњи просек)",
+      "kind": "yearly",
+      "date_start": "2025-01-01",
+      "date_end": "2026-01-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/prokuplje/results/2025.json",
+      "stats": {
+        "min": 0.3558,
+        "max": 46.71,
+        "mean": 1.1495,
+        "median": 0.5963,
+        "p90": 1.8599,
+        "count": 5082,
+        "sum": 5563.8775,
+        "p75": 0.9423,
+        "p95": 2.9943,
+        "std": 2.7277
+      },
+      "pixel_count": 4842,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1302,
+          "to": 2.2688,
+          "count": 4471,
+          "pct": 92.34
+        },
+        {
+          "class": "ниско",
+          "from": 2.2688,
+          "to": 4.4074,
+          "count": 242,
+          "pct": 5.0
+        },
+        {
+          "class": "умерено",
+          "from": 4.4074,
+          "to": 6.5461,
+          "count": 50,
+          "pct": 1.03
+        },
+        {
+          "class": "повишено",
+          "from": 6.5461,
+          "to": 8.6847,
+          "count": 26,
+          "pct": 0.54
+        },
+        {
+          "class": "високо",
+          "from": 8.6847,
+          "to": 10.8233,
+          "count": 53,
+          "pct": 1.09
+        }
+      ]
+    }
+  ],
+  "trend": {
+    "mean_linear": {
+      "ok": true,
+      "n": 12,
+      "slope_abs_per_year": 0.07107,
+      "slope_pct_per_year": 11.0769,
+      "intercept": -142.536876,
+      "r2": 0.8041,
+      "first_year": 2014,
+      "last_year": 2025
+    },
+    "mean_sen_slope_abs_per_year": 0.071417,
+    "mann_kendall_mean": {
+      "ok": true,
+      "n": 12,
+      "s": 44,
+      "z": 2.9486,
+      "p_value": 0.00319,
+      "kendall_tau": 0.6667,
+      "trend": "растући",
+      "significant_0_05": true
+    },
+    "forecast_next_5_years": [
+      {
+        "year": 2026,
+        "linear_mean": 1.4509,
+        "sen_mean": 1.2209,
+        "note": "Пројекција није мерење; важи само ако се досадашњи тренд настави."
+      },
+      {
+        "year": 2027,
+        "linear_mean": 1.522,
+        "sen_mean": 1.2923,
+        "note": "Пројекција није мерење; важи само ако се досадашњи тренд настави."
+      },
+      {
+        "year": 2028,
+        "linear_mean": 1.5931,
+        "sen_mean": 1.3638,
+        "note": "Пројекција није мерење; важи само ако се досадашњи тренд настави."
+      },
+      {
+        "year": 2029,
+        "linear_mean": 1.6642,
+        "sen_mean": 1.4352,
+        "note": "Пројекција није мерење; важи само ако се досадашњи тренд настави."
+      },
+      {
+        "year": 2030,
+        "linear_mean": 1.7352,
+        "sen_mean": 1.5066,
+        "note": "Пројекција није мерење; важи само ако се досадашњи тренд настави."
+      }
+    ]
+  },
+  "seasonality": {
+    "01": {
+      "count": 3,
+      "min": 1.2777,
+      "max": 1.3203,
+      "mean": 1.3008,
+      "median": 1.3044,
+      "p75": 1.3123,
+      "p90": 1.3171,
+      "p95": 1.3187,
+      "std": 0.0176,
+      "sum": 3.9024
+    },
+    "02": {
+      "count": 3,
+      "min": 0.7843,
+      "max": 1.3147,
+      "mean": 1.0557,
+      "median": 1.0682,
+      "p75": 1.1915,
+      "p90": 1.2654,
+      "p95": 1.29,
+      "std": 0.2167,
+      "sum": 3.1672
+    },
+    "03": {
+      "count": 3,
+      "min": 0.7851,
+      "max": 1.4117,
+      "mean": 1.096,
+      "median": 1.0912,
+      "p75": 1.2514,
+      "p90": 1.3476,
+      "p95": 1.3797,
+      "std": 0.2558,
+      "sum": 3.288
+    },
+    "04": {
+      "count": 3,
+      "min": 0.9824,
+      "max": 1.2488,
+      "mean": 1.1193,
+      "median": 1.1266,
+      "p75": 1.1877,
+      "p90": 1.2244,
+      "p95": 1.2366,
+      "std": 0.1089,
+      "sum": 3.3578
+    },
+    "05": {
+      "count": 2,
+      "min": 1.1959,
+      "max": 1.2156,
+      "mean": 1.2058,
+      "median": 1.2058,
+      "p75": 1.2107,
+      "p90": 1.2136,
+      "p95": 1.2146,
+      "std": 0.0099,
+      "sum": 2.4115
+    },
+    "06": {
+      "count": 2,
+      "min": 1.2269,
+      "max": 1.5065,
+      "mean": 1.3667,
+      "median": 1.3667,
+      "p75": 1.4366,
+      "p90": 1.4785,
+      "p95": 1.4925,
+      "std": 0.1398,
+      "sum": 2.7334
+    },
+    "07": {
+      "count": 2,
+      "min": 1.1751,
+      "max": 1.2293,
+      "mean": 1.2022,
+      "median": 1.2022,
+      "p75": 1.2157,
+      "p90": 1.2239,
+      "p95": 1.2266,
+      "std": 0.0271,
+      "sum": 2.4044
+    },
+    "08": {
+      "count": 2,
+      "min": 1.203,
+      "max": 1.2156,
+      "mean": 1.2093,
+      "median": 1.2093,
+      "p75": 1.2125,
+      "p90": 1.2143,
+      "p95": 1.215,
+      "std": 0.0063,
+      "sum": 2.4186
+    },
+    "09": {
+      "count": 2,
+      "min": 1.1239,
+      "max": 1.1369,
+      "mean": 1.1304,
+      "median": 1.1304,
+      "p75": 1.1337,
+      "p90": 1.1356,
+      "p95": 1.1362,
+      "std": 0.0065,
+      "sum": 2.2608
+    },
+    "10": {
+      "count": 2,
+      "min": 1.0369,
+      "max": 1.2603,
+      "mean": 1.1486,
+      "median": 1.1486,
+      "p75": 1.2045,
+      "p90": 1.238,
+      "p95": 1.2491,
+      "std": 0.1117,
+      "sum": 2.2972
+    },
+    "11": {
+      "count": 2,
+      "min": 1.2495,
+      "max": 1.3122,
+      "mean": 1.2809,
+      "median": 1.2809,
+      "p75": 1.2965,
+      "p90": 1.3059,
+      "p95": 1.3091,
+      "std": 0.0313,
+      "sum": 2.5617
+    },
+    "12": {
+      "count": 2,
+      "min": 0.9977,
+      "max": 1.0979,
+      "mean": 1.0478,
+      "median": 1.0478,
+      "p75": 1.0729,
+      "p90": 1.0879,
+      "p95": 1.0929,
+      "std": 0.0501,
+      "sum": 2.0956
+    }
+  },
+  "limits": [
+    "VIIRS радијанса није SQM вредност у mag/arcsec².",
+    "Јавна топлотна мапа је интерполисана визуелизација; статистика се рачуна из сирових пиксела.",
+    "Месечни просеци се не смеју мешати са годишњим трендом; за тренд користити годишње просеке."
+  ]
+}

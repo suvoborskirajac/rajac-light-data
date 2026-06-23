@@ -1,0 +1,2636 @@
+{
+  "ok": true,
+  "created_at": "2026-06-23T12:10:29Z",
+  "area": {
+    "slug": "zvezdara",
+    "name": "Градска општина Звездара",
+    "group": "БеоВидео",
+    "public_url": "https://piorajac.rs/beovideo/"
+  },
+  "unit": "nW/cm²/sr",
+  "scale": {
+    "absolute_min": 2.28,
+    "absolute_max": 159.0,
+    "visual_min": 3.25,
+    "visual_max": 95.4218,
+    "method": "p01–p99 из свих пиксела свих периода изабраног подручја; екстреми се не губе у статистици"
+  },
+  "coverage": {
+    "monthly_count": 28,
+    "yearly_count": 12,
+    "monthly_first": "2024-01",
+    "monthly_last": "2026-04",
+    "yearly_first": "2014",
+    "yearly_last": "2025"
+  },
+  "monthly": [
+    {
+      "id": "2026-04",
+      "label": "04/2026",
+      "kind": "monthly",
+      "date_start": "2026-04-01",
+      "date_end": "2026-05-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/zvezdara/results/2026-04.json",
+      "stats": {
+        "min": 3.36,
+        "max": 118.09,
+        "mean": 37.9893,
+        "median": 35.41,
+        "p90": 76.52,
+        "count": 261,
+        "sum": 7735.5055,
+        "p75": 57.245,
+        "p95": 83.414,
+        "std": 24.6353
+      },
+      "pixel_count": 202,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 3.25,
+          "to": 21.6844,
+          "count": 59,
+          "pct": 29.21
+        },
+        {
+          "class": "ниско",
+          "from": 21.6844,
+          "to": 40.1187,
+          "count": 60,
+          "pct": 29.7
+        },
+        {
+          "class": "умерено",
+          "from": 40.1187,
+          "to": 58.5531,
+          "count": 36,
+          "pct": 17.82
+        },
+        {
+          "class": "повишено",
+          "from": 58.5531,
+          "to": 76.9874,
+          "count": 28,
+          "pct": 13.86
+        },
+        {
+          "class": "високо",
+          "from": 76.9874,
+          "to": 95.4218,
+          "count": 19,
+          "pct": 9.41
+        }
+      ]
+    },
+    {
+      "id": "2026-03",
+      "label": "03/2026",
+      "kind": "monthly",
+      "date_start": "2026-03-01",
+      "date_end": "2026-04-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/zvezdara/results/2026-03.json",
+      "stats": {
+        "min": 3.56,
+        "max": 136.29,
+        "mean": 37.835,
+        "median": 34.5325,
+        "p90": 73.5967,
+        "count": 261,
+        "sum": 7704.1,
+        "p75": 56.945,
+        "p95": 83.4485,
+        "std": 24.7386
+      },
+      "pixel_count": 202,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 3.25,
+          "to": 21.6844,
+          "count": 58,
+          "pct": 28.71
+        },
+        {
+          "class": "ниско",
+          "from": 21.6844,
+          "to": 40.1187,
+          "count": 60,
+          "pct": 29.7
+        },
+        {
+          "class": "умерено",
+          "from": 40.1187,
+          "to": 58.5531,
+          "count": 38,
+          "pct": 18.81
+        },
+        {
+          "class": "повишено",
+          "from": 58.5531,
+          "to": 76.9874,
+          "count": 29,
+          "pct": 14.36
+        },
+        {
+          "class": "високо",
+          "from": 76.9874,
+          "to": 95.4218,
+          "count": 17,
+          "pct": 8.42
+        }
+      ]
+    },
+    {
+      "id": "2026-02",
+      "label": "02/2026",
+      "kind": "monthly",
+      "date_start": "2026-02-01",
+      "date_end": "2026-03-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/zvezdara/results/2026-02.json",
+      "stats": {
+        "min": 2.69,
+        "max": 120.54,
+        "mean": 33.7668,
+        "median": 29.8974,
+        "p90": 67.73,
+        "count": 261,
+        "sum": 6875.7123,
+        "p75": 47.5375,
+        "p95": 77.253,
+        "std": 21.9261
+      },
+      "pixel_count": 202,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 3.25,
+          "to": 21.6844,
+          "count": 62,
+          "pct": 30.69
+        },
+        {
+          "class": "ниско",
+          "from": 21.6844,
+          "to": 40.1187,
+          "count": 73,
+          "pct": 36.14
+        },
+        {
+          "class": "умерено",
+          "from": 40.1187,
+          "to": 58.5531,
+          "count": 38,
+          "pct": 18.81
+        },
+        {
+          "class": "повишено",
+          "from": 58.5531,
+          "to": 76.9874,
+          "count": 18,
+          "pct": 8.91
+        },
+        {
+          "class": "високо",
+          "from": 76.9874,
+          "to": 95.4218,
+          "count": 11,
+          "pct": 5.45
+        }
+      ]
+    },
+    {
+      "id": "2026-01",
+      "label": "01/2026",
+      "kind": "monthly",
+      "date_start": "2026-01-01",
+      "date_end": "2026-02-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/zvezdara/results/2026-01.json",
+      "stats": {
+        "min": 4.66,
+        "max": 159.0,
+        "mean": 51.2685,
+        "median": 48.4,
+        "p90": 96.4849,
+        "count": 261,
+        "sum": 10439.4824,
+        "p75": 72.62,
+        "p95": 102.81,
+        "std": 31.8328
+      },
+      "pixel_count": 202,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 3.25,
+          "to": 21.6844,
+          "count": 42,
+          "pct": 20.79
+        },
+        {
+          "class": "ниско",
+          "from": 21.6844,
+          "to": 40.1187,
+          "count": 39,
+          "pct": 19.31
+        },
+        {
+          "class": "умерено",
+          "from": 40.1187,
+          "to": 58.5531,
+          "count": 42,
+          "pct": 20.79
+        },
+        {
+          "class": "повишено",
+          "from": 58.5531,
+          "to": 76.9874,
+          "count": 36,
+          "pct": 17.82
+        },
+        {
+          "class": "високо",
+          "from": 76.9874,
+          "to": 95.4218,
+          "count": 43,
+          "pct": 21.29
+        }
+      ]
+    },
+    {
+      "id": "2025-12",
+      "label": "12/2025",
+      "kind": "monthly",
+      "date_start": "2025-12-01",
+      "date_end": "2026-01-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/zvezdara/results/2025-12.json",
+      "stats": {
+        "min": 2.69,
+        "max": 69.77,
+        "mean": 22.4839,
+        "median": 20.5867,
+        "p90": 42.7175,
+        "count": 261,
+        "sum": 4578.2553,
+        "p75": 32.8875,
+        "p95": 45.597,
+        "std": 13.6771
+      },
+      "pixel_count": 202,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 3.25,
+          "to": 21.6844,
+          "count": 105,
+          "pct": 51.98
+        },
+        {
+          "class": "ниско",
+          "from": 21.6844,
+          "to": 40.1187,
+          "count": 69,
+          "pct": 34.16
+        },
+        {
+          "class": "умерено",
+          "from": 40.1187,
+          "to": 58.5531,
+          "count": 27,
+          "pct": 13.37
+        },
+        {
+          "class": "повишено",
+          "from": 58.5531,
+          "to": 76.9874,
+          "count": 1,
+          "pct": 0.5
+        },
+        {
+          "class": "високо",
+          "from": 76.9874,
+          "to": 95.4218,
+          "count": 0,
+          "pct": 0.0
+        }
+      ]
+    },
+    {
+      "id": "2025-11",
+      "label": "11/2025",
+      "kind": "monthly",
+      "date_start": "2025-11-01",
+      "date_end": "2025-12-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/zvezdara/results/2025-11.json",
+      "stats": {
+        "min": 2.94,
+        "max": 86.2,
+        "mean": 32.1203,
+        "median": 28.1712,
+        "p90": 66.6142,
+        "count": 261,
+        "sum": 6540.4509,
+        "p75": 43.535,
+        "p95": 71.04,
+        "std": 20.8127
+      },
+      "pixel_count": 202,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 3.25,
+          "to": 21.6844,
+          "count": 69,
+          "pct": 34.16
+        },
+        {
+          "class": "ниско",
+          "from": 21.6844,
+          "to": 40.1187,
+          "count": 71,
+          "pct": 35.15
+        },
+        {
+          "class": "умерено",
+          "from": 40.1187,
+          "to": 58.5531,
+          "count": 32,
+          "pct": 15.84
+        },
+        {
+          "class": "повишено",
+          "from": 58.5531,
+          "to": 76.9874,
+          "count": 25,
+          "pct": 12.38
+        },
+        {
+          "class": "високо",
+          "from": 76.9874,
+          "to": 95.4218,
+          "count": 5,
+          "pct": 2.48
+        }
+      ]
+    },
+    {
+      "id": "2025-10",
+      "label": "10/2025",
+      "kind": "monthly",
+      "date_start": "2025-10-01",
+      "date_end": "2025-11-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/zvezdara/results/2025-10.json",
+      "stats": {
+        "min": 3.22,
+        "max": 96.31,
+        "mean": 34.3558,
+        "median": 30.7375,
+        "p90": 68.07,
+        "count": 261,
+        "sum": 6995.6512,
+        "p75": 50.5325,
+        "p95": 75.9295,
+        "std": 22.0246
+      },
+      "pixel_count": 202,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 3.25,
+          "to": 21.6844,
+          "count": 62,
+          "pct": 30.69
+        },
+        {
+          "class": "ниско",
+          "from": 21.6844,
+          "to": 40.1187,
+          "count": 66,
+          "pct": 32.67
+        },
+        {
+          "class": "умерено",
+          "from": 40.1187,
+          "to": 58.5531,
+          "count": 38,
+          "pct": 18.81
+        },
+        {
+          "class": "повишено",
+          "from": 58.5531,
+          "to": 76.9874,
+          "count": 26,
+          "pct": 12.87
+        },
+        {
+          "class": "високо",
+          "from": 76.9874,
+          "to": 95.4218,
+          "count": 10,
+          "pct": 4.95
+        }
+      ]
+    },
+    {
+      "id": "2025-09",
+      "label": "09/2025",
+      "kind": "monthly",
+      "date_start": "2025-09-01",
+      "date_end": "2025-10-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/zvezdara/results/2025-09.json",
+      "stats": {
+        "min": 3.08,
+        "max": 98.93,
+        "mean": 34.7114,
+        "median": 31.6991,
+        "p90": 70.0941,
+        "count": 261,
+        "sum": 7068.0662,
+        "p75": 51.8975,
+        "p95": 75.8565,
+        "std": 22.4476
+      },
+      "pixel_count": 202,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 3.25,
+          "to": 21.6844,
+          "count": 61,
+          "pct": 30.2
+        },
+        {
+          "class": "ниско",
+          "from": 21.6844,
+          "to": 40.1187,
+          "count": 68,
+          "pct": 33.66
+        },
+        {
+          "class": "умерено",
+          "from": 40.1187,
+          "to": 58.5531,
+          "count": 37,
+          "pct": 18.32
+        },
+        {
+          "class": "повишено",
+          "from": 58.5531,
+          "to": 76.9874,
+          "count": 28,
+          "pct": 13.86
+        },
+        {
+          "class": "високо",
+          "from": 76.9874,
+          "to": 95.4218,
+          "count": 8,
+          "pct": 3.96
+        }
+      ]
+    },
+    {
+      "id": "2025-08",
+      "label": "08/2025",
+      "kind": "monthly",
+      "date_start": "2025-08-01",
+      "date_end": "2025-09-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/zvezdara/results/2025-08.json",
+      "stats": {
+        "min": 4.57,
+        "max": 98.96,
+        "mean": 34.4043,
+        "median": 31.256,
+        "p90": 66.96,
+        "count": 261,
+        "sum": 7005.5165,
+        "p75": 48.5825,
+        "p95": 73.2485,
+        "std": 20.6281
+      },
+      "pixel_count": 202,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 3.25,
+          "to": 21.6844,
+          "count": 56,
+          "pct": 27.72
+        },
+        {
+          "class": "ниско",
+          "from": 21.6844,
+          "to": 40.1187,
+          "count": 71,
+          "pct": 35.15
+        },
+        {
+          "class": "умерено",
+          "from": 40.1187,
+          "to": 58.5531,
+          "count": 45,
+          "pct": 22.28
+        },
+        {
+          "class": "повишено",
+          "from": 58.5531,
+          "to": 76.9874,
+          "count": 26,
+          "pct": 12.87
+        },
+        {
+          "class": "високо",
+          "from": 76.9874,
+          "to": 95.4218,
+          "count": 4,
+          "pct": 1.98
+        }
+      ]
+    },
+    {
+      "id": "2025-07",
+      "label": "07/2025",
+      "kind": "monthly",
+      "date_start": "2025-07-01",
+      "date_end": "2025-08-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/zvezdara/results/2025-07.json",
+      "stats": {
+        "min": 4.15,
+        "max": 83.25,
+        "mean": 33.3784,
+        "median": 30.7756,
+        "p90": 64.99,
+        "count": 261,
+        "sum": 6796.6181,
+        "p75": 48.67,
+        "p95": 69.7105,
+        "std": 20.3913
+      },
+      "pixel_count": 202,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 3.25,
+          "to": 21.6844,
+          "count": 66,
+          "pct": 32.67
+        },
+        {
+          "class": "ниско",
+          "from": 21.6844,
+          "to": 40.1187,
+          "count": 66,
+          "pct": 32.67
+        },
+        {
+          "class": "умерено",
+          "from": 40.1187,
+          "to": 58.5531,
+          "count": 41,
+          "pct": 20.3
+        },
+        {
+          "class": "повишено",
+          "from": 58.5531,
+          "to": 76.9874,
+          "count": 26,
+          "pct": 12.87
+        },
+        {
+          "class": "високо",
+          "from": 76.9874,
+          "to": 95.4218,
+          "count": 3,
+          "pct": 1.49
+        }
+      ]
+    },
+    {
+      "id": "2025-06",
+      "label": "06/2025",
+      "kind": "monthly",
+      "date_start": "2025-06-01",
+      "date_end": "2025-07-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/zvezdara/results/2025-06.json",
+      "stats": {
+        "min": 3.48,
+        "max": 98.48,
+        "mean": 33.7047,
+        "median": 30.96,
+        "p90": 64.96,
+        "count": 261,
+        "sum": 6863.0746,
+        "p75": 48.855,
+        "p95": 74.356,
+        "std": 21.5722
+      },
+      "pixel_count": 202,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 3.25,
+          "to": 21.6844,
+          "count": 65,
+          "pct": 32.18
+        },
+        {
+          "class": "ниско",
+          "from": 21.6844,
+          "to": 40.1187,
+          "count": 65,
+          "pct": 32.18
+        },
+        {
+          "class": "умерено",
+          "from": 40.1187,
+          "to": 58.5531,
+          "count": 40,
+          "pct": 19.8
+        },
+        {
+          "class": "повишено",
+          "from": 58.5531,
+          "to": 76.9874,
+          "count": 26,
+          "pct": 12.87
+        },
+        {
+          "class": "високо",
+          "from": 76.9874,
+          "to": 95.4218,
+          "count": 6,
+          "pct": 2.97
+        }
+      ]
+    },
+    {
+      "id": "2025-05",
+      "label": "05/2025",
+      "kind": "monthly",
+      "date_start": "2025-05-01",
+      "date_end": "2025-06-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/zvezdara/results/2025-05.json",
+      "stats": {
+        "min": 3.68,
+        "max": 98.32,
+        "mean": 35.1847,
+        "median": 30.6309,
+        "p90": 71.12,
+        "count": 261,
+        "sum": 7164.4361,
+        "p75": 52.185,
+        "p95": 75.6125,
+        "std": 22.242
+      },
+      "pixel_count": 202,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 3.25,
+          "to": 21.6844,
+          "count": 54,
+          "pct": 26.73
+        },
+        {
+          "class": "ниско",
+          "from": 21.6844,
+          "to": 40.1187,
+          "count": 75,
+          "pct": 37.13
+        },
+        {
+          "class": "умерено",
+          "from": 40.1187,
+          "to": 58.5531,
+          "count": 33,
+          "pct": 16.34
+        },
+        {
+          "class": "повишено",
+          "from": 58.5531,
+          "to": 76.9874,
+          "count": 30,
+          "pct": 14.85
+        },
+        {
+          "class": "високо",
+          "from": 76.9874,
+          "to": 95.4218,
+          "count": 10,
+          "pct": 4.95
+        }
+      ]
+    },
+    {
+      "id": "2025-04",
+      "label": "04/2025",
+      "kind": "monthly",
+      "date_start": "2025-04-01",
+      "date_end": "2025-05-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/zvezdara/results/2025-04.json",
+      "stats": {
+        "min": 3.27,
+        "max": 100.78,
+        "mean": 34.793,
+        "median": 31.1817,
+        "p90": 68.04,
+        "count": 261,
+        "sum": 7084.665,
+        "p75": 51.61,
+        "p95": 75.39,
+        "std": 22.0533
+      },
+      "pixel_count": 202,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 3.25,
+          "to": 21.6844,
+          "count": 65,
+          "pct": 32.18
+        },
+        {
+          "class": "ниско",
+          "from": 21.6844,
+          "to": 40.1187,
+          "count": 59,
+          "pct": 29.21
+        },
+        {
+          "class": "умерено",
+          "from": 40.1187,
+          "to": 58.5531,
+          "count": 42,
+          "pct": 20.79
+        },
+        {
+          "class": "повишено",
+          "from": 58.5531,
+          "to": 76.9874,
+          "count": 29,
+          "pct": 14.36
+        },
+        {
+          "class": "високо",
+          "from": 76.9874,
+          "to": 95.4218,
+          "count": 7,
+          "pct": 3.47
+        }
+      ]
+    },
+    {
+      "id": "2025-03",
+      "label": "03/2025",
+      "kind": "monthly",
+      "date_start": "2025-03-01",
+      "date_end": "2025-04-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/zvezdara/results/2025-03.json",
+      "stats": {
+        "min": 2.66,
+        "max": 99.95,
+        "mean": 37.3728,
+        "median": 32.39,
+        "p90": 73.63,
+        "count": 261,
+        "sum": 7609.9896,
+        "p75": 57.9925,
+        "p95": 80.9865,
+        "std": 24.8031
+      },
+      "pixel_count": 202,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 3.25,
+          "to": 21.6844,
+          "count": 61,
+          "pct": 30.2
+        },
+        {
+          "class": "ниско",
+          "from": 21.6844,
+          "to": 40.1187,
+          "count": 61,
+          "pct": 30.2
+        },
+        {
+          "class": "умерено",
+          "from": 40.1187,
+          "to": 58.5531,
+          "count": 32,
+          "pct": 15.84
+        },
+        {
+          "class": "повишено",
+          "from": 58.5531,
+          "to": 76.9874,
+          "count": 34,
+          "pct": 16.83
+        },
+        {
+          "class": "високо",
+          "from": 76.9874,
+          "to": 95.4218,
+          "count": 14,
+          "pct": 6.93
+        }
+      ]
+    },
+    {
+      "id": "2025-02",
+      "label": "02/2025",
+      "kind": "monthly",
+      "date_start": "2025-02-01",
+      "date_end": "2025-03-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/zvezdara/results/2025-02.json",
+      "stats": {
+        "min": 2.28,
+        "max": 109.73,
+        "mean": 37.7113,
+        "median": 31.8773,
+        "p90": 82.59,
+        "count": 261,
+        "sum": 7678.9093,
+        "p75": 53.46,
+        "p95": 84.9,
+        "std": 26.5616
+      },
+      "pixel_count": 202,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 3.25,
+          "to": 21.6844,
+          "count": 61,
+          "pct": 30.2
+        },
+        {
+          "class": "ниско",
+          "from": 21.6844,
+          "to": 40.1187,
+          "count": 59,
+          "pct": 29.21
+        },
+        {
+          "class": "умерено",
+          "from": 40.1187,
+          "to": 58.5531,
+          "count": 38,
+          "pct": 18.81
+        },
+        {
+          "class": "повишено",
+          "from": 58.5531,
+          "to": 76.9874,
+          "count": 17,
+          "pct": 8.42
+        },
+        {
+          "class": "високо",
+          "from": 76.9874,
+          "to": 95.4218,
+          "count": 27,
+          "pct": 13.37
+        }
+      ]
+    },
+    {
+      "id": "2025-01",
+      "label": "01/2025",
+      "kind": "monthly",
+      "date_start": "2025-01-01",
+      "date_end": "2025-02-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/zvezdara/results/2025-01.json",
+      "stats": {
+        "min": 3.42,
+        "max": 97.27,
+        "mean": 40.2308,
+        "median": 40.97,
+        "p90": 73.6368,
+        "count": 261,
+        "sum": 8191.9435,
+        "p75": 58.205,
+        "p95": 78.6645,
+        "std": 24.1187
+      },
+      "pixel_count": 202,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 3.25,
+          "to": 21.6844,
+          "count": 50,
+          "pct": 24.75
+        },
+        {
+          "class": "ниско",
+          "from": 21.6844,
+          "to": 40.1187,
+          "count": 48,
+          "pct": 23.76
+        },
+        {
+          "class": "умерено",
+          "from": 40.1187,
+          "to": 58.5531,
+          "count": 54,
+          "pct": 26.73
+        },
+        {
+          "class": "повишено",
+          "from": 58.5531,
+          "to": 76.9874,
+          "count": 35,
+          "pct": 17.33
+        },
+        {
+          "class": "високо",
+          "from": 76.9874,
+          "to": 95.4218,
+          "count": 15,
+          "pct": 7.43
+        }
+      ]
+    },
+    {
+      "id": "2024-12",
+      "label": "12/2024",
+      "kind": "monthly",
+      "date_start": "2024-12-01",
+      "date_end": "2025-01-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/zvezdara/results/2024-12.json",
+      "stats": {
+        "min": 3.49,
+        "max": 139.49,
+        "mean": 45.7928,
+        "median": 45.8094,
+        "p90": 86.5178,
+        "count": 261,
+        "sum": 9324.4994,
+        "p75": 65.4175,
+        "p95": 90.1465,
+        "std": 27.4432
+      },
+      "pixel_count": 202,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 3.25,
+          "to": 21.6844,
+          "count": 44,
+          "pct": 21.78
+        },
+        {
+          "class": "ниско",
+          "from": 21.6844,
+          "to": 40.1187,
+          "count": 42,
+          "pct": 20.79
+        },
+        {
+          "class": "умерено",
+          "from": 40.1187,
+          "to": 58.5531,
+          "count": 53,
+          "pct": 26.24
+        },
+        {
+          "class": "повишено",
+          "from": 58.5531,
+          "to": 76.9874,
+          "count": 33,
+          "pct": 16.34
+        },
+        {
+          "class": "високо",
+          "from": 76.9874,
+          "to": 95.4218,
+          "count": 30,
+          "pct": 14.85
+        }
+      ]
+    },
+    {
+      "id": "2024-11",
+      "label": "11/2024",
+      "kind": "monthly",
+      "date_start": "2024-11-01",
+      "date_end": "2024-12-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/zvezdara/results/2024-11.json",
+      "stats": {
+        "min": 3.71,
+        "max": 101.73,
+        "mean": 32.0701,
+        "median": 27.55,
+        "p90": 63.2,
+        "count": 261,
+        "sum": 6530.2369,
+        "p75": 44.81,
+        "p95": 68.4805,
+        "std": 19.9343
+      },
+      "pixel_count": 202,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 3.25,
+          "to": 21.6844,
+          "count": 70,
+          "pct": 34.65
+        },
+        {
+          "class": "ниско",
+          "from": 21.6844,
+          "to": 40.1187,
+          "count": 60,
+          "pct": 29.7
+        },
+        {
+          "class": "умерено",
+          "from": 40.1187,
+          "to": 58.5531,
+          "count": 46,
+          "pct": 22.77
+        },
+        {
+          "class": "повишено",
+          "from": 58.5531,
+          "to": 76.9874,
+          "count": 25,
+          "pct": 12.38
+        },
+        {
+          "class": "високо",
+          "from": 76.9874,
+          "to": 95.4218,
+          "count": 1,
+          "pct": 0.5
+        }
+      ]
+    },
+    {
+      "id": "2024-10",
+      "label": "10/2024",
+      "kind": "monthly",
+      "date_start": "2024-10-01",
+      "date_end": "2024-11-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/zvezdara/results/2024-10.json",
+      "stats": {
+        "min": 3.51,
+        "max": 93.67,
+        "mean": 34.1396,
+        "median": 30.45,
+        "p90": 67.18,
+        "count": 261,
+        "sum": 6951.6337,
+        "p75": 48.905,
+        "p95": 73.9325,
+        "std": 21.7418
+      },
+      "pixel_count": 202,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 3.25,
+          "to": 21.6844,
+          "count": 62,
+          "pct": 30.69
+        },
+        {
+          "class": "ниско",
+          "from": 21.6844,
+          "to": 40.1187,
+          "count": 67,
+          "pct": 33.17
+        },
+        {
+          "class": "умерено",
+          "from": 40.1187,
+          "to": 58.5531,
+          "count": 41,
+          "pct": 20.3
+        },
+        {
+          "class": "повишено",
+          "from": 58.5531,
+          "to": 76.9874,
+          "count": 24,
+          "pct": 11.88
+        },
+        {
+          "class": "високо",
+          "from": 76.9874,
+          "to": 95.4218,
+          "count": 8,
+          "pct": 3.96
+        }
+      ]
+    },
+    {
+      "id": "2024-09",
+      "label": "09/2024",
+      "kind": "monthly",
+      "date_start": "2024-09-01",
+      "date_end": "2024-10-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/zvezdara/results/2024-09.json",
+      "stats": {
+        "min": 3.4,
+        "max": 100.3,
+        "mean": 33.1268,
+        "median": 29.48,
+        "p90": 68.2778,
+        "count": 261,
+        "sum": 6745.3928,
+        "p75": 47.8925,
+        "p95": 72.461,
+        "std": 21.3897
+      },
+      "pixel_count": 202,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 3.25,
+          "to": 21.6844,
+          "count": 62,
+          "pct": 30.69
+        },
+        {
+          "class": "ниско",
+          "from": 21.6844,
+          "to": 40.1187,
+          "count": 72,
+          "pct": 35.64
+        },
+        {
+          "class": "умерено",
+          "from": 40.1187,
+          "to": 58.5531,
+          "count": 38,
+          "pct": 18.81
+        },
+        {
+          "class": "повишено",
+          "from": 58.5531,
+          "to": 76.9874,
+          "count": 25,
+          "pct": 12.38
+        },
+        {
+          "class": "високо",
+          "from": 76.9874,
+          "to": 95.4218,
+          "count": 5,
+          "pct": 2.48
+        }
+      ]
+    },
+    {
+      "id": "2024-08",
+      "label": "08/2024",
+      "kind": "monthly",
+      "date_start": "2024-08-01",
+      "date_end": "2024-09-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/zvezdara/results/2024-08.json",
+      "stats": {
+        "min": 3.45,
+        "max": 101.3,
+        "mean": 32.9098,
+        "median": 29.5102,
+        "p90": 64.76,
+        "count": 261,
+        "sum": 6701.2114,
+        "p75": 47.38,
+        "p95": 71.5005,
+        "std": 21.1763
+      },
+      "pixel_count": 202,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 3.25,
+          "to": 21.6844,
+          "count": 69,
+          "pct": 34.16
+        },
+        {
+          "class": "ниско",
+          "from": 21.6844,
+          "to": 40.1187,
+          "count": 65,
+          "pct": 32.18
+        },
+        {
+          "class": "умерено",
+          "from": 40.1187,
+          "to": 58.5531,
+          "count": 38,
+          "pct": 18.81
+        },
+        {
+          "class": "повишено",
+          "from": 58.5531,
+          "to": 76.9874,
+          "count": 24,
+          "pct": 11.88
+        },
+        {
+          "class": "високо",
+          "from": 76.9874,
+          "to": 95.4218,
+          "count": 6,
+          "pct": 2.97
+        }
+      ]
+    },
+    {
+      "id": "2024-07",
+      "label": "07/2024",
+      "kind": "monthly",
+      "date_start": "2024-07-01",
+      "date_end": "2024-08-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/zvezdara/results/2024-07.json",
+      "stats": {
+        "min": 4.4,
+        "max": 77.82,
+        "mean": 30.2595,
+        "median": 26.6836,
+        "p90": 59.6611,
+        "count": 261,
+        "sum": 6161.5507,
+        "p75": 43.0375,
+        "p95": 68.776,
+        "std": 18.8625
+      },
+      "pixel_count": 202,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 3.25,
+          "to": 21.6844,
+          "count": 71,
+          "pct": 35.15
+        },
+        {
+          "class": "ниско",
+          "from": 21.6844,
+          "to": 40.1187,
+          "count": 71,
+          "pct": 35.15
+        },
+        {
+          "class": "умерено",
+          "from": 40.1187,
+          "to": 58.5531,
+          "count": 39,
+          "pct": 19.31
+        },
+        {
+          "class": "повишено",
+          "from": 58.5531,
+          "to": 76.9874,
+          "count": 21,
+          "pct": 10.4
+        },
+        {
+          "class": "високо",
+          "from": 76.9874,
+          "to": 95.4218,
+          "count": 0,
+          "pct": 0.0
+        }
+      ]
+    },
+    {
+      "id": "2024-06",
+      "label": "06/2024",
+      "kind": "monthly",
+      "date_start": "2024-06-01",
+      "date_end": "2024-07-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/zvezdara/results/2024-06.json",
+      "stats": {
+        "min": 3.09,
+        "max": 101.92,
+        "mean": 32.5755,
+        "median": 28.7925,
+        "p90": 66.79,
+        "count": 261,
+        "sum": 6633.1299,
+        "p75": 47.2025,
+        "p95": 72.212,
+        "std": 21.4243
+      },
+      "pixel_count": 202,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 3.25,
+          "to": 21.6844,
+          "count": 69,
+          "pct": 34.16
+        },
+        {
+          "class": "ниско",
+          "from": 21.6844,
+          "to": 40.1187,
+          "count": 67,
+          "pct": 33.17
+        },
+        {
+          "class": "умерено",
+          "from": 40.1187,
+          "to": 58.5531,
+          "count": 35,
+          "pct": 17.33
+        },
+        {
+          "class": "повишено",
+          "from": 58.5531,
+          "to": 76.9874,
+          "count": 26,
+          "pct": 12.87
+        },
+        {
+          "class": "високо",
+          "from": 76.9874,
+          "to": 95.4218,
+          "count": 5,
+          "pct": 2.48
+        }
+      ]
+    },
+    {
+      "id": "2024-05",
+      "label": "05/2024",
+      "kind": "monthly",
+      "date_start": "2024-05-01",
+      "date_end": "2024-06-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/zvezdara/results/2024-05.json",
+      "stats": {
+        "min": 4.53,
+        "max": 92.13,
+        "mean": 33.3921,
+        "median": 29.6668,
+        "p90": 65.04,
+        "count": 261,
+        "sum": 6799.4165,
+        "p75": 48.525,
+        "p95": 71.9735,
+        "std": 20.2979
+      },
+      "pixel_count": 202,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 3.25,
+          "to": 21.6844,
+          "count": 63,
+          "pct": 31.19
+        },
+        {
+          "class": "ниско",
+          "from": 21.6844,
+          "to": 40.1187,
+          "count": 69,
+          "pct": 34.16
+        },
+        {
+          "class": "умерено",
+          "from": 40.1187,
+          "to": 58.5531,
+          "count": 46,
+          "pct": 22.77
+        },
+        {
+          "class": "повишено",
+          "from": 58.5531,
+          "to": 76.9874,
+          "count": 19,
+          "pct": 9.41
+        },
+        {
+          "class": "високо",
+          "from": 76.9874,
+          "to": 95.4218,
+          "count": 5,
+          "pct": 2.48
+        }
+      ]
+    },
+    {
+      "id": "2024-04",
+      "label": "04/2024",
+      "kind": "monthly",
+      "date_start": "2024-04-01",
+      "date_end": "2024-05-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/zvezdara/results/2024-04.json",
+      "stats": {
+        "min": 3.47,
+        "max": 123.38,
+        "mean": 37.5293,
+        "median": 33.25,
+        "p90": 72.87,
+        "count": 261,
+        "sum": 7641.8474,
+        "p75": 56.0375,
+        "p95": 79.632,
+        "std": 23.9372
+      },
+      "pixel_count": 202,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 3.25,
+          "to": 21.6844,
+          "count": 60,
+          "pct": 29.7
+        },
+        {
+          "class": "ниско",
+          "from": 21.6844,
+          "to": 40.1187,
+          "count": 55,
+          "pct": 27.23
+        },
+        {
+          "class": "умерено",
+          "from": 40.1187,
+          "to": 58.5531,
+          "count": 41,
+          "pct": 20.3
+        },
+        {
+          "class": "повишено",
+          "from": 58.5531,
+          "to": 76.9874,
+          "count": 32,
+          "pct": 15.84
+        },
+        {
+          "class": "високо",
+          "from": 76.9874,
+          "to": 95.4218,
+          "count": 14,
+          "pct": 6.93
+        }
+      ]
+    },
+    {
+      "id": "2024-03",
+      "label": "03/2024",
+      "kind": "monthly",
+      "date_start": "2024-03-01",
+      "date_end": "2024-04-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/zvezdara/results/2024-03.json",
+      "stats": {
+        "min": 3.56,
+        "max": 106.27,
+        "mean": 35.1783,
+        "median": 31.09,
+        "p90": 71.237,
+        "count": 261,
+        "sum": 7163.1382,
+        "p75": 52.725,
+        "p95": 80.847,
+        "std": 23.7763
+      },
+      "pixel_count": 202,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 3.25,
+          "to": 21.6844,
+          "count": 66,
+          "pct": 32.67
+        },
+        {
+          "class": "ниско",
+          "from": 21.6844,
+          "to": 40.1187,
+          "count": 59,
+          "pct": 29.21
+        },
+        {
+          "class": "умерено",
+          "from": 40.1187,
+          "to": 58.5531,
+          "count": 35,
+          "pct": 17.33
+        },
+        {
+          "class": "повишено",
+          "from": 58.5531,
+          "to": 76.9874,
+          "count": 28,
+          "pct": 13.86
+        },
+        {
+          "class": "високо",
+          "from": 76.9874,
+          "to": 95.4218,
+          "count": 14,
+          "pct": 6.93
+        }
+      ]
+    },
+    {
+      "id": "2024-02",
+      "label": "02/2024",
+      "kind": "monthly",
+      "date_start": "2024-02-01",
+      "date_end": "2024-03-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/zvezdara/results/2024-02.json",
+      "stats": {
+        "min": 3.43,
+        "max": 102.76,
+        "mean": 39.1488,
+        "median": 34.275,
+        "p90": 80.735,
+        "count": 261,
+        "sum": 7971.607,
+        "p75": 59.63,
+        "p95": 86.4725,
+        "std": 25.879
+      },
+      "pixel_count": 202,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 3.25,
+          "to": 21.6844,
+          "count": 56,
+          "pct": 27.72
+        },
+        {
+          "class": "ниско",
+          "from": 21.6844,
+          "to": 40.1187,
+          "count": 64,
+          "pct": 31.68
+        },
+        {
+          "class": "умерено",
+          "from": 40.1187,
+          "to": 58.5531,
+          "count": 29,
+          "pct": 14.36
+        },
+        {
+          "class": "повишено",
+          "from": 58.5531,
+          "to": 76.9874,
+          "count": 31,
+          "pct": 15.35
+        },
+        {
+          "class": "високо",
+          "from": 76.9874,
+          "to": 95.4218,
+          "count": 22,
+          "pct": 10.89
+        }
+      ]
+    },
+    {
+      "id": "2024-01",
+      "label": "01/2024",
+      "kind": "monthly",
+      "date_start": "2024-01-01",
+      "date_end": "2024-02-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/zvezdara/results/2024-01.json",
+      "stats": {
+        "min": 4.14,
+        "max": 136.24,
+        "mean": 55.8344,
+        "median": 53.6356,
+        "p90": 106.5426,
+        "count": 261,
+        "sum": 11369.2031,
+        "p75": 81.595,
+        "p95": 117.546,
+        "std": 35.2781
+      },
+      "pixel_count": 202,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 3.25,
+          "to": 21.6844,
+          "count": 45,
+          "pct": 22.28
+        },
+        {
+          "class": "ниско",
+          "from": 21.6844,
+          "to": 40.1187,
+          "count": 32,
+          "pct": 15.84
+        },
+        {
+          "class": "умерено",
+          "from": 40.1187,
+          "to": 58.5531,
+          "count": 31,
+          "pct": 15.35
+        },
+        {
+          "class": "повишено",
+          "from": 58.5531,
+          "to": 76.9874,
+          "count": 35,
+          "pct": 17.33
+        },
+        {
+          "class": "високо",
+          "from": 76.9874,
+          "to": 95.4218,
+          "count": 59,
+          "pct": 29.21
+        }
+      ]
+    }
+  ],
+  "yearly": [
+    {
+      "id": "2014",
+      "label": "2014. (годишњи просек)",
+      "kind": "yearly",
+      "date_start": "2014-01-01",
+      "date_end": "2015-01-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/zvezdara/results/2014.json",
+      "stats": {
+        "min": 2.5753,
+        "max": 119.1387,
+        "mean": 32.1832,
+        "median": 24.7341,
+        "p90": 68.8412,
+        "count": 259,
+        "sum": 6554.7791,
+        "p75": 48.0841,
+        "p95": 79.9854,
+        "std": 24.6528
+      },
+      "pixel_count": 203,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 3.25,
+          "to": 21.6844,
+          "count": 93,
+          "pct": 45.81
+        },
+        {
+          "class": "ниско",
+          "from": 21.6844,
+          "to": 40.1187,
+          "count": 42,
+          "pct": 20.69
+        },
+        {
+          "class": "умерено",
+          "from": 40.1187,
+          "to": 58.5531,
+          "count": 34,
+          "pct": 16.75
+        },
+        {
+          "class": "повишено",
+          "from": 58.5531,
+          "to": 76.9874,
+          "count": 21,
+          "pct": 10.34
+        },
+        {
+          "class": "високо",
+          "from": 76.9874,
+          "to": 95.4218,
+          "count": 13,
+          "pct": 6.4
+        }
+      ]
+    },
+    {
+      "id": "2015",
+      "label": "2015. (годишњи просек)",
+      "kind": "yearly",
+      "date_start": "2015-01-01",
+      "date_end": "2016-01-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/zvezdara/results/2015.json",
+      "stats": {
+        "min": 2.336,
+        "max": 106.9261,
+        "mean": 30.2664,
+        "median": 23.2302,
+        "p90": 65.5705,
+        "count": 259,
+        "sum": 6164.3653,
+        "p75": 43.9108,
+        "p95": 76.847,
+        "std": 23.2986
+      },
+      "pixel_count": 203,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 3.25,
+          "to": 21.6844,
+          "count": 98,
+          "pct": 48.28
+        },
+        {
+          "class": "ниско",
+          "from": 21.6844,
+          "to": 40.1187,
+          "count": 44,
+          "pct": 21.67
+        },
+        {
+          "class": "умерено",
+          "from": 40.1187,
+          "to": 58.5531,
+          "count": 32,
+          "pct": 15.76
+        },
+        {
+          "class": "повишено",
+          "from": 58.5531,
+          "to": 76.9874,
+          "count": 19,
+          "pct": 9.36
+        },
+        {
+          "class": "високо",
+          "from": 76.9874,
+          "to": 95.4218,
+          "count": 10,
+          "pct": 4.93
+        }
+      ]
+    },
+    {
+      "id": "2016",
+      "label": "2016. (годишњи просек)",
+      "kind": "yearly",
+      "date_start": "2016-01-01",
+      "date_end": "2017-01-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/zvezdara/results/2016.json",
+      "stats": {
+        "min": 2.7905,
+        "max": 104.9113,
+        "mean": 33.0881,
+        "median": 25.28,
+        "p90": 72.9036,
+        "count": 259,
+        "sum": 6739.0764,
+        "p75": 46.9853,
+        "p95": 81.3255,
+        "std": 24.9661
+      },
+      "pixel_count": 203,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 3.25,
+          "to": 21.6844,
+          "count": 87,
+          "pct": 42.86
+        },
+        {
+          "class": "ниско",
+          "from": 21.6844,
+          "to": 40.1187,
+          "count": 49,
+          "pct": 24.14
+        },
+        {
+          "class": "умерено",
+          "from": 40.1187,
+          "to": 58.5531,
+          "count": 33,
+          "pct": 16.26
+        },
+        {
+          "class": "повишено",
+          "from": 58.5531,
+          "to": 76.9874,
+          "count": 19,
+          "pct": 9.36
+        },
+        {
+          "class": "високо",
+          "from": 76.9874,
+          "to": 95.4218,
+          "count": 15,
+          "pct": 7.39
+        }
+      ]
+    },
+    {
+      "id": "2017",
+      "label": "2017. (годишњи просек)",
+      "kind": "yearly",
+      "date_start": "2017-01-01",
+      "date_end": "2018-01-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/zvezdara/results/2017.json",
+      "stats": {
+        "min": 2.6646,
+        "max": 104.0534,
+        "mean": 31.7344,
+        "median": 24.6842,
+        "p90": 67.8871,
+        "count": 259,
+        "sum": 6463.3696,
+        "p75": 46.3965,
+        "p95": 80.0934,
+        "std": 23.8696
+      },
+      "pixel_count": 203,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 3.25,
+          "to": 21.6844,
+          "count": 91,
+          "pct": 44.83
+        },
+        {
+          "class": "ниско",
+          "from": 21.6844,
+          "to": 40.1187,
+          "count": 47,
+          "pct": 23.15
+        },
+        {
+          "class": "умерено",
+          "from": 40.1187,
+          "to": 58.5531,
+          "count": 34,
+          "pct": 16.75
+        },
+        {
+          "class": "повишено",
+          "from": 58.5531,
+          "to": 76.9874,
+          "count": 18,
+          "pct": 8.87
+        },
+        {
+          "class": "високо",
+          "from": 76.9874,
+          "to": 95.4218,
+          "count": 13,
+          "pct": 6.4
+        }
+      ]
+    },
+    {
+      "id": "2018",
+      "label": "2018. (годишњи просек)",
+      "kind": "yearly",
+      "date_start": "2018-01-01",
+      "date_end": "2019-01-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/zvezdara/results/2018.json",
+      "stats": {
+        "min": 3.3267,
+        "max": 93.3467,
+        "mean": 30.7955,
+        "median": 25.1763,
+        "p90": 63.7933,
+        "count": 259,
+        "sum": 6272.1281,
+        "p75": 44.5846,
+        "p95": 74.0545,
+        "std": 21.5666
+      },
+      "pixel_count": 203,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 3.25,
+          "to": 21.6844,
+          "count": 91,
+          "pct": 44.83
+        },
+        {
+          "class": "ниско",
+          "from": 21.6844,
+          "to": 40.1187,
+          "count": 50,
+          "pct": 24.63
+        },
+        {
+          "class": "умерено",
+          "from": 40.1187,
+          "to": 58.5531,
+          "count": 35,
+          "pct": 17.24
+        },
+        {
+          "class": "повишено",
+          "from": 58.5531,
+          "to": 76.9874,
+          "count": 21,
+          "pct": 10.34
+        },
+        {
+          "class": "високо",
+          "from": 76.9874,
+          "to": 95.4218,
+          "count": 6,
+          "pct": 2.96
+        }
+      ]
+    },
+    {
+      "id": "2019",
+      "label": "2019. (годишњи просек)",
+      "kind": "yearly",
+      "date_start": "2019-01-01",
+      "date_end": "2020-01-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/zvezdara/results/2019.json",
+      "stats": {
+        "min": 3.4883,
+        "max": 116.545,
+        "mean": 35.8423,
+        "median": 29.7188,
+        "p90": 73.3075,
+        "count": 259,
+        "sum": 7300.0324,
+        "p75": 53.9071,
+        "p95": 83.1828,
+        "std": 24.837
+      },
+      "pixel_count": 203,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 3.25,
+          "to": 21.6844,
+          "count": 72,
+          "pct": 35.47
+        },
+        {
+          "class": "ниско",
+          "from": 21.6844,
+          "to": 40.1187,
+          "count": 55,
+          "pct": 27.09
+        },
+        {
+          "class": "умерено",
+          "from": 40.1187,
+          "to": 58.5531,
+          "count": 35,
+          "pct": 17.24
+        },
+        {
+          "class": "повишено",
+          "from": 58.5531,
+          "to": 76.9874,
+          "count": 25,
+          "pct": 12.32
+        },
+        {
+          "class": "високо",
+          "from": 76.9874,
+          "to": 95.4218,
+          "count": 16,
+          "pct": 7.88
+        }
+      ]
+    },
+    {
+      "id": "2020",
+      "label": "2020. (годишњи просек)",
+      "kind": "yearly",
+      "date_start": "2020-01-01",
+      "date_end": "2021-01-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/zvezdara/results/2020.json",
+      "stats": {
+        "min": 3.6983,
+        "max": 109.5158,
+        "mean": 31.0555,
+        "median": 26.2353,
+        "p90": 60.8196,
+        "count": 259,
+        "sum": 6325.0846,
+        "p75": 44.82,
+        "p95": 69.9302,
+        "std": 21.0324
+      },
+      "pixel_count": 203,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 3.25,
+          "to": 21.6844,
+          "count": 87,
+          "pct": 42.86
+        },
+        {
+          "class": "ниско",
+          "from": 21.6844,
+          "to": 40.1187,
+          "count": 51,
+          "pct": 25.12
+        },
+        {
+          "class": "умерено",
+          "from": 40.1187,
+          "to": 58.5531,
+          "count": 41,
+          "pct": 20.2
+        },
+        {
+          "class": "повишено",
+          "from": 58.5531,
+          "to": 76.9874,
+          "count": 19,
+          "pct": 9.36
+        },
+        {
+          "class": "високо",
+          "from": 76.9874,
+          "to": 95.4218,
+          "count": 5,
+          "pct": 2.46
+        }
+      ]
+    },
+    {
+      "id": "2021",
+      "label": "2021. (годишњи просек)",
+      "kind": "yearly",
+      "date_start": "2021-01-01",
+      "date_end": "2022-01-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/zvezdara/results/2021.json",
+      "stats": {
+        "min": 4.1817,
+        "max": 144.9617,
+        "mean": 34.7417,
+        "median": 29.4475,
+        "p90": 67.9967,
+        "count": 259,
+        "sum": 7075.8609,
+        "p75": 49.2929,
+        "p95": 74.9475,
+        "std": 23.4909
+      },
+      "pixel_count": 203,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 3.25,
+          "to": 21.6844,
+          "count": 77,
+          "pct": 37.93
+        },
+        {
+          "class": "ниско",
+          "from": 21.6844,
+          "to": 40.1187,
+          "count": 51,
+          "pct": 25.12
+        },
+        {
+          "class": "умерено",
+          "from": 40.1187,
+          "to": 58.5531,
+          "count": 44,
+          "pct": 21.67
+        },
+        {
+          "class": "повишено",
+          "from": 58.5531,
+          "to": 76.9874,
+          "count": 22,
+          "pct": 10.84
+        },
+        {
+          "class": "високо",
+          "from": 76.9874,
+          "to": 95.4218,
+          "count": 9,
+          "pct": 4.43
+        }
+      ]
+    },
+    {
+      "id": "2022",
+      "label": "2022. (годишњи просек)",
+      "kind": "yearly",
+      "date_start": "2022-01-01",
+      "date_end": "2023-01-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/zvezdara/results/2022.json",
+      "stats": {
+        "min": 3.7092,
+        "max": 104.18,
+        "mean": 35.4355,
+        "median": 30.6254,
+        "p90": 69.2292,
+        "count": 259,
+        "sum": 7217.1646,
+        "p75": 52.1554,
+        "p95": 77.8356,
+        "std": 23.1097
+      },
+      "pixel_count": 203,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 3.25,
+          "to": 21.6844,
+          "count": 68,
+          "pct": 33.5
+        },
+        {
+          "class": "ниско",
+          "from": 21.6844,
+          "to": 40.1187,
+          "count": 60,
+          "pct": 29.56
+        },
+        {
+          "class": "умерено",
+          "from": 40.1187,
+          "to": 58.5531,
+          "count": 39,
+          "pct": 19.21
+        },
+        {
+          "class": "повишено",
+          "from": 58.5531,
+          "to": 76.9874,
+          "count": 24,
+          "pct": 11.82
+        },
+        {
+          "class": "високо",
+          "from": 76.9874,
+          "to": 95.4218,
+          "count": 12,
+          "pct": 5.91
+        }
+      ]
+    },
+    {
+      "id": "2023",
+      "label": "2023. (годишњи просек)",
+      "kind": "yearly",
+      "date_start": "2023-01-01",
+      "date_end": "2024-01-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/zvezdara/results/2023.json",
+      "stats": {
+        "min": 3.5592,
+        "max": 90.5073,
+        "mean": 34.8908,
+        "median": 29.6813,
+        "p90": 71.4221,
+        "count": 259,
+        "sum": 7106.2251,
+        "p75": 51.1282,
+        "p95": 77.127,
+        "std": 23.2201
+      },
+      "pixel_count": 203,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 3.25,
+          "to": 21.6844,
+          "count": 72,
+          "pct": 35.47
+        },
+        {
+          "class": "ниско",
+          "from": 21.6844,
+          "to": 40.1187,
+          "count": 56,
+          "pct": 27.59
+        },
+        {
+          "class": "умерено",
+          "from": 40.1187,
+          "to": 58.5531,
+          "count": 38,
+          "pct": 18.72
+        },
+        {
+          "class": "повишено",
+          "from": 58.5531,
+          "to": 76.9874,
+          "count": 26,
+          "pct": 12.81
+        },
+        {
+          "class": "високо",
+          "from": 76.9874,
+          "to": 95.4218,
+          "count": 11,
+          "pct": 5.42
+        }
+      ]
+    },
+    {
+      "id": "2024",
+      "label": "2024. (годишњи просек)",
+      "kind": "yearly",
+      "date_start": "2024-01-01",
+      "date_end": "2025-01-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/zvezdara/results/2024.json",
+      "stats": {
+        "min": 4.0558,
+        "max": 101.3458,
+        "mean": 39.1273,
+        "median": 35.3742,
+        "p90": 77.9109,
+        "count": 259,
+        "sum": 7969.0749,
+        "p75": 56.9454,
+        "p95": 83.2212,
+        "std": 24.404
+      },
+      "pixel_count": 203,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 3.25,
+          "to": 21.6844,
+          "count": 56,
+          "pct": 27.59
+        },
+        {
+          "class": "ниско",
+          "from": 21.6844,
+          "to": 40.1187,
+          "count": 63,
+          "pct": 31.03
+        },
+        {
+          "class": "умерено",
+          "from": 40.1187,
+          "to": 58.5531,
+          "count": 37,
+          "pct": 18.23
+        },
+        {
+          "class": "повишено",
+          "from": 58.5531,
+          "to": 76.9874,
+          "count": 26,
+          "pct": 12.81
+        },
+        {
+          "class": "високо",
+          "from": 76.9874,
+          "to": 95.4218,
+          "count": 21,
+          "pct": 10.34
+        }
+      ]
+    },
+    {
+      "id": "2025",
+      "label": "2025. (годишњи просек)",
+      "kind": "yearly",
+      "date_start": "2025-01-01",
+      "date_end": "2026-01-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/zvezdara/results/2025.json",
+      "stats": {
+        "min": 3.8067,
+        "max": 92.3542,
+        "mean": 36.3284,
+        "median": 33.6529,
+        "p90": 71.5475,
+        "count": 259,
+        "sum": 7399.0349,
+        "p75": 51.1467,
+        "p95": 75.8572,
+        "std": 22.519
+      },
+      "pixel_count": 203,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 3.25,
+          "to": 21.6844,
+          "count": 59,
+          "pct": 29.06
+        },
+        {
+          "class": "ниско",
+          "from": 21.6844,
+          "to": 40.1187,
+          "count": 66,
+          "pct": 32.51
+        },
+        {
+          "class": "умерено",
+          "from": 40.1187,
+          "to": 58.5531,
+          "count": 38,
+          "pct": 18.72
+        },
+        {
+          "class": "повишено",
+          "from": 58.5531,
+          "to": 76.9874,
+          "count": 32,
+          "pct": 15.76
+        },
+        {
+          "class": "високо",
+          "from": 76.9874,
+          "to": 95.4218,
+          "count": 8,
+          "pct": 3.94
+        }
+      ]
+    }
+  ],
+  "trend": {
+    "mean_linear": {
+      "ok": true,
+      "n": 12,
+      "slope_abs_per_year": 0.571753,
+      "slope_pct_per_year": 1.7766,
+      "intercept": -1120.865428,
+      "r2": 0.5834,
+      "first_year": 2014,
+      "last_year": 2025
+    },
+    "mean_sen_slope_abs_per_year": 0.57615,
+    "mann_kendall_mean": {
+      "ok": true,
+      "n": 12,
+      "s": 36,
+      "z": 2.4,
+      "p_value": 0.01639,
+      "kendall_tau": 0.5455,
+      "trend": "растући",
+      "significant_0_05": true
+    },
+    "forecast_next_5_years": [
+      {
+        "year": 2026,
+        "linear_mean": 37.5061,
+        "sen_mean": 36.9046,
+        "note": "Пројекција није мерење; важи само ако се досадашњи тренд настави."
+      },
+      {
+        "year": 2027,
+        "linear_mean": 38.0779,
+        "sen_mean": 37.4807,
+        "note": "Пројекција није мерење; важи само ако се досадашњи тренд настави."
+      },
+      {
+        "year": 2028,
+        "linear_mean": 38.6497,
+        "sen_mean": 38.0569,
+        "note": "Пројекција није мерење; важи само ако се досадашњи тренд настави."
+      },
+      {
+        "year": 2029,
+        "linear_mean": 39.2214,
+        "sen_mean": 38.633,
+        "note": "Пројекција није мерење; важи само ако се досадашњи тренд настави."
+      },
+      {
+        "year": 2030,
+        "linear_mean": 39.7932,
+        "sen_mean": 39.2092,
+        "note": "Пројекција није мерење; важи само ако се досадашњи тренд настави."
+      }
+    ]
+  },
+  "seasonality": {
+    "01": {
+      "count": 3,
+      "min": 40.2308,
+      "max": 55.8344,
+      "mean": 49.1112,
+      "median": 51.2685,
+      "p75": 53.5515,
+      "p90": 54.9212,
+      "p95": 55.3778,
+      "std": 6.5502,
+      "sum": 147.3337
+    },
+    "02": {
+      "count": 3,
+      "min": 33.7668,
+      "max": 39.1488,
+      "mean": 36.8756,
+      "median": 37.7113,
+      "p75": 38.4301,
+      "p90": 38.8613,
+      "p95": 39.0051,
+      "std": 2.2753,
+      "sum": 110.6269
+    },
+    "03": {
+      "count": 3,
+      "min": 35.1783,
+      "max": 37.835,
+      "mean": 36.7954,
+      "median": 37.3728,
+      "p75": 37.6039,
+      "p90": 37.7426,
+      "p95": 37.7888,
+      "std": 1.1589,
+      "sum": 110.3861
+    },
+    "04": {
+      "count": 3,
+      "min": 34.793,
+      "max": 37.9893,
+      "mean": 36.7705,
+      "median": 37.5293,
+      "p75": 37.7593,
+      "p90": 37.8973,
+      "p95": 37.9433,
+      "std": 1.4109,
+      "sum": 110.3116
+    },
+    "05": {
+      "count": 2,
+      "min": 33.3921,
+      "max": 35.1847,
+      "mean": 34.2884,
+      "median": 34.2884,
+      "p75": 34.7366,
+      "p90": 35.0054,
+      "p95": 35.0951,
+      "std": 0.8963,
+      "sum": 68.5768
+    },
+    "06": {
+      "count": 2,
+      "min": 32.5755,
+      "max": 33.7047,
+      "mean": 33.1401,
+      "median": 33.1401,
+      "p75": 33.4224,
+      "p90": 33.5918,
+      "p95": 33.6482,
+      "std": 0.5646,
+      "sum": 66.2802
+    },
+    "07": {
+      "count": 2,
+      "min": 30.2595,
+      "max": 33.3784,
+      "mean": 31.819,
+      "median": 31.819,
+      "p75": 32.5987,
+      "p90": 33.0665,
+      "p95": 33.2225,
+      "std": 1.5595,
+      "sum": 63.6379
+    },
+    "08": {
+      "count": 2,
+      "min": 32.9098,
+      "max": 34.4043,
+      "mean": 33.657,
+      "median": 33.657,
+      "p75": 34.0307,
+      "p90": 34.2548,
+      "p95": 34.3296,
+      "std": 0.7473,
+      "sum": 67.3141
+    },
+    "09": {
+      "count": 2,
+      "min": 33.1268,
+      "max": 34.7114,
+      "mean": 33.9191,
+      "median": 33.9191,
+      "p75": 34.3152,
+      "p90": 34.5529,
+      "p95": 34.6322,
+      "std": 0.7923,
+      "sum": 67.8382
+    },
+    "10": {
+      "count": 2,
+      "min": 34.1396,
+      "max": 34.3558,
+      "mean": 34.2477,
+      "median": 34.2477,
+      "p75": 34.3017,
+      "p90": 34.3342,
+      "p95": 34.345,
+      "std": 0.1081,
+      "sum": 68.4954
+    },
+    "11": {
+      "count": 2,
+      "min": 32.0701,
+      "max": 32.1203,
+      "mean": 32.0952,
+      "median": 32.0952,
+      "p75": 32.1077,
+      "p90": 32.1153,
+      "p95": 32.1178,
+      "std": 0.0251,
+      "sum": 64.1904
+    },
+    "12": {
+      "count": 2,
+      "min": 22.4839,
+      "max": 45.7928,
+      "mean": 34.1384,
+      "median": 34.1384,
+      "p75": 39.9656,
+      "p90": 43.4619,
+      "p95": 44.6274,
+      "std": 11.6545,
+      "sum": 68.2767
+    }
+  },
+  "limits": [
+    "VIIRS радијанса није SQM вредност у mag/arcsec².",
+    "Јавна топлотна мапа је интерполисана визуелизација; статистика се рачуна из сирових пиксела.",
+    "Месечни просеци се не смеју мешати са годишњим трендом; за тренд користити годишње просеке."
+  ]
+}

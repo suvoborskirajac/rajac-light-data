@@ -1,0 +1,2636 @@
+{
+  "ok": true,
+  "created_at": "2026-06-23T12:10:27Z",
+  "area": {
+    "slug": "pio-rajac",
+    "name": "ПИО Рајац",
+    "group": "Заштићена подручја",
+    "public_url": "https://piorajac.rs/monitoring-svetlosno-zagadjenje/"
+  },
+  "unit": "nW/cm²/sr",
+  "scale": {
+    "absolute_min": 0.1269,
+    "absolute_max": 12.67,
+    "visual_min": 0.1787,
+    "visual_max": 4.6842,
+    "method": "p01–p99 из свих пиксела свих периода изабраног подручја; екстреми се не губе у статистици"
+  },
+  "coverage": {
+    "monthly_count": 28,
+    "yearly_count": 12,
+    "monthly_first": "2024-01",
+    "monthly_last": "2026-04",
+    "yearly_first": "2014",
+    "yearly_last": "2025"
+  },
+  "monthly": [
+    {
+      "id": "2026-04",
+      "label": "04/2026",
+      "kind": "monthly",
+      "date_start": "2026-04-01",
+      "date_end": "2026-05-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/pio-rajac/results/2026-04.json",
+      "stats": {
+        "min": 0.23,
+        "max": 3.82,
+        "mean": 0.6056,
+        "median": 0.4158,
+        "p90": 1.05,
+        "count": 163,
+        "sum": 69.4448,
+        "p75": 0.5025,
+        "p95": 1.919,
+        "std": 0.6432
+      },
+      "pixel_count": 112,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1787,
+          "to": 1.0798,
+          "count": 101,
+          "pct": 90.18
+        },
+        {
+          "class": "ниско",
+          "from": 1.0798,
+          "to": 1.9809,
+          "count": 5,
+          "pct": 4.46
+        },
+        {
+          "class": "умерено",
+          "from": 1.9809,
+          "to": 2.882,
+          "count": 2,
+          "pct": 1.79
+        },
+        {
+          "class": "повишено",
+          "from": 2.882,
+          "to": 3.7831,
+          "count": 3,
+          "pct": 2.68
+        },
+        {
+          "class": "високо",
+          "from": 3.7831,
+          "to": 4.6842,
+          "count": 1,
+          "pct": 0.89
+        }
+      ]
+    },
+    {
+      "id": "2026-03",
+      "label": "03/2026",
+      "kind": "monthly",
+      "date_start": "2026-03-01",
+      "date_end": "2026-04-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/pio-rajac/results/2026-03.json",
+      "stats": {
+        "min": 0.33,
+        "max": 2.88,
+        "mean": 0.7063,
+        "median": 0.5585,
+        "p90": 1.06,
+        "count": 163,
+        "sum": 80.987,
+        "p75": 0.64,
+        "p95": 1.9445,
+        "std": 0.5074
+      },
+      "pixel_count": 112,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1787,
+          "to": 1.0798,
+          "count": 101,
+          "pct": 90.18
+        },
+        {
+          "class": "ниско",
+          "from": 1.0798,
+          "to": 1.9809,
+          "count": 5,
+          "pct": 4.46
+        },
+        {
+          "class": "умерено",
+          "from": 1.9809,
+          "to": 2.882,
+          "count": 6,
+          "pct": 5.36
+        },
+        {
+          "class": "повишено",
+          "from": 2.882,
+          "to": 3.7831,
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "class": "високо",
+          "from": 3.7831,
+          "to": 4.6842,
+          "count": 0,
+          "pct": 0.0
+        }
+      ]
+    },
+    {
+      "id": "2026-02",
+      "label": "02/2026",
+      "kind": "monthly",
+      "date_start": "2026-02-01",
+      "date_end": "2026-03-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/pio-rajac/results/2026-02.json",
+      "stats": {
+        "min": 0.24,
+        "max": 5.29,
+        "mean": 0.6896,
+        "median": 0.5142,
+        "p90": 1.13,
+        "count": 163,
+        "sum": 79.0711,
+        "p75": 0.6025,
+        "p95": 1.489,
+        "std": 0.7541
+      },
+      "pixel_count": 112,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1787,
+          "to": 1.0798,
+          "count": 100,
+          "pct": 89.29
+        },
+        {
+          "class": "ниско",
+          "from": 1.0798,
+          "to": 1.9809,
+          "count": 9,
+          "pct": 8.04
+        },
+        {
+          "class": "умерено",
+          "from": 1.9809,
+          "to": 2.882,
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "class": "повишено",
+          "from": 2.882,
+          "to": 3.7831,
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "class": "високо",
+          "from": 3.7831,
+          "to": 4.6842,
+          "count": 3,
+          "pct": 2.68
+        }
+      ]
+    },
+    {
+      "id": "2026-01",
+      "label": "01/2026",
+      "kind": "monthly",
+      "date_start": "2026-01-01",
+      "date_end": "2026-02-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/pio-rajac/results/2026-01.json",
+      "stats": {
+        "min": 0.6,
+        "max": 6.85,
+        "mean": 1.0957,
+        "median": 0.833,
+        "p90": 1.58,
+        "count": 163,
+        "sum": 125.6415,
+        "p75": 1.0075,
+        "p95": 2.977,
+        "std": 0.9391
+      },
+      "pixel_count": 112,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1787,
+          "to": 1.0798,
+          "count": 89,
+          "pct": 79.46
+        },
+        {
+          "class": "ниско",
+          "from": 1.0798,
+          "to": 1.9809,
+          "count": 14,
+          "pct": 12.5
+        },
+        {
+          "class": "умерено",
+          "from": 1.9809,
+          "to": 2.882,
+          "count": 3,
+          "pct": 2.68
+        },
+        {
+          "class": "повишено",
+          "from": 2.882,
+          "to": 3.7831,
+          "count": 2,
+          "pct": 1.79
+        },
+        {
+          "class": "високо",
+          "from": 3.7831,
+          "to": 4.6842,
+          "count": 4,
+          "pct": 3.57
+        }
+      ]
+    },
+    {
+      "id": "2025-12",
+      "label": "12/2025",
+      "kind": "monthly",
+      "date_start": "2025-12-01",
+      "date_end": "2026-01-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/pio-rajac/results/2025-12.json",
+      "stats": {
+        "min": 0.33,
+        "max": 3.67,
+        "mean": 0.6726,
+        "median": 0.4731,
+        "p90": 1.16,
+        "count": 163,
+        "sum": 77.1238,
+        "p75": 0.5825,
+        "p95": 2.0455,
+        "std": 0.6338
+      },
+      "pixel_count": 112,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1787,
+          "to": 1.0798,
+          "count": 100,
+          "pct": 89.29
+        },
+        {
+          "class": "ниско",
+          "from": 1.0798,
+          "to": 1.9809,
+          "count": 6,
+          "pct": 5.36
+        },
+        {
+          "class": "умерено",
+          "from": 1.9809,
+          "to": 2.882,
+          "count": 2,
+          "pct": 1.79
+        },
+        {
+          "class": "повишено",
+          "from": 2.882,
+          "to": 3.7831,
+          "count": 4,
+          "pct": 3.57
+        },
+        {
+          "class": "високо",
+          "from": 3.7831,
+          "to": 4.6842,
+          "count": 0,
+          "pct": 0.0
+        }
+      ]
+    },
+    {
+      "id": "2025-11",
+      "label": "11/2025",
+      "kind": "monthly",
+      "date_start": "2025-11-01",
+      "date_end": "2025-12-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/pio-rajac/results/2025-11.json",
+      "stats": {
+        "min": 0.58,
+        "max": 7.49,
+        "mean": 1.1157,
+        "median": 0.764,
+        "p90": 1.76,
+        "count": 163,
+        "sum": 127.9307,
+        "p75": 0.87,
+        "p95": 3.9855,
+        "std": 1.1037
+      },
+      "pixel_count": 112,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1787,
+          "to": 1.0798,
+          "count": 93,
+          "pct": 83.04
+        },
+        {
+          "class": "ниско",
+          "from": 1.0798,
+          "to": 1.9809,
+          "count": 9,
+          "pct": 8.04
+        },
+        {
+          "class": "умерено",
+          "from": 1.9809,
+          "to": 2.882,
+          "count": 1,
+          "pct": 0.89
+        },
+        {
+          "class": "повишено",
+          "from": 2.882,
+          "to": 3.7831,
+          "count": 3,
+          "pct": 2.68
+        },
+        {
+          "class": "високо",
+          "from": 3.7831,
+          "to": 4.6842,
+          "count": 6,
+          "pct": 5.36
+        }
+      ]
+    },
+    {
+      "id": "2025-10",
+      "label": "10/2025",
+      "kind": "monthly",
+      "date_start": "2025-10-01",
+      "date_end": "2025-11-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/pio-rajac/results/2025-10.json",
+      "stats": {
+        "min": 0.46,
+        "max": 3.7,
+        "mean": 0.786,
+        "median": 0.5821,
+        "p90": 1.25,
+        "count": 163,
+        "sum": 90.127,
+        "p75": 0.655,
+        "p95": 2.5835,
+        "std": 0.631
+      },
+      "pixel_count": 112,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1787,
+          "to": 1.0798,
+          "count": 98,
+          "pct": 87.5
+        },
+        {
+          "class": "ниско",
+          "from": 1.0798,
+          "to": 1.9809,
+          "count": 7,
+          "pct": 6.25
+        },
+        {
+          "class": "умерено",
+          "from": 1.9809,
+          "to": 2.882,
+          "count": 4,
+          "pct": 3.57
+        },
+        {
+          "class": "повишено",
+          "from": 2.882,
+          "to": 3.7831,
+          "count": 3,
+          "pct": 2.68
+        },
+        {
+          "class": "високо",
+          "from": 3.7831,
+          "to": 4.6842,
+          "count": 0,
+          "pct": 0.0
+        }
+      ]
+    },
+    {
+      "id": "2025-09",
+      "label": "09/2025",
+      "kind": "monthly",
+      "date_start": "2025-09-01",
+      "date_end": "2025-10-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/pio-rajac/results/2025-09.json",
+      "stats": {
+        "min": 0.35,
+        "max": 3.98,
+        "mean": 0.6662,
+        "median": 0.4727,
+        "p90": 1.11,
+        "count": 163,
+        "sum": 76.3876,
+        "p75": 0.5725,
+        "p95": 1.924,
+        "std": 0.5762
+      },
+      "pixel_count": 112,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1787,
+          "to": 1.0798,
+          "count": 100,
+          "pct": 89.29
+        },
+        {
+          "class": "ниско",
+          "from": 1.0798,
+          "to": 1.9809,
+          "count": 6,
+          "pct": 5.36
+        },
+        {
+          "class": "умерено",
+          "from": 1.9809,
+          "to": 2.882,
+          "count": 4,
+          "pct": 3.57
+        },
+        {
+          "class": "повишено",
+          "from": 2.882,
+          "to": 3.7831,
+          "count": 1,
+          "pct": 0.89
+        },
+        {
+          "class": "високо",
+          "from": 3.7831,
+          "to": 4.6842,
+          "count": 1,
+          "pct": 0.89
+        }
+      ]
+    },
+    {
+      "id": "2025-08",
+      "label": "08/2025",
+      "kind": "monthly",
+      "date_start": "2025-08-01",
+      "date_end": "2025-09-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/pio-rajac/results/2025-08.json",
+      "stats": {
+        "min": 0.34,
+        "max": 4.85,
+        "mean": 0.7145,
+        "median": 0.5149,
+        "p90": 1.04,
+        "count": 163,
+        "sum": 81.9249,
+        "p75": 0.5925,
+        "p95": 1.916,
+        "std": 0.7399
+      },
+      "pixel_count": 112,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1787,
+          "to": 1.0798,
+          "count": 101,
+          "pct": 90.18
+        },
+        {
+          "class": "ниско",
+          "from": 1.0798,
+          "to": 1.9809,
+          "count": 5,
+          "pct": 4.46
+        },
+        {
+          "class": "умерено",
+          "from": 1.9809,
+          "to": 2.882,
+          "count": 2,
+          "pct": 1.79
+        },
+        {
+          "class": "повишено",
+          "from": 2.882,
+          "to": 3.7831,
+          "count": 1,
+          "pct": 0.89
+        },
+        {
+          "class": "високо",
+          "from": 3.7831,
+          "to": 4.6842,
+          "count": 3,
+          "pct": 2.68
+        }
+      ]
+    },
+    {
+      "id": "2025-07",
+      "label": "07/2025",
+      "kind": "monthly",
+      "date_start": "2025-07-01",
+      "date_end": "2025-08-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/pio-rajac/results/2025-07.json",
+      "stats": {
+        "min": 0.39,
+        "max": 4.79,
+        "mean": 0.7857,
+        "median": 0.581,
+        "p90": 1.13,
+        "count": 163,
+        "sum": 90.0899,
+        "p75": 0.6725,
+        "p95": 2.3005,
+        "std": 0.7281
+      },
+      "pixel_count": 112,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1787,
+          "to": 1.0798,
+          "count": 100,
+          "pct": 89.29
+        },
+        {
+          "class": "ниско",
+          "from": 1.0798,
+          "to": 1.9809,
+          "count": 3,
+          "pct": 2.68
+        },
+        {
+          "class": "умерено",
+          "from": 1.9809,
+          "to": 2.882,
+          "count": 6,
+          "pct": 5.36
+        },
+        {
+          "class": "повишено",
+          "from": 2.882,
+          "to": 3.7831,
+          "count": 1,
+          "pct": 0.89
+        },
+        {
+          "class": "високо",
+          "from": 3.7831,
+          "to": 4.6842,
+          "count": 2,
+          "pct": 1.79
+        }
+      ]
+    },
+    {
+      "id": "2025-06",
+      "label": "06/2025",
+      "kind": "monthly",
+      "date_start": "2025-06-01",
+      "date_end": "2025-07-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/pio-rajac/results/2025-06.json",
+      "stats": {
+        "min": 0.57,
+        "max": 4.39,
+        "mean": 0.8994,
+        "median": 0.74,
+        "p90": 1.3627,
+        "count": 163,
+        "sum": 103.1238,
+        "p75": 0.8025,
+        "p95": 1.8705,
+        "std": 0.5842
+      },
+      "pixel_count": 112,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1787,
+          "to": 1.0798,
+          "count": 97,
+          "pct": 86.61
+        },
+        {
+          "class": "ниско",
+          "from": 1.0798,
+          "to": 1.9809,
+          "count": 10,
+          "pct": 8.93
+        },
+        {
+          "class": "умерено",
+          "from": 1.9809,
+          "to": 2.882,
+          "count": 2,
+          "pct": 1.79
+        },
+        {
+          "class": "повишено",
+          "from": 2.882,
+          "to": 3.7831,
+          "count": 1,
+          "pct": 0.89
+        },
+        {
+          "class": "високо",
+          "from": 3.7831,
+          "to": 4.6842,
+          "count": 2,
+          "pct": 1.79
+        }
+      ]
+    },
+    {
+      "id": "2025-05",
+      "label": "05/2025",
+      "kind": "monthly",
+      "date_start": "2025-05-01",
+      "date_end": "2025-06-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/pio-rajac/results/2025-05.json",
+      "stats": {
+        "min": 0.44,
+        "max": 3.65,
+        "mean": 0.8471,
+        "median": 0.6952,
+        "p90": 1.1,
+        "count": 163,
+        "sum": 97.1258,
+        "p75": 0.82,
+        "p95": 1.6395,
+        "std": 0.5279
+      },
+      "pixel_count": 112,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1787,
+          "to": 1.0798,
+          "count": 100,
+          "pct": 89.29
+        },
+        {
+          "class": "ниско",
+          "from": 1.0798,
+          "to": 1.9809,
+          "count": 7,
+          "pct": 6.25
+        },
+        {
+          "class": "умерено",
+          "from": 1.9809,
+          "to": 2.882,
+          "count": 3,
+          "pct": 2.68
+        },
+        {
+          "class": "повишено",
+          "from": 2.882,
+          "to": 3.7831,
+          "count": 2,
+          "pct": 1.79
+        },
+        {
+          "class": "високо",
+          "from": 3.7831,
+          "to": 4.6842,
+          "count": 0,
+          "pct": 0.0
+        }
+      ]
+    },
+    {
+      "id": "2025-04",
+      "label": "04/2025",
+      "kind": "monthly",
+      "date_start": "2025-04-01",
+      "date_end": "2025-05-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/pio-rajac/results/2025-04.json",
+      "stats": {
+        "min": 0.25,
+        "max": 3.73,
+        "mean": 0.6507,
+        "median": 0.4736,
+        "p90": 0.96,
+        "count": 163,
+        "sum": 74.6153,
+        "p75": 0.5825,
+        "p95": 2.348,
+        "std": 0.5902
+      },
+      "pixel_count": 112,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1787,
+          "to": 1.0798,
+          "count": 101,
+          "pct": 90.18
+        },
+        {
+          "class": "ниско",
+          "from": 1.0798,
+          "to": 1.9809,
+          "count": 3,
+          "pct": 2.68
+        },
+        {
+          "class": "умерено",
+          "from": 1.9809,
+          "to": 2.882,
+          "count": 6,
+          "pct": 5.36
+        },
+        {
+          "class": "повишено",
+          "from": 2.882,
+          "to": 3.7831,
+          "count": 2,
+          "pct": 1.79
+        },
+        {
+          "class": "високо",
+          "from": 3.7831,
+          "to": 4.6842,
+          "count": 0,
+          "pct": 0.0
+        }
+      ]
+    },
+    {
+      "id": "2025-03",
+      "label": "03/2025",
+      "kind": "monthly",
+      "date_start": "2025-03-01",
+      "date_end": "2025-04-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/pio-rajac/results/2025-03.json",
+      "stats": {
+        "min": 0.23,
+        "max": 4.8,
+        "mean": 0.6115,
+        "median": 0.3594,
+        "p90": 1.18,
+        "count": 163,
+        "sum": 70.1133,
+        "p75": 0.47,
+        "p95": 2.1995,
+        "std": 0.7688
+      },
+      "pixel_count": 112,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1787,
+          "to": 1.0798,
+          "count": 99,
+          "pct": 88.39
+        },
+        {
+          "class": "ниско",
+          "from": 1.0798,
+          "to": 1.9809,
+          "count": 7,
+          "pct": 6.25
+        },
+        {
+          "class": "умерено",
+          "from": 1.9809,
+          "to": 2.882,
+          "count": 3,
+          "pct": 2.68
+        },
+        {
+          "class": "повишено",
+          "from": 2.882,
+          "to": 3.7831,
+          "count": 1,
+          "pct": 0.89
+        },
+        {
+          "class": "високо",
+          "from": 3.7831,
+          "to": 4.6842,
+          "count": 2,
+          "pct": 1.79
+        }
+      ]
+    },
+    {
+      "id": "2025-02",
+      "label": "02/2025",
+      "kind": "monthly",
+      "date_start": "2025-02-01",
+      "date_end": "2025-03-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/pio-rajac/results/2025-02.json",
+      "stats": {
+        "min": 0.18,
+        "max": 6.81,
+        "mean": 0.7676,
+        "median": 0.5165,
+        "p90": 0.822,
+        "count": 163,
+        "sum": 88.0184,
+        "p75": 0.6225,
+        "p95": 1.9395,
+        "std": 1.1896
+      },
+      "pixel_count": 112,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1787,
+          "to": 1.0798,
+          "count": 104,
+          "pct": 92.86
+        },
+        {
+          "class": "ниско",
+          "from": 1.0798,
+          "to": 1.9809,
+          "count": 2,
+          "pct": 1.79
+        },
+        {
+          "class": "умерено",
+          "from": 1.9809,
+          "to": 2.882,
+          "count": 1,
+          "pct": 0.89
+        },
+        {
+          "class": "повишено",
+          "from": 2.882,
+          "to": 3.7831,
+          "count": 1,
+          "pct": 0.89
+        },
+        {
+          "class": "високо",
+          "from": 3.7831,
+          "to": 4.6842,
+          "count": 4,
+          "pct": 3.57
+        }
+      ]
+    },
+    {
+      "id": "2025-01",
+      "label": "01/2025",
+      "kind": "monthly",
+      "date_start": "2025-01-01",
+      "date_end": "2025-02-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/pio-rajac/results/2025-01.json",
+      "stats": {
+        "min": 0.39,
+        "max": 6.68,
+        "mean": 0.9724,
+        "median": 0.5769,
+        "p90": 1.67,
+        "count": 163,
+        "sum": 111.5004,
+        "p75": 0.7725,
+        "p95": 3.7315,
+        "std": 1.1972
+      },
+      "pixel_count": 112,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1787,
+          "to": 1.0798,
+          "count": 96,
+          "pct": 85.71
+        },
+        {
+          "class": "ниско",
+          "from": 1.0798,
+          "to": 1.9809,
+          "count": 5,
+          "pct": 4.46
+        },
+        {
+          "class": "умерено",
+          "from": 1.9809,
+          "to": 2.882,
+          "count": 1,
+          "pct": 0.89
+        },
+        {
+          "class": "повишено",
+          "from": 2.882,
+          "to": 3.7831,
+          "count": 4,
+          "pct": 3.57
+        },
+        {
+          "class": "високо",
+          "from": 3.7831,
+          "to": 4.6842,
+          "count": 6,
+          "pct": 5.36
+        }
+      ]
+    },
+    {
+      "id": "2024-12",
+      "label": "12/2024",
+      "kind": "monthly",
+      "date_start": "2024-12-01",
+      "date_end": "2025-01-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/pio-rajac/results/2024-12.json",
+      "stats": {
+        "min": 0.48,
+        "max": 9.57,
+        "mean": 1.3207,
+        "median": 0.7137,
+        "p90": 3.4698,
+        "count": 163,
+        "sum": 151.4403,
+        "p75": 0.9875,
+        "p95": 5.6335,
+        "std": 1.6421
+      },
+      "pixel_count": 112,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1787,
+          "to": 1.0798,
+          "count": 87,
+          "pct": 77.68
+        },
+        {
+          "class": "ниско",
+          "from": 1.0798,
+          "to": 1.9809,
+          "count": 10,
+          "pct": 8.93
+        },
+        {
+          "class": "умерено",
+          "from": 1.9809,
+          "to": 2.882,
+          "count": 2,
+          "pct": 1.79
+        },
+        {
+          "class": "повишено",
+          "from": 2.882,
+          "to": 3.7831,
+          "count": 4,
+          "pct": 3.57
+        },
+        {
+          "class": "високо",
+          "from": 3.7831,
+          "to": 4.6842,
+          "count": 9,
+          "pct": 8.04
+        }
+      ]
+    },
+    {
+      "id": "2024-11",
+      "label": "11/2024",
+      "kind": "monthly",
+      "date_start": "2024-11-01",
+      "date_end": "2024-12-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/pio-rajac/results/2024-11.json",
+      "stats": {
+        "min": 0.44,
+        "max": 7.11,
+        "mean": 0.9443,
+        "median": 0.6711,
+        "p90": 1.39,
+        "count": 163,
+        "sum": 108.2771,
+        "p75": 0.7925,
+        "p95": 2.7135,
+        "std": 0.9961
+      },
+      "pixel_count": 112,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1787,
+          "to": 1.0798,
+          "count": 96,
+          "pct": 85.71
+        },
+        {
+          "class": "ниско",
+          "from": 1.0798,
+          "to": 1.9809,
+          "count": 8,
+          "pct": 7.14
+        },
+        {
+          "class": "умерено",
+          "from": 1.9809,
+          "to": 2.882,
+          "count": 2,
+          "pct": 1.79
+        },
+        {
+          "class": "повишено",
+          "from": 2.882,
+          "to": 3.7831,
+          "count": 2,
+          "pct": 1.79
+        },
+        {
+          "class": "високо",
+          "from": 3.7831,
+          "to": 4.6842,
+          "count": 4,
+          "pct": 3.57
+        }
+      ]
+    },
+    {
+      "id": "2024-10",
+      "label": "10/2024",
+      "kind": "monthly",
+      "date_start": "2024-10-01",
+      "date_end": "2024-11-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/pio-rajac/results/2024-10.json",
+      "stats": {
+        "min": 0.39,
+        "max": 4.31,
+        "mean": 0.7566,
+        "median": 0.5562,
+        "p90": 1.13,
+        "count": 163,
+        "sum": 86.753,
+        "p75": 0.665,
+        "p95": 2.11,
+        "std": 0.634
+      },
+      "pixel_count": 112,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1787,
+          "to": 1.0798,
+          "count": 99,
+          "pct": 88.39
+        },
+        {
+          "class": "ниско",
+          "from": 1.0798,
+          "to": 1.9809,
+          "count": 5,
+          "pct": 4.46
+        },
+        {
+          "class": "умерено",
+          "from": 1.9809,
+          "to": 2.882,
+          "count": 5,
+          "pct": 4.46
+        },
+        {
+          "class": "повишено",
+          "from": 2.882,
+          "to": 3.7831,
+          "count": 2,
+          "pct": 1.79
+        },
+        {
+          "class": "високо",
+          "from": 3.7831,
+          "to": 4.6842,
+          "count": 1,
+          "pct": 0.89
+        }
+      ]
+    },
+    {
+      "id": "2024-09",
+      "label": "09/2024",
+      "kind": "monthly",
+      "date_start": "2024-09-01",
+      "date_end": "2024-10-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/pio-rajac/results/2024-09.json",
+      "stats": {
+        "min": 0.35,
+        "max": 3.55,
+        "mean": 0.6769,
+        "median": 0.5028,
+        "p90": 1.22,
+        "count": 163,
+        "sum": 77.611,
+        "p75": 0.59,
+        "p95": 2.1,
+        "std": 0.5785
+      },
+      "pixel_count": 112,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1787,
+          "to": 1.0798,
+          "count": 100,
+          "pct": 89.29
+        },
+        {
+          "class": "ниско",
+          "from": 1.0798,
+          "to": 1.9809,
+          "count": 5,
+          "pct": 4.46
+        },
+        {
+          "class": "умерено",
+          "from": 1.9809,
+          "to": 2.882,
+          "count": 4,
+          "pct": 3.57
+        },
+        {
+          "class": "повишено",
+          "from": 2.882,
+          "to": 3.7831,
+          "count": 3,
+          "pct": 2.68
+        },
+        {
+          "class": "високо",
+          "from": 3.7831,
+          "to": 4.6842,
+          "count": 0,
+          "pct": 0.0
+        }
+      ]
+    },
+    {
+      "id": "2024-08",
+      "label": "08/2024",
+      "kind": "monthly",
+      "date_start": "2024-08-01",
+      "date_end": "2024-09-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/pio-rajac/results/2024-08.json",
+      "stats": {
+        "min": 0.37,
+        "max": 4.38,
+        "mean": 0.7599,
+        "median": 0.515,
+        "p90": 1.15,
+        "count": 163,
+        "sum": 87.1325,
+        "p75": 0.635,
+        "p95": 2.419,
+        "std": 0.7437
+      },
+      "pixel_count": 112,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1787,
+          "to": 1.0798,
+          "count": 98,
+          "pct": 87.5
+        },
+        {
+          "class": "ниско",
+          "from": 1.0798,
+          "to": 1.9809,
+          "count": 7,
+          "pct": 6.25
+        },
+        {
+          "class": "умерено",
+          "from": 1.9809,
+          "to": 2.882,
+          "count": 2,
+          "pct": 1.79
+        },
+        {
+          "class": "повишено",
+          "from": 2.882,
+          "to": 3.7831,
+          "count": 2,
+          "pct": 1.79
+        },
+        {
+          "class": "високо",
+          "from": 3.7831,
+          "to": 4.6842,
+          "count": 3,
+          "pct": 2.68
+        }
+      ]
+    },
+    {
+      "id": "2024-07",
+      "label": "07/2024",
+      "kind": "monthly",
+      "date_start": "2024-07-01",
+      "date_end": "2024-08-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/pio-rajac/results/2024-07.json",
+      "stats": {
+        "min": 0.55,
+        "max": 3.44,
+        "mean": 0.9248,
+        "median": 0.7758,
+        "p90": 1.3,
+        "count": 163,
+        "sum": 106.04,
+        "p75": 0.855,
+        "p95": 2.4005,
+        "std": 0.5272
+      },
+      "pixel_count": 112,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1787,
+          "to": 1.0798,
+          "count": 99,
+          "pct": 88.39
+        },
+        {
+          "class": "ниско",
+          "from": 1.0798,
+          "to": 1.9809,
+          "count": 4,
+          "pct": 3.57
+        },
+        {
+          "class": "умерено",
+          "from": 1.9809,
+          "to": 2.882,
+          "count": 6,
+          "pct": 5.36
+        },
+        {
+          "class": "повишено",
+          "from": 2.882,
+          "to": 3.7831,
+          "count": 3,
+          "pct": 2.68
+        },
+        {
+          "class": "високо",
+          "from": 3.7831,
+          "to": 4.6842,
+          "count": 0,
+          "pct": 0.0
+        }
+      ]
+    },
+    {
+      "id": "2024-06",
+      "label": "06/2024",
+      "kind": "monthly",
+      "date_start": "2024-06-01",
+      "date_end": "2024-07-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/pio-rajac/results/2024-06.json",
+      "stats": {
+        "min": 0.68,
+        "max": 4.73,
+        "mean": 1.0582,
+        "median": 0.8592,
+        "p90": 1.45,
+        "count": 163,
+        "sum": 121.3403,
+        "p75": 0.9625,
+        "p95": 2.5205,
+        "std": 0.6496
+      },
+      "pixel_count": 112,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1787,
+          "to": 1.0798,
+          "count": 94,
+          "pct": 83.93
+        },
+        {
+          "class": "ниско",
+          "from": 1.0798,
+          "to": 1.9809,
+          "count": 9,
+          "pct": 8.04
+        },
+        {
+          "class": "умерено",
+          "from": 1.9809,
+          "to": 2.882,
+          "count": 4,
+          "pct": 3.57
+        },
+        {
+          "class": "повишено",
+          "from": 2.882,
+          "to": 3.7831,
+          "count": 3,
+          "pct": 2.68
+        },
+        {
+          "class": "високо",
+          "from": 3.7831,
+          "to": 4.6842,
+          "count": 2,
+          "pct": 1.79
+        }
+      ]
+    },
+    {
+      "id": "2024-05",
+      "label": "05/2024",
+      "kind": "monthly",
+      "date_start": "2024-05-01",
+      "date_end": "2024-06-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/pio-rajac/results/2024-05.json",
+      "stats": {
+        "min": 0.37,
+        "max": 5.16,
+        "mean": 0.7811,
+        "median": 0.5476,
+        "p90": 1.26,
+        "count": 163,
+        "sum": 89.5611,
+        "p75": 0.67,
+        "p95": 2.3755,
+        "std": 0.766
+      },
+      "pixel_count": 112,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1787,
+          "to": 1.0798,
+          "count": 97,
+          "pct": 86.61
+        },
+        {
+          "class": "ниско",
+          "from": 1.0798,
+          "to": 1.9809,
+          "count": 8,
+          "pct": 7.14
+        },
+        {
+          "class": "умерено",
+          "from": 1.9809,
+          "to": 2.882,
+          "count": 3,
+          "pct": 2.68
+        },
+        {
+          "class": "повишено",
+          "from": 2.882,
+          "to": 3.7831,
+          "count": 2,
+          "pct": 1.79
+        },
+        {
+          "class": "високо",
+          "from": 3.7831,
+          "to": 4.6842,
+          "count": 2,
+          "pct": 1.79
+        }
+      ]
+    },
+    {
+      "id": "2024-04",
+      "label": "04/2024",
+      "kind": "monthly",
+      "date_start": "2024-04-01",
+      "date_end": "2024-05-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/pio-rajac/results/2024-04.json",
+      "stats": {
+        "min": 0.25,
+        "max": 4.7,
+        "mean": 0.688,
+        "median": 0.4475,
+        "p90": 1.12,
+        "count": 163,
+        "sum": 78.8908,
+        "p75": 0.57,
+        "p95": 1.9455,
+        "std": 0.8066
+      },
+      "pixel_count": 112,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1787,
+          "to": 1.0798,
+          "count": 99,
+          "pct": 88.39
+        },
+        {
+          "class": "ниско",
+          "from": 1.0798,
+          "to": 1.9809,
+          "count": 7,
+          "pct": 6.25
+        },
+        {
+          "class": "умерено",
+          "from": 1.9809,
+          "to": 2.882,
+          "count": 2,
+          "pct": 1.79
+        },
+        {
+          "class": "повишено",
+          "from": 2.882,
+          "to": 3.7831,
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "class": "високо",
+          "from": 3.7831,
+          "to": 4.6842,
+          "count": 4,
+          "pct": 3.57
+        }
+      ]
+    },
+    {
+      "id": "2024-03",
+      "label": "03/2024",
+      "kind": "monthly",
+      "date_start": "2024-03-01",
+      "date_end": "2024-04-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/pio-rajac/results/2024-03.json",
+      "stats": {
+        "min": 0.2,
+        "max": 4.39,
+        "mean": 0.6671,
+        "median": 0.4489,
+        "p90": 0.99,
+        "count": 163,
+        "sum": 76.4923,
+        "p75": 0.5925,
+        "p95": 1.8435,
+        "std": 0.6696
+      },
+      "pixel_count": 112,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1787,
+          "to": 1.0798,
+          "count": 101,
+          "pct": 90.18
+        },
+        {
+          "class": "ниско",
+          "from": 1.0798,
+          "to": 1.9809,
+          "count": 6,
+          "pct": 5.36
+        },
+        {
+          "class": "умерено",
+          "from": 1.9809,
+          "to": 2.882,
+          "count": 1,
+          "pct": 0.89
+        },
+        {
+          "class": "повишено",
+          "from": 2.882,
+          "to": 3.7831,
+          "count": 2,
+          "pct": 1.79
+        },
+        {
+          "class": "високо",
+          "from": 3.7831,
+          "to": 4.6842,
+          "count": 2,
+          "pct": 1.79
+        }
+      ]
+    },
+    {
+      "id": "2024-02",
+      "label": "02/2024",
+      "kind": "monthly",
+      "date_start": "2024-02-01",
+      "date_end": "2024-03-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/pio-rajac/results/2024-02.json",
+      "stats": {
+        "min": 0.25,
+        "max": 4.81,
+        "mean": 0.735,
+        "median": 0.4823,
+        "p90": 1.44,
+        "count": 163,
+        "sum": 84.272,
+        "p75": 0.625,
+        "p95": 2.2605,
+        "std": 0.7724
+      },
+      "pixel_count": 112,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1787,
+          "to": 1.0798,
+          "count": 98,
+          "pct": 87.5
+        },
+        {
+          "class": "ниско",
+          "from": 1.0798,
+          "to": 1.9809,
+          "count": 6,
+          "pct": 5.36
+        },
+        {
+          "class": "умерено",
+          "from": 1.9809,
+          "to": 2.882,
+          "count": 5,
+          "pct": 4.46
+        },
+        {
+          "class": "повишено",
+          "from": 2.882,
+          "to": 3.7831,
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "class": "високо",
+          "from": 3.7831,
+          "to": 4.6842,
+          "count": 3,
+          "pct": 2.68
+        }
+      ]
+    },
+    {
+      "id": "2024-01",
+      "label": "01/2024",
+      "kind": "monthly",
+      "date_start": "2024-01-01",
+      "date_end": "2024-02-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/pio-rajac/results/2024-01.json",
+      "stats": {
+        "min": 0.47,
+        "max": 12.67,
+        "mean": 1.625,
+        "median": 0.9667,
+        "p90": 3.72,
+        "count": 163,
+        "sum": 186.3303,
+        "p75": 1.3125,
+        "p95": 5.4345,
+        "std": 1.8798
+      },
+      "pixel_count": 112,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1787,
+          "to": 1.0798,
+          "count": 69,
+          "pct": 61.61
+        },
+        {
+          "class": "ниско",
+          "from": 1.0798,
+          "to": 1.9809,
+          "count": 21,
+          "pct": 18.75
+        },
+        {
+          "class": "умерено",
+          "from": 1.9809,
+          "to": 2.882,
+          "count": 10,
+          "pct": 8.93
+        },
+        {
+          "class": "повишено",
+          "from": 2.882,
+          "to": 3.7831,
+          "count": 1,
+          "pct": 0.89
+        },
+        {
+          "class": "високо",
+          "from": 3.7831,
+          "to": 4.6842,
+          "count": 11,
+          "pct": 9.82
+        }
+      ]
+    }
+  ],
+  "yearly": [
+    {
+      "id": "2014",
+      "label": "2014. (годишњи просек)",
+      "kind": "yearly",
+      "date_start": "2014-01-01",
+      "date_end": "2015-01-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/pio-rajac/results/2014.json",
+      "stats": {
+        "min": 0.1971,
+        "max": 3.0176,
+        "mean": 0.3977,
+        "median": 0.2406,
+        "p90": 0.7734,
+        "count": 156,
+        "sum": 45.4967,
+        "p75": 0.2796,
+        "p95": 1.3583,
+        "std": 0.4605
+      },
+      "pixel_count": 112,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1787,
+          "to": 1.0798,
+          "count": 104,
+          "pct": 92.86
+        },
+        {
+          "class": "ниско",
+          "from": 1.0798,
+          "to": 1.9809,
+          "count": 4,
+          "pct": 3.57
+        },
+        {
+          "class": "умерено",
+          "from": 1.9809,
+          "to": 2.882,
+          "count": 3,
+          "pct": 2.68
+        },
+        {
+          "class": "повишено",
+          "from": 2.882,
+          "to": 3.7831,
+          "count": 1,
+          "pct": 0.89
+        },
+        {
+          "class": "високо",
+          "from": 3.7831,
+          "to": 4.6842,
+          "count": 0,
+          "pct": 0.0
+        }
+      ]
+    },
+    {
+      "id": "2015",
+      "label": "2015. (годишњи просек)",
+      "kind": "yearly",
+      "date_start": "2015-01-01",
+      "date_end": "2016-01-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/pio-rajac/results/2015.json",
+      "stats": {
+        "min": 0.1466,
+        "max": 3.974,
+        "mean": 0.4123,
+        "median": 0.2104,
+        "p90": 0.8706,
+        "count": 156,
+        "sum": 47.16,
+        "p75": 0.2561,
+        "p95": 1.6972,
+        "std": 0.6223
+      },
+      "pixel_count": 112,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1787,
+          "to": 1.0798,
+          "count": 103,
+          "pct": 91.96
+        },
+        {
+          "class": "ниско",
+          "from": 1.0798,
+          "to": 1.9809,
+          "count": 4,
+          "pct": 3.57
+        },
+        {
+          "class": "умерено",
+          "from": 1.9809,
+          "to": 2.882,
+          "count": 3,
+          "pct": 2.68
+        },
+        {
+          "class": "повишено",
+          "from": 2.882,
+          "to": 3.7831,
+          "count": 1,
+          "pct": 0.89
+        },
+        {
+          "class": "високо",
+          "from": 3.7831,
+          "to": 4.6842,
+          "count": 1,
+          "pct": 0.89
+        }
+      ]
+    },
+    {
+      "id": "2016",
+      "label": "2016. (годишњи просек)",
+      "kind": "yearly",
+      "date_start": "2016-01-01",
+      "date_end": "2017-01-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/pio-rajac/results/2016.json",
+      "stats": {
+        "min": 0.1183,
+        "max": 3.2246,
+        "mean": 0.3713,
+        "median": 0.1929,
+        "p90": 0.8793,
+        "count": 156,
+        "sum": 42.4711,
+        "p75": 0.2503,
+        "p95": 1.3547,
+        "std": 0.5129
+      },
+      "pixel_count": 112,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1787,
+          "to": 1.0798,
+          "count": 103,
+          "pct": 91.96
+        },
+        {
+          "class": "ниско",
+          "from": 1.0798,
+          "to": 1.9809,
+          "count": 5,
+          "pct": 4.46
+        },
+        {
+          "class": "умерено",
+          "from": 1.9809,
+          "to": 2.882,
+          "count": 3,
+          "pct": 2.68
+        },
+        {
+          "class": "повишено",
+          "from": 2.882,
+          "to": 3.7831,
+          "count": 1,
+          "pct": 0.89
+        },
+        {
+          "class": "високо",
+          "from": 3.7831,
+          "to": 4.6842,
+          "count": 0,
+          "pct": 0.0
+        }
+      ]
+    },
+    {
+      "id": "2017",
+      "label": "2017. (годишњи просек)",
+      "kind": "yearly",
+      "date_start": "2017-01-01",
+      "date_end": "2018-01-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/pio-rajac/results/2017.json",
+      "stats": {
+        "min": 0.3332,
+        "max": 2.0325,
+        "mean": 0.4997,
+        "median": 0.3954,
+        "p90": 0.952,
+        "count": 156,
+        "sum": 57.1584,
+        "p75": 0.4277,
+        "p95": 1.2648,
+        "std": 0.3125
+      },
+      "pixel_count": 112,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1787,
+          "to": 1.0798,
+          "count": 104,
+          "pct": 92.86
+        },
+        {
+          "class": "ниско",
+          "from": 1.0798,
+          "to": 1.9809,
+          "count": 7,
+          "pct": 6.25
+        },
+        {
+          "class": "умерено",
+          "from": 1.9809,
+          "to": 2.882,
+          "count": 1,
+          "pct": 0.89
+        },
+        {
+          "class": "повишено",
+          "from": 2.882,
+          "to": 3.7831,
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "class": "високо",
+          "from": 3.7831,
+          "to": 4.6842,
+          "count": 0,
+          "pct": 0.0
+        }
+      ]
+    },
+    {
+      "id": "2018",
+      "label": "2018. (годишњи просек)",
+      "kind": "yearly",
+      "date_start": "2018-01-01",
+      "date_end": "2019-01-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/pio-rajac/results/2018.json",
+      "stats": {
+        "min": 0.285,
+        "max": 2.41,
+        "mean": 0.4853,
+        "median": 0.351,
+        "p90": 0.8417,
+        "count": 156,
+        "sum": 55.5151,
+        "p75": 0.4106,
+        "p95": 1.3551,
+        "std": 0.3666
+      },
+      "pixel_count": 112,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1787,
+          "to": 1.0798,
+          "count": 103,
+          "pct": 91.96
+        },
+        {
+          "class": "ниско",
+          "from": 1.0798,
+          "to": 1.9809,
+          "count": 8,
+          "pct": 7.14
+        },
+        {
+          "class": "умерено",
+          "from": 1.9809,
+          "to": 2.882,
+          "count": 1,
+          "pct": 0.89
+        },
+        {
+          "class": "повишено",
+          "from": 2.882,
+          "to": 3.7831,
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "class": "високо",
+          "from": 3.7831,
+          "to": 4.6842,
+          "count": 0,
+          "pct": 0.0
+        }
+      ]
+    },
+    {
+      "id": "2019",
+      "label": "2019. (годишњи просек)",
+      "kind": "yearly",
+      "date_start": "2019-01-01",
+      "date_end": "2020-01-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/pio-rajac/results/2019.json",
+      "stats": {
+        "min": 0.2958,
+        "max": 2.6292,
+        "mean": 0.5473,
+        "median": 0.3974,
+        "p90": 0.935,
+        "count": 156,
+        "sum": 62.6086,
+        "p75": 0.4852,
+        "p95": 1.5441,
+        "std": 0.4236
+      },
+      "pixel_count": 112,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1787,
+          "to": 1.0798,
+          "count": 102,
+          "pct": 91.07
+        },
+        {
+          "class": "ниско",
+          "from": 1.0798,
+          "to": 1.9809,
+          "count": 7,
+          "pct": 6.25
+        },
+        {
+          "class": "умерено",
+          "from": 1.9809,
+          "to": 2.882,
+          "count": 3,
+          "pct": 2.68
+        },
+        {
+          "class": "повишено",
+          "from": 2.882,
+          "to": 3.7831,
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "class": "високо",
+          "from": 3.7831,
+          "to": 4.6842,
+          "count": 0,
+          "pct": 0.0
+        }
+      ]
+    },
+    {
+      "id": "2020",
+      "label": "2020. (годишњи просек)",
+      "kind": "yearly",
+      "date_start": "2020-01-01",
+      "date_end": "2021-01-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/pio-rajac/results/2020.json",
+      "stats": {
+        "min": 0.3533,
+        "max": 2.745,
+        "mean": 0.634,
+        "median": 0.4789,
+        "p90": 1.2883,
+        "count": 156,
+        "sum": 72.5233,
+        "p75": 0.5731,
+        "p95": 1.5671,
+        "std": 0.4514
+      },
+      "pixel_count": 112,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1787,
+          "to": 1.0798,
+          "count": 99,
+          "pct": 88.39
+        },
+        {
+          "class": "ниско",
+          "from": 1.0798,
+          "to": 1.9809,
+          "count": 9,
+          "pct": 8.04
+        },
+        {
+          "class": "умерено",
+          "from": 1.9809,
+          "to": 2.882,
+          "count": 4,
+          "pct": 3.57
+        },
+        {
+          "class": "повишено",
+          "from": 2.882,
+          "to": 3.7831,
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "class": "високо",
+          "from": 3.7831,
+          "to": 4.6842,
+          "count": 0,
+          "pct": 0.0
+        }
+      ]
+    },
+    {
+      "id": "2021",
+      "label": "2021. (годишњи просек)",
+      "kind": "yearly",
+      "date_start": "2021-01-01",
+      "date_end": "2022-01-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/pio-rajac/results/2021.json",
+      "stats": {
+        "min": 0.4392,
+        "max": 3.5992,
+        "mean": 0.8058,
+        "median": 0.5851,
+        "p90": 1.4783,
+        "count": 156,
+        "sum": 92.1802,
+        "p75": 0.7056,
+        "p95": 2.2436,
+        "std": 0.628
+      },
+      "pixel_count": 112,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1787,
+          "to": 1.0798,
+          "count": 98,
+          "pct": 87.5
+        },
+        {
+          "class": "ниско",
+          "from": 1.0798,
+          "to": 1.9809,
+          "count": 6,
+          "pct": 5.36
+        },
+        {
+          "class": "умерено",
+          "from": 1.9809,
+          "to": 2.882,
+          "count": 4,
+          "pct": 3.57
+        },
+        {
+          "class": "повишено",
+          "from": 2.882,
+          "to": 3.7831,
+          "count": 4,
+          "pct": 3.57
+        },
+        {
+          "class": "високо",
+          "from": 3.7831,
+          "to": 4.6842,
+          "count": 0,
+          "pct": 0.0
+        }
+      ]
+    },
+    {
+      "id": "2022",
+      "label": "2022. (годишњи просек)",
+      "kind": "yearly",
+      "date_start": "2022-01-01",
+      "date_end": "2023-01-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/pio-rajac/results/2022.json",
+      "stats": {
+        "min": 0.4617,
+        "max": 5.4983,
+        "mean": 0.9388,
+        "median": 0.6378,
+        "p90": 1.8108,
+        "count": 156,
+        "sum": 107.3871,
+        "p75": 0.81,
+        "p95": 2.7786,
+        "std": 0.8716
+      },
+      "pixel_count": 112,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1787,
+          "to": 1.0798,
+          "count": 94,
+          "pct": 83.93
+        },
+        {
+          "class": "ниско",
+          "from": 1.0798,
+          "to": 1.9809,
+          "count": 8,
+          "pct": 7.14
+        },
+        {
+          "class": "умерено",
+          "from": 1.9809,
+          "to": 2.882,
+          "count": 4,
+          "pct": 3.57
+        },
+        {
+          "class": "повишено",
+          "from": 2.882,
+          "to": 3.7831,
+          "count": 3,
+          "pct": 2.68
+        },
+        {
+          "class": "високо",
+          "from": 3.7831,
+          "to": 4.6842,
+          "count": 3,
+          "pct": 2.68
+        }
+      ]
+    },
+    {
+      "id": "2023",
+      "label": "2023. (годишњи просек)",
+      "kind": "yearly",
+      "date_start": "2023-01-01",
+      "date_end": "2024-01-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/pio-rajac/results/2023.json",
+      "stats": {
+        "min": 0.4467,
+        "max": 4.3742,
+        "mean": 0.8575,
+        "median": 0.5725,
+        "p90": 1.7642,
+        "count": 156,
+        "sum": 98.0863,
+        "p75": 0.7267,
+        "p95": 2.3531,
+        "std": 0.7541
+      },
+      "pixel_count": 112,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1787,
+          "to": 1.0798,
+          "count": 94,
+          "pct": 83.93
+        },
+        {
+          "class": "ниско",
+          "from": 1.0798,
+          "to": 1.9809,
+          "count": 8,
+          "pct": 7.14
+        },
+        {
+          "class": "умерено",
+          "from": 1.9809,
+          "to": 2.882,
+          "count": 6,
+          "pct": 5.36
+        },
+        {
+          "class": "повишено",
+          "from": 2.882,
+          "to": 3.7831,
+          "count": 2,
+          "pct": 1.79
+        },
+        {
+          "class": "високо",
+          "from": 3.7831,
+          "to": 4.6842,
+          "count": 2,
+          "pct": 1.79
+        }
+      ]
+    },
+    {
+      "id": "2024",
+      "label": "2024. (годишњи просек)",
+      "kind": "yearly",
+      "date_start": "2024-01-01",
+      "date_end": "2025-01-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/pio-rajac/results/2024.json",
+      "stats": {
+        "min": 0.4858,
+        "max": 5.4525,
+        "mean": 0.9354,
+        "median": 0.6104,
+        "p90": 2.0992,
+        "count": 156,
+        "sum": 107.0074,
+        "p75": 0.79,
+        "p95": 2.7281,
+        "std": 0.8798
+      },
+      "pixel_count": 112,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1787,
+          "to": 1.0798,
+          "count": 93,
+          "pct": 83.04
+        },
+        {
+          "class": "ниско",
+          "from": 1.0798,
+          "to": 1.9809,
+          "count": 7,
+          "pct": 6.25
+        },
+        {
+          "class": "умерено",
+          "from": 1.9809,
+          "to": 2.882,
+          "count": 7,
+          "pct": 6.25
+        },
+        {
+          "class": "повишено",
+          "from": 2.882,
+          "to": 3.7831,
+          "count": 2,
+          "pct": 1.79
+        },
+        {
+          "class": "високо",
+          "from": 3.7831,
+          "to": 4.6842,
+          "count": 3,
+          "pct": 2.68
+        }
+      ]
+    },
+    {
+      "id": "2025",
+      "label": "2025. (годишњи просек)",
+      "kind": "yearly",
+      "date_start": "2025-01-01",
+      "date_end": "2026-01-01",
+      "unit": "nW/cm²/sr",
+      "json": "public/sites/pio-rajac/results/2025.json",
+      "stats": {
+        "min": 0.4567,
+        "max": 4.5517,
+        "mean": 0.8208,
+        "median": 0.5449,
+        "p90": 1.7058,
+        "count": 156,
+        "sum": 93.8932,
+        "p75": 0.6667,
+        "p95": 2.3626,
+        "std": 0.7431
+      },
+      "pixel_count": 112,
+      "has_pixels": true,
+      "distribution": [
+        {
+          "class": "врло ниско",
+          "from": 0.1787,
+          "to": 1.0798,
+          "count": 95,
+          "pct": 84.82
+        },
+        {
+          "class": "ниско",
+          "from": 1.0798,
+          "to": 1.9809,
+          "count": 7,
+          "pct": 6.25
+        },
+        {
+          "class": "умерено",
+          "from": 1.9809,
+          "to": 2.882,
+          "count": 6,
+          "pct": 5.36
+        },
+        {
+          "class": "повишено",
+          "from": 2.882,
+          "to": 3.7831,
+          "count": 2,
+          "pct": 1.79
+        },
+        {
+          "class": "високо",
+          "from": 3.7831,
+          "to": 4.6842,
+          "count": 2,
+          "pct": 1.79
+        }
+      ]
+    }
+  ],
+  "trend": {
+    "mean_linear": {
+      "ok": true,
+      "n": 12,
+      "slope_abs_per_year": 0.055976,
+      "slope_pct_per_year": 14.0749,
+      "intercept": -112.401119,
+      "r2": 0.8634,
+      "first_year": 2014,
+      "last_year": 2025
+    },
+    "mean_sen_slope_abs_per_year": 0.057561,
+    "mann_kendall_mean": {
+      "ok": true,
+      "n": 12,
+      "s": 50,
+      "z": 3.3601,
+      "p_value": 0.00078,
+      "kendall_tau": 0.7576,
+      "trend": "растући",
+      "significant_0_05": true
+    },
+    "forecast_next_5_years": [
+      {
+        "year": 2026,
+        "linear_mean": 1.0063,
+        "sen_mean": 0.8784,
+        "note": "Пројекција није мерење; важи само ако се досадашњи тренд настави."
+      },
+      {
+        "year": 2027,
+        "linear_mean": 1.0622,
+        "sen_mean": 0.9359,
+        "note": "Пројекција није мерење; важи само ако се досадашњи тренд настави."
+      },
+      {
+        "year": 2028,
+        "linear_mean": 1.1182,
+        "sen_mean": 0.9935,
+        "note": "Пројекција није мерење; важи само ако се досадашњи тренд настави."
+      },
+      {
+        "year": 2029,
+        "linear_mean": 1.1742,
+        "sen_mean": 1.051,
+        "note": "Пројекција није мерење; важи само ако се досадашњи тренд настави."
+      },
+      {
+        "year": 2030,
+        "linear_mean": 1.2302,
+        "sen_mean": 1.1086,
+        "note": "Пројекција није мерење; важи само ако се досадашњи тренд настави."
+      }
+    ]
+  },
+  "seasonality": {
+    "01": {
+      "count": 3,
+      "min": 0.9724,
+      "max": 1.625,
+      "mean": 1.231,
+      "median": 1.0957,
+      "p75": 1.3603,
+      "p90": 1.5191,
+      "p95": 1.5721,
+      "std": 0.2831,
+      "sum": 3.6931
+    },
+    "02": {
+      "count": 3,
+      "min": 0.6896,
+      "max": 0.7676,
+      "mean": 0.7307,
+      "median": 0.735,
+      "p75": 0.7513,
+      "p90": 0.7611,
+      "p95": 0.7643,
+      "std": 0.032,
+      "sum": 2.1922
+    },
+    "03": {
+      "count": 3,
+      "min": 0.6115,
+      "max": 0.7063,
+      "mean": 0.6616,
+      "median": 0.6671,
+      "p75": 0.6867,
+      "p90": 0.6985,
+      "p95": 0.7024,
+      "std": 0.0389,
+      "sum": 1.9849
+    },
+    "04": {
+      "count": 3,
+      "min": 0.6056,
+      "max": 0.688,
+      "mean": 0.6481,
+      "median": 0.6507,
+      "p75": 0.6693,
+      "p90": 0.6805,
+      "p95": 0.6843,
+      "std": 0.0337,
+      "sum": 1.9443
+    },
+    "05": {
+      "count": 2,
+      "min": 0.7811,
+      "max": 0.8471,
+      "mean": 0.8141,
+      "median": 0.8141,
+      "p75": 0.8306,
+      "p90": 0.8405,
+      "p95": 0.8438,
+      "std": 0.033,
+      "sum": 1.6282
+    },
+    "06": {
+      "count": 2,
+      "min": 0.8994,
+      "max": 1.0582,
+      "mean": 0.9788,
+      "median": 0.9788,
+      "p75": 1.0185,
+      "p90": 1.0423,
+      "p95": 1.0503,
+      "std": 0.0794,
+      "sum": 1.9576
+    },
+    "07": {
+      "count": 2,
+      "min": 0.7857,
+      "max": 0.9248,
+      "mean": 0.8552,
+      "median": 0.8552,
+      "p75": 0.89,
+      "p90": 0.9109,
+      "p95": 0.9178,
+      "std": 0.0696,
+      "sum": 1.7105
+    },
+    "08": {
+      "count": 2,
+      "min": 0.7145,
+      "max": 0.7599,
+      "mean": 0.7372,
+      "median": 0.7372,
+      "p75": 0.7486,
+      "p90": 0.7554,
+      "p95": 0.7576,
+      "std": 0.0227,
+      "sum": 1.4744
+    },
+    "09": {
+      "count": 2,
+      "min": 0.6662,
+      "max": 0.6769,
+      "mean": 0.6715,
+      "median": 0.6715,
+      "p75": 0.6742,
+      "p90": 0.6758,
+      "p95": 0.6764,
+      "std": 0.0053,
+      "sum": 1.3431
+    },
+    "10": {
+      "count": 2,
+      "min": 0.7566,
+      "max": 0.786,
+      "mean": 0.7713,
+      "median": 0.7713,
+      "p75": 0.7787,
+      "p90": 0.7831,
+      "p95": 0.7845,
+      "std": 0.0147,
+      "sum": 1.5426
+    },
+    "11": {
+      "count": 2,
+      "min": 0.9443,
+      "max": 1.1157,
+      "mean": 1.03,
+      "median": 1.03,
+      "p75": 1.0728,
+      "p90": 1.0986,
+      "p95": 1.1071,
+      "std": 0.0857,
+      "sum": 2.06
+    },
+    "12": {
+      "count": 2,
+      "min": 0.6726,
+      "max": 1.3207,
+      "mean": 0.9967,
+      "median": 0.9967,
+      "p75": 1.1587,
+      "p90": 1.2559,
+      "p95": 1.2883,
+      "std": 0.3241,
+      "sum": 1.9933
+    }
+  },
+  "limits": [
+    "VIIRS радијанса није SQM вредност у mag/arcsec².",
+    "Јавна топлотна мапа је интерполисана визуелизација; статистика се рачуна из сирових пиксела.",
+    "Месечни просеци се не смеју мешати са годишњим трендом; за тренд користити годишње просеке."
+  ]
+}
