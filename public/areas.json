@@ -1,1 +1,31 @@
-
+{
+  "areas": [
+    {
+      "enabled": true,
+      "slug": "pio-rajac",
+      "name": "ПИО Рајац",
+      "group": "Заштићена подручја",
+      "boundary": "public/boundaries/pio-rajac.geojson",
+      "legacy_results": true,
+      "public_url": "https://piorajac.rs/monitoring-svetlosno-zagadjenje/"
+    },
+    {
+      "enabled": true,
+      "slug": "prokuplje",
+      "name": "Општина Прокупље",
+      "group": "БеоВидео",
+      "boundary": "public/boundaries/prokuplje.geojson",
+      "legacy_results": false,
+      "public_url": "https://piorajac.rs/beovideo/"
+    },
+    {
+      "enabled": true,
+      "slug": "zvezdara",
+      "name": "Градска општина Звездара",
+      "group": "БеоВидео",
+      "boundary": "public/boundaries/zvezdara.geojson",
+      "legacy_results": false,
+      "public_url": "https://piorajac.rs/beovideo/"
+    }
+  ]
+}
