@@ -1,14 +1,17 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""PIO Rajac light pollution processor for GitHub Actions.
+"""Multi-area light pollution processor for GitHub Actions.
 
-Creates static JSON files for the WordPress viewer:
-- public/results/index.json
-- public/results/YYYY-MM.json
+Creates static VIIRS JSON files for one or more protected areas / municipalities:
+- public/catalog.json
+- public/sites/<area-slug>/results/index.json
+- public/sites/<area-slug>/results/YYYY-MM.json
+- public/sites/<area-slug>/results/YYYY.json
 
-Default dataset is NOAA monthly VIIRS DNB stray-light corrected composite
-(NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG), because it is already monthly,
-stable for this first phase, and contains average radiance + cloud-free coverage.
+Compatibility:
+- for the area marked as "legacy_results": true, also mirrors results to:
+  public/results/index.json and public/results/YYYY-MM.json
+  so the existing PIO Rajac WordPress viewer keeps working without changes.
 """
 from __future__ import annotations
 
@@ -16,18 +19,20 @@ import argparse
 import json
 import math
 import os
-import sys
 import tempfile
 from dataclasses import dataclass
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
-from typing import Any, Dict, Iterable, List, Optional, Tuple
+from typing import Any, Dict, List, Optional
 
 import ee
 
 ROOT = Path(__file__).resolve().parent
-BOUNDARY = ROOT / "public" / "boundaries" / "pio-rajac.geojson"
-RESULTS = ROOT / "public" / "results"
+PUBLIC = ROOT / "public"
+AREAS_FILE = PUBLIC / "areas.json"
+BOUNDARIES = PUBLIC / "boundaries"
+LEGACY_RESULTS = PUBLIC / "results"
+SITES_ROOT = PUBLIC / "sites"
 
 DATASETS = {
     "monthly-vcmsl": {
@@ -50,12 +55,23 @@ DATASETS = {
     },
 }
 
+
 @dataclass
 class Period:
     id: str
     label: str
     start: str
     end: str
+
+
+@dataclass
+class Area:
+    slug: str
+    name: str
+    boundary_path: Path
+    legacy_results: bool = False
+    group: str = ""
+    public_url: str = ""
 
 
 def log(msg: str) -> None:
@@ -107,7 +123,6 @@ def yearly_period(year: int) -> Period:
 
 
 def yearly_candidate_periods(start_year: int, end_year: int) -> List[Period]:
-    """Years from end_year down to start_year, newest first."""
     return [yearly_period(y) for y in range(end_year, start_year - 1, -1)]
 
 
@@ -121,11 +136,83 @@ def latest_candidate_periods(n: int, extra_back: int = 8) -> List[Period]:
     return periods
 
 
+def current_year_candidate_periods(max_months: int = 12) -> List[Period]:
+    """Calendar months from the current year, newest complete month first."""
+    today = date.today()
+    cursor = previous_month_start(today.replace(day=1))
+    periods: List[Period] = []
+    while cursor.year == today.year and len(periods) < max_months:
+        periods.append(period_from_month_start(cursor))
+        cursor = previous_month_start(cursor)
+    return periods
+
+
+def monthly_candidate_periods_from_year(start_year: int) -> List[Period]:
+    """All complete monthly periods from January of start_year to the latest complete month, newest first."""
+    today = date.today()
+    if start_year < 2012:
+        raise ValueError("--monthly-from не треба да буде пре 2012. године за VIIRS месечне композите.")
+    if start_year > today.year:
+        raise ValueError("--monthly-from не може бити у будућности.")
+    cursor = previous_month_start(today.replace(day=1))
+    stop = date(start_year, 1, 1)
+    periods: List[Period] = []
+    while cursor >= stop:
+        periods.append(period_from_month_start(cursor))
+        cursor = previous_month_start(cursor)
+    return periods
+
+
+def default_areas() -> List[Area]:
+    return [
+        Area(
+            slug="pio-rajac",
+            name="ПИО Рајац",
+            boundary_path=BOUNDARIES / "pio-rajac.geojson",
+            legacy_results=True,
+            group="Заштићена подручја",
+            public_url="https://piorajac.rs/monitoring-svetlosno-zagadjenje/",
+        )
+    ]
+
+
+def load_areas() -> List[Area]:
+    if not AREAS_FILE.exists():
+        log("WARN: public/areas.json does not exist; using default PIO Rajac area only.")
+        return default_areas()
+
+    raw = load_json(AREAS_FILE)
+    rows = raw.get("areas", raw if isinstance(raw, list) else [])
+    areas: List[Area] = []
+    for row in rows:
+        if not row.get("enabled", True):
+            continue
+        slug = str(row.get("slug", "")).strip()
+        name = str(row.get("name", slug)).strip()
+        boundary = str(row.get("boundary", "")).strip()
+        if not slug or not boundary:
+            raise RuntimeError(f"Invalid area row in {AREAS_FILE}: missing slug or boundary")
+        boundary_path = (ROOT / boundary).resolve() if not boundary.startswith("/") else Path(boundary)
+        areas.append(
+            Area(
+                slug=slug,
+                name=name,
+                boundary_path=boundary_path,
+                legacy_results=bool(row.get("legacy_results", False)),
+                group=str(row.get("group", "")).strip(),
+                public_url=str(row.get("public_url", "")).strip(),
+            )
+        )
+    if not areas:
+        raise RuntimeError(f"No enabled areas in {AREAS_FILE}")
+    return areas
+
+
 def geojson_to_ee_geometry(gj: Dict[str, Any]) -> ee.Geometry:
     if gj.get("type") == "FeatureCollection":
         geoms = [feat.get("geometry") for feat in gj.get("features", []) if feat.get("geometry")]
         if not geoms:
-            raise ValueError("GeoJSON FeatureCollection nema geometrije.")
+            raise ValueError("GeoJSON FeatureCollection нема геометрије.")
         if len(geoms) == 1:
             return ee.Geometry(geoms[0])
         polys: List[Any] = []
@@ -134,6 +221,9 @@ def geojson_to_ee_geometry(gj: Dict[str, Any]) -> ee.Geometry:
                 polys.append(geom["coordinates"])
             elif geom.get("type") == "MultiPolygon":
                 polys.extend(geom["coordinates"])
+            else:
+                # Fallback for mixed geometry collections.
+                return ee.FeatureCollection(gj).geometry()
         return ee.Geometry.MultiPolygon(polys)
     if gj.get("type") == "Feature":
         return ee.Geometry(gj["geometry"])
@@ -210,8 +300,30 @@ def has_images(dataset: Dict[str, Any], period: Period, region: ee.Geometry) -> 
 
 
 def select_available_periods(dataset: Dict[str, Any], region: ee.Geometry, months: int) -> List[Period]:
+    return select_available_periods_from_candidates(dataset, region, latest_candidate_periods(months, extra_back=10), months)
+
+
+def select_current_year_available_periods(dataset: Dict[str, Any], region: ee.Geometry, months: int) -> List[Period]:
+    candidates = current_year_candidate_periods(max_months=max(1, months))
+    if not candidates:
+        log("WARN: No complete month exists in the current calendar year yet; falling back to latest available months.")
+        return select_available_periods(dataset, region, months)
+    return select_available_periods_from_candidates(dataset, region, candidates, months)
+
+
+def select_available_periods_from_year(dataset: Dict[str, Any], region: ee.Geometry, start_year: int) -> List[Period]:
+    candidates = monthly_candidate_periods_from_year(start_year)
+    if not candidates:
+        raise RuntimeError(f"Нема комплетних месечних периода од {start_year}. године до данас.")
+    # For a fixed archive start year we intentionally process the whole monthly archive,
+    # not only the latest N months. This is needed for the public viewer to show all
+    # monthly maps from 2024 onward, the same way Rajac has a historical monthly archive.
+    return select_available_periods_from_candidates(dataset, region, candidates, len(candidates))
+
+
+def select_available_periods_from_candidates(dataset: Dict[str, Any], region: ee.Geometry, candidates: List[Period], months: int) -> List[Period]:
     chosen: List[Period] = []
-    for period in latest_candidate_periods(months, extra_back=10):
+    for period in candidates:
         if has_images(dataset, period, region):
             chosen.append(period)
             log(f"Selected available month: {period.id}")
@@ -225,14 +337,12 @@ def select_available_periods(dataset: Dict[str, Any], region: ee.Geometry, month
 
 
 def build_monthly_image(dataset: Dict[str, Any], period: Period, region: ee.Geometry) -> ee.Image:
-    """Build an image for a single calendar month."""
     coll = image_collection_for_period(dataset, period, region)
     band = dataset["band"]
     if dataset["id"] == "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG":
         img = ee.Image(coll.first())
         radiance = img.select(band).rename(band)
         coverage = img.select(dataset["coverage_band"])
-        # cf_cvg >= 1 keeps actual observed cloud-free pixels and removes no-data cells.
         return radiance.updateMask(coverage.gte(1)).clip(region)
 
     def mask_black_marble(img):
@@ -247,7 +357,6 @@ def build_monthly_image(dataset: Dict[str, Any], period: Period, region: ee.Geom
 
 
 def build_yearly_image(dataset: Dict[str, Any], period: Period, region: ee.Geometry) -> ee.Image:
-    """Build an image for a full calendar year (mean of 12 cloud-masked monthly composites)."""
     coll = image_collection_for_period(dataset, period, region)
     band = dataset["band"]
     if dataset["id"] == "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG":
@@ -257,8 +366,6 @@ def build_yearly_image(dataset: Dict[str, Any], period: Period, region: ee.Geome
             return img.select(band).updateMask(img.select(cov_band).gte(1))
 
         return coll.map(mask_month).mean().clip(region).rename(band)
-
-    # Black Marble (and any other future dataset) — same masking, just mean over the year.
     return build_monthly_image(dataset, period, region)
 
 
@@ -317,16 +424,11 @@ def sample_pixels(image: ee.Image, geom: ee.Geometry, band: str, scale_m: float)
             "value": round(value, 4),
             "class": classify_value(value),
         })
-    # Stable order for viewer/statistics.
     pixels.sort(key=lambda p: (p["lat"], p["lon"]))
     return pixels
 
 
 def compute_hotspots(pixels: List[Dict[str, Any]], top_n: int = 5) -> List[Dict[str, Any]]:
-    """Top-N pixels with highest radiance inside the PIO boundary.
-    These are real, geographically located hotspots — no inference about
-    where the light originates from, just where it is brightest *within* PIO.
-    """
     ranked = sorted(pixels, key=lambda p: float(p.get("value") or 0), reverse=True)
     out = []
     for i, p in enumerate(ranked[:top_n], 1):
@@ -340,20 +442,22 @@ def compute_hotspots(pixels: List[Dict[str, Any]], top_n: int = 5) -> List[Dict[
     return out
 
 
-def build_result(dataset: Dict[str, Any], period: Period, region: ee.Geometry, kind: str = "monthly") -> Dict[str, Any]:
-    """kind: 'monthly' or 'yearly' — selects the image-building strategy."""
+def build_result(dataset: Dict[str, Any], period: Period, region: ee.Geometry, area: Area, kind: str = "monthly") -> Dict[str, Any]:
     band = dataset["band"]
     scale_m = float(dataset["scale_m"])
-    if kind == "yearly":
-        image = build_yearly_image(dataset, period, region)
-    else:
-        image = build_monthly_image(dataset, period, region)
+    image = build_yearly_image(dataset, period, region) if kind == "yearly" else build_monthly_image(dataset, period, region)
     stats = reduce_stats(image, region, band, scale_m)
     pixels = sample_pixels(image, region, band, scale_m)
     if stats["count"] <= 0 or not pixels:
-        raise RuntimeError(f"Period {period.id} nema validne piksele u granici PIO Rajac.")
+        raise RuntimeError(f"Period {period.id} nema validne piksele za područje {area.slug}.")
     return {
         "ok": True,
+        "area": {
+            "slug": area.slug,
+            "name": area.name,
+            "group": area.group,
+            "public_url": area.public_url,
+        },
         "meta": {
             "id": period.id,
             "label": period.label,
@@ -374,32 +478,30 @@ def build_result(dataset: Dict[str, Any], period: Period, region: ee.Geometry, k
     }
 
 
-def main() -> int:
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--months", type=int, default=12, help="Number of latest available complete months to process.")
-    parser.add_argument("--dataset", choices=sorted(DATASETS.keys()), default="monthly-vcmsl")
-    parser.add_argument("--yearly", action="store_true", help="Also generate yearly averaged composites.")
-    parser.add_argument("--yearly-from", type=int, default=2013, help="Earliest year to include in yearly composites (default 2013, when VCMSLCFG has full coverage).")
-    parser.add_argument("--yearly-to", type=int, default=date.today().year - 1, help="Latest year to include (defaults to last complete calendar year).")
-    args = parser.parse_args()
+def process_area(area: Area, dataset: Dict[str, Any], args: argparse.Namespace) -> Dict[str, Any]:
+    if not area.boundary_path.exists():
+        raise RuntimeError(f"Nedostaje granica za {area.slug}: {area.boundary_path}")
 
-    if not BOUNDARY.exists():
-        raise RuntimeError(f"Nedostaje granica: {BOUNDARY}")
-
-    dataset = DATASETS[args.dataset]
-    RESULTS.mkdir(parents=True, exist_ok=True)
-
-    init_ee()
-    boundary = load_json(BOUNDARY)
+    boundary = load_json(area.boundary_path)
     region = geojson_to_ee_geometry(boundary)
+    area_results = SITES_ROOT / area.slug / "results"
+    area_results.mkdir(parents=True, exist_ok=True)
 
-    # --- Monthly composites ---
-    periods = select_available_periods(dataset, region, max(1, args.months))
-    index_periods = []
+    log(f"=== AREA {area.slug}: {area.name} ===")
+    if args.monthly_from:
+        periods = select_available_periods_from_year(dataset, region, args.monthly_from)
+    elif args.current_year:
+        periods = select_current_year_available_periods(dataset, region, max(1, args.months))
+    else:
+        periods = select_available_periods(dataset, region, max(1, args.months))
+    index_periods: List[Dict[str, Any]] = []
+
     for period in periods:
-        log(f"Processing month {period.id} from {dataset['id']}...")
-        result = build_result(dataset, period, region, kind="monthly")
-        write_json(RESULTS / f"{period.id}.json", result)
+        log(f"Processing {area.slug} month {period.id} from {dataset['id']}...")
+        result = build_result(dataset, period, region, area, kind="monthly")
+        write_json(area_results / f"{period.id}.json", result)
+        if area.legacy_results:
+            write_json(LEGACY_RESULTS / f"{period.id}.json", result)
         index_periods.append({
             "id": period.id,
             "label": period.label,
@@ -407,23 +509,23 @@ def main() -> int:
             "dataset": dataset["id"],
             "kind": "monthly",
         })
-        log(f"OK {period.id}: {len(result['pixels'])} pixels, mean={result['stats']['overall']['mean']}, max={result['stats']['overall']['max']}")
+        log(f"OK {area.slug} {period.id}: {len(result['pixels'])} pixels, mean={result['stats']['overall']['mean']}, max={result['stats']['overall']['max']}")
 
-    # --- Yearly composites (optional) ---
     index_yearly: List[Dict[str, Any]] = []
     if args.yearly:
-        candidates = yearly_candidate_periods(args.yearly_from, args.yearly_to)
-        for year_period in candidates:
+        for year_period in yearly_candidate_periods(args.yearly_from, args.yearly_to):
             if not has_images(dataset, year_period, region):
-                log(f"Skipped year {year_period.id} (no images in collection)")
+                log(f"Skipped {area.slug} year {year_period.id} (no images in collection)")
                 continue
-            log(f"Processing year {year_period.id} from {dataset['id']}...")
+            log(f"Processing {area.slug} year {year_period.id} from {dataset['id']}...")
             try:
-                result = build_result(dataset, year_period, region, kind="yearly")
+                result = build_result(dataset, year_period, region, area, kind="yearly")
             except RuntimeError as exc:
-                log(f"WARN year {year_period.id}: {exc}")
+                log(f"WARN {area.slug} year {year_period.id}: {exc}")
                 continue
-            write_json(RESULTS / f"{year_period.id}.json", result)
+            write_json(area_results / f"{year_period.id}.json", result)
+            if area.legacy_results:
+                write_json(LEGACY_RESULTS / f"{year_period.id}.json", result)
             index_yearly.append({
                 "id": year_period.id,
                 "label": year_period.label,
@@ -431,10 +533,16 @@ def main() -> int:
                 "dataset": dataset["id"],
                 "kind": "yearly",
             })
-            log(f"OK year {year_period.id}: {len(result['pixels'])} pixels, mean={result['stats']['overall']['mean']}, max={result['stats']['overall']['max']}")
+            log(f"OK {area.slug} year {year_period.id}: {len(result['pixels'])} pixels, mean={result['stats']['overall']['mean']}, max={result['stats']['overall']['max']}")
 
     index = {
         "ok": True,
+        "area": {
+            "slug": area.slug,
+            "name": area.name,
+            "group": area.group,
+            "public_url": area.public_url,
+        },
         "latest": periods[0].id,
         "periods": index_periods,
         "yearlyPeriods": index_yearly,
@@ -447,10 +555,58 @@ def main() -> int:
             "yearlyFirst": index_yearly[-1]["id"] if index_yearly else None,
             "yearlyLast": index_yearly[0]["id"] if index_yearly else None,
         },
-        "note": "Generated by GitHub Actions processor for PIO Rajac light pollution monitor. These are real satellite-derived VIIRS nighttime radiance JSON results.",
+        "note": "Generated by GitHub Actions multi-area processor. These are real satellite-derived VIIRS nighttime radiance JSON results.",
     }
-    write_json(RESULTS / "index.json", index)
-    log(f"DONE: {len(periods)} monthly + {len(index_yearly)} yearly periods written to {RESULTS}")
+    write_json(area_results / "index.json", index)
+    if area.legacy_results:
+        write_json(LEGACY_RESULTS / "index.json", index)
+    return index
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--months", type=int, default=12, help="Number of latest available complete months to process.")
+    parser.add_argument("--dataset", choices=sorted(DATASETS.keys()), default="monthly-vcmsl")
+    parser.add_argument("--yearly", action="store_true", help="Also generate yearly averaged composites.")
+    parser.add_argument("--yearly-from", type=int, default=2013, help="Earliest year to include in yearly composites.")
+    parser.add_argument("--yearly-to", type=int, default=date.today().year - 1, help="Latest year to include, defaults to last complete calendar year.")
+    parser.add_argument("--area", default="", help="Optional single area slug. Empty means all enabled areas.")
+    parser.add_argument("--monthly-from", type=int, default=0, help="Earliest year for monthly archive. Example: --monthly-from 2024 generates every available month from 2024-01 onward.")
+    parser.add_argument("--current-year", action="store_true", help="Generate monthly periods only for the current calendar year, newest available month first. Ignored when --monthly-from is used.")
+    args = parser.parse_args()
+
+    dataset = DATASETS[args.dataset]
+    init_ee()
+
+    areas = load_areas()
+    if args.area:
+        areas = [a for a in areas if a.slug == args.area]
+        if not areas:
+            raise RuntimeError(f"Area slug not found or not enabled: {args.area}")
+
+    catalog_areas: List[Dict[str, Any]] = []
+    for area in areas:
+        index = process_area(area, dataset, args)
+        catalog_areas.append({
+            "slug": area.slug,
+            "name": area.name,
+            "group": area.group,
+            "public_url": area.public_url,
+            "results": f"public/sites/{area.slug}/results/index.json",
+            "latest": index.get("latest"),
+            "periods_count": index.get("coverage", {}).get("count"),
+            "yearly_count": index.get("coverage", {}).get("yearlyCount"),
+        })
+
+    catalog = {
+        "ok": True,
+        "updated_at": datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z"),
+        "dataset": dataset["id"],
+        "unit": dataset["unit"],
+        "areas": catalog_areas,
+    }
+    write_json(PUBLIC / "catalog.json", catalog)
+    log(f"DONE: processed {len(catalog_areas)} area(s).")
     return 0
 
 
@@ -458,5 +614,6 @@ if __name__ == "__main__":
     try:
         raise SystemExit(main())
     except Exception as exc:
-        print(f"ERROR: {exc}", file=sys.stderr, flush=True)
+        print(f"ERROR: {exc}", flush=True)
         raise
+
