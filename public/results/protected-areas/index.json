@@ -1,0 +1,15 @@
+{
+  "status": "ok",
+  "generated_at": "2026-07-08T17:51:42Z",
+  "source_dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG",
+  "latest_month": "2026-04",
+  "latest_year": "2026",
+  "months": [
+    "2026-04"
+  ],
+  "years": [
+    "2026"
+  ],
+  "latest_file": "latest.json",
+  "rajac_file": "rajac.json"
+}
