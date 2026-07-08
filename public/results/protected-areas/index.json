@@ -1,10 +1,13 @@
 {
   "status": "ok",
-  "generated_at": "2026-07-08T17:51:42Z",
+  "generated_at": "2026-07-08T17:54:49Z",
   "source_dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG",
   "latest_month": "2026-04",
   "latest_year": "2026",
   "months": [
+    "2026-01",
+    "2026-02",
+    "2026-03",
     "2026-04"
   ],
   "years": [
