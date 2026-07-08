@@ -25,6 +25,7 @@ on:
         required: false
         default: false
         type: boolean
+
   schedule:
     - cron: "30 5 8,18,28 * *"
 
@@ -39,14 +40,16 @@ jobs:
   viirs-protected-areas:
     runs-on: ubuntu-latest
     timeout-minutes: 90
+
     env:
-      EE_PROJECT_ID: ${{ secrets.EE_PROJECT_ID }}
-      EE_SERVICE_ACCOUNT: ${{ secrets.EE_SERVICE_ACCOUNT }}
-      EE_SERVICE_ACCOUNT_KEY_JSON: ${{ secrets.EE_SERVICE_ACCOUNT_KEY_JSON }}
+      EE_PROJECT_ID: deft-epigram-414409
+      EE_SERVICE_ACCOUNT: rajac-light-monitor@deft-epigram-414409.iam.gserviceaccount.com
+      EE_SERVICE_ACCOUNT_KEY_JSON: ${{ secrets.GEE_SERVICE_ACCOUNT_JSON }}
       MODE: ${{ github.event.inputs.mode || 'latest' }}
       START_MONTH: ${{ github.event.inputs.start || '2014-01' }}
       END_MONTH: ${{ github.event.inputs.end || 'auto' }}
       OVERWRITE: ${{ github.event.inputs.overwrite || 'false' }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -66,6 +69,7 @@ jobs:
         run: |
           EXTRA=""
           if [ "$OVERWRITE" = "true" ]; then EXTRA="--overwrite"; fi
+
           python protected_areas/protected_areas_processor.py \
             --mode "$MODE" \
             --start "$START_MONTH" \
@@ -86,7 +90,9 @@ jobs:
         run: |
           git config user.name "rajac-light-monitor"
           git config user.email "actions@github.com"
+
           git add public/results/protected-areas protected_areas/zasticena_podrucja_srbije_gee.geojson
+
           if git diff --cached --quiet; then
             echo "Нема нових VIIRS резултата за упис."
           else
