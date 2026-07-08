@@ -1,0 +1,15 @@
+{
+  "status": "ok",
+  "generated_at": "2026-07-08T19:54:03Z",
+  "source_dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG",
+  "records": [
+    {
+      "status": "ok",
+      "period_kind": "month",
+      "period": "2026-04",
+      "pa_id": "rajac",
+      "name": "ПИО „Рајац\"",
+      "file": "public/results/protected-areas/rasters/months/2026-04/rajac.png"
+    }
+  ]
+}
