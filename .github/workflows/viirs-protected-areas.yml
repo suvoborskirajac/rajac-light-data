@@ -84,6 +84,7 @@ jobs:
             --tile-scale 4 \
             --min-cf-cvg 1 \
             --min-months-year 3 \
+            --ee-deadline 300000 \
             $EXTRA
 
       - name: Commit updated protected-area results
