@@ -1,15 +1,359 @@
 {
   "status": "ok",
-  "generated_at": "2026-07-08T19:54:03Z",
+  "generated_at": "2026-07-08T20:11:50Z",
   "source_dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG",
   "records": [
     {
       "status": "ok",
       "period_kind": "month",
       "period": "2026-04",
+      "pa_id": "carska-bara",
+      "name": "Царска бара",
+      "file": "public/results/protected-areas/rasters/months/2026-04/carska-bara.png"
+    },
+    {
+      "status": "ok",
+      "period_kind": "month",
+      "period": "2026-04",
+      "pa_id": "deliblatska-pescara",
+      "name": "Делиблатска пешчара",
+      "file": "public/results/protected-areas/rasters/months/2026-04/deliblatska-pescara.png"
+    },
+    {
+      "status": "ok",
+      "period_kind": "month",
+      "period": "2026-04",
+      "pa_id": "goc-gvozdac",
+      "name": "Гоч-Гвоздац",
+      "file": "public/results/protected-areas/rasters/months/2026-04/goc-gvozdac.png"
+    },
+    {
+      "status": "ok",
+      "period_kind": "month",
+      "period": "2026-04",
+      "pa_id": "golija",
+      "name": "Голија",
+      "file": "public/results/protected-areas/rasters/months/2026-04/golija.png"
+    },
+    {
+      "status": "ok",
+      "period_kind": "month",
+      "period": "2026-04",
+      "pa_id": "jerma",
+      "name": "Јерма",
+      "file": "public/results/protected-areas/rasters/months/2026-04/jerma.png"
+    },
+    {
+      "status": "ok",
+      "period_kind": "month",
+      "period": "2026-04",
+      "pa_id": "kamena-gora",
+      "name": "Камена гора",
+      "file": "public/results/protected-areas/rasters/months/2026-04/kamena-gora.png"
+    },
+    {
+      "status": "ok",
+      "period_kind": "month",
+      "period": "2026-04",
+      "pa_id": "kanjiski-jarasi",
+      "name": "Кањишки јараши",
+      "file": "public/results/protected-areas/rasters/months/2026-04/kanjiski-jarasi.png"
+    },
+    {
+      "status": "ok",
+      "period_kind": "month",
+      "period": "2026-04",
+      "pa_id": "karadjordjevo",
+      "name": "Карађорђево",
+      "file": "public/results/protected-areas/rasters/months/2026-04/karadjordjevo.png"
+    },
+    {
+      "status": "ok",
+      "period_kind": "month",
+      "period": "2026-04",
+      "pa_id": "karas-nera",
+      "name": "Кaраш-Нера",
+      "file": "public/results/protected-areas/rasters/months/2026-04/karas-nera.png"
+    },
+    {
+      "status": "ok",
+      "period_kind": "month",
+      "period": "2026-04",
+      "pa_id": "klisura-djetinje",
+      "name": "Клисура Дјетиње",
+      "file": "public/results/protected-areas/rasters/months/2026-04/klisura-djetinje.png"
+    },
+    {
+      "status": "ok",
+      "period_kind": "month",
+      "period": "2026-04",
+      "pa_id": "klisura-reke-milesevke",
+      "name": "Клисура реке Милешевке",
+      "file": "public/results/protected-areas/rasters/months/2026-04/klisura-reke-milesevke.png"
+    },
+    {
+      "status": "ok",
+      "period_kind": "month",
+      "period": "2026-04",
+      "pa_id": "klisura-reke-tresnjice",
+      "name": "Клисура реке Трешњице",
+      "file": "public/results/protected-areas/rasters/months/2026-04/klisura-reke-tresnjice.png"
+    },
+    {
+      "status": "ok",
+      "period_kind": "month",
+      "period": "2026-04",
+      "pa_id": "koviljsko-pertovaradinski-rit",
+      "name": "Ковиљско-петроварадински рит",
+      "file": "public/results/protected-areas/rasters/months/2026-04/koviljsko-pertovaradinski-rit.png"
+    },
+    {
+      "status": "ok",
+      "period_kind": "month",
+      "period": "2026-04",
+      "pa_id": "maljen",
+      "name": "Маљен",
+      "file": "public/results/protected-areas/rasters/months/2026-04/maljen.png"
+    },
+    {
+      "status": "ok",
+      "period_kind": "month",
+      "period": "2026-04",
+      "pa_id": "nacionalni-park-djerdap",
+      "name": "Национални парк Ђердап",
+      "file": "public/results/protected-areas/rasters/months/2026-04/nacionalni-park-djerdap.png"
+    },
+    {
+      "status": "ok",
+      "period_kind": "month",
+      "period": "2026-04",
+      "pa_id": "nacionalni-park-fruska-gora",
+      "name": "Национални парк Фрушка гора",
+      "file": "public/results/protected-areas/rasters/months/2026-04/nacionalni-park-fruska-gora.png"
+    },
+    {
+      "status": "ok",
+      "period_kind": "month",
+      "period": "2026-04",
+      "pa_id": "nacionalni-park-kopaonik",
+      "name": "Национални парк Копаоник",
+      "file": "public/results/protected-areas/rasters/months/2026-04/nacionalni-park-kopaonik.png"
+    },
+    {
+      "status": "ok",
+      "period_kind": "month",
+      "period": "2026-04",
+      "pa_id": "nacionalni-park-tara",
+      "name": "Национални парк Тара",
+      "file": "public/results/protected-areas/rasters/months/2026-04/nacionalni-park-tara.png"
+    },
+    {
+      "status": "ok",
+      "period_kind": "month",
+      "period": "2026-04",
+      "pa_id": "okanj-bara",
+      "name": "Окањ бара",
+      "file": "public/results/protected-areas/rasters/months/2026-04/okanj-bara.png"
+    },
+    {
+      "status": "ok",
+      "period_kind": "month",
+      "period": "2026-04",
+      "pa_id": "ovcarsko-kablarska-klisura",
+      "name": "Овчарско-кабларска клисура",
+      "file": "public/results/protected-areas/rasters/months/2026-04/ovcarsko-kablarska-klisura.png"
+    },
+    {
+      "status": "ok",
+      "period_kind": "month",
+      "period": "2026-04",
+      "pa_id": "ozren-jadovnik",
+      "name": "Озрен-Јадовник",
+      "file": "public/results/protected-areas/rasters/months/2026-04/ozren-jadovnik.png"
+    },
+    {
+      "status": "ok",
+      "period_kind": "month",
+      "period": "2026-04",
+      "pa_id": "pasnjaci-velike-droplje",
+      "name": "Пашњаци Велике дропље",
+      "file": "public/results/protected-areas/rasters/months/2026-04/pasnjaci-velike-droplje.png"
+    },
+    {
+      "status": "ok",
+      "period_kind": "month",
+      "period": "2026-04",
+      "pa_id": "pestersko-polje",
+      "name": "Пештерско поље",
+      "file": "public/results/protected-areas/rasters/months/2026-04/pestersko-polje.png"
+    },
+    {
+      "status": "ok",
+      "period_kind": "month",
+      "period": "2026-04",
+      "pa_id": "planina-cer",
+      "name": "Планина Цер",
+      "file": "public/results/protected-areas/rasters/months/2026-04/planina-cer.png"
+    },
+    {
+      "status": "ok",
+      "period_kind": "month",
+      "period": "2026-04",
+      "pa_id": "planina-rudnik",
+      "name": "Планина Рудник",
+      "file": "public/results/protected-areas/rasters/months/2026-04/planina-rudnik.png"
+    },
+    {
+      "status": "ok",
+      "period_kind": "month",
+      "period": "2026-04",
+      "pa_id": "potamisje",
+      "name": "Потамишје",
+      "file": "public/results/protected-areas/rasters/months/2026-04/potamisje.png"
+    },
+    {
+      "status": "ok",
+      "period_kind": "month",
+      "period": "2026-04",
+      "pa_id": "radan",
+      "name": "Радан",
+      "file": "public/results/protected-areas/rasters/months/2026-04/radan.png"
+    },
+    {
+      "status": "skipped",
+      "period_kind": "month",
+      "period": "2026-04",
       "pa_id": "rajac",
       "name": "ПИО „Рајац\"",
       "file": "public/results/protected-areas/rasters/months/2026-04/rajac.png"
+    },
+    {
+      "status": "ok",
+      "period_kind": "month",
+      "period": "2026-04",
+      "pa_id": "ritovi-donjeg-potisja",
+      "name": "Ритови Доњег Потисја",
+      "file": "public/results/protected-areas/rasters/months/2026-04/ritovi-donjeg-potisja.png"
+    },
+    {
+      "status": "ok",
+      "period_kind": "month",
+      "period": "2026-04",
+      "pa_id": "sargan-mokra-gora",
+      "name": "Шарган – Мокра гора",
+      "file": "public/results/protected-areas/rasters/months/2026-04/sargan-mokra-gora.png"
+    },
+    {
+      "status": "ok",
+      "period_kind": "month",
+      "period": "2026-04",
+      "pa_id": "sicevacka-klisura",
+      "name": "Сићевачка клисура",
+      "file": "public/results/protected-areas/rasters/months/2026-04/sicevacka-klisura.png"
+    },
+    {
+      "status": "ok",
+      "period_kind": "month",
+      "period": "2026-04",
+      "pa_id": "stara-planina",
+      "name": "Стара планина",
+      "file": "public/results/protected-areas/rasters/months/2026-04/stara-planina.png"
+    },
+    {
+      "status": "ok",
+      "period_kind": "month",
+      "period": "2026-04",
+      "pa_id": "stolovi",
+      "name": "Столови",
+      "file": "public/results/protected-areas/rasters/months/2026-04/stolovi.png"
+    },
+    {
+      "status": "ok",
+      "period_kind": "month",
+      "period": "2026-04",
+      "pa_id": "suboticka-pescara",
+      "name": "Суботичка пешчара",
+      "file": "public/results/protected-areas/rasters/months/2026-04/suboticka-pescara.png"
+    },
+    {
+      "status": "ok",
+      "period_kind": "month",
+      "period": "2026-04",
+      "pa_id": "suva-planiana",
+      "name": "Сува планина",
+      "file": "public/results/protected-areas/rasters/months/2026-04/suva-planiana.png"
+    },
+    {
+      "status": "ok",
+      "period_kind": "month",
+      "period": "2026-04",
+      "pa_id": "tikvara",
+      "name": "Тиквара",
+      "file": "public/results/protected-areas/rasters/months/2026-04/tikvara.png"
+    },
+    {
+      "status": "ok",
+      "period_kind": "month",
+      "period": "2026-04",
+      "pa_id": "titelski-breg",
+      "name": "Тителски брег",
+      "file": "public/results/protected-areas/rasters/months/2026-04/titelski-breg.png"
+    },
+    {
+      "status": "ok",
+      "period_kind": "month",
+      "period": "2026-04",
+      "pa_id": "uvac",
+      "name": "Увац",
+      "file": "public/results/protected-areas/rasters/months/2026-04/uvac.png"
+    },
+    {
+      "status": "ok",
+      "period_kind": "month",
+      "period": "2026-04",
+      "pa_id": "vardenik",
+      "name": "Варденик",
+      "file": "public/results/protected-areas/rasters/months/2026-04/vardenik.png"
+    },
+    {
+      "status": "ok",
+      "period_kind": "month",
+      "period": "2026-04",
+      "pa_id": "veliki-jastrebac",
+      "name": "Велики Јастребац",
+      "file": "public/results/protected-areas/rasters/months/2026-04/veliki-jastrebac.png"
+    },
+    {
+      "status": "ok",
+      "period_kind": "month",
+      "period": "2026-04",
+      "pa_id": "vlasina",
+      "name": "Власина",
+      "file": "public/results/protected-areas/rasters/months/2026-04/vlasina.png"
+    },
+    {
+      "status": "ok",
+      "period_kind": "month",
+      "period": "2026-04",
+      "pa_id": "vrsacke-planine",
+      "name": "Вршачке планине",
+      "file": "public/results/protected-areas/rasters/months/2026-04/vrsacke-planine.png"
+    },
+    {
+      "status": "ok",
+      "period_kind": "month",
+      "period": "2026-04",
+      "pa_id": "zeljin",
+      "name": "Жељин",
+      "file": "public/results/protected-areas/rasters/months/2026-04/zeljin.png"
+    },
+    {
+      "status": "ok",
+      "period_kind": "month",
+      "period": "2026-04",
+      "pa_id": "zlatibor",
+      "name": "Златибор",
+      "file": "public/results/protected-areas/rasters/months/2026-04/zlatibor.png"
     }
   ]
 }
