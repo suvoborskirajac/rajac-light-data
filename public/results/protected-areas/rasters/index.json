@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "generated_at": "2026-07-09T10:42:53Z",
+  "generated_at": "2026-07-09T13:53:52Z",
   "source_dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG",
   "palette": [
     "233b2a",
@@ -255,6 +255,15 @@
       "name": "ПИО „Рајац\"",
       "style": "smooth",
       "file": "public/results/protected-areas/rasters/months/2026-04/rajac_smooth.png"
+    },
+    {
+      "status": "ok",
+      "period_kind": "month",
+      "period": "2026-04",
+      "pa_id": "rajac",
+      "name": "ПИО „Рајац\"",
+      "style": "surface",
+      "file": "public/results/protected-areas/rasters/months/2026-04/rajac_surface.png"
     },
     {
       "status": "ok",
