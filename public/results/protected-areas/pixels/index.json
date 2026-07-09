@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "generated_at": "2026-07-09T21:23:35Z",
+  "generated_at": "2026-07-09T22:11:59Z",
   "source_dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG",
   "description": "Pixel JSON files for SVG Rajac-style heatmap rendering.",
   "records": [
@@ -355,6 +355,4582 @@
       "pa_id": "zlatibor",
       "pixels": 2898,
       "file": "public/results/protected-areas/pixels/months/2026-04/zlatibor.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2014",
+      "pa_id": "carska-bara",
+      "pixels": 431,
+      "file": "public/results/protected-areas/pixels/years/2014/carska-bara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2014",
+      "pa_id": "deliblatska-pescara",
+      "pixels": 2528,
+      "file": "public/results/protected-areas/pixels/years/2014/deliblatska-pescara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2014",
+      "pa_id": "goc-gvozdac",
+      "pixels": 320,
+      "file": "public/results/protected-areas/pixels/years/2014/goc-gvozdac.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2014",
+      "pa_id": "golija",
+      "pixels": 5000,
+      "file": "public/results/protected-areas/pixels/years/2014/golija.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2014",
+      "pa_id": "jerma",
+      "pixels": 516,
+      "file": "public/results/protected-areas/pixels/years/2014/jerma.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2014",
+      "pa_id": "kamena-gora",
+      "pixels": 586,
+      "file": "public/results/protected-areas/pixels/years/2014/kamena-gora.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2014",
+      "pa_id": "kanjiski-jarasi",
+      "pixels": 386,
+      "file": "public/results/protected-areas/pixels/years/2014/kanjiski-jarasi.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2014",
+      "pa_id": "karadjordjevo",
+      "pixels": 282,
+      "file": "public/results/protected-areas/pixels/years/2014/karadjordjevo.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2014",
+      "pa_id": "karas-nera",
+      "pixels": 236,
+      "file": "public/results/protected-areas/pixels/years/2014/karas-nera.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2014",
+      "pa_id": "klisura-djetinje",
+      "pixels": 101,
+      "file": "public/results/protected-areas/pixels/years/2014/klisura-djetinje.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2014",
+      "pa_id": "klisura-reke-milesevke",
+      "pixels": 133,
+      "file": "public/results/protected-areas/pixels/years/2014/klisura-reke-milesevke.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2014",
+      "pa_id": "klisura-reke-tresnjice",
+      "pixels": 76,
+      "file": "public/results/protected-areas/pixels/years/2014/klisura-reke-tresnjice.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2014",
+      "pa_id": "koviljsko-pertovaradinski-rit",
+      "pixels": 506,
+      "file": "public/results/protected-areas/pixels/years/2014/koviljsko-pertovaradinski-rit.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2014",
+      "pa_id": "maljen",
+      "pixels": 764,
+      "file": "public/results/protected-areas/pixels/years/2014/maljen.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2014",
+      "pa_id": "nacionalni-park-djerdap",
+      "pixels": 4479,
+      "file": "public/results/protected-areas/pixels/years/2014/nacionalni-park-djerdap.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2014",
+      "pa_id": "nacionalni-park-fruska-gora",
+      "pixels": 2315,
+      "file": "public/results/protected-areas/pixels/years/2014/nacionalni-park-fruska-gora.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2014",
+      "pa_id": "nacionalni-park-kopaonik",
+      "pixels": 888,
+      "file": "public/results/protected-areas/pixels/years/2014/nacionalni-park-kopaonik.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2014",
+      "pa_id": "nacionalni-park-tara",
+      "pixels": 1784,
+      "file": "public/results/protected-areas/pixels/years/2014/nacionalni-park-tara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2014",
+      "pa_id": "okanj-bara",
+      "pixels": 437,
+      "file": "public/results/protected-areas/pixels/years/2014/okanj-bara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2014",
+      "pa_id": "ovcarsko-kablarska-klisura",
+      "pixels": 396,
+      "file": "public/results/protected-areas/pixels/years/2014/ovcarsko-kablarska-klisura.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2014",
+      "pa_id": "ozren-jadovnik",
+      "pixels": 732,
+      "file": "public/results/protected-areas/pixels/years/2014/ozren-jadovnik.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2014",
+      "pa_id": "pasnjaci-velike-droplje",
+      "pixels": 580,
+      "file": "public/results/protected-areas/pixels/years/2014/pasnjaci-velike-droplje.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2014",
+      "pa_id": "pestersko-polje",
+      "pixels": 280,
+      "file": "public/results/protected-areas/pixels/years/2014/pestersko-polje.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2014",
+      "pa_id": "planina-cer",
+      "pixels": 503,
+      "file": "public/results/protected-areas/pixels/years/2014/planina-cer.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2014",
+      "pa_id": "planina-rudnik",
+      "pixels": 786,
+      "file": "public/results/protected-areas/pixels/years/2014/planina-rudnik.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2014",
+      "pa_id": "potamisje",
+      "pixels": 2008,
+      "file": "public/results/protected-areas/pixels/years/2014/potamisje.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2014",
+      "pa_id": "radan",
+      "pixels": 3005,
+      "file": "public/results/protected-areas/pixels/years/2014/radan.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2014",
+      "pa_id": "rajac",
+      "pixels": 165,
+      "file": "public/results/protected-areas/pixels/years/2014/rajac.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2014",
+      "pa_id": "ritovi-donjeg-potisja",
+      "pixels": 402,
+      "file": "public/results/protected-areas/pixels/years/2014/ritovi-donjeg-potisja.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2014",
+      "pa_id": "sargan-mokra-gora",
+      "pixels": 804,
+      "file": "public/results/protected-areas/pixels/years/2014/sargan-mokra-gora.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2014",
+      "pa_id": "sicevacka-klisura",
+      "pixels": 561,
+      "file": "public/results/protected-areas/pixels/years/2014/sicevacka-klisura.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2014",
+      "pa_id": "stara-planina",
+      "pixels": 5000,
+      "file": "public/results/protected-areas/pixels/years/2014/stara-planina.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2014",
+      "pa_id": "stolovi",
+      "pixels": 729,
+      "file": "public/results/protected-areas/pixels/years/2014/stolovi.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2014",
+      "pa_id": "suboticka-pescara",
+      "pixels": 475,
+      "file": "public/results/protected-areas/pixels/years/2014/suboticka-pescara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2014",
+      "pa_id": "suva-planiana",
+      "pixels": 1315,
+      "file": "public/results/protected-areas/pixels/years/2014/suva-planiana.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2014",
+      "pa_id": "tikvara",
+      "pixels": 64,
+      "file": "public/results/protected-areas/pixels/years/2014/tikvara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2014",
+      "pa_id": "titelski-breg",
+      "pixels": 171,
+      "file": "public/results/protected-areas/pixels/years/2014/titelski-breg.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2014",
+      "pa_id": "uvac",
+      "pixels": 1003,
+      "file": "public/results/protected-areas/pixels/years/2014/uvac.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2014",
+      "pa_id": "vardenik",
+      "pixels": 805,
+      "file": "public/results/protected-areas/pixels/years/2014/vardenik.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2014",
+      "pa_id": "veliki-jastrebac",
+      "pixels": 2655,
+      "file": "public/results/protected-areas/pixels/years/2014/veliki-jastrebac.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2014",
+      "pa_id": "vlasina",
+      "pixels": 904,
+      "file": "public/results/protected-areas/pixels/years/2014/vlasina.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2014",
+      "pa_id": "vrsacke-planine",
+      "pixels": 482,
+      "file": "public/results/protected-areas/pixels/years/2014/vrsacke-planine.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2014",
+      "pa_id": "zeljin",
+      "pixels": 501,
+      "file": "public/results/protected-areas/pixels/years/2014/zeljin.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2014",
+      "pa_id": "zlatibor",
+      "pixels": 2901,
+      "file": "public/results/protected-areas/pixels/years/2014/zlatibor.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2015",
+      "pa_id": "carska-bara",
+      "pixels": 431,
+      "file": "public/results/protected-areas/pixels/years/2015/carska-bara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2015",
+      "pa_id": "deliblatska-pescara",
+      "pixels": 2528,
+      "file": "public/results/protected-areas/pixels/years/2015/deliblatska-pescara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2015",
+      "pa_id": "goc-gvozdac",
+      "pixels": 320,
+      "file": "public/results/protected-areas/pixels/years/2015/goc-gvozdac.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2015",
+      "pa_id": "golija",
+      "pixels": 5000,
+      "file": "public/results/protected-areas/pixels/years/2015/golija.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2015",
+      "pa_id": "jerma",
+      "pixels": 516,
+      "file": "public/results/protected-areas/pixels/years/2015/jerma.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2015",
+      "pa_id": "kamena-gora",
+      "pixels": 586,
+      "file": "public/results/protected-areas/pixels/years/2015/kamena-gora.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2015",
+      "pa_id": "kanjiski-jarasi",
+      "pixels": 386,
+      "file": "public/results/protected-areas/pixels/years/2015/kanjiski-jarasi.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2015",
+      "pa_id": "karadjordjevo",
+      "pixels": 282,
+      "file": "public/results/protected-areas/pixels/years/2015/karadjordjevo.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2015",
+      "pa_id": "karas-nera",
+      "pixels": 236,
+      "file": "public/results/protected-areas/pixels/years/2015/karas-nera.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2015",
+      "pa_id": "klisura-djetinje",
+      "pixels": 101,
+      "file": "public/results/protected-areas/pixels/years/2015/klisura-djetinje.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2015",
+      "pa_id": "klisura-reke-milesevke",
+      "pixels": 133,
+      "file": "public/results/protected-areas/pixels/years/2015/klisura-reke-milesevke.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2015",
+      "pa_id": "klisura-reke-tresnjice",
+      "pixels": 76,
+      "file": "public/results/protected-areas/pixels/years/2015/klisura-reke-tresnjice.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2015",
+      "pa_id": "koviljsko-pertovaradinski-rit",
+      "pixels": 506,
+      "file": "public/results/protected-areas/pixels/years/2015/koviljsko-pertovaradinski-rit.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2015",
+      "pa_id": "maljen",
+      "pixels": 764,
+      "file": "public/results/protected-areas/pixels/years/2015/maljen.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2015",
+      "pa_id": "nacionalni-park-djerdap",
+      "pixels": 4479,
+      "file": "public/results/protected-areas/pixels/years/2015/nacionalni-park-djerdap.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2015",
+      "pa_id": "nacionalni-park-fruska-gora",
+      "pixels": 2315,
+      "file": "public/results/protected-areas/pixels/years/2015/nacionalni-park-fruska-gora.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2015",
+      "pa_id": "nacionalni-park-kopaonik",
+      "pixels": 888,
+      "file": "public/results/protected-areas/pixels/years/2015/nacionalni-park-kopaonik.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2015",
+      "pa_id": "nacionalni-park-tara",
+      "pixels": 1784,
+      "file": "public/results/protected-areas/pixels/years/2015/nacionalni-park-tara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2015",
+      "pa_id": "okanj-bara",
+      "pixels": 437,
+      "file": "public/results/protected-areas/pixels/years/2015/okanj-bara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2015",
+      "pa_id": "ovcarsko-kablarska-klisura",
+      "pixels": 396,
+      "file": "public/results/protected-areas/pixels/years/2015/ovcarsko-kablarska-klisura.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2015",
+      "pa_id": "ozren-jadovnik",
+      "pixels": 732,
+      "file": "public/results/protected-areas/pixels/years/2015/ozren-jadovnik.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2015",
+      "pa_id": "pasnjaci-velike-droplje",
+      "pixels": 580,
+      "file": "public/results/protected-areas/pixels/years/2015/pasnjaci-velike-droplje.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2015",
+      "pa_id": "pestersko-polje",
+      "pixels": 280,
+      "file": "public/results/protected-areas/pixels/years/2015/pestersko-polje.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2015",
+      "pa_id": "planina-cer",
+      "pixels": 503,
+      "file": "public/results/protected-areas/pixels/years/2015/planina-cer.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2015",
+      "pa_id": "planina-rudnik",
+      "pixels": 786,
+      "file": "public/results/protected-areas/pixels/years/2015/planina-rudnik.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2015",
+      "pa_id": "potamisje",
+      "pixels": 2008,
+      "file": "public/results/protected-areas/pixels/years/2015/potamisje.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2015",
+      "pa_id": "radan",
+      "pixels": 3005,
+      "file": "public/results/protected-areas/pixels/years/2015/radan.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2015",
+      "pa_id": "rajac",
+      "pixels": 165,
+      "file": "public/results/protected-areas/pixels/years/2015/rajac.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2015",
+      "pa_id": "ritovi-donjeg-potisja",
+      "pixels": 402,
+      "file": "public/results/protected-areas/pixels/years/2015/ritovi-donjeg-potisja.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2015",
+      "pa_id": "sargan-mokra-gora",
+      "pixels": 804,
+      "file": "public/results/protected-areas/pixels/years/2015/sargan-mokra-gora.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2015",
+      "pa_id": "sicevacka-klisura",
+      "pixels": 561,
+      "file": "public/results/protected-areas/pixels/years/2015/sicevacka-klisura.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2015",
+      "pa_id": "stara-planina",
+      "pixels": 5000,
+      "file": "public/results/protected-areas/pixels/years/2015/stara-planina.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2015",
+      "pa_id": "stolovi",
+      "pixels": 729,
+      "file": "public/results/protected-areas/pixels/years/2015/stolovi.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2015",
+      "pa_id": "suboticka-pescara",
+      "pixels": 475,
+      "file": "public/results/protected-areas/pixels/years/2015/suboticka-pescara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2015",
+      "pa_id": "suva-planiana",
+      "pixels": 1315,
+      "file": "public/results/protected-areas/pixels/years/2015/suva-planiana.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2015",
+      "pa_id": "tikvara",
+      "pixels": 64,
+      "file": "public/results/protected-areas/pixels/years/2015/tikvara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2015",
+      "pa_id": "titelski-breg",
+      "pixels": 171,
+      "file": "public/results/protected-areas/pixels/years/2015/titelski-breg.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2015",
+      "pa_id": "uvac",
+      "pixels": 1003,
+      "file": "public/results/protected-areas/pixels/years/2015/uvac.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2015",
+      "pa_id": "vardenik",
+      "pixels": 805,
+      "file": "public/results/protected-areas/pixels/years/2015/vardenik.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2015",
+      "pa_id": "veliki-jastrebac",
+      "pixels": 2655,
+      "file": "public/results/protected-areas/pixels/years/2015/veliki-jastrebac.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2015",
+      "pa_id": "vlasina",
+      "pixels": 904,
+      "file": "public/results/protected-areas/pixels/years/2015/vlasina.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2015",
+      "pa_id": "vrsacke-planine",
+      "pixels": 482,
+      "file": "public/results/protected-areas/pixels/years/2015/vrsacke-planine.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2015",
+      "pa_id": "zeljin",
+      "pixels": 501,
+      "file": "public/results/protected-areas/pixels/years/2015/zeljin.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2015",
+      "pa_id": "zlatibor",
+      "pixels": 2901,
+      "file": "public/results/protected-areas/pixels/years/2015/zlatibor.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2016",
+      "pa_id": "carska-bara",
+      "pixels": 431,
+      "file": "public/results/protected-areas/pixels/years/2016/carska-bara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2016",
+      "pa_id": "deliblatska-pescara",
+      "pixels": 2528,
+      "file": "public/results/protected-areas/pixels/years/2016/deliblatska-pescara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2016",
+      "pa_id": "goc-gvozdac",
+      "pixels": 320,
+      "file": "public/results/protected-areas/pixels/years/2016/goc-gvozdac.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2016",
+      "pa_id": "golija",
+      "pixels": 5000,
+      "file": "public/results/protected-areas/pixels/years/2016/golija.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2016",
+      "pa_id": "jerma",
+      "pixels": 516,
+      "file": "public/results/protected-areas/pixels/years/2016/jerma.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2016",
+      "pa_id": "kamena-gora",
+      "pixels": 586,
+      "file": "public/results/protected-areas/pixels/years/2016/kamena-gora.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2016",
+      "pa_id": "kanjiski-jarasi",
+      "pixels": 386,
+      "file": "public/results/protected-areas/pixels/years/2016/kanjiski-jarasi.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2016",
+      "pa_id": "karadjordjevo",
+      "pixels": 282,
+      "file": "public/results/protected-areas/pixels/years/2016/karadjordjevo.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2016",
+      "pa_id": "karas-nera",
+      "pixels": 236,
+      "file": "public/results/protected-areas/pixels/years/2016/karas-nera.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2016",
+      "pa_id": "klisura-djetinje",
+      "pixels": 101,
+      "file": "public/results/protected-areas/pixels/years/2016/klisura-djetinje.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2016",
+      "pa_id": "klisura-reke-milesevke",
+      "pixels": 133,
+      "file": "public/results/protected-areas/pixels/years/2016/klisura-reke-milesevke.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2016",
+      "pa_id": "klisura-reke-tresnjice",
+      "pixels": 76,
+      "file": "public/results/protected-areas/pixels/years/2016/klisura-reke-tresnjice.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2016",
+      "pa_id": "koviljsko-pertovaradinski-rit",
+      "pixels": 506,
+      "file": "public/results/protected-areas/pixels/years/2016/koviljsko-pertovaradinski-rit.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2016",
+      "pa_id": "maljen",
+      "pixels": 764,
+      "file": "public/results/protected-areas/pixels/years/2016/maljen.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2016",
+      "pa_id": "nacionalni-park-djerdap",
+      "pixels": 4479,
+      "file": "public/results/protected-areas/pixels/years/2016/nacionalni-park-djerdap.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2016",
+      "pa_id": "nacionalni-park-fruska-gora",
+      "pixels": 2315,
+      "file": "public/results/protected-areas/pixels/years/2016/nacionalni-park-fruska-gora.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2016",
+      "pa_id": "nacionalni-park-kopaonik",
+      "pixels": 888,
+      "file": "public/results/protected-areas/pixels/years/2016/nacionalni-park-kopaonik.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2016",
+      "pa_id": "nacionalni-park-tara",
+      "pixels": 1784,
+      "file": "public/results/protected-areas/pixels/years/2016/nacionalni-park-tara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2016",
+      "pa_id": "okanj-bara",
+      "pixels": 437,
+      "file": "public/results/protected-areas/pixels/years/2016/okanj-bara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2016",
+      "pa_id": "ovcarsko-kablarska-klisura",
+      "pixels": 396,
+      "file": "public/results/protected-areas/pixels/years/2016/ovcarsko-kablarska-klisura.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2016",
+      "pa_id": "ozren-jadovnik",
+      "pixels": 732,
+      "file": "public/results/protected-areas/pixels/years/2016/ozren-jadovnik.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2016",
+      "pa_id": "pasnjaci-velike-droplje",
+      "pixels": 580,
+      "file": "public/results/protected-areas/pixels/years/2016/pasnjaci-velike-droplje.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2016",
+      "pa_id": "pestersko-polje",
+      "pixels": 280,
+      "file": "public/results/protected-areas/pixels/years/2016/pestersko-polje.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2016",
+      "pa_id": "planina-cer",
+      "pixels": 503,
+      "file": "public/results/protected-areas/pixels/years/2016/planina-cer.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2016",
+      "pa_id": "planina-rudnik",
+      "pixels": 786,
+      "file": "public/results/protected-areas/pixels/years/2016/planina-rudnik.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2016",
+      "pa_id": "potamisje",
+      "pixels": 2008,
+      "file": "public/results/protected-areas/pixels/years/2016/potamisje.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2016",
+      "pa_id": "radan",
+      "pixels": 3005,
+      "file": "public/results/protected-areas/pixels/years/2016/radan.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2016",
+      "pa_id": "rajac",
+      "pixels": 165,
+      "file": "public/results/protected-areas/pixels/years/2016/rajac.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2016",
+      "pa_id": "ritovi-donjeg-potisja",
+      "pixels": 402,
+      "file": "public/results/protected-areas/pixels/years/2016/ritovi-donjeg-potisja.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2016",
+      "pa_id": "sargan-mokra-gora",
+      "pixels": 804,
+      "file": "public/results/protected-areas/pixels/years/2016/sargan-mokra-gora.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2016",
+      "pa_id": "sicevacka-klisura",
+      "pixels": 561,
+      "file": "public/results/protected-areas/pixels/years/2016/sicevacka-klisura.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2016",
+      "pa_id": "stara-planina",
+      "pixels": 5000,
+      "file": "public/results/protected-areas/pixels/years/2016/stara-planina.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2016",
+      "pa_id": "stolovi",
+      "pixels": 729,
+      "file": "public/results/protected-areas/pixels/years/2016/stolovi.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2016",
+      "pa_id": "suboticka-pescara",
+      "pixels": 475,
+      "file": "public/results/protected-areas/pixels/years/2016/suboticka-pescara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2016",
+      "pa_id": "suva-planiana",
+      "pixels": 1315,
+      "file": "public/results/protected-areas/pixels/years/2016/suva-planiana.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2016",
+      "pa_id": "tikvara",
+      "pixels": 64,
+      "file": "public/results/protected-areas/pixels/years/2016/tikvara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2016",
+      "pa_id": "titelski-breg",
+      "pixels": 171,
+      "file": "public/results/protected-areas/pixels/years/2016/titelski-breg.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2016",
+      "pa_id": "uvac",
+      "pixels": 1003,
+      "file": "public/results/protected-areas/pixels/years/2016/uvac.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2016",
+      "pa_id": "vardenik",
+      "pixels": 805,
+      "file": "public/results/protected-areas/pixels/years/2016/vardenik.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2016",
+      "pa_id": "veliki-jastrebac",
+      "pixels": 2655,
+      "file": "public/results/protected-areas/pixels/years/2016/veliki-jastrebac.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2016",
+      "pa_id": "vlasina",
+      "pixels": 904,
+      "file": "public/results/protected-areas/pixels/years/2016/vlasina.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2016",
+      "pa_id": "vrsacke-planine",
+      "pixels": 482,
+      "file": "public/results/protected-areas/pixels/years/2016/vrsacke-planine.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2016",
+      "pa_id": "zeljin",
+      "pixels": 501,
+      "file": "public/results/protected-areas/pixels/years/2016/zeljin.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2016",
+      "pa_id": "zlatibor",
+      "pixels": 2901,
+      "file": "public/results/protected-areas/pixels/years/2016/zlatibor.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2017",
+      "pa_id": "carska-bara",
+      "pixels": 431,
+      "file": "public/results/protected-areas/pixels/years/2017/carska-bara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2017",
+      "pa_id": "deliblatska-pescara",
+      "pixels": 2528,
+      "file": "public/results/protected-areas/pixels/years/2017/deliblatska-pescara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2017",
+      "pa_id": "goc-gvozdac",
+      "pixels": 320,
+      "file": "public/results/protected-areas/pixels/years/2017/goc-gvozdac.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2017",
+      "pa_id": "golija",
+      "pixels": 5000,
+      "file": "public/results/protected-areas/pixels/years/2017/golija.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2017",
+      "pa_id": "jerma",
+      "pixels": 516,
+      "file": "public/results/protected-areas/pixels/years/2017/jerma.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2017",
+      "pa_id": "kamena-gora",
+      "pixels": 586,
+      "file": "public/results/protected-areas/pixels/years/2017/kamena-gora.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2017",
+      "pa_id": "kanjiski-jarasi",
+      "pixels": 386,
+      "file": "public/results/protected-areas/pixels/years/2017/kanjiski-jarasi.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2017",
+      "pa_id": "karadjordjevo",
+      "pixels": 282,
+      "file": "public/results/protected-areas/pixels/years/2017/karadjordjevo.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2017",
+      "pa_id": "karas-nera",
+      "pixels": 236,
+      "file": "public/results/protected-areas/pixels/years/2017/karas-nera.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2017",
+      "pa_id": "klisura-djetinje",
+      "pixels": 101,
+      "file": "public/results/protected-areas/pixels/years/2017/klisura-djetinje.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2017",
+      "pa_id": "klisura-reke-milesevke",
+      "pixels": 133,
+      "file": "public/results/protected-areas/pixels/years/2017/klisura-reke-milesevke.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2017",
+      "pa_id": "klisura-reke-tresnjice",
+      "pixels": 76,
+      "file": "public/results/protected-areas/pixels/years/2017/klisura-reke-tresnjice.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2017",
+      "pa_id": "koviljsko-pertovaradinski-rit",
+      "pixels": 506,
+      "file": "public/results/protected-areas/pixels/years/2017/koviljsko-pertovaradinski-rit.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2017",
+      "pa_id": "maljen",
+      "pixels": 764,
+      "file": "public/results/protected-areas/pixels/years/2017/maljen.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2017",
+      "pa_id": "nacionalni-park-djerdap",
+      "pixels": 4479,
+      "file": "public/results/protected-areas/pixels/years/2017/nacionalni-park-djerdap.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2017",
+      "pa_id": "nacionalni-park-fruska-gora",
+      "pixels": 2315,
+      "file": "public/results/protected-areas/pixels/years/2017/nacionalni-park-fruska-gora.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2017",
+      "pa_id": "nacionalni-park-kopaonik",
+      "pixels": 888,
+      "file": "public/results/protected-areas/pixels/years/2017/nacionalni-park-kopaonik.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2017",
+      "pa_id": "nacionalni-park-tara",
+      "pixels": 1784,
+      "file": "public/results/protected-areas/pixels/years/2017/nacionalni-park-tara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2017",
+      "pa_id": "okanj-bara",
+      "pixels": 437,
+      "file": "public/results/protected-areas/pixels/years/2017/okanj-bara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2017",
+      "pa_id": "ovcarsko-kablarska-klisura",
+      "pixels": 396,
+      "file": "public/results/protected-areas/pixels/years/2017/ovcarsko-kablarska-klisura.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2017",
+      "pa_id": "ozren-jadovnik",
+      "pixels": 732,
+      "file": "public/results/protected-areas/pixels/years/2017/ozren-jadovnik.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2017",
+      "pa_id": "pasnjaci-velike-droplje",
+      "pixels": 580,
+      "file": "public/results/protected-areas/pixels/years/2017/pasnjaci-velike-droplje.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2017",
+      "pa_id": "pestersko-polje",
+      "pixels": 280,
+      "file": "public/results/protected-areas/pixels/years/2017/pestersko-polje.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2017",
+      "pa_id": "planina-cer",
+      "pixels": 503,
+      "file": "public/results/protected-areas/pixels/years/2017/planina-cer.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2017",
+      "pa_id": "planina-rudnik",
+      "pixels": 786,
+      "file": "public/results/protected-areas/pixels/years/2017/planina-rudnik.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2017",
+      "pa_id": "potamisje",
+      "pixels": 2008,
+      "file": "public/results/protected-areas/pixels/years/2017/potamisje.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2017",
+      "pa_id": "radan",
+      "pixels": 3005,
+      "file": "public/results/protected-areas/pixels/years/2017/radan.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2017",
+      "pa_id": "rajac",
+      "pixels": 165,
+      "file": "public/results/protected-areas/pixels/years/2017/rajac.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2017",
+      "pa_id": "ritovi-donjeg-potisja",
+      "pixels": 402,
+      "file": "public/results/protected-areas/pixels/years/2017/ritovi-donjeg-potisja.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2017",
+      "pa_id": "sargan-mokra-gora",
+      "pixels": 804,
+      "file": "public/results/protected-areas/pixels/years/2017/sargan-mokra-gora.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2017",
+      "pa_id": "sicevacka-klisura",
+      "pixels": 561,
+      "file": "public/results/protected-areas/pixels/years/2017/sicevacka-klisura.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2017",
+      "pa_id": "stara-planina",
+      "pixels": 5000,
+      "file": "public/results/protected-areas/pixels/years/2017/stara-planina.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2017",
+      "pa_id": "stolovi",
+      "pixels": 729,
+      "file": "public/results/protected-areas/pixels/years/2017/stolovi.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2017",
+      "pa_id": "suboticka-pescara",
+      "pixels": 475,
+      "file": "public/results/protected-areas/pixels/years/2017/suboticka-pescara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2017",
+      "pa_id": "suva-planiana",
+      "pixels": 1315,
+      "file": "public/results/protected-areas/pixels/years/2017/suva-planiana.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2017",
+      "pa_id": "tikvara",
+      "pixels": 64,
+      "file": "public/results/protected-areas/pixels/years/2017/tikvara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2017",
+      "pa_id": "titelski-breg",
+      "pixels": 171,
+      "file": "public/results/protected-areas/pixels/years/2017/titelski-breg.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2017",
+      "pa_id": "uvac",
+      "pixels": 1003,
+      "file": "public/results/protected-areas/pixels/years/2017/uvac.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2017",
+      "pa_id": "vardenik",
+      "pixels": 805,
+      "file": "public/results/protected-areas/pixels/years/2017/vardenik.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2017",
+      "pa_id": "veliki-jastrebac",
+      "pixels": 2655,
+      "file": "public/results/protected-areas/pixels/years/2017/veliki-jastrebac.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2017",
+      "pa_id": "vlasina",
+      "pixels": 904,
+      "file": "public/results/protected-areas/pixels/years/2017/vlasina.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2017",
+      "pa_id": "vrsacke-planine",
+      "pixels": 482,
+      "file": "public/results/protected-areas/pixels/years/2017/vrsacke-planine.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2017",
+      "pa_id": "zeljin",
+      "pixels": 501,
+      "file": "public/results/protected-areas/pixels/years/2017/zeljin.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2017",
+      "pa_id": "zlatibor",
+      "pixels": 2901,
+      "file": "public/results/protected-areas/pixels/years/2017/zlatibor.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2018",
+      "pa_id": "carska-bara",
+      "pixels": 431,
+      "file": "public/results/protected-areas/pixels/years/2018/carska-bara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2018",
+      "pa_id": "deliblatska-pescara",
+      "pixels": 2528,
+      "file": "public/results/protected-areas/pixels/years/2018/deliblatska-pescara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2018",
+      "pa_id": "goc-gvozdac",
+      "pixels": 320,
+      "file": "public/results/protected-areas/pixels/years/2018/goc-gvozdac.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2018",
+      "pa_id": "golija",
+      "pixels": 5000,
+      "file": "public/results/protected-areas/pixels/years/2018/golija.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2018",
+      "pa_id": "jerma",
+      "pixels": 516,
+      "file": "public/results/protected-areas/pixels/years/2018/jerma.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2018",
+      "pa_id": "kamena-gora",
+      "pixels": 586,
+      "file": "public/results/protected-areas/pixels/years/2018/kamena-gora.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2018",
+      "pa_id": "kanjiski-jarasi",
+      "pixels": 386,
+      "file": "public/results/protected-areas/pixels/years/2018/kanjiski-jarasi.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2018",
+      "pa_id": "karadjordjevo",
+      "pixels": 282,
+      "file": "public/results/protected-areas/pixels/years/2018/karadjordjevo.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2018",
+      "pa_id": "karas-nera",
+      "pixels": 236,
+      "file": "public/results/protected-areas/pixels/years/2018/karas-nera.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2018",
+      "pa_id": "klisura-djetinje",
+      "pixels": 101,
+      "file": "public/results/protected-areas/pixels/years/2018/klisura-djetinje.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2018",
+      "pa_id": "klisura-reke-milesevke",
+      "pixels": 133,
+      "file": "public/results/protected-areas/pixels/years/2018/klisura-reke-milesevke.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2018",
+      "pa_id": "klisura-reke-tresnjice",
+      "pixels": 76,
+      "file": "public/results/protected-areas/pixels/years/2018/klisura-reke-tresnjice.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2018",
+      "pa_id": "koviljsko-pertovaradinski-rit",
+      "pixels": 506,
+      "file": "public/results/protected-areas/pixels/years/2018/koviljsko-pertovaradinski-rit.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2018",
+      "pa_id": "maljen",
+      "pixels": 764,
+      "file": "public/results/protected-areas/pixels/years/2018/maljen.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2018",
+      "pa_id": "nacionalni-park-djerdap",
+      "pixels": 4479,
+      "file": "public/results/protected-areas/pixels/years/2018/nacionalni-park-djerdap.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2018",
+      "pa_id": "nacionalni-park-fruska-gora",
+      "pixels": 2315,
+      "file": "public/results/protected-areas/pixels/years/2018/nacionalni-park-fruska-gora.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2018",
+      "pa_id": "nacionalni-park-kopaonik",
+      "pixels": 888,
+      "file": "public/results/protected-areas/pixels/years/2018/nacionalni-park-kopaonik.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2018",
+      "pa_id": "nacionalni-park-tara",
+      "pixels": 1784,
+      "file": "public/results/protected-areas/pixels/years/2018/nacionalni-park-tara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2018",
+      "pa_id": "okanj-bara",
+      "pixels": 437,
+      "file": "public/results/protected-areas/pixels/years/2018/okanj-bara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2018",
+      "pa_id": "ovcarsko-kablarska-klisura",
+      "pixels": 396,
+      "file": "public/results/protected-areas/pixels/years/2018/ovcarsko-kablarska-klisura.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2018",
+      "pa_id": "ozren-jadovnik",
+      "pixels": 732,
+      "file": "public/results/protected-areas/pixels/years/2018/ozren-jadovnik.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2018",
+      "pa_id": "pasnjaci-velike-droplje",
+      "pixels": 580,
+      "file": "public/results/protected-areas/pixels/years/2018/pasnjaci-velike-droplje.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2018",
+      "pa_id": "pestersko-polje",
+      "pixels": 280,
+      "file": "public/results/protected-areas/pixels/years/2018/pestersko-polje.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2018",
+      "pa_id": "planina-cer",
+      "pixels": 503,
+      "file": "public/results/protected-areas/pixels/years/2018/planina-cer.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2018",
+      "pa_id": "planina-rudnik",
+      "pixels": 786,
+      "file": "public/results/protected-areas/pixels/years/2018/planina-rudnik.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2018",
+      "pa_id": "potamisje",
+      "pixels": 2008,
+      "file": "public/results/protected-areas/pixels/years/2018/potamisje.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2018",
+      "pa_id": "radan",
+      "pixels": 3005,
+      "file": "public/results/protected-areas/pixels/years/2018/radan.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2018",
+      "pa_id": "rajac",
+      "pixels": 165,
+      "file": "public/results/protected-areas/pixels/years/2018/rajac.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2018",
+      "pa_id": "ritovi-donjeg-potisja",
+      "pixels": 402,
+      "file": "public/results/protected-areas/pixels/years/2018/ritovi-donjeg-potisja.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2018",
+      "pa_id": "sargan-mokra-gora",
+      "pixels": 804,
+      "file": "public/results/protected-areas/pixels/years/2018/sargan-mokra-gora.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2018",
+      "pa_id": "sicevacka-klisura",
+      "pixels": 561,
+      "file": "public/results/protected-areas/pixels/years/2018/sicevacka-klisura.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2018",
+      "pa_id": "stara-planina",
+      "pixels": 5000,
+      "file": "public/results/protected-areas/pixels/years/2018/stara-planina.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2018",
+      "pa_id": "stolovi",
+      "pixels": 729,
+      "file": "public/results/protected-areas/pixels/years/2018/stolovi.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2018",
+      "pa_id": "suboticka-pescara",
+      "pixels": 475,
+      "file": "public/results/protected-areas/pixels/years/2018/suboticka-pescara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2018",
+      "pa_id": "suva-planiana",
+      "pixels": 1315,
+      "file": "public/results/protected-areas/pixels/years/2018/suva-planiana.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2018",
+      "pa_id": "tikvara",
+      "pixels": 64,
+      "file": "public/results/protected-areas/pixels/years/2018/tikvara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2018",
+      "pa_id": "titelski-breg",
+      "pixels": 171,
+      "file": "public/results/protected-areas/pixels/years/2018/titelski-breg.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2018",
+      "pa_id": "uvac",
+      "pixels": 1003,
+      "file": "public/results/protected-areas/pixels/years/2018/uvac.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2018",
+      "pa_id": "vardenik",
+      "pixels": 805,
+      "file": "public/results/protected-areas/pixels/years/2018/vardenik.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2018",
+      "pa_id": "veliki-jastrebac",
+      "pixels": 2655,
+      "file": "public/results/protected-areas/pixels/years/2018/veliki-jastrebac.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2018",
+      "pa_id": "vlasina",
+      "pixels": 904,
+      "file": "public/results/protected-areas/pixels/years/2018/vlasina.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2018",
+      "pa_id": "vrsacke-planine",
+      "pixels": 482,
+      "file": "public/results/protected-areas/pixels/years/2018/vrsacke-planine.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2018",
+      "pa_id": "zeljin",
+      "pixels": 501,
+      "file": "public/results/protected-areas/pixels/years/2018/zeljin.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2018",
+      "pa_id": "zlatibor",
+      "pixels": 2901,
+      "file": "public/results/protected-areas/pixels/years/2018/zlatibor.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2019",
+      "pa_id": "carska-bara",
+      "pixels": 431,
+      "file": "public/results/protected-areas/pixels/years/2019/carska-bara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2019",
+      "pa_id": "deliblatska-pescara",
+      "pixels": 2528,
+      "file": "public/results/protected-areas/pixels/years/2019/deliblatska-pescara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2019",
+      "pa_id": "goc-gvozdac",
+      "pixels": 320,
+      "file": "public/results/protected-areas/pixels/years/2019/goc-gvozdac.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2019",
+      "pa_id": "golija",
+      "pixels": 5000,
+      "file": "public/results/protected-areas/pixels/years/2019/golija.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2019",
+      "pa_id": "jerma",
+      "pixels": 516,
+      "file": "public/results/protected-areas/pixels/years/2019/jerma.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2019",
+      "pa_id": "kamena-gora",
+      "pixels": 586,
+      "file": "public/results/protected-areas/pixels/years/2019/kamena-gora.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2019",
+      "pa_id": "kanjiski-jarasi",
+      "pixels": 386,
+      "file": "public/results/protected-areas/pixels/years/2019/kanjiski-jarasi.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2019",
+      "pa_id": "karadjordjevo",
+      "pixels": 282,
+      "file": "public/results/protected-areas/pixels/years/2019/karadjordjevo.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2019",
+      "pa_id": "karas-nera",
+      "pixels": 236,
+      "file": "public/results/protected-areas/pixels/years/2019/karas-nera.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2019",
+      "pa_id": "klisura-djetinje",
+      "pixels": 101,
+      "file": "public/results/protected-areas/pixels/years/2019/klisura-djetinje.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2019",
+      "pa_id": "klisura-reke-milesevke",
+      "pixels": 133,
+      "file": "public/results/protected-areas/pixels/years/2019/klisura-reke-milesevke.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2019",
+      "pa_id": "klisura-reke-tresnjice",
+      "pixels": 76,
+      "file": "public/results/protected-areas/pixels/years/2019/klisura-reke-tresnjice.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2019",
+      "pa_id": "koviljsko-pertovaradinski-rit",
+      "pixels": 506,
+      "file": "public/results/protected-areas/pixels/years/2019/koviljsko-pertovaradinski-rit.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2019",
+      "pa_id": "maljen",
+      "pixels": 764,
+      "file": "public/results/protected-areas/pixels/years/2019/maljen.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2019",
+      "pa_id": "nacionalni-park-djerdap",
+      "pixels": 4479,
+      "file": "public/results/protected-areas/pixels/years/2019/nacionalni-park-djerdap.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2019",
+      "pa_id": "nacionalni-park-fruska-gora",
+      "pixels": 2315,
+      "file": "public/results/protected-areas/pixels/years/2019/nacionalni-park-fruska-gora.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2019",
+      "pa_id": "nacionalni-park-kopaonik",
+      "pixels": 888,
+      "file": "public/results/protected-areas/pixels/years/2019/nacionalni-park-kopaonik.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2019",
+      "pa_id": "nacionalni-park-tara",
+      "pixels": 1784,
+      "file": "public/results/protected-areas/pixels/years/2019/nacionalni-park-tara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2019",
+      "pa_id": "okanj-bara",
+      "pixels": 437,
+      "file": "public/results/protected-areas/pixels/years/2019/okanj-bara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2019",
+      "pa_id": "ovcarsko-kablarska-klisura",
+      "pixels": 396,
+      "file": "public/results/protected-areas/pixels/years/2019/ovcarsko-kablarska-klisura.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2019",
+      "pa_id": "ozren-jadovnik",
+      "pixels": 732,
+      "file": "public/results/protected-areas/pixels/years/2019/ozren-jadovnik.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2019",
+      "pa_id": "pasnjaci-velike-droplje",
+      "pixels": 580,
+      "file": "public/results/protected-areas/pixels/years/2019/pasnjaci-velike-droplje.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2019",
+      "pa_id": "pestersko-polje",
+      "pixels": 280,
+      "file": "public/results/protected-areas/pixels/years/2019/pestersko-polje.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2019",
+      "pa_id": "planina-cer",
+      "pixels": 503,
+      "file": "public/results/protected-areas/pixels/years/2019/planina-cer.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2019",
+      "pa_id": "planina-rudnik",
+      "pixels": 786,
+      "file": "public/results/protected-areas/pixels/years/2019/planina-rudnik.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2019",
+      "pa_id": "potamisje",
+      "pixels": 2008,
+      "file": "public/results/protected-areas/pixels/years/2019/potamisje.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2019",
+      "pa_id": "radan",
+      "pixels": 3005,
+      "file": "public/results/protected-areas/pixels/years/2019/radan.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2019",
+      "pa_id": "rajac",
+      "pixels": 165,
+      "file": "public/results/protected-areas/pixels/years/2019/rajac.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2019",
+      "pa_id": "ritovi-donjeg-potisja",
+      "pixels": 402,
+      "file": "public/results/protected-areas/pixels/years/2019/ritovi-donjeg-potisja.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2019",
+      "pa_id": "sargan-mokra-gora",
+      "pixels": 804,
+      "file": "public/results/protected-areas/pixels/years/2019/sargan-mokra-gora.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2019",
+      "pa_id": "sicevacka-klisura",
+      "pixels": 561,
+      "file": "public/results/protected-areas/pixels/years/2019/sicevacka-klisura.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2019",
+      "pa_id": "stara-planina",
+      "pixels": 5000,
+      "file": "public/results/protected-areas/pixels/years/2019/stara-planina.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2019",
+      "pa_id": "stolovi",
+      "pixels": 729,
+      "file": "public/results/protected-areas/pixels/years/2019/stolovi.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2019",
+      "pa_id": "suboticka-pescara",
+      "pixels": 475,
+      "file": "public/results/protected-areas/pixels/years/2019/suboticka-pescara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2019",
+      "pa_id": "suva-planiana",
+      "pixels": 1315,
+      "file": "public/results/protected-areas/pixels/years/2019/suva-planiana.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2019",
+      "pa_id": "tikvara",
+      "pixels": 64,
+      "file": "public/results/protected-areas/pixels/years/2019/tikvara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2019",
+      "pa_id": "titelski-breg",
+      "pixels": 171,
+      "file": "public/results/protected-areas/pixels/years/2019/titelski-breg.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2019",
+      "pa_id": "uvac",
+      "pixels": 1003,
+      "file": "public/results/protected-areas/pixels/years/2019/uvac.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2019",
+      "pa_id": "vardenik",
+      "pixels": 805,
+      "file": "public/results/protected-areas/pixels/years/2019/vardenik.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2019",
+      "pa_id": "veliki-jastrebac",
+      "pixels": 2655,
+      "file": "public/results/protected-areas/pixels/years/2019/veliki-jastrebac.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2019",
+      "pa_id": "vlasina",
+      "pixels": 904,
+      "file": "public/results/protected-areas/pixels/years/2019/vlasina.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2019",
+      "pa_id": "vrsacke-planine",
+      "pixels": 482,
+      "file": "public/results/protected-areas/pixels/years/2019/vrsacke-planine.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2019",
+      "pa_id": "zeljin",
+      "pixels": 501,
+      "file": "public/results/protected-areas/pixels/years/2019/zeljin.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2019",
+      "pa_id": "zlatibor",
+      "pixels": 2901,
+      "file": "public/results/protected-areas/pixels/years/2019/zlatibor.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2020",
+      "pa_id": "carska-bara",
+      "pixels": 431,
+      "file": "public/results/protected-areas/pixels/years/2020/carska-bara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2020",
+      "pa_id": "deliblatska-pescara",
+      "pixels": 2528,
+      "file": "public/results/protected-areas/pixels/years/2020/deliblatska-pescara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2020",
+      "pa_id": "goc-gvozdac",
+      "pixels": 320,
+      "file": "public/results/protected-areas/pixels/years/2020/goc-gvozdac.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2020",
+      "pa_id": "golija",
+      "pixels": 5000,
+      "file": "public/results/protected-areas/pixels/years/2020/golija.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2020",
+      "pa_id": "jerma",
+      "pixels": 516,
+      "file": "public/results/protected-areas/pixels/years/2020/jerma.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2020",
+      "pa_id": "kamena-gora",
+      "pixels": 586,
+      "file": "public/results/protected-areas/pixels/years/2020/kamena-gora.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2020",
+      "pa_id": "kanjiski-jarasi",
+      "pixels": 386,
+      "file": "public/results/protected-areas/pixels/years/2020/kanjiski-jarasi.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2020",
+      "pa_id": "karadjordjevo",
+      "pixels": 282,
+      "file": "public/results/protected-areas/pixels/years/2020/karadjordjevo.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2020",
+      "pa_id": "karas-nera",
+      "pixels": 236,
+      "file": "public/results/protected-areas/pixels/years/2020/karas-nera.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2020",
+      "pa_id": "klisura-djetinje",
+      "pixels": 101,
+      "file": "public/results/protected-areas/pixels/years/2020/klisura-djetinje.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2020",
+      "pa_id": "klisura-reke-milesevke",
+      "pixels": 133,
+      "file": "public/results/protected-areas/pixels/years/2020/klisura-reke-milesevke.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2020",
+      "pa_id": "klisura-reke-tresnjice",
+      "pixels": 76,
+      "file": "public/results/protected-areas/pixels/years/2020/klisura-reke-tresnjice.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2020",
+      "pa_id": "koviljsko-pertovaradinski-rit",
+      "pixels": 506,
+      "file": "public/results/protected-areas/pixels/years/2020/koviljsko-pertovaradinski-rit.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2020",
+      "pa_id": "maljen",
+      "pixels": 764,
+      "file": "public/results/protected-areas/pixels/years/2020/maljen.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2020",
+      "pa_id": "nacionalni-park-djerdap",
+      "pixels": 4479,
+      "file": "public/results/protected-areas/pixels/years/2020/nacionalni-park-djerdap.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2020",
+      "pa_id": "nacionalni-park-fruska-gora",
+      "pixels": 2315,
+      "file": "public/results/protected-areas/pixels/years/2020/nacionalni-park-fruska-gora.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2020",
+      "pa_id": "nacionalni-park-kopaonik",
+      "pixels": 888,
+      "file": "public/results/protected-areas/pixels/years/2020/nacionalni-park-kopaonik.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2020",
+      "pa_id": "nacionalni-park-tara",
+      "pixels": 1784,
+      "file": "public/results/protected-areas/pixels/years/2020/nacionalni-park-tara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2020",
+      "pa_id": "okanj-bara",
+      "pixels": 437,
+      "file": "public/results/protected-areas/pixels/years/2020/okanj-bara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2020",
+      "pa_id": "ovcarsko-kablarska-klisura",
+      "pixels": 396,
+      "file": "public/results/protected-areas/pixels/years/2020/ovcarsko-kablarska-klisura.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2020",
+      "pa_id": "ozren-jadovnik",
+      "pixels": 732,
+      "file": "public/results/protected-areas/pixels/years/2020/ozren-jadovnik.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2020",
+      "pa_id": "pasnjaci-velike-droplje",
+      "pixels": 580,
+      "file": "public/results/protected-areas/pixels/years/2020/pasnjaci-velike-droplje.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2020",
+      "pa_id": "pestersko-polje",
+      "pixels": 280,
+      "file": "public/results/protected-areas/pixels/years/2020/pestersko-polje.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2020",
+      "pa_id": "planina-cer",
+      "pixels": 503,
+      "file": "public/results/protected-areas/pixels/years/2020/planina-cer.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2020",
+      "pa_id": "planina-rudnik",
+      "pixels": 786,
+      "file": "public/results/protected-areas/pixels/years/2020/planina-rudnik.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2020",
+      "pa_id": "potamisje",
+      "pixels": 2008,
+      "file": "public/results/protected-areas/pixels/years/2020/potamisje.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2020",
+      "pa_id": "radan",
+      "pixels": 3005,
+      "file": "public/results/protected-areas/pixels/years/2020/radan.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2020",
+      "pa_id": "rajac",
+      "pixels": 165,
+      "file": "public/results/protected-areas/pixels/years/2020/rajac.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2020",
+      "pa_id": "ritovi-donjeg-potisja",
+      "pixels": 402,
+      "file": "public/results/protected-areas/pixels/years/2020/ritovi-donjeg-potisja.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2020",
+      "pa_id": "sargan-mokra-gora",
+      "pixels": 804,
+      "file": "public/results/protected-areas/pixels/years/2020/sargan-mokra-gora.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2020",
+      "pa_id": "sicevacka-klisura",
+      "pixels": 561,
+      "file": "public/results/protected-areas/pixels/years/2020/sicevacka-klisura.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2020",
+      "pa_id": "stara-planina",
+      "pixels": 5000,
+      "file": "public/results/protected-areas/pixels/years/2020/stara-planina.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2020",
+      "pa_id": "stolovi",
+      "pixels": 729,
+      "file": "public/results/protected-areas/pixels/years/2020/stolovi.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2020",
+      "pa_id": "suboticka-pescara",
+      "pixels": 475,
+      "file": "public/results/protected-areas/pixels/years/2020/suboticka-pescara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2020",
+      "pa_id": "suva-planiana",
+      "pixels": 1315,
+      "file": "public/results/protected-areas/pixels/years/2020/suva-planiana.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2020",
+      "pa_id": "tikvara",
+      "pixels": 64,
+      "file": "public/results/protected-areas/pixels/years/2020/tikvara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2020",
+      "pa_id": "titelski-breg",
+      "pixels": 171,
+      "file": "public/results/protected-areas/pixels/years/2020/titelski-breg.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2020",
+      "pa_id": "uvac",
+      "pixels": 1003,
+      "file": "public/results/protected-areas/pixels/years/2020/uvac.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2020",
+      "pa_id": "vardenik",
+      "pixels": 805,
+      "file": "public/results/protected-areas/pixels/years/2020/vardenik.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2020",
+      "pa_id": "veliki-jastrebac",
+      "pixels": 2655,
+      "file": "public/results/protected-areas/pixels/years/2020/veliki-jastrebac.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2020",
+      "pa_id": "vlasina",
+      "pixels": 904,
+      "file": "public/results/protected-areas/pixels/years/2020/vlasina.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2020",
+      "pa_id": "vrsacke-planine",
+      "pixels": 482,
+      "file": "public/results/protected-areas/pixels/years/2020/vrsacke-planine.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2020",
+      "pa_id": "zeljin",
+      "pixels": 501,
+      "file": "public/results/protected-areas/pixels/years/2020/zeljin.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2020",
+      "pa_id": "zlatibor",
+      "pixels": 2901,
+      "file": "public/results/protected-areas/pixels/years/2020/zlatibor.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2021",
+      "pa_id": "carska-bara",
+      "pixels": 431,
+      "file": "public/results/protected-areas/pixels/years/2021/carska-bara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2021",
+      "pa_id": "deliblatska-pescara",
+      "pixels": 2528,
+      "file": "public/results/protected-areas/pixels/years/2021/deliblatska-pescara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2021",
+      "pa_id": "goc-gvozdac",
+      "pixels": 320,
+      "file": "public/results/protected-areas/pixels/years/2021/goc-gvozdac.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2021",
+      "pa_id": "golija",
+      "pixels": 5000,
+      "file": "public/results/protected-areas/pixels/years/2021/golija.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2021",
+      "pa_id": "jerma",
+      "pixels": 516,
+      "file": "public/results/protected-areas/pixels/years/2021/jerma.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2021",
+      "pa_id": "kamena-gora",
+      "pixels": 586,
+      "file": "public/results/protected-areas/pixels/years/2021/kamena-gora.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2021",
+      "pa_id": "kanjiski-jarasi",
+      "pixels": 386,
+      "file": "public/results/protected-areas/pixels/years/2021/kanjiski-jarasi.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2021",
+      "pa_id": "karadjordjevo",
+      "pixels": 282,
+      "file": "public/results/protected-areas/pixels/years/2021/karadjordjevo.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2021",
+      "pa_id": "karas-nera",
+      "pixels": 236,
+      "file": "public/results/protected-areas/pixels/years/2021/karas-nera.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2021",
+      "pa_id": "klisura-djetinje",
+      "pixels": 101,
+      "file": "public/results/protected-areas/pixels/years/2021/klisura-djetinje.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2021",
+      "pa_id": "klisura-reke-milesevke",
+      "pixels": 133,
+      "file": "public/results/protected-areas/pixels/years/2021/klisura-reke-milesevke.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2021",
+      "pa_id": "klisura-reke-tresnjice",
+      "pixels": 76,
+      "file": "public/results/protected-areas/pixels/years/2021/klisura-reke-tresnjice.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2021",
+      "pa_id": "koviljsko-pertovaradinski-rit",
+      "pixels": 506,
+      "file": "public/results/protected-areas/pixels/years/2021/koviljsko-pertovaradinski-rit.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2021",
+      "pa_id": "maljen",
+      "pixels": 764,
+      "file": "public/results/protected-areas/pixels/years/2021/maljen.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2021",
+      "pa_id": "nacionalni-park-djerdap",
+      "pixels": 4479,
+      "file": "public/results/protected-areas/pixels/years/2021/nacionalni-park-djerdap.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2021",
+      "pa_id": "nacionalni-park-fruska-gora",
+      "pixels": 2315,
+      "file": "public/results/protected-areas/pixels/years/2021/nacionalni-park-fruska-gora.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2021",
+      "pa_id": "nacionalni-park-kopaonik",
+      "pixels": 888,
+      "file": "public/results/protected-areas/pixels/years/2021/nacionalni-park-kopaonik.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2021",
+      "pa_id": "nacionalni-park-tara",
+      "pixels": 1784,
+      "file": "public/results/protected-areas/pixels/years/2021/nacionalni-park-tara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2021",
+      "pa_id": "okanj-bara",
+      "pixels": 437,
+      "file": "public/results/protected-areas/pixels/years/2021/okanj-bara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2021",
+      "pa_id": "ovcarsko-kablarska-klisura",
+      "pixels": 396,
+      "file": "public/results/protected-areas/pixels/years/2021/ovcarsko-kablarska-klisura.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2021",
+      "pa_id": "ozren-jadovnik",
+      "pixels": 732,
+      "file": "public/results/protected-areas/pixels/years/2021/ozren-jadovnik.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2021",
+      "pa_id": "pasnjaci-velike-droplje",
+      "pixels": 580,
+      "file": "public/results/protected-areas/pixels/years/2021/pasnjaci-velike-droplje.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2021",
+      "pa_id": "pestersko-polje",
+      "pixels": 280,
+      "file": "public/results/protected-areas/pixels/years/2021/pestersko-polje.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2021",
+      "pa_id": "planina-cer",
+      "pixels": 503,
+      "file": "public/results/protected-areas/pixels/years/2021/planina-cer.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2021",
+      "pa_id": "planina-rudnik",
+      "pixels": 786,
+      "file": "public/results/protected-areas/pixels/years/2021/planina-rudnik.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2021",
+      "pa_id": "potamisje",
+      "pixels": 2008,
+      "file": "public/results/protected-areas/pixels/years/2021/potamisje.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2021",
+      "pa_id": "radan",
+      "pixels": 3005,
+      "file": "public/results/protected-areas/pixels/years/2021/radan.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2021",
+      "pa_id": "rajac",
+      "pixels": 165,
+      "file": "public/results/protected-areas/pixels/years/2021/rajac.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2021",
+      "pa_id": "ritovi-donjeg-potisja",
+      "pixels": 402,
+      "file": "public/results/protected-areas/pixels/years/2021/ritovi-donjeg-potisja.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2021",
+      "pa_id": "sargan-mokra-gora",
+      "pixels": 804,
+      "file": "public/results/protected-areas/pixels/years/2021/sargan-mokra-gora.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2021",
+      "pa_id": "sicevacka-klisura",
+      "pixels": 561,
+      "file": "public/results/protected-areas/pixels/years/2021/sicevacka-klisura.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2021",
+      "pa_id": "stara-planina",
+      "pixels": 5000,
+      "file": "public/results/protected-areas/pixels/years/2021/stara-planina.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2021",
+      "pa_id": "stolovi",
+      "pixels": 729,
+      "file": "public/results/protected-areas/pixels/years/2021/stolovi.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2021",
+      "pa_id": "suboticka-pescara",
+      "pixels": 475,
+      "file": "public/results/protected-areas/pixels/years/2021/suboticka-pescara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2021",
+      "pa_id": "suva-planiana",
+      "pixels": 1315,
+      "file": "public/results/protected-areas/pixels/years/2021/suva-planiana.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2021",
+      "pa_id": "tikvara",
+      "pixels": 64,
+      "file": "public/results/protected-areas/pixels/years/2021/tikvara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2021",
+      "pa_id": "titelski-breg",
+      "pixels": 171,
+      "file": "public/results/protected-areas/pixels/years/2021/titelski-breg.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2021",
+      "pa_id": "uvac",
+      "pixels": 1003,
+      "file": "public/results/protected-areas/pixels/years/2021/uvac.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2021",
+      "pa_id": "vardenik",
+      "pixels": 805,
+      "file": "public/results/protected-areas/pixels/years/2021/vardenik.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2021",
+      "pa_id": "veliki-jastrebac",
+      "pixels": 2655,
+      "file": "public/results/protected-areas/pixels/years/2021/veliki-jastrebac.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2021",
+      "pa_id": "vlasina",
+      "pixels": 904,
+      "file": "public/results/protected-areas/pixels/years/2021/vlasina.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2021",
+      "pa_id": "vrsacke-planine",
+      "pixels": 482,
+      "file": "public/results/protected-areas/pixels/years/2021/vrsacke-planine.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2021",
+      "pa_id": "zeljin",
+      "pixels": 501,
+      "file": "public/results/protected-areas/pixels/years/2021/zeljin.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2021",
+      "pa_id": "zlatibor",
+      "pixels": 2901,
+      "file": "public/results/protected-areas/pixels/years/2021/zlatibor.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2022",
+      "pa_id": "carska-bara",
+      "pixels": 431,
+      "file": "public/results/protected-areas/pixels/years/2022/carska-bara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2022",
+      "pa_id": "deliblatska-pescara",
+      "pixels": 2528,
+      "file": "public/results/protected-areas/pixels/years/2022/deliblatska-pescara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2022",
+      "pa_id": "goc-gvozdac",
+      "pixels": 320,
+      "file": "public/results/protected-areas/pixels/years/2022/goc-gvozdac.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2022",
+      "pa_id": "golija",
+      "pixels": 5000,
+      "file": "public/results/protected-areas/pixels/years/2022/golija.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2022",
+      "pa_id": "jerma",
+      "pixels": 516,
+      "file": "public/results/protected-areas/pixels/years/2022/jerma.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2022",
+      "pa_id": "kamena-gora",
+      "pixels": 586,
+      "file": "public/results/protected-areas/pixels/years/2022/kamena-gora.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2022",
+      "pa_id": "kanjiski-jarasi",
+      "pixels": 386,
+      "file": "public/results/protected-areas/pixels/years/2022/kanjiski-jarasi.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2022",
+      "pa_id": "karadjordjevo",
+      "pixels": 282,
+      "file": "public/results/protected-areas/pixels/years/2022/karadjordjevo.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2022",
+      "pa_id": "karas-nera",
+      "pixels": 236,
+      "file": "public/results/protected-areas/pixels/years/2022/karas-nera.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2022",
+      "pa_id": "klisura-djetinje",
+      "pixels": 101,
+      "file": "public/results/protected-areas/pixels/years/2022/klisura-djetinje.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2022",
+      "pa_id": "klisura-reke-milesevke",
+      "pixels": 133,
+      "file": "public/results/protected-areas/pixels/years/2022/klisura-reke-milesevke.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2022",
+      "pa_id": "klisura-reke-tresnjice",
+      "pixels": 76,
+      "file": "public/results/protected-areas/pixels/years/2022/klisura-reke-tresnjice.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2022",
+      "pa_id": "koviljsko-pertovaradinski-rit",
+      "pixels": 506,
+      "file": "public/results/protected-areas/pixels/years/2022/koviljsko-pertovaradinski-rit.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2022",
+      "pa_id": "maljen",
+      "pixels": 764,
+      "file": "public/results/protected-areas/pixels/years/2022/maljen.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2022",
+      "pa_id": "nacionalni-park-djerdap",
+      "pixels": 4479,
+      "file": "public/results/protected-areas/pixels/years/2022/nacionalni-park-djerdap.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2022",
+      "pa_id": "nacionalni-park-fruska-gora",
+      "pixels": 2315,
+      "file": "public/results/protected-areas/pixels/years/2022/nacionalni-park-fruska-gora.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2022",
+      "pa_id": "nacionalni-park-kopaonik",
+      "pixels": 888,
+      "file": "public/results/protected-areas/pixels/years/2022/nacionalni-park-kopaonik.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2022",
+      "pa_id": "nacionalni-park-tara",
+      "pixels": 1784,
+      "file": "public/results/protected-areas/pixels/years/2022/nacionalni-park-tara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2022",
+      "pa_id": "okanj-bara",
+      "pixels": 437,
+      "file": "public/results/protected-areas/pixels/years/2022/okanj-bara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2022",
+      "pa_id": "ovcarsko-kablarska-klisura",
+      "pixels": 396,
+      "file": "public/results/protected-areas/pixels/years/2022/ovcarsko-kablarska-klisura.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2022",
+      "pa_id": "ozren-jadovnik",
+      "pixels": 732,
+      "file": "public/results/protected-areas/pixels/years/2022/ozren-jadovnik.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2022",
+      "pa_id": "pasnjaci-velike-droplje",
+      "pixels": 580,
+      "file": "public/results/protected-areas/pixels/years/2022/pasnjaci-velike-droplje.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2022",
+      "pa_id": "pestersko-polje",
+      "pixels": 280,
+      "file": "public/results/protected-areas/pixels/years/2022/pestersko-polje.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2022",
+      "pa_id": "planina-cer",
+      "pixels": 503,
+      "file": "public/results/protected-areas/pixels/years/2022/planina-cer.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2022",
+      "pa_id": "planina-rudnik",
+      "pixels": 786,
+      "file": "public/results/protected-areas/pixels/years/2022/planina-rudnik.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2022",
+      "pa_id": "potamisje",
+      "pixels": 2008,
+      "file": "public/results/protected-areas/pixels/years/2022/potamisje.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2022",
+      "pa_id": "radan",
+      "pixels": 3005,
+      "file": "public/results/protected-areas/pixels/years/2022/radan.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2022",
+      "pa_id": "rajac",
+      "pixels": 165,
+      "file": "public/results/protected-areas/pixels/years/2022/rajac.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2022",
+      "pa_id": "ritovi-donjeg-potisja",
+      "pixels": 402,
+      "file": "public/results/protected-areas/pixels/years/2022/ritovi-donjeg-potisja.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2022",
+      "pa_id": "sargan-mokra-gora",
+      "pixels": 804,
+      "file": "public/results/protected-areas/pixels/years/2022/sargan-mokra-gora.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2022",
+      "pa_id": "sicevacka-klisura",
+      "pixels": 561,
+      "file": "public/results/protected-areas/pixels/years/2022/sicevacka-klisura.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2022",
+      "pa_id": "stara-planina",
+      "pixels": 5000,
+      "file": "public/results/protected-areas/pixels/years/2022/stara-planina.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2022",
+      "pa_id": "stolovi",
+      "pixels": 729,
+      "file": "public/results/protected-areas/pixels/years/2022/stolovi.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2022",
+      "pa_id": "suboticka-pescara",
+      "pixels": 475,
+      "file": "public/results/protected-areas/pixels/years/2022/suboticka-pescara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2022",
+      "pa_id": "suva-planiana",
+      "pixels": 1315,
+      "file": "public/results/protected-areas/pixels/years/2022/suva-planiana.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2022",
+      "pa_id": "tikvara",
+      "pixels": 64,
+      "file": "public/results/protected-areas/pixels/years/2022/tikvara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2022",
+      "pa_id": "titelski-breg",
+      "pixels": 171,
+      "file": "public/results/protected-areas/pixels/years/2022/titelski-breg.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2022",
+      "pa_id": "uvac",
+      "pixels": 1003,
+      "file": "public/results/protected-areas/pixels/years/2022/uvac.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2022",
+      "pa_id": "vardenik",
+      "pixels": 805,
+      "file": "public/results/protected-areas/pixels/years/2022/vardenik.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2022",
+      "pa_id": "veliki-jastrebac",
+      "pixels": 2655,
+      "file": "public/results/protected-areas/pixels/years/2022/veliki-jastrebac.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2022",
+      "pa_id": "vlasina",
+      "pixels": 904,
+      "file": "public/results/protected-areas/pixels/years/2022/vlasina.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2022",
+      "pa_id": "vrsacke-planine",
+      "pixels": 482,
+      "file": "public/results/protected-areas/pixels/years/2022/vrsacke-planine.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2022",
+      "pa_id": "zeljin",
+      "pixels": 501,
+      "file": "public/results/protected-areas/pixels/years/2022/zeljin.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2022",
+      "pa_id": "zlatibor",
+      "pixels": 2901,
+      "file": "public/results/protected-areas/pixels/years/2022/zlatibor.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2023",
+      "pa_id": "carska-bara",
+      "pixels": 431,
+      "file": "public/results/protected-areas/pixels/years/2023/carska-bara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2023",
+      "pa_id": "deliblatska-pescara",
+      "pixels": 2528,
+      "file": "public/results/protected-areas/pixels/years/2023/deliblatska-pescara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2023",
+      "pa_id": "goc-gvozdac",
+      "pixels": 320,
+      "file": "public/results/protected-areas/pixels/years/2023/goc-gvozdac.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2023",
+      "pa_id": "golija",
+      "pixels": 5000,
+      "file": "public/results/protected-areas/pixels/years/2023/golija.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2023",
+      "pa_id": "jerma",
+      "pixels": 516,
+      "file": "public/results/protected-areas/pixels/years/2023/jerma.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2023",
+      "pa_id": "kamena-gora",
+      "pixels": 586,
+      "file": "public/results/protected-areas/pixels/years/2023/kamena-gora.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2023",
+      "pa_id": "kanjiski-jarasi",
+      "pixels": 386,
+      "file": "public/results/protected-areas/pixels/years/2023/kanjiski-jarasi.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2023",
+      "pa_id": "karadjordjevo",
+      "pixels": 282,
+      "file": "public/results/protected-areas/pixels/years/2023/karadjordjevo.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2023",
+      "pa_id": "karas-nera",
+      "pixels": 236,
+      "file": "public/results/protected-areas/pixels/years/2023/karas-nera.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2023",
+      "pa_id": "klisura-djetinje",
+      "pixels": 101,
+      "file": "public/results/protected-areas/pixels/years/2023/klisura-djetinje.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2023",
+      "pa_id": "klisura-reke-milesevke",
+      "pixels": 133,
+      "file": "public/results/protected-areas/pixels/years/2023/klisura-reke-milesevke.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2023",
+      "pa_id": "klisura-reke-tresnjice",
+      "pixels": 76,
+      "file": "public/results/protected-areas/pixels/years/2023/klisura-reke-tresnjice.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2023",
+      "pa_id": "koviljsko-pertovaradinski-rit",
+      "pixels": 506,
+      "file": "public/results/protected-areas/pixels/years/2023/koviljsko-pertovaradinski-rit.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2023",
+      "pa_id": "maljen",
+      "pixels": 764,
+      "file": "public/results/protected-areas/pixels/years/2023/maljen.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2023",
+      "pa_id": "nacionalni-park-djerdap",
+      "pixels": 4479,
+      "file": "public/results/protected-areas/pixels/years/2023/nacionalni-park-djerdap.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2023",
+      "pa_id": "nacionalni-park-fruska-gora",
+      "pixels": 2315,
+      "file": "public/results/protected-areas/pixels/years/2023/nacionalni-park-fruska-gora.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2023",
+      "pa_id": "nacionalni-park-kopaonik",
+      "pixels": 888,
+      "file": "public/results/protected-areas/pixels/years/2023/nacionalni-park-kopaonik.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2023",
+      "pa_id": "nacionalni-park-tara",
+      "pixels": 1784,
+      "file": "public/results/protected-areas/pixels/years/2023/nacionalni-park-tara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2023",
+      "pa_id": "okanj-bara",
+      "pixels": 437,
+      "file": "public/results/protected-areas/pixels/years/2023/okanj-bara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2023",
+      "pa_id": "ovcarsko-kablarska-klisura",
+      "pixels": 396,
+      "file": "public/results/protected-areas/pixels/years/2023/ovcarsko-kablarska-klisura.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2023",
+      "pa_id": "ozren-jadovnik",
+      "pixels": 732,
+      "file": "public/results/protected-areas/pixels/years/2023/ozren-jadovnik.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2023",
+      "pa_id": "pasnjaci-velike-droplje",
+      "pixels": 580,
+      "file": "public/results/protected-areas/pixels/years/2023/pasnjaci-velike-droplje.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2023",
+      "pa_id": "pestersko-polje",
+      "pixels": 280,
+      "file": "public/results/protected-areas/pixels/years/2023/pestersko-polje.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2023",
+      "pa_id": "planina-cer",
+      "pixels": 503,
+      "file": "public/results/protected-areas/pixels/years/2023/planina-cer.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2023",
+      "pa_id": "planina-rudnik",
+      "pixels": 786,
+      "file": "public/results/protected-areas/pixels/years/2023/planina-rudnik.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2023",
+      "pa_id": "potamisje",
+      "pixels": 2008,
+      "file": "public/results/protected-areas/pixels/years/2023/potamisje.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2023",
+      "pa_id": "radan",
+      "pixels": 3005,
+      "file": "public/results/protected-areas/pixels/years/2023/radan.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2023",
+      "pa_id": "rajac",
+      "pixels": 165,
+      "file": "public/results/protected-areas/pixels/years/2023/rajac.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2023",
+      "pa_id": "ritovi-donjeg-potisja",
+      "pixels": 402,
+      "file": "public/results/protected-areas/pixels/years/2023/ritovi-donjeg-potisja.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2023",
+      "pa_id": "sargan-mokra-gora",
+      "pixels": 804,
+      "file": "public/results/protected-areas/pixels/years/2023/sargan-mokra-gora.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2023",
+      "pa_id": "sicevacka-klisura",
+      "pixels": 561,
+      "file": "public/results/protected-areas/pixels/years/2023/sicevacka-klisura.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2023",
+      "pa_id": "stara-planina",
+      "pixels": 5000,
+      "file": "public/results/protected-areas/pixels/years/2023/stara-planina.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2023",
+      "pa_id": "stolovi",
+      "pixels": 729,
+      "file": "public/results/protected-areas/pixels/years/2023/stolovi.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2023",
+      "pa_id": "suboticka-pescara",
+      "pixels": 475,
+      "file": "public/results/protected-areas/pixels/years/2023/suboticka-pescara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2023",
+      "pa_id": "suva-planiana",
+      "pixels": 1315,
+      "file": "public/results/protected-areas/pixels/years/2023/suva-planiana.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2023",
+      "pa_id": "tikvara",
+      "pixels": 64,
+      "file": "public/results/protected-areas/pixels/years/2023/tikvara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2023",
+      "pa_id": "titelski-breg",
+      "pixels": 171,
+      "file": "public/results/protected-areas/pixels/years/2023/titelski-breg.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2023",
+      "pa_id": "uvac",
+      "pixels": 1003,
+      "file": "public/results/protected-areas/pixels/years/2023/uvac.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2023",
+      "pa_id": "vardenik",
+      "pixels": 805,
+      "file": "public/results/protected-areas/pixels/years/2023/vardenik.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2023",
+      "pa_id": "veliki-jastrebac",
+      "pixels": 2655,
+      "file": "public/results/protected-areas/pixels/years/2023/veliki-jastrebac.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2023",
+      "pa_id": "vlasina",
+      "pixels": 904,
+      "file": "public/results/protected-areas/pixels/years/2023/vlasina.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2023",
+      "pa_id": "vrsacke-planine",
+      "pixels": 482,
+      "file": "public/results/protected-areas/pixels/years/2023/vrsacke-planine.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2023",
+      "pa_id": "zeljin",
+      "pixels": 501,
+      "file": "public/results/protected-areas/pixels/years/2023/zeljin.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2023",
+      "pa_id": "zlatibor",
+      "pixels": 2901,
+      "file": "public/results/protected-areas/pixels/years/2023/zlatibor.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2024",
+      "pa_id": "carska-bara",
+      "pixels": 431,
+      "file": "public/results/protected-areas/pixels/years/2024/carska-bara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2024",
+      "pa_id": "deliblatska-pescara",
+      "pixels": 2528,
+      "file": "public/results/protected-areas/pixels/years/2024/deliblatska-pescara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2024",
+      "pa_id": "goc-gvozdac",
+      "pixels": 320,
+      "file": "public/results/protected-areas/pixels/years/2024/goc-gvozdac.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2024",
+      "pa_id": "golija",
+      "pixels": 5000,
+      "file": "public/results/protected-areas/pixels/years/2024/golija.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2024",
+      "pa_id": "jerma",
+      "pixels": 516,
+      "file": "public/results/protected-areas/pixels/years/2024/jerma.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2024",
+      "pa_id": "kamena-gora",
+      "pixels": 586,
+      "file": "public/results/protected-areas/pixels/years/2024/kamena-gora.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2024",
+      "pa_id": "kanjiski-jarasi",
+      "pixels": 386,
+      "file": "public/results/protected-areas/pixels/years/2024/kanjiski-jarasi.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2024",
+      "pa_id": "karadjordjevo",
+      "pixels": 282,
+      "file": "public/results/protected-areas/pixels/years/2024/karadjordjevo.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2024",
+      "pa_id": "karas-nera",
+      "pixels": 236,
+      "file": "public/results/protected-areas/pixels/years/2024/karas-nera.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2024",
+      "pa_id": "klisura-djetinje",
+      "pixels": 101,
+      "file": "public/results/protected-areas/pixels/years/2024/klisura-djetinje.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2024",
+      "pa_id": "klisura-reke-milesevke",
+      "pixels": 133,
+      "file": "public/results/protected-areas/pixels/years/2024/klisura-reke-milesevke.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2024",
+      "pa_id": "klisura-reke-tresnjice",
+      "pixels": 76,
+      "file": "public/results/protected-areas/pixels/years/2024/klisura-reke-tresnjice.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2024",
+      "pa_id": "koviljsko-pertovaradinski-rit",
+      "pixels": 506,
+      "file": "public/results/protected-areas/pixels/years/2024/koviljsko-pertovaradinski-rit.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2024",
+      "pa_id": "maljen",
+      "pixels": 764,
+      "file": "public/results/protected-areas/pixels/years/2024/maljen.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2024",
+      "pa_id": "nacionalni-park-djerdap",
+      "pixels": 4479,
+      "file": "public/results/protected-areas/pixels/years/2024/nacionalni-park-djerdap.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2024",
+      "pa_id": "nacionalni-park-fruska-gora",
+      "pixels": 2315,
+      "file": "public/results/protected-areas/pixels/years/2024/nacionalni-park-fruska-gora.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2024",
+      "pa_id": "nacionalni-park-kopaonik",
+      "pixels": 888,
+      "file": "public/results/protected-areas/pixels/years/2024/nacionalni-park-kopaonik.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2024",
+      "pa_id": "nacionalni-park-tara",
+      "pixels": 1784,
+      "file": "public/results/protected-areas/pixels/years/2024/nacionalni-park-tara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2024",
+      "pa_id": "okanj-bara",
+      "pixels": 437,
+      "file": "public/results/protected-areas/pixels/years/2024/okanj-bara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2024",
+      "pa_id": "ovcarsko-kablarska-klisura",
+      "pixels": 396,
+      "file": "public/results/protected-areas/pixels/years/2024/ovcarsko-kablarska-klisura.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2024",
+      "pa_id": "ozren-jadovnik",
+      "pixels": 732,
+      "file": "public/results/protected-areas/pixels/years/2024/ozren-jadovnik.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2024",
+      "pa_id": "pasnjaci-velike-droplje",
+      "pixels": 580,
+      "file": "public/results/protected-areas/pixels/years/2024/pasnjaci-velike-droplje.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2024",
+      "pa_id": "pestersko-polje",
+      "pixels": 280,
+      "file": "public/results/protected-areas/pixels/years/2024/pestersko-polje.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2024",
+      "pa_id": "planina-cer",
+      "pixels": 503,
+      "file": "public/results/protected-areas/pixels/years/2024/planina-cer.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2024",
+      "pa_id": "planina-rudnik",
+      "pixels": 786,
+      "file": "public/results/protected-areas/pixels/years/2024/planina-rudnik.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2024",
+      "pa_id": "potamisje",
+      "pixels": 2008,
+      "file": "public/results/protected-areas/pixels/years/2024/potamisje.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2024",
+      "pa_id": "radan",
+      "pixels": 3005,
+      "file": "public/results/protected-areas/pixels/years/2024/radan.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2024",
+      "pa_id": "rajac",
+      "pixels": 165,
+      "file": "public/results/protected-areas/pixels/years/2024/rajac.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2024",
+      "pa_id": "ritovi-donjeg-potisja",
+      "pixels": 402,
+      "file": "public/results/protected-areas/pixels/years/2024/ritovi-donjeg-potisja.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2024",
+      "pa_id": "sargan-mokra-gora",
+      "pixels": 804,
+      "file": "public/results/protected-areas/pixels/years/2024/sargan-mokra-gora.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2024",
+      "pa_id": "sicevacka-klisura",
+      "pixels": 561,
+      "file": "public/results/protected-areas/pixels/years/2024/sicevacka-klisura.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2024",
+      "pa_id": "stara-planina",
+      "pixels": 5000,
+      "file": "public/results/protected-areas/pixels/years/2024/stara-planina.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2024",
+      "pa_id": "stolovi",
+      "pixels": 729,
+      "file": "public/results/protected-areas/pixels/years/2024/stolovi.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2024",
+      "pa_id": "suboticka-pescara",
+      "pixels": 475,
+      "file": "public/results/protected-areas/pixels/years/2024/suboticka-pescara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2024",
+      "pa_id": "suva-planiana",
+      "pixels": 1315,
+      "file": "public/results/protected-areas/pixels/years/2024/suva-planiana.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2024",
+      "pa_id": "tikvara",
+      "pixels": 64,
+      "file": "public/results/protected-areas/pixels/years/2024/tikvara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2024",
+      "pa_id": "titelski-breg",
+      "pixels": 171,
+      "file": "public/results/protected-areas/pixels/years/2024/titelski-breg.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2024",
+      "pa_id": "uvac",
+      "pixels": 1003,
+      "file": "public/results/protected-areas/pixels/years/2024/uvac.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2024",
+      "pa_id": "vardenik",
+      "pixels": 805,
+      "file": "public/results/protected-areas/pixels/years/2024/vardenik.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2024",
+      "pa_id": "veliki-jastrebac",
+      "pixels": 2655,
+      "file": "public/results/protected-areas/pixels/years/2024/veliki-jastrebac.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2024",
+      "pa_id": "vlasina",
+      "pixels": 904,
+      "file": "public/results/protected-areas/pixels/years/2024/vlasina.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2024",
+      "pa_id": "vrsacke-planine",
+      "pixels": 482,
+      "file": "public/results/protected-areas/pixels/years/2024/vrsacke-planine.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2024",
+      "pa_id": "zeljin",
+      "pixels": 501,
+      "file": "public/results/protected-areas/pixels/years/2024/zeljin.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2024",
+      "pa_id": "zlatibor",
+      "pixels": 2901,
+      "file": "public/results/protected-areas/pixels/years/2024/zlatibor.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2025",
+      "pa_id": "carska-bara",
+      "pixels": 431,
+      "file": "public/results/protected-areas/pixels/years/2025/carska-bara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2025",
+      "pa_id": "deliblatska-pescara",
+      "pixels": 2528,
+      "file": "public/results/protected-areas/pixels/years/2025/deliblatska-pescara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2025",
+      "pa_id": "goc-gvozdac",
+      "pixels": 320,
+      "file": "public/results/protected-areas/pixels/years/2025/goc-gvozdac.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2025",
+      "pa_id": "golija",
+      "pixels": 5000,
+      "file": "public/results/protected-areas/pixels/years/2025/golija.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2025",
+      "pa_id": "jerma",
+      "pixels": 516,
+      "file": "public/results/protected-areas/pixels/years/2025/jerma.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2025",
+      "pa_id": "kamena-gora",
+      "pixels": 586,
+      "file": "public/results/protected-areas/pixels/years/2025/kamena-gora.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2025",
+      "pa_id": "kanjiski-jarasi",
+      "pixels": 386,
+      "file": "public/results/protected-areas/pixels/years/2025/kanjiski-jarasi.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2025",
+      "pa_id": "karadjordjevo",
+      "pixels": 282,
+      "file": "public/results/protected-areas/pixels/years/2025/karadjordjevo.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2025",
+      "pa_id": "karas-nera",
+      "pixels": 236,
+      "file": "public/results/protected-areas/pixels/years/2025/karas-nera.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2025",
+      "pa_id": "klisura-djetinje",
+      "pixels": 101,
+      "file": "public/results/protected-areas/pixels/years/2025/klisura-djetinje.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2025",
+      "pa_id": "klisura-reke-milesevke",
+      "pixels": 133,
+      "file": "public/results/protected-areas/pixels/years/2025/klisura-reke-milesevke.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2025",
+      "pa_id": "klisura-reke-tresnjice",
+      "pixels": 76,
+      "file": "public/results/protected-areas/pixels/years/2025/klisura-reke-tresnjice.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2025",
+      "pa_id": "koviljsko-pertovaradinski-rit",
+      "pixels": 506,
+      "file": "public/results/protected-areas/pixels/years/2025/koviljsko-pertovaradinski-rit.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2025",
+      "pa_id": "maljen",
+      "pixels": 764,
+      "file": "public/results/protected-areas/pixels/years/2025/maljen.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2025",
+      "pa_id": "nacionalni-park-djerdap",
+      "pixels": 4479,
+      "file": "public/results/protected-areas/pixels/years/2025/nacionalni-park-djerdap.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2025",
+      "pa_id": "nacionalni-park-fruska-gora",
+      "pixels": 2315,
+      "file": "public/results/protected-areas/pixels/years/2025/nacionalni-park-fruska-gora.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2025",
+      "pa_id": "nacionalni-park-kopaonik",
+      "pixels": 888,
+      "file": "public/results/protected-areas/pixels/years/2025/nacionalni-park-kopaonik.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2025",
+      "pa_id": "nacionalni-park-tara",
+      "pixels": 1784,
+      "file": "public/results/protected-areas/pixels/years/2025/nacionalni-park-tara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2025",
+      "pa_id": "okanj-bara",
+      "pixels": 437,
+      "file": "public/results/protected-areas/pixels/years/2025/okanj-bara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2025",
+      "pa_id": "ovcarsko-kablarska-klisura",
+      "pixels": 396,
+      "file": "public/results/protected-areas/pixels/years/2025/ovcarsko-kablarska-klisura.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2025",
+      "pa_id": "ozren-jadovnik",
+      "pixels": 732,
+      "file": "public/results/protected-areas/pixels/years/2025/ozren-jadovnik.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2025",
+      "pa_id": "pasnjaci-velike-droplje",
+      "pixels": 580,
+      "file": "public/results/protected-areas/pixels/years/2025/pasnjaci-velike-droplje.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2025",
+      "pa_id": "pestersko-polje",
+      "pixels": 280,
+      "file": "public/results/protected-areas/pixels/years/2025/pestersko-polje.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2025",
+      "pa_id": "planina-cer",
+      "pixels": 503,
+      "file": "public/results/protected-areas/pixels/years/2025/planina-cer.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2025",
+      "pa_id": "planina-rudnik",
+      "pixels": 786,
+      "file": "public/results/protected-areas/pixels/years/2025/planina-rudnik.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2025",
+      "pa_id": "potamisje",
+      "pixels": 2008,
+      "file": "public/results/protected-areas/pixels/years/2025/potamisje.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2025",
+      "pa_id": "radan",
+      "pixels": 3005,
+      "file": "public/results/protected-areas/pixels/years/2025/radan.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2025",
+      "pa_id": "rajac",
+      "pixels": 165,
+      "file": "public/results/protected-areas/pixels/years/2025/rajac.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2025",
+      "pa_id": "ritovi-donjeg-potisja",
+      "pixels": 402,
+      "file": "public/results/protected-areas/pixels/years/2025/ritovi-donjeg-potisja.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2025",
+      "pa_id": "sargan-mokra-gora",
+      "pixels": 804,
+      "file": "public/results/protected-areas/pixels/years/2025/sargan-mokra-gora.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2025",
+      "pa_id": "sicevacka-klisura",
+      "pixels": 561,
+      "file": "public/results/protected-areas/pixels/years/2025/sicevacka-klisura.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2025",
+      "pa_id": "stara-planina",
+      "pixels": 5000,
+      "file": "public/results/protected-areas/pixels/years/2025/stara-planina.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2025",
+      "pa_id": "stolovi",
+      "pixels": 729,
+      "file": "public/results/protected-areas/pixels/years/2025/stolovi.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2025",
+      "pa_id": "suboticka-pescara",
+      "pixels": 475,
+      "file": "public/results/protected-areas/pixels/years/2025/suboticka-pescara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2025",
+      "pa_id": "suva-planiana",
+      "pixels": 1315,
+      "file": "public/results/protected-areas/pixels/years/2025/suva-planiana.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2025",
+      "pa_id": "tikvara",
+      "pixels": 64,
+      "file": "public/results/protected-areas/pixels/years/2025/tikvara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2025",
+      "pa_id": "titelski-breg",
+      "pixels": 171,
+      "file": "public/results/protected-areas/pixels/years/2025/titelski-breg.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2025",
+      "pa_id": "uvac",
+      "pixels": 1003,
+      "file": "public/results/protected-areas/pixels/years/2025/uvac.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2025",
+      "pa_id": "vardenik",
+      "pixels": 805,
+      "file": "public/results/protected-areas/pixels/years/2025/vardenik.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2025",
+      "pa_id": "veliki-jastrebac",
+      "pixels": 2655,
+      "file": "public/results/protected-areas/pixels/years/2025/veliki-jastrebac.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2025",
+      "pa_id": "vlasina",
+      "pixels": 904,
+      "file": "public/results/protected-areas/pixels/years/2025/vlasina.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2025",
+      "pa_id": "vrsacke-planine",
+      "pixels": 482,
+      "file": "public/results/protected-areas/pixels/years/2025/vrsacke-planine.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2025",
+      "pa_id": "zeljin",
+      "pixels": 501,
+      "file": "public/results/protected-areas/pixels/years/2025/zeljin.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2025",
+      "pa_id": "zlatibor",
+      "pixels": 2901,
+      "file": "public/results/protected-areas/pixels/years/2025/zlatibor.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2026",
+      "pa_id": "carska-bara",
+      "pixels": 431,
+      "file": "public/results/protected-areas/pixels/years/2026/carska-bara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2026",
+      "pa_id": "deliblatska-pescara",
+      "pixels": 2447,
+      "file": "public/results/protected-areas/pixels/years/2026/deliblatska-pescara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2026",
+      "pa_id": "goc-gvozdac",
+      "pixels": 320,
+      "file": "public/results/protected-areas/pixels/years/2026/goc-gvozdac.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2026",
+      "pa_id": "golija",
+      "pixels": 5000,
+      "file": "public/results/protected-areas/pixels/years/2026/golija.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2026",
+      "pa_id": "jerma",
+      "pixels": 516,
+      "file": "public/results/protected-areas/pixels/years/2026/jerma.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2026",
+      "pa_id": "kamena-gora",
+      "pixels": 586,
+      "file": "public/results/protected-areas/pixels/years/2026/kamena-gora.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2026",
+      "pa_id": "kanjiski-jarasi",
+      "pixels": 386,
+      "file": "public/results/protected-areas/pixels/years/2026/kanjiski-jarasi.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2026",
+      "pa_id": "karadjordjevo",
+      "pixels": 282,
+      "file": "public/results/protected-areas/pixels/years/2026/karadjordjevo.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2026",
+      "pa_id": "karas-nera",
+      "pixels": 234,
+      "file": "public/results/protected-areas/pixels/years/2026/karas-nera.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2026",
+      "pa_id": "klisura-djetinje",
+      "pixels": 101,
+      "file": "public/results/protected-areas/pixels/years/2026/klisura-djetinje.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2026",
+      "pa_id": "klisura-reke-milesevke",
+      "pixels": 133,
+      "file": "public/results/protected-areas/pixels/years/2026/klisura-reke-milesevke.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2026",
+      "pa_id": "klisura-reke-tresnjice",
+      "pixels": 76,
+      "file": "public/results/protected-areas/pixels/years/2026/klisura-reke-tresnjice.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2026",
+      "pa_id": "koviljsko-pertovaradinski-rit",
+      "pixels": 506,
+      "file": "public/results/protected-areas/pixels/years/2026/koviljsko-pertovaradinski-rit.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2026",
+      "pa_id": "maljen",
+      "pixels": 764,
+      "file": "public/results/protected-areas/pixels/years/2026/maljen.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2026",
+      "pa_id": "nacionalni-park-djerdap",
+      "pixels": 4479,
+      "file": "public/results/protected-areas/pixels/years/2026/nacionalni-park-djerdap.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2026",
+      "pa_id": "nacionalni-park-fruska-gora",
+      "pixels": 2315,
+      "file": "public/results/protected-areas/pixels/years/2026/nacionalni-park-fruska-gora.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2026",
+      "pa_id": "nacionalni-park-kopaonik",
+      "pixels": 888,
+      "file": "public/results/protected-areas/pixels/years/2026/nacionalni-park-kopaonik.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2026",
+      "pa_id": "nacionalni-park-tara",
+      "pixels": 1784,
+      "file": "public/results/protected-areas/pixels/years/2026/nacionalni-park-tara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2026",
+      "pa_id": "okanj-bara",
+      "pixels": 437,
+      "file": "public/results/protected-areas/pixels/years/2026/okanj-bara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2026",
+      "pa_id": "ovcarsko-kablarska-klisura",
+      "pixels": 396,
+      "file": "public/results/protected-areas/pixels/years/2026/ovcarsko-kablarska-klisura.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2026",
+      "pa_id": "ozren-jadovnik",
+      "pixels": 732,
+      "file": "public/results/protected-areas/pixels/years/2026/ozren-jadovnik.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2026",
+      "pa_id": "pasnjaci-velike-droplje",
+      "pixels": 580,
+      "file": "public/results/protected-areas/pixels/years/2026/pasnjaci-velike-droplje.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2026",
+      "pa_id": "pestersko-polje",
+      "pixels": 280,
+      "file": "public/results/protected-areas/pixels/years/2026/pestersko-polje.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2026",
+      "pa_id": "planina-cer",
+      "pixels": 503,
+      "file": "public/results/protected-areas/pixels/years/2026/planina-cer.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2026",
+      "pa_id": "planina-rudnik",
+      "pixels": 786,
+      "file": "public/results/protected-areas/pixels/years/2026/planina-rudnik.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2026",
+      "pa_id": "potamisje",
+      "pixels": 2008,
+      "file": "public/results/protected-areas/pixels/years/2026/potamisje.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2026",
+      "pa_id": "radan",
+      "pixels": 3005,
+      "file": "public/results/protected-areas/pixels/years/2026/radan.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2026",
+      "pa_id": "rajac",
+      "pixels": 165,
+      "file": "public/results/protected-areas/pixels/years/2026/rajac.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2026",
+      "pa_id": "ritovi-donjeg-potisja",
+      "pixels": 402,
+      "file": "public/results/protected-areas/pixels/years/2026/ritovi-donjeg-potisja.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2026",
+      "pa_id": "sargan-mokra-gora",
+      "pixels": 804,
+      "file": "public/results/protected-areas/pixels/years/2026/sargan-mokra-gora.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2026",
+      "pa_id": "sicevacka-klisura",
+      "pixels": 561,
+      "file": "public/results/protected-areas/pixels/years/2026/sicevacka-klisura.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2026",
+      "pa_id": "stara-planina",
+      "pixels": 5000,
+      "file": "public/results/protected-areas/pixels/years/2026/stara-planina.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2026",
+      "pa_id": "stolovi",
+      "pixels": 729,
+      "file": "public/results/protected-areas/pixels/years/2026/stolovi.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2026",
+      "pa_id": "suboticka-pescara",
+      "pixels": 475,
+      "file": "public/results/protected-areas/pixels/years/2026/suboticka-pescara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2026",
+      "pa_id": "suva-planiana",
+      "pixels": 1284,
+      "file": "public/results/protected-areas/pixels/years/2026/suva-planiana.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2026",
+      "pa_id": "tikvara",
+      "pixels": 64,
+      "file": "public/results/protected-areas/pixels/years/2026/tikvara.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2026",
+      "pa_id": "titelski-breg",
+      "pixels": 171,
+      "file": "public/results/protected-areas/pixels/years/2026/titelski-breg.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2026",
+      "pa_id": "uvac",
+      "pixels": 1003,
+      "file": "public/results/protected-areas/pixels/years/2026/uvac.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2026",
+      "pa_id": "vardenik",
+      "pixels": 805,
+      "file": "public/results/protected-areas/pixels/years/2026/vardenik.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2026",
+      "pa_id": "veliki-jastrebac",
+      "pixels": 2655,
+      "file": "public/results/protected-areas/pixels/years/2026/veliki-jastrebac.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2026",
+      "pa_id": "vlasina",
+      "pixels": 829,
+      "file": "public/results/protected-areas/pixels/years/2026/vlasina.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2026",
+      "pa_id": "vrsacke-planine",
+      "pixels": 482,
+      "file": "public/results/protected-areas/pixels/years/2026/vrsacke-planine.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2026",
+      "pa_id": "zeljin",
+      "pixels": 501,
+      "file": "public/results/protected-areas/pixels/years/2026/zeljin.json"
+    },
+    {
+      "status": "ok",
+      "period_kind": "year",
+      "period": "2026",
+      "pa_id": "zlatibor",
+      "pixels": 2901,
+      "file": "public/results/protected-areas/pixels/years/2026/zlatibor.json"
     }
   ]
 }
