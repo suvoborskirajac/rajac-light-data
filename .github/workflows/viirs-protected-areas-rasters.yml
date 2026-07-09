@@ -41,16 +41,18 @@ on:
         required: true
         default: "rajac"
       style_mode:
-        description: "raw = изворни пиксели, smooth = глатка карта, both = обе"
+        description: "heatmap = топлотна мапа, smooth = глатка карта, raw = изворни пиксели, both = raw+smooth, all = raw+smooth+heatmap"
         required: true
-        default: "both"
+        default: "heatmap"
         type: choice
         options:
-          - both
+          - heatmap
           - smooth
           - raw
+          - both
+          - all
       max_images:
-        description: "Заштитни лимит броја PNG слика. За све године × сва подручја ставити 700 или више."
+        description: "Заштитни лимит броја PNG слика. За сва подручја и више периода ставити довољно висок број."
         required: false
         default: "60"
       overwrite:
@@ -81,9 +83,10 @@ jobs:
       START_MONTH: ${{ github.event.inputs.start_month || '2026-01' }}
       END_MONTH: ${{ github.event.inputs.end_month || 'auto' }}
       AREA: ${{ github.event.inputs.area || 'rajac' }}
-      STYLE_MODE: ${{ github.event.inputs.style_mode || 'both' }}
+      STYLE_MODE: ${{ github.event.inputs.style_mode || 'heatmap' }}
       MAX_IMAGES: ${{ github.event.inputs.max_images || '120' }}
       OVERWRITE: ${{ github.event.inputs.overwrite || 'false' }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -122,10 +125,16 @@ jobs:
             --ee-deadline 300000 \
             --dimensions 1400 \
             --dimensions-smooth 2200 \
+            --dimensions-heatmap 2400 \
             --smooth-method bicubic \
             --smooth-radius 250 \
             --smooth-sigma 120 \
             --smooth-scale 120 \
+            --heat-resample bicubic \
+            --heat-radius 900 \
+            --heat-sigma 320 \
+            --heat-scale 60 \
+            --heat-gain 1.0 \
             --vis-min 0 \
             --vis-max 3 \
             --outline-width 2 \
@@ -135,7 +144,7 @@ jobs:
         run: |
           git config user.name "rajac-light-monitor"
           git config user.email "actions@github.com"
-          git add public/results/protected-areas/rasters protected_areas/protected_areas_raster_exporter.py
+          git add public/results/protected-areas/rasters protected_areas/protected_areas_raster_exporter.py .github/workflows/viirs-protected-areas-rasters.yml README-VIIRS-RASTER-MAPS.md UPUTSTVO-GITHUB-V2.txt
           if git diff --cached --quiet; then
             echo "Нема нових PNG карата за упис."
           else
