@@ -127,7 +127,7 @@ jobs:
             --dimensions 1400 \
             --dimensions-smooth 2200 \
             --dimensions-heatmap 2400 \
-            --dimensions-surface 3200 \
+            --dimensions-surface 2200 \
             --smooth-method bicubic \
             --smooth-radius 250 \
             --smooth-sigma 120 \
@@ -138,10 +138,10 @@ jobs:
             --heat-scale 30 \
             --heat-gain 1.0 \
             --surface-resample bicubic \
-            --surface-radius 140 \
+            --surface-radius 120 \
             --surface-sigma 55 \
-            --surface-scale 30 \
-            --surface-detail-weight 0.35 \
+            --surface-scale 70 \
+            --surface-detail-weight 0.45 \
             --surface-gain 1.0 \
             --vis-min 0 \
             --vis-max 3 \
