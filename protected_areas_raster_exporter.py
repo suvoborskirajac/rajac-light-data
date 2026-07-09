@@ -7,10 +7,14 @@ Creates Earth Engine thumbnail PNG maps for one protected area or all areas,
 for a selected month/year or for all years.
 
 Outputs:
-  public/results/protected-areas/rasters/months/YYYY-MM/<pa_id>.png         (raw)
-  public/results/protected-areas/rasters/months/YYYY-MM/<pa_id>_smooth.png  (smooth)
-  public/results/protected-areas/rasters/years/YYYY/<pa_id>.png             (raw)
-  public/results/protected-areas/rasters/years/YYYY/<pa_id>_smooth.png      (smooth)
+  public/results/protected-areas/rasters/months/YYYY-MM/<pa_id>.png            (raw)
+  public/results/protected-areas/rasters/months/YYYY-MM/<pa_id>_smooth.png     (smooth)
+  public/results/protected-areas/rasters/months/YYYY-MM/<pa_id>_heatmap.png    (heatmap)
+  public/results/protected-areas/rasters/months/YYYY-MM/<pa_id>_surface.png    (surface)
+  public/results/protected-areas/rasters/years/YYYY/<pa_id>.png                (raw)
+  public/results/protected-areas/rasters/years/YYYY/<pa_id>_smooth.png         (smooth)
+  public/results/protected-areas/rasters/years/YYYY/<pa_id>_heatmap.png        (heatmap)
+  public/results/protected-areas/rasters/years/YYYY/<pa_id>_surface.png        (surface)
   public/results/protected-areas/rasters/index.json
 """
 from __future__ import annotations
@@ -20,12 +24,11 @@ import datetime as dt
 import json
 import os
 import re
-import sys
 import tempfile
 import time
 import unicodedata
 from pathlib import Path
-from typing import Any, Dict, Iterable, List, Optional, Tuple
+from typing import Any, Dict, Iterable, List, Tuple
 
 import ee
 import requests
@@ -158,43 +161,119 @@ def smooth_image(img: ee.Image, args: argparse.Namespace) -> ee.Image:
     sm = img.select("avg_rad")
     if args.smooth_method in ("bilinear", "bicubic"):
         sm = sm.resample(args.smooth_method)
-    if args.smooth_radius and args.smooth_radius > 0:
+    if args.smooth_radius > 0:
         sm = sm.focal_mean(radius=args.smooth_radius, units="meters")
-    if args.smooth_sigma and args.smooth_sigma > 0:
-        kernel = ee.Kernel.gaussian(radius=args.smooth_radius, sigma=args.smooth_sigma, units="meters", normalize=True)
+    if args.smooth_sigma > 0:
+        kernel = ee.Kernel.gaussian(radius=max(args.smooth_radius, args.smooth_sigma * 2.5), sigma=args.smooth_sigma, units="meters", normalize=True)
         sm = sm.convolve(kernel)
-    if args.smooth_scale and args.smooth_scale > 0:
+    if args.smooth_scale > 0:
         sm = sm.reproject(crs="EPSG:4326", scale=args.smooth_scale)
     return sm.rename("avg_rad")
 
 
+def heatmap_image(img: ee.Image, args: argparse.Namespace) -> ee.Image:
+    hm = img.select("avg_rad")
+    if args.heat_resample in ("bilinear", "bicubic"):
+        hm = hm.resample(args.heat_resample)
+    if args.heat_radius > 0:
+        hm = hm.focal_mean(radius=args.heat_radius, units="meters")
+    if args.heat_sigma > 0:
+        kernel = ee.Kernel.gaussian(radius=max(args.heat_radius, args.heat_sigma * 3.0), sigma=args.heat_sigma, units="meters", normalize=True)
+        hm = hm.convolve(kernel)
+    if args.heat_gain != 1.0:
+        hm = hm.multiply(args.heat_gain)
+    if args.heat_scale > 0:
+        hm = hm.reproject(crs="EPSG:4326", scale=args.heat_scale)
+    return hm.rename("avg_rad")
+
+
+
+def surface_image(img: ee.Image, args: argparse.Namespace) -> ee.Image:
+    """Interpolisana površ / Rajac-style visualization.
+
+    Ovo nije običan heatmap blur. Zadržava deo bicubic detalja i meša ga
+    sa umereno zaglađenom površinom, da karta ne postane jedna velika mrlja.
+    """
+    fine = img.select("avg_rad")
+    if args.surface_resample in ("bilinear", "bicubic"):
+        fine = fine.resample(args.surface_resample)
+    if args.surface_scale > 0:
+        fine = fine.reproject(crs="EPSG:4326", scale=args.surface_scale)
+
+    soft = fine
+    if args.surface_radius > 0:
+        soft = soft.focal_mean(radius=args.surface_radius, units="meters")
+    if args.surface_sigma > 0:
+        kernel = ee.Kernel.gaussian(
+            radius=max(args.surface_radius, args.surface_sigma * 2.5),
+            sigma=args.surface_sigma,
+            units="meters",
+            normalize=True,
+        )
+        soft = soft.convolve(kernel)
+
+    w = max(0.0, min(1.0, float(args.surface_detail_weight)))
+    surface = soft.multiply(1.0 - w).add(fine.multiply(w))
+    if args.surface_gain != 1.0:
+        surface = surface.multiply(args.surface_gain)
+    return surface.rename("avg_rad")
+
 def render_variant(img: ee.Image, geom: ee.Geometry, args: argparse.Namespace, style: str) -> ee.Image:
-    clipped = img.select("avg_rad").clip(geom)
+    base = img.select("avg_rad")
     if style == "smooth":
-        clipped = smooth_image(clipped, args)
+        base = smooth_image(base, args)
+    elif style == "heatmap":
+        base = heatmap_image(base, args)
+    elif style == "surface":
+        base = surface_image(base, args)
+    clipped = base.clip(geom)
     vis = clipped.visualize(min=args.vis_min, max=args.vis_max, palette=PALETTE, forceRgbOutput=True)
-    outline = ee.Image().byte().paint(ee.FeatureCollection([ee.Feature(geom)]), 1, args.outline_width).selfMask().visualize(palette=["ffffff"], forceRgbOutput=True)
+    outline = (
+        ee.Image()
+        .byte()
+        .paint(ee.FeatureCollection([ee.Feature(geom)]), 1, args.outline_width)
+        .selfMask()
+        .visualize(palette=["ffffff"], forceRgbOutput=True)
+    )
     return vis.blend(outline)
 
 
 def raster_file_name(pa_id: str, style: str) -> str:
-    return f"{pa_id}.png" if style == "raw" else f"{pa_id}_smooth.png"
+    if style == "smooth":
+        return f"{pa_id}_smooth.png"
+    if style == "heatmap":
+        return f"{pa_id}_heatmap.png"
+    if style == "surface":
+        return f"{pa_id}_surface.png"
+    return f"{pa_id}.png"
 
 
-def download_png(url: str, out: Path, retries: int = 3) -> None:
+def download_png(url: str, out: Path, retries: int = 4, timeout: int = 360) -> None:
     out.parent.mkdir(parents=True, exist_ok=True)
     last = None
     for attempt in range(1, retries + 1):
         try:
-            r = requests.get(url, timeout=120)
+            print(f"Downloading PNG attempt {attempt}/{retries}, timeout={timeout}s")
+            r = requests.get(url, timeout=timeout)
             if r.status_code == 200 and len(r.content) > 100:
                 out.write_bytes(r.content)
                 return
             last = RuntimeError(f"HTTP {r.status_code}, bytes={len(r.content)}")
         except Exception as exc:
             last = exc
-        time.sleep(2 * attempt)
+            print(f"PNG download attempt {attempt} failed: {exc}")
+        time.sleep(5 * attempt)
     raise RuntimeError(f"Cannot download PNG: {url}: {last}")
+
+
+def dimensions_for_style(style: str, args: argparse.Namespace) -> int:
+    if style == "smooth":
+        return args.dimensions_smooth
+    if style == "heatmap":
+        return args.dimensions_heatmap
+    if style == "surface":
+        return args.dimensions_surface
+    return args.dimensions
 
 
 def export_one(kind: str, period: str, area: Dict[str, Any], args: argparse.Namespace, style: str) -> Dict[str, Any]:
@@ -206,15 +285,14 @@ def export_one(kind: str, period: str, area: Dict[str, Any], args: argparse.Name
         print(f"SKIP existing: {out}")
         return {"status": "skipped", "period_kind": kind, "period": period, "pa_id": pa_id, "name": name, "style": style, "file": str(out)}
     geom = ee.Geometry(area["geometry"], None, False)
-    if args.simplify_meters and args.simplify_meters > 0:
+    if args.simplify_meters > 0:
         geom = geom.simplify(maxError=args.simplify_meters)
     img = image_for(kind, period, args)
     rendered = render_variant(img, geom, args, style)
     region = geom.bounds(maxError=1)
-    dims = args.dimensions_smooth if style == "smooth" else args.dimensions
     url = rendered.getThumbURL({
         "region": region,
-        "dimensions": dims,
+        "dimensions": dimensions_for_style(style, args),
         "format": "png",
         "crs": "EPSG:4326",
     })
@@ -254,6 +332,9 @@ def update_index(results_dir: Path, records: List[Dict[str, Any]]) -> None:
         "status": "ok",
         "generated_at": dt.datetime.utcnow().replace(microsecond=0).isoformat() + "Z",
         "source_dataset": DATASET_ID,
+        "palette": PALETTE,
+        "vis_min": 0,
+        "vis_max": 3,
         "records": sorted(merged.values(), key=lambda x: (str(x.get("period_kind")), str(x.get("period")), str(x.get("pa_id")), str(x.get("style", "raw")))),
     }
     idx_path.parent.mkdir(parents=True, exist_ok=True)
@@ -269,8 +350,8 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--start-month", default="2026-01")
     p.add_argument("--end-month", default="auto")
     p.add_argument("--area", default="rajac", help="pa_id or all")
-    p.add_argument("--style-mode", choices=["raw", "smooth", "both"], default="both")
-    p.add_argument("--max-images", type=int, default=120, help="Safety limit. Set higher for all areas/all years and both styles.")
+    p.add_argument("--style-mode", choices=["raw", "smooth", "heatmap", "surface", "both", "all"], default="surface")
+    p.add_argument("--max-images", type=int, default=120, help="Safety limit. Set higher for all areas/all years and all styles.")
     p.add_argument("--overwrite", action="store_true")
     p.add_argument("--areas-geojson", default="protected_areas/zasticena_podrucja_srbije_gee.geojson")
     p.add_argument("--results-dir", default="public/results/protected-areas/rasters")
@@ -283,6 +364,8 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--min-months-year", type=int, default=3)
     p.add_argument("--dimensions", type=int, default=1400)
     p.add_argument("--dimensions-smooth", type=int, default=2200)
+    p.add_argument("--dimensions-heatmap", type=int, default=2400)
+    p.add_argument("--dimensions-surface", type=int, default=1600)
     p.add_argument("--vis-min", type=float, default=0.0)
     p.add_argument("--vis-max", type=float, default=3.0)
     p.add_argument("--outline-width", type=int, default=2)
@@ -291,7 +374,26 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--smooth-radius", type=float, default=250)
     p.add_argument("--smooth-sigma", type=float, default=120)
     p.add_argument("--smooth-scale", type=float, default=120)
+    p.add_argument("--heat-resample", choices=["bilinear", "bicubic"], default="bicubic")
+    p.add_argument("--heat-radius", type=float, default=900)
+    p.add_argument("--heat-sigma", type=float, default=320)
+    p.add_argument("--heat-scale", type=float, default=60)
+    p.add_argument("--heat-gain", type=float, default=1.0)
+    p.add_argument("--surface-resample", choices=["bilinear", "bicubic"], default="bicubic")
+    p.add_argument("--surface-radius", type=float, default=80)
+    p.add_argument("--surface-sigma", type=float, default=0)
+    p.add_argument("--surface-scale", type=float, default=120)
+    p.add_argument("--surface-detail-weight", type=float, default=0.70)
+    p.add_argument("--surface-gain", type=float, default=1.0)
     return p.parse_args()
+
+
+def styles_from_mode(mode: str) -> List[str]:
+    if mode == "both":
+        return ["raw", "smooth"]
+    if mode == "all":
+        return ["raw", "smooth", "heatmap", "surface"]
+    return [mode]
 
 
 def main() -> int:
@@ -303,7 +405,7 @@ def main() -> int:
         if not areas:
             raise RuntimeError(f"Area not found: {args.area}")
     periods = build_periods(args)
-    styles = [args.style_mode] if args.style_mode in ("raw", "smooth") else ["raw", "smooth"]
+    styles = styles_from_mode(args.style_mode)
     total = len(areas) * len(periods) * len(styles)
     print(f"Raster export plan: {len(areas)} area(s) × {len(periods)} period(s) × {len(styles)} style(s) = {total} PNG")
     if total > args.max_images:
