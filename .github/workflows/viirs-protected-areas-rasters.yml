@@ -40,6 +40,15 @@ on:
         description: "pa_id подручја, нпр. rajac, или all за сва подручја"
         required: true
         default: "rajac"
+      style_mode:
+        description: "raw = изворни пиксели, smooth = глатка карта, both = обе"
+        required: true
+        default: "both"
+        type: choice
+        options:
+          - both
+          - smooth
+          - raw
       max_images:
         description: "Заштитни лимит броја PNG слика. За све године × сва подручја ставити 700 или више."
         required: false
@@ -61,7 +70,6 @@ jobs:
   viirs-rasters:
     runs-on: ubuntu-latest
     timeout-minutes: 120
-
     env:
       EE_PROJECT_ID: deft-epigram-414409
       EE_SERVICE_ACCOUNT: rajac-light-monitor@deft-epigram-414409.iam.gserviceaccount.com
@@ -73,9 +81,9 @@ jobs:
       START_MONTH: ${{ github.event.inputs.start_month || '2026-01' }}
       END_MONTH: ${{ github.event.inputs.end_month || 'auto' }}
       AREA: ${{ github.event.inputs.area || 'rajac' }}
-      MAX_IMAGES: ${{ github.event.inputs.max_images || '60' }}
+      STYLE_MODE: ${{ github.event.inputs.style_mode || 'both' }}
+      MAX_IMAGES: ${{ github.event.inputs.max_images || '120' }}
       OVERWRITE: ${{ github.event.inputs.overwrite || 'false' }}
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -96,7 +104,6 @@ jobs:
         run: |
           EXTRA=""
           if [ "$OVERWRITE" = "true" ]; then EXTRA="--overwrite"; fi
-
           python protected_areas/protected_areas_raster_exporter.py \
             --range-mode "$RANGE_MODE" \
             --period-kind "$PERIOD_KIND" \
@@ -105,6 +112,7 @@ jobs:
             --start-month "$START_MONTH" \
             --end-month "$END_MONTH" \
             --area "$AREA" \
+            --style-mode "$STYLE_MODE" \
             --max-images "$MAX_IMAGES" \
             --areas-geojson protected_areas/zasticena_podrucja_srbije_gee.geojson \
             --results-dir public/results/protected-areas/rasters \
@@ -113,6 +121,11 @@ jobs:
             --key-json-env EE_SERVICE_ACCOUNT_KEY_JSON \
             --ee-deadline 300000 \
             --dimensions 1400 \
+            --dimensions-smooth 2200 \
+            --smooth-method bicubic \
+            --smooth-radius 250 \
+            --smooth-sigma 120 \
+            --smooth-scale 120 \
             --vis-min 0 \
             --vis-max 3 \
             --outline-width 2 \
@@ -122,9 +135,7 @@ jobs:
         run: |
           git config user.name "rajac-light-monitor"
           git config user.email "actions@github.com"
-
           git add public/results/protected-areas/rasters protected_areas/protected_areas_raster_exporter.py
-
           if git diff --cached --quiet; then
             echo "Нема нових PNG карата за упис."
           else
