@@ -1,24 +1,31 @@
-GITHUB PATCH V2 — raw + smooth PNG карта
+GITHUB PATCH — TOPLOTNA MAPA + LEGENDA
 
-Распакуј у корен GitHub репозиторијума rajac-light-data.
+1) OTVORI REPOZITORIJUM:
+https://github.com/suvoborskirajac/rajac-light-data
 
-После распакивања покрени:
+2) U repo ubaci sadržaj ovog paketa tako da fajlovi legnu na mesta:
+/.github/workflows/viirs-protected-areas-rasters.yml
+/protected_areas/protected_areas_raster_exporter.py
+/README-VIIRS-RASTER-MAPS.md
+/UPUTSTVO-GITHUB-V2.txt
+
+3) Zatim idi na:
 Actions → VIIRS protected areas raster maps → Run workflow
 
-Први тест:
+4) Za prvo testiranje postavi:
 range_mode = single
 period_kind = month
-period = 2026-04
+period = auto
 area = rajac
-style_mode = both
+style_mode = heatmap
 max_images = 10
 overwrite = true
 
-За сва подручја за један месец:
+5) Kada to proradi, za sva područja za jedan mesec može:
 range_mode = single
 period_kind = month
-period = 2026-04
+period = auto
 area = all
-style_mode = both
-max_images = 120
-overwrite = false
+style_mode = heatmap
+max_images = 100
+overwrite = true

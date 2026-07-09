@@ -1,20 +1,27 @@
-# VIIRS raster maps v2 — raw + smooth
+# VIIRS raster karte za zaštićena područja Srbije
 
-Ова допуна додаје две варијанте PNG карте за свако заштићено подручје и изабрани период:
+Овај додатак проширује постојећи систем `rajac-light-data` и додаје три врсте PNG карата:
 
-- `raw` — изворни VIIRS пиксели (стручни приказ)
-- `smooth` — глатка презентациона карта (bicubic resampling + благо smoothing)
+- `raw` — изворни VIIRS пиксели
+- `smooth` — глатка карта
+- `heatmap` — топлотна мапа
 
-## Излази
+## Излазни фајлови
 
-Месец:
+Месечни:
+- `public/results/protected-areas/rasters/months/YYYY-MM/<pa_id>.png`
+- `public/results/protected-areas/rasters/months/YYYY-MM/<pa_id>_smooth.png`
+- `public/results/protected-areas/rasters/months/YYYY-MM/<pa_id>_heatmap.png`
 
-- `public/results/protected-areas/rasters/months/YYYY-MM/<pa_id>.png` → raw
-- `public/results/protected-areas/rasters/months/YYYY-MM/<pa_id>_smooth.png` → smooth
+Годишњи:
+- `public/results/protected-areas/rasters/years/YYYY/<pa_id>.png`
+- `public/results/protected-areas/rasters/years/YYYY/<pa_id>_smooth.png`
+- `public/results/protected-areas/rasters/years/YYYY/<pa_id>_heatmap.png`
 
-Година:
+## GitHub workflow
 
-- `public/results/protected-areas/rasters/years/YYYY/<pa_id>.png` → raw
-- `public/results/protected-areas/rasters/years/YYYY/<pa_id>_smooth.png` → smooth
+Workflow: `Actions → VIIRS protected areas raster maps`
 
-Workflow параметар `style_mode`: `raw`, `smooth` или `both`.
+Најважнији улазни параметар:
+- `style_mode = heatmap` за нову топлотну мапу
+- `style_mode = all` за raw + smooth + heatmap
