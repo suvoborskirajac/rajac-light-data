@@ -41,11 +41,12 @@ on:
         required: true
         default: "rajac"
       style_mode:
-        description: "surface = интерполисана површ као стара Рајац карта, heatmap = топлотна мапа, smooth = глатка карта, raw = изворни пиксели, all = све"
+        description: "heat_surface = права топлотна површ без видљивих квадрата, surface = прелазна површ, heatmap = мекши приказ, smooth = глатка карта, raw = изворни пиксели, all = све"
         required: true
-        default: "surface"
+        default: "heat_surface"
         type: choice
         options:
+          - heat_surface
           - surface
           - heatmap
           - smooth
@@ -84,7 +85,7 @@ jobs:
       START_MONTH: ${{ github.event.inputs.start_month || '2026-01' }}
       END_MONTH: ${{ github.event.inputs.end_month || 'auto' }}
       AREA: ${{ github.event.inputs.area || 'rajac' }}
-      STYLE_MODE: ${{ github.event.inputs.style_mode || 'surface' }}
+      STYLE_MODE: ${{ github.event.inputs.style_mode || 'heat_surface' }}
       MAX_IMAGES: ${{ github.event.inputs.max_images || '120' }}
       OVERWRITE: ${{ github.event.inputs.overwrite || 'false' }}
 
@@ -128,6 +129,7 @@ jobs:
             --dimensions-smooth 2200 \
             --dimensions-heatmap 2400 \
             --dimensions-surface 1600 \
+            --dimensions-heat-surface 2200 \
             --smooth-method bicubic \
             --smooth-radius 250 \
             --smooth-sigma 120 \
@@ -143,6 +145,14 @@ jobs:
             --surface-scale 120 \
             --surface-detail-weight 0.70 \
             --surface-gain 1.0 \
+            --heat-surface-resample bicubic \
+            --heat-surface-radius 700 \
+            --heat-surface-sigma 250 \
+            --heat-surface-scale 0 \
+            --heat-surface-detail-weight 0.12 \
+            --heat-surface-gain 1.0 \
+            --heat-surface-min-weight 0.01 \
+            --heat-surface-epsilon 0.0001 \
             --vis-min 0 \
             --vis-max 3 \
             --outline-width 2 \
