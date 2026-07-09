@@ -185,7 +185,12 @@ def pixel_bbox(lon: float, lat: float, scale_m: float) -> List[float]:
     half_lat = (scale_m / 2.0) / 111320.0
     cos_lat = max(0.1, math.cos(math.radians(lat)))
     half_lon = (scale_m / 2.0) / (111320.0 * cos_lat)
-    return [round(lon - half_lon, 6), round(lat - half_lat, 6), round(lon + half_lon, 6), round(lat + half_lat, 6)]
+    return [
+        round(lon - half_lon, 6),
+        round(lat - half_lat, 6),
+        round(lon + half_lon, 6),
+        round(lat + half_lat, 6),
+    ]
 
 
 def percentile(values: List[float], pct: float) -> Optional[float]:
@@ -205,8 +210,21 @@ def percentile(values: List[float], pct: float) -> Optional[float]:
 def make_stats(pixels: List[Dict[str, Any]]) -> Dict[str, Any]:
     vals = [float(p["value"]) for p in pixels if p.get("value") is not None]
     if not vals:
-        return {"overall": {"min": None, "max": None, "mean": None, "median": None, "p90": None, "count": 0, "sum": 0}, "hotspots": []}
+        return {
+            "overall": {
+                "min": None,
+                "max": None,
+                "mean": None,
+                "median": None,
+                "p90": None,
+                "count": 0,
+                "sum": 0,
+            },
+            "hotspots": [],
+        }
+
     hotspots = sorted(pixels, key=lambda p: float(p.get("value") or 0), reverse=True)[:5]
+
     return {
         "overall": {
             "min": round(min(vals), 4),
@@ -230,43 +248,76 @@ def make_stats(pixels: List[Dict[str, Any]]) -> Dict[str, Any]:
     }
 
 
+def sampling_geometry(geom: ee.Geometry, args: argparse.Namespace) -> ee.Geometry:
+    """Return geometry used only for choosing VIIRS pixel centres.
+
+    The old Rajac SVG map included edge pixels whose VIIRS cells intersect the
+    protected-area boundary. Earth Engine sample(region=geom) keeps only points
+    whose centres are inside the polygon, so border pixels are missing.
+
+    We therefore sample from a buffered geometry, while the front-end SVG still
+    clips the visual heatmap to the real protected-area boundary.
+    """
+    buffer_m = args.edge_buffer_meters
+    if buffer_m is None or buffer_m < 0:
+        buffer_m = float(args.scale) * 0.55
+    if buffer_m <= 0:
+        return geom
+    return geom.buffer(buffer_m)
+
+
 def sample_pixels(image: ee.Image, geom: ee.Geometry, args: argparse.Namespace) -> List[Dict[str, Any]]:
+    sample_region = sampling_geometry(geom, args)
     fc = image.select("avg_rad").sample(
-        region=geom,
+        region=sample_region,
         scale=args.scale,
         geometries=True,
         tileScale=args.tile_scale,
     )
+
     if args.max_pixels_per_area > 0:
         fc = fc.limit(args.max_pixels_per_area)
+
     info = fc.getInfo()
     pixels: List[Dict[str, Any]] = []
+
     for feat in info.get("features", []):
         props = feat.get("properties") or {}
         geom_info = feat.get("geometry") or {}
         coords = geom_info.get("coordinates") or []
+
         if len(coords) < 2:
             continue
+
         value = props.get("avg_rad")
+
         try:
             value_f = float(value)
         except Exception:
             continue
+
         if not math.isfinite(value_f):
             continue
+
         lon = round(float(coords[0]), 6)
         lat = round(float(coords[1]), 6)
         v = round(value_f, args.value_digits)
-        pixels.append({
-            "lon": lon,
-            "lat": lat,
-            "bbox": pixel_bbox(lon, lat, args.scale),
-            "value": v,
-            "class": pixel_class(v),
-        })
+
+        pixels.append(
+            {
+                "lon": lon,
+                "lat": lat,
+                "bbox": pixel_bbox(lon, lat, args.scale),
+                "value": v,
+                "class": pixel_class(v),
+            }
+        )
+
     pixels.sort(key=lambda p: (-p["lat"], p["lon"]))
+
     for i, p in enumerate(pixels, start=1):
         p["id"] = f"px-{i:04d}"
+
     return pixels
 
 
@@ -278,20 +329,38 @@ def area_name(area: Dict[str, Any]) -> str:
 def export_area(kind: str, period: str, area: Dict[str, Any], args: argparse.Namespace) -> Dict[str, Any]:
     props = dict(area.get("properties") or {})
     pa_id = str(props.get("pa_id"))
+
     folder = "years" if kind == "year" else "months"
     out = Path(args.results_dir) / "pixels" / folder / period / f"{pa_id}.json"
+
     if out.exists() and not args.overwrite:
         print(f"SKIP existing: {out}")
-        return {"status": "skipped", "period_kind": kind, "period": period, "pa_id": pa_id, "file": str(out)}
+        return {
+            "status": "skipped",
+            "period_kind": kind,
+            "period": period,
+            "pa_id": pa_id,
+            "file": str(out),
+        }
 
     geom = ee.Geometry(area["geometry"], None, False)
+
     if args.simplify_meters > 0:
         geom = geom.simplify(maxError=args.simplify_meters)
+
     image = image_for(kind, period, args)
     pixels = sample_pixels(image, geom, args)
     stats = make_stats(pixels)
+
     now = dt.datetime.utcnow().replace(microsecond=0).isoformat() + "Z"
     label = period[5:7] + "/" + period[:4] if kind == "month" and len(period) == 7 else period
+
+    edge_buffer = (
+        args.edge_buffer_meters
+        if args.edge_buffer_meters is not None and args.edge_buffer_meters >= 0
+        else round(float(args.scale) * 0.55, 3)
+    )
+
     result = {
         "ok": True,
         "area": {
@@ -311,99 +380,156 @@ def export_area(kind: str, period: str, area: Dict[str, Any], args: argparse.Nam
             "band": BAND_RAD,
             "unit": "nW/cm²/sr",
             "scale_m": args.scale,
+            "edge_buffer_m": edge_buffer,
+            "pixel_sampling": "buffered_centres_to_include_boundary_intersecting_viirs_pixels",
             "created_at": now,
             "placeholder": False,
-            "interpretation": "SVG heatmap prikaz je izglađena vizuelizacija iz centara VIIRS piksela; sirovi pikseli ostaju u JSON-u za statistiku.",
+            "interpretation": (
+                "SVG heatmap prikaz je izglađena vizuelizacija iz centara VIIRS piksela; "
+                "sirovi pikseli ostaju u JSON-u za statistiku."
+            ),
         },
         "stats": stats,
         "pixels": pixels,
     }
+
     write_json(out, result)
     print(f"OK: {out} ({len(pixels)} pixels)")
-    return {"status": "ok", "period_kind": kind, "period": period, "pa_id": pa_id, "pixels": len(pixels), "file": str(out)}
+
+    return {
+        "status": "ok",
+        "period_kind": kind,
+        "period": period,
+        "pa_id": pa_id,
+        "pixels": len(pixels),
+        "file": str(out),
+    }
 
 
 def build_periods(args: argparse.Namespace) -> List[Tuple[str, str]]:
     latest = latest_dataset_month() if args.end_month == "auto" or args.period == "auto" else None
+
     if args.range_mode == "single":
         if args.period_kind == "month":
             return [("month", latest if args.period == "auto" else args.period)]
         return [("year", args.period)]
+
     if args.range_mode == "all_years":
         latest_year = int((latest or latest_dataset_month())[:4])
         return [("year", str(y)) for y in range(args.start_year, latest_year + 1)]
+
     if args.range_mode == "months_range":
         end = latest if args.end_month == "auto" else args.end_month
         return [("month", p) for p in month_range(args.start_month, end)]
+
     raise ValueError(f"Unknown range_mode: {args.range_mode}")
 
 
 def update_index(results_dir: Path, records: List[Dict[str, Any]]) -> None:
     idx_path = results_dir / "pixels" / "index.json"
     old: Dict[str, Any] = {"records": []}
+
     if idx_path.exists():
         try:
             old = json.loads(idx_path.read_text(encoding="utf-8"))
         except Exception:
             pass
-    merged = {(r.get("period_kind"), r.get("period"), r.get("pa_id")): r for r in old.get("records", [])}
+
+    merged = {
+        (r.get("period_kind"), r.get("period"), r.get("pa_id")): r
+        for r in old.get("records", [])
+    }
+
     for r in records:
         merged[(r.get("period_kind"), r.get("period"), r.get("pa_id"))] = r
+
     out = {
         "status": "ok",
         "generated_at": dt.datetime.utcnow().replace(microsecond=0).isoformat() + "Z",
         "source_dataset": DATASET_ID,
         "description": "Pixel JSON files for SVG Rajac-style heatmap rendering.",
-        "records": sorted(merged.values(), key=lambda x: (str(x.get("period_kind")), str(x.get("period")), str(x.get("pa_id")))),
+        "records": sorted(
+            merged.values(),
+            key=lambda x: (
+                str(x.get("period_kind")),
+                str(x.get("period")),
+                str(x.get("pa_id")),
+            ),
+        ),
     }
+
     write_json(idx_path, out)
 
 
 def parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(description="Generate VIIRS pixel JSON for protected areas Serbia")
+
     p.add_argument("--range-mode", choices=["single", "all_years", "months_range"], default="single")
     p.add_argument("--period-kind", choices=["month", "year"], default="month")
     p.add_argument("--period", default="auto", help="YYYY-MM for month, YYYY for year, or auto for latest month")
+
     p.add_argument("--start-year", type=int, default=2014)
     p.add_argument("--start-month", default="2026-01")
     p.add_argument("--end-month", default="auto")
+
     p.add_argument("--area", default="rajac", help="pa_id or all")
     p.add_argument("--max-areas", type=int, default=60, help="Safety limit for number of areas to process")
     p.add_argument("--max-pixels-per-area", type=int, default=5000)
     p.add_argument("--overwrite", action="store_true")
+
     p.add_argument("--areas-geojson", default="protected_areas/zasticena_podrucja_srbije_gee.geojson")
     p.add_argument("--results-dir", default="public/results/protected-areas")
+
     p.add_argument("--project", default=os.environ.get("EE_PROJECT_ID") or os.environ.get("GOOGLE_CLOUD_PROJECT") or None)
     p.add_argument("--service-account", default=os.environ.get("EE_SERVICE_ACCOUNT") or None)
     p.add_argument("--key-file", default=os.environ.get("EE_KEY_FILE") or None)
     p.add_argument("--key-json-env", default=os.environ.get("EE_KEY_JSON_ENV") or "")
+
     p.add_argument("--ee-deadline", type=int, default=300000)
     p.add_argument("--scale", type=float, default=463.83)
+    p.add_argument(
+        "--edge-buffer-meters",
+        type=float,
+        default=260.0,
+        help=(
+            "Buffer used only for sampling pixel centres; "
+            "restores boundary-intersecting pixels like the old Rajac SVG map."
+        ),
+    )
     p.add_argument("--tile-scale", type=int, default=4)
     p.add_argument("--min-cf-cvg", type=int, default=1)
     p.add_argument("--min-months-year", type=int, default=3)
     p.add_argument("--simplify-meters", type=float, default=0)
     p.add_argument("--value-digits", type=int, default=2)
+
     return p.parse_args()
 
 
 def main() -> int:
     args = parse_args()
     init_ee(args)
+
     areas = load_areas(Path(args.areas_geojson))
+
     if args.area != "all":
         areas = [a for a in areas if str(a["properties"].get("pa_id")) == args.area]
         if not areas:
             raise RuntimeError(f"Area not found: {args.area}")
+
     if len(areas) > args.max_areas:
         raise RuntimeError(f"Safety stop: {len(areas)} areas requested, max-areas={args.max_areas}")
+
     periods = build_periods(args)
     records: List[Dict[str, Any]] = []
+
     print(f"Pixel export plan: {len(areas)} area(s) × {len(periods)} period(s)")
+
     for kind, period in periods:
         for area in areas:
             records.append(export_area(kind, period, area, args))
+
     update_index(Path(args.results_dir), records)
+
     print("DONE")
     return 0
 
