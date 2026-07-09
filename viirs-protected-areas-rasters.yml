@@ -40,6 +40,15 @@ on:
         description: "pa_id подручја, нпр. rajac, или all за сва подручја"
         required: true
         default: "rajac"
+      style_mode:
+        description: "raw = изворни пиксели, smooth = глатка карта, both = обе"
+        required: true
+        default: "both"
+        type: choice
+        options:
+          - both
+          - smooth
+          - raw
       max_images:
         description: "Заштитни лимит броја PNG слика. За све године × сва подручја ставити 700 или више."
         required: false
@@ -72,7 +81,8 @@ jobs:
       START_MONTH: ${{ github.event.inputs.start_month || '2026-01' }}
       END_MONTH: ${{ github.event.inputs.end_month || 'auto' }}
       AREA: ${{ github.event.inputs.area || 'rajac' }}
-      MAX_IMAGES: ${{ github.event.inputs.max_images || '60' }}
+      STYLE_MODE: ${{ github.event.inputs.style_mode || 'both' }}
+      MAX_IMAGES: ${{ github.event.inputs.max_images || '120' }}
       OVERWRITE: ${{ github.event.inputs.overwrite || 'false' }}
     steps:
       - name: Checkout
@@ -102,6 +112,7 @@ jobs:
             --start-month "$START_MONTH" \
             --end-month "$END_MONTH" \
             --area "$AREA" \
+            --style-mode "$STYLE_MODE" \
             --max-images "$MAX_IMAGES" \
             --areas-geojson protected_areas/zasticena_podrucja_srbije_gee.geojson \
             --results-dir public/results/protected-areas/rasters \
@@ -110,6 +121,11 @@ jobs:
             --key-json-env EE_SERVICE_ACCOUNT_KEY_JSON \
             --ee-deadline 300000 \
             --dimensions 1400 \
+            --dimensions-smooth 2200 \
+            --smooth-method bicubic \
+            --smooth-radius 250 \
+            --smooth-sigma 120 \
+            --smooth-scale 120 \
             --vis-min 0 \
             --vis-max 3 \
             --outline-width 2 \

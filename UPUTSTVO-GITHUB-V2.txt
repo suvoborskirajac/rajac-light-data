@@ -1,0 +1,24 @@
+GITHUB PATCH V2 — raw + smooth PNG карта
+
+Распакуј у корен GitHub репозиторијума rajac-light-data.
+
+После распакивања покрени:
+Actions → VIIRS protected areas raster maps → Run workflow
+
+Први тест:
+range_mode = single
+period_kind = month
+period = 2026-04
+area = rajac
+style_mode = both
+max_images = 10
+overwrite = true
+
+За сва подручја за један месец:
+range_mode = single
+period_kind = month
+period = 2026-04
+area = all
+style_mode = both
+max_images = 120
+overwrite = false
