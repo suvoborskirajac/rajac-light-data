@@ -111,6 +111,7 @@ jobs:
             --key-json-env EE_SERVICE_ACCOUNT_KEY_JSON \
             --ee-deadline 300000 \
             --scale 463.83 \
+            --edge-buffer-meters 260 \
             --tile-scale 4 \
             --min-cf-cvg 1 \
             --min-months-year 3 \
