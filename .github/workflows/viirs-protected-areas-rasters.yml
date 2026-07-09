@@ -125,15 +125,15 @@ jobs:
             --ee-deadline 300000 \
             --dimensions 1400 \
             --dimensions-smooth 2200 \
-            --dimensions-heatmap 2400 \
+            --dimensions-heatmap 3000 \
             --smooth-method bicubic \
-            --smooth-radius 250 \
-            --smooth-sigma 120 \
+            --smooth-radius 260 \
+            --smooth-sigma 110 \
             --smooth-scale 120 \
             --heat-resample bicubic \
             --heat-radius 900 \
             --heat-sigma 320 \
-            --heat-scale 60 \
+            --heat-scale 30 \
             --heat-gain 1.0 \
             --vis-min 0 \
             --vis-max 3 \
