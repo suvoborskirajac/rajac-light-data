@@ -7,8 +7,10 @@ Creates Earth Engine thumbnail PNG maps for one protected area or all areas,
 for a selected month/year or for all years.
 
 Outputs:
-  public/results/protected-areas/rasters/months/YYYY-MM/<pa_id>.png
-  public/results/protected-areas/rasters/years/YYYY/<pa_id>.png
+  public/results/protected-areas/rasters/months/YYYY-MM/<pa_id>.png         (raw)
+  public/results/protected-areas/rasters/months/YYYY-MM/<pa_id>_smooth.png  (smooth)
+  public/results/protected-areas/rasters/years/YYYY/<pa_id>.png             (raw)
+  public/results/protected-areas/rasters/years/YYYY/<pa_id>_smooth.png      (smooth)
   public/results/protected-areas/rasters/index.json
 """
 from __future__ import annotations
@@ -152,11 +154,31 @@ def image_for(kind: str, period: str, args: argparse.Namespace) -> ee.Image:
     return annual_image(period, args.min_cf_cvg, args.min_months_year)
 
 
-def render_image(img: ee.Image, geom: ee.Geometry, args: argparse.Namespace) -> ee.Image:
+def smooth_image(img: ee.Image, args: argparse.Namespace) -> ee.Image:
+    sm = img.select("avg_rad")
+    if args.smooth_method in ("bilinear", "bicubic"):
+        sm = sm.resample(args.smooth_method)
+    if args.smooth_radius and args.smooth_radius > 0:
+        sm = sm.focal_mean(radius=args.smooth_radius, units="meters")
+    if args.smooth_sigma and args.smooth_sigma > 0:
+        kernel = ee.Kernel.gaussian(radius=args.smooth_radius, sigma=args.smooth_sigma, units="meters", normalize=True)
+        sm = sm.convolve(kernel)
+    if args.smooth_scale and args.smooth_scale > 0:
+        sm = sm.reproject(crs="EPSG:4326", scale=args.smooth_scale)
+    return sm.rename("avg_rad")
+
+
+def render_variant(img: ee.Image, geom: ee.Geometry, args: argparse.Namespace, style: str) -> ee.Image:
     clipped = img.select("avg_rad").clip(geom)
+    if style == "smooth":
+        clipped = smooth_image(clipped, args)
     vis = clipped.visualize(min=args.vis_min, max=args.vis_max, palette=PALETTE, forceRgbOutput=True)
     outline = ee.Image().byte().paint(ee.FeatureCollection([ee.Feature(geom)]), 1, args.outline_width).selfMask().visualize(palette=["ffffff"], forceRgbOutput=True)
     return vis.blend(outline)
+
+
+def raster_file_name(pa_id: str, style: str) -> str:
+    return f"{pa_id}.png" if style == "raw" else f"{pa_id}_smooth.png"
 
 
 def download_png(url: str, out: Path, retries: int = 3) -> None:
@@ -175,29 +197,30 @@ def download_png(url: str, out: Path, retries: int = 3) -> None:
     raise RuntimeError(f"Cannot download PNG: {url}: {last}")
 
 
-def export_one(kind: str, period: str, area: Dict[str, Any], args: argparse.Namespace) -> Dict[str, Any]:
+def export_one(kind: str, period: str, area: Dict[str, Any], args: argparse.Namespace, style: str) -> Dict[str, Any]:
     pa_id = area["properties"].get("pa_id")
     name = area["properties"].get("name") or area["properties"].get("name_lat") or pa_id
     folder = "years" if kind == "year" else "months"
-    out = Path(args.results_dir) / folder / period / f"{pa_id}.png"
+    out = Path(args.results_dir) / folder / period / raster_file_name(pa_id, style)
     if out.exists() and not args.overwrite:
         print(f"SKIP existing: {out}")
-        return {"status": "skipped", "period_kind": kind, "period": period, "pa_id": pa_id, "name": name, "file": str(out)}
+        return {"status": "skipped", "period_kind": kind, "period": period, "pa_id": pa_id, "name": name, "style": style, "file": str(out)}
     geom = ee.Geometry(area["geometry"], None, False)
     if args.simplify_meters and args.simplify_meters > 0:
         geom = geom.simplify(maxError=args.simplify_meters)
     img = image_for(kind, period, args)
-    rendered = render_image(img, geom, args)
+    rendered = render_variant(img, geom, args, style)
     region = geom.bounds(maxError=1)
+    dims = args.dimensions_smooth if style == "smooth" else args.dimensions
     url = rendered.getThumbURL({
         "region": region,
-        "dimensions": args.dimensions,
+        "dimensions": dims,
         "format": "png",
         "crs": "EPSG:4326",
     })
     download_png(url, out)
     print(f"OK: {out}")
-    return {"status": "ok", "period_kind": kind, "period": period, "pa_id": pa_id, "name": name, "file": str(out)}
+    return {"status": "ok", "period_kind": kind, "period": period, "pa_id": pa_id, "name": name, "style": style, "file": str(out)}
 
 
 def build_periods(args: argparse.Namespace) -> List[Tuple[str, str]]:
@@ -224,14 +247,14 @@ def update_index(results_dir: Path, records: List[Dict[str, Any]]) -> None:
             old = json.loads(idx_path.read_text(encoding="utf-8"))
         except Exception:
             pass
-    merged = {(r.get("period_kind"), r.get("period"), r.get("pa_id")): r for r in old.get("records", [])}
+    merged = {(r.get("period_kind"), r.get("period"), r.get("pa_id"), r.get("style", "raw")): r for r in old.get("records", [])}
     for r in records:
-        merged[(r.get("period_kind"), r.get("period"), r.get("pa_id"))] = r
+        merged[(r.get("period_kind"), r.get("period"), r.get("pa_id"), r.get("style", "raw"))] = r
     out = {
         "status": "ok",
         "generated_at": dt.datetime.utcnow().replace(microsecond=0).isoformat() + "Z",
         "source_dataset": DATASET_ID,
-        "records": sorted(merged.values(), key=lambda x: (str(x.get("period_kind")), str(x.get("period")), str(x.get("pa_id")))),
+        "records": sorted(merged.values(), key=lambda x: (str(x.get("period_kind")), str(x.get("period")), str(x.get("pa_id")), str(x.get("style", "raw")))),
     }
     idx_path.parent.mkdir(parents=True, exist_ok=True)
     idx_path.write_text(json.dumps(out, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
@@ -246,7 +269,8 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--start-month", default="2026-01")
     p.add_argument("--end-month", default="auto")
     p.add_argument("--area", default="rajac", help="pa_id or all")
-    p.add_argument("--max-images", type=int, default=60, help="Safety limit. Set higher for all areas/all years.")
+    p.add_argument("--style-mode", choices=["raw", "smooth", "both"], default="both")
+    p.add_argument("--max-images", type=int, default=120, help="Safety limit. Set higher for all areas/all years and both styles.")
     p.add_argument("--overwrite", action="store_true")
     p.add_argument("--areas-geojson", default="protected_areas/zasticena_podrucja_srbije_gee.geojson")
     p.add_argument("--results-dir", default="public/results/protected-areas/rasters")
@@ -258,10 +282,15 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--min-cf-cvg", type=int, default=1)
     p.add_argument("--min-months-year", type=int, default=3)
     p.add_argument("--dimensions", type=int, default=1400)
+    p.add_argument("--dimensions-smooth", type=int, default=2200)
     p.add_argument("--vis-min", type=float, default=0.0)
     p.add_argument("--vis-max", type=float, default=3.0)
     p.add_argument("--outline-width", type=int, default=2)
     p.add_argument("--simplify-meters", type=float, default=0)
+    p.add_argument("--smooth-method", choices=["bilinear", "bicubic"], default="bicubic")
+    p.add_argument("--smooth-radius", type=float, default=250)
+    p.add_argument("--smooth-sigma", type=float, default=120)
+    p.add_argument("--smooth-scale", type=float, default=120)
     return p.parse_args()
 
 
@@ -274,14 +303,16 @@ def main() -> int:
         if not areas:
             raise RuntimeError(f"Area not found: {args.area}")
     periods = build_periods(args)
-    total = len(areas) * len(periods)
-    print(f"Raster export plan: {len(areas)} area(s) × {len(periods)} period(s) = {total} PNG")
+    styles = [args.style_mode] if args.style_mode in ("raw", "smooth") else ["raw", "smooth"]
+    total = len(areas) * len(periods) * len(styles)
+    print(f"Raster export plan: {len(areas)} area(s) × {len(periods)} period(s) × {len(styles)} style(s) = {total} PNG")
     if total > args.max_images:
         raise RuntimeError(f"Safety stop: requested {total} images, max-images={args.max_images}. Increase max-images intentionally.")
     records: List[Dict[str, Any]] = []
     for kind, period in periods:
         for area in areas:
-            records.append(export_one(kind, period, area, args))
+            for style in styles:
+                records.append(export_one(kind, period, area, args, style))
     update_index(Path(args.results_dir), records)
     print("DONE")
     return 0
