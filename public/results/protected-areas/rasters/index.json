@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "generated_at": "2026-07-09T08:38:02Z",
+  "generated_at": "2026-07-09T08:44:33Z",
   "source_dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG",
   "records": [
     {
@@ -229,7 +229,7 @@
       "file": "public/results/protected-areas/rasters/months/2026-04/rajac.png"
     },
     {
-      "status": "ok",
+      "status": "skipped",
       "period_kind": "month",
       "period": "2026-04",
       "pa_id": "rajac",
