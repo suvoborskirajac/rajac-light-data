@@ -41,11 +41,12 @@ on:
         required: true
         default: "rajac"
       style_mode:
-        description: "heatmap = топлотна мапа, smooth = глатка карта, raw = изворни пиксели, both = raw+smooth, all = raw+smooth+heatmap"
+        description: "surface = интерполисана површ као стара Рајац карта, heatmap = топлотна мапа, smooth = глатка карта, raw = изворни пиксели, all = све"
         required: true
-        default: "heatmap"
+        default: "surface"
         type: choice
         options:
+          - surface
           - heatmap
           - smooth
           - raw
@@ -83,7 +84,7 @@ jobs:
       START_MONTH: ${{ github.event.inputs.start_month || '2026-01' }}
       END_MONTH: ${{ github.event.inputs.end_month || 'auto' }}
       AREA: ${{ github.event.inputs.area || 'rajac' }}
-      STYLE_MODE: ${{ github.event.inputs.style_mode || 'heatmap' }}
+      STYLE_MODE: ${{ github.event.inputs.style_mode || 'surface' }}
       MAX_IMAGES: ${{ github.event.inputs.max_images || '120' }}
       OVERWRITE: ${{ github.event.inputs.overwrite || 'false' }}
 
@@ -125,16 +126,23 @@ jobs:
             --ee-deadline 300000 \
             --dimensions 1400 \
             --dimensions-smooth 2200 \
-            --dimensions-heatmap 3000 \
+            --dimensions-heatmap 2400 \
+            --dimensions-surface 3200 \
             --smooth-method bicubic \
-            --smooth-radius 260 \
-            --smooth-sigma 110 \
+            --smooth-radius 250 \
+            --smooth-sigma 120 \
             --smooth-scale 120 \
             --heat-resample bicubic \
-            --heat-radius 900 \
-            --heat-sigma 320 \
+            --heat-radius 260 \
+            --heat-sigma 110 \
             --heat-scale 30 \
             --heat-gain 1.0 \
+            --surface-resample bicubic \
+            --surface-radius 140 \
+            --surface-sigma 55 \
+            --surface-scale 30 \
+            --surface-detail-weight 0.35 \
+            --surface-gain 1.0 \
             --vis-min 0 \
             --vis-max 3 \
             --outline-width 2 \
