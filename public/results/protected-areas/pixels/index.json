@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "generated_at": "2026-07-09T20:52:56Z",
+  "generated_at": "2026-07-09T21:16:24Z",
   "source_dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG",
   "description": "Pixel JSON files for SVG Rajac-style heatmap rendering.",
   "records": [
@@ -9,7 +9,7 @@
       "period_kind": "month",
       "period": "2026-04",
       "pa_id": "rajac",
-      "pixels": 112,
+      "pixels": 166,
       "file": "public/results/protected-areas/pixels/months/2026-04/rajac.json"
     }
   ]
