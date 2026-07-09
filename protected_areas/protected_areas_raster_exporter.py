@@ -10,9 +10,11 @@ Outputs:
   public/results/protected-areas/rasters/months/YYYY-MM/<pa_id>.png            (raw)
   public/results/protected-areas/rasters/months/YYYY-MM/<pa_id>_smooth.png     (smooth)
   public/results/protected-areas/rasters/months/YYYY-MM/<pa_id>_heatmap.png    (heatmap)
+  public/results/protected-areas/rasters/months/YYYY-MM/<pa_id>_surface.png    (surface)
   public/results/protected-areas/rasters/years/YYYY/<pa_id>.png                (raw)
   public/results/protected-areas/rasters/years/YYYY/<pa_id>_smooth.png         (smooth)
   public/results/protected-areas/rasters/years/YYYY/<pa_id>_heatmap.png        (heatmap)
+  public/results/protected-areas/rasters/years/YYYY/<pa_id>_surface.png        (surface)
   public/results/protected-areas/rasters/index.json
 """
 from __future__ import annotations
@@ -185,12 +187,45 @@ def heatmap_image(img: ee.Image, args: argparse.Namespace) -> ee.Image:
     return hm.rename("avg_rad")
 
 
+
+def surface_image(img: ee.Image, args: argparse.Namespace) -> ee.Image:
+    """Interpolisana površ / Rajac-style visualization.
+
+    Ovo nije običan heatmap blur. Zadržava deo bicubic detalja i meša ga
+    sa umereno zaglađenom površinom, da karta ne postane jedna velika mrlja.
+    """
+    fine = img.select("avg_rad")
+    if args.surface_resample in ("bilinear", "bicubic"):
+        fine = fine.resample(args.surface_resample)
+    if args.surface_scale > 0:
+        fine = fine.reproject(crs="EPSG:4326", scale=args.surface_scale)
+
+    soft = fine
+    if args.surface_radius > 0:
+        soft = soft.focal_mean(radius=args.surface_radius, units="meters")
+    if args.surface_sigma > 0:
+        kernel = ee.Kernel.gaussian(
+            radius=max(args.surface_radius, args.surface_sigma * 2.5),
+            sigma=args.surface_sigma,
+            units="meters",
+            normalize=True,
+        )
+        soft = soft.convolve(kernel)
+
+    w = max(0.0, min(1.0, float(args.surface_detail_weight)))
+    surface = soft.multiply(1.0 - w).add(fine.multiply(w))
+    if args.surface_gain != 1.0:
+        surface = surface.multiply(args.surface_gain)
+    return surface.rename("avg_rad")
+
 def render_variant(img: ee.Image, geom: ee.Geometry, args: argparse.Namespace, style: str) -> ee.Image:
     base = img.select("avg_rad")
     if style == "smooth":
         base = smooth_image(base, args)
     elif style == "heatmap":
         base = heatmap_image(base, args)
+    elif style == "surface":
+        base = surface_image(base, args)
     clipped = base.clip(geom)
     vis = clipped.visualize(min=args.vis_min, max=args.vis_max, palette=PALETTE, forceRgbOutput=True)
     outline = (
@@ -208,6 +243,8 @@ def raster_file_name(pa_id: str, style: str) -> str:
         return f"{pa_id}_smooth.png"
     if style == "heatmap":
         return f"{pa_id}_heatmap.png"
+    if style == "surface":
+        return f"{pa_id}_surface.png"
     return f"{pa_id}.png"
 
 
@@ -232,6 +269,8 @@ def dimensions_for_style(style: str, args: argparse.Namespace) -> int:
         return args.dimensions_smooth
     if style == "heatmap":
         return args.dimensions_heatmap
+    if style == "surface":
+        return args.dimensions_surface
     return args.dimensions
 
 
@@ -309,7 +348,7 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--start-month", default="2026-01")
     p.add_argument("--end-month", default="auto")
     p.add_argument("--area", default="rajac", help="pa_id or all")
-    p.add_argument("--style-mode", choices=["raw", "smooth", "heatmap", "both", "all"], default="heatmap")
+    p.add_argument("--style-mode", choices=["raw", "smooth", "heatmap", "surface", "both", "all"], default="surface")
     p.add_argument("--max-images", type=int, default=120, help="Safety limit. Set higher for all areas/all years and all styles.")
     p.add_argument("--overwrite", action="store_true")
     p.add_argument("--areas-geojson", default="protected_areas/zasticena_podrucja_srbije_gee.geojson")
@@ -324,6 +363,7 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--dimensions", type=int, default=1400)
     p.add_argument("--dimensions-smooth", type=int, default=2200)
     p.add_argument("--dimensions-heatmap", type=int, default=2400)
+    p.add_argument("--dimensions-surface", type=int, default=3200)
     p.add_argument("--vis-min", type=float, default=0.0)
     p.add_argument("--vis-max", type=float, default=3.0)
     p.add_argument("--outline-width", type=int, default=2)
@@ -337,6 +377,12 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--heat-sigma", type=float, default=320)
     p.add_argument("--heat-scale", type=float, default=60)
     p.add_argument("--heat-gain", type=float, default=1.0)
+    p.add_argument("--surface-resample", choices=["bilinear", "bicubic"], default="bicubic")
+    p.add_argument("--surface-radius", type=float, default=140)
+    p.add_argument("--surface-sigma", type=float, default=55)
+    p.add_argument("--surface-scale", type=float, default=30)
+    p.add_argument("--surface-detail-weight", type=float, default=0.35)
+    p.add_argument("--surface-gain", type=float, default=1.0)
     return p.parse_args()
 
 
@@ -344,7 +390,7 @@ def styles_from_mode(mode: str) -> List[str]:
     if mode == "both":
         return ["raw", "smooth"]
     if mode == "all":
-        return ["raw", "smooth", "heatmap"]
+        return ["raw", "smooth", "heatmap", "surface"]
     return [mode]
 
 
