@@ -19,7 +19,7 @@
     "scale_m": 463.83,
     "edge_buffer_m": 260.0,
     "pixel_sampling": "buffered_centres_to_include_boundary_intersecting_viirs_pixels",
-    "created_at": "2026-07-09T21:16:24Z",
+    "created_at": "2026-07-09T21:23:25Z",
     "placeholder": false,
     "interpretation": "SVG heatmap prikaz je izglađena vizuelizacija iz centara VIIRS piksela; sirovi pikseli ostaju u JSON-u za statistiku."
   },
