@@ -248,19 +248,21 @@ def raster_file_name(pa_id: str, style: str) -> str:
     return f"{pa_id}.png"
 
 
-def download_png(url: str, out: Path, retries: int = 3) -> None:
+def download_png(url: str, out: Path, retries: int = 4, timeout: int = 360) -> None:
     out.parent.mkdir(parents=True, exist_ok=True)
     last = None
     for attempt in range(1, retries + 1):
         try:
-            r = requests.get(url, timeout=120)
+            print(f"Downloading PNG attempt {attempt}/{retries}, timeout={timeout}s")
+            r = requests.get(url, timeout=timeout)
             if r.status_code == 200 and len(r.content) > 100:
                 out.write_bytes(r.content)
                 return
             last = RuntimeError(f"HTTP {r.status_code}, bytes={len(r.content)}")
         except Exception as exc:
             last = exc
-        time.sleep(2 * attempt)
+            print(f"PNG download attempt {attempt} failed: {exc}")
+        time.sleep(5 * attempt)
     raise RuntimeError(f"Cannot download PNG: {url}: {last}")
 
 
@@ -363,7 +365,7 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--dimensions", type=int, default=1400)
     p.add_argument("--dimensions-smooth", type=int, default=2200)
     p.add_argument("--dimensions-heatmap", type=int, default=2400)
-    p.add_argument("--dimensions-surface", type=int, default=3200)
+    p.add_argument("--dimensions-surface", type=int, default=1600)
     p.add_argument("--vis-min", type=float, default=0.0)
     p.add_argument("--vis-max", type=float, default=3.0)
     p.add_argument("--outline-width", type=int, default=2)
@@ -378,10 +380,10 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--heat-scale", type=float, default=60)
     p.add_argument("--heat-gain", type=float, default=1.0)
     p.add_argument("--surface-resample", choices=["bilinear", "bicubic"], default="bicubic")
-    p.add_argument("--surface-radius", type=float, default=140)
-    p.add_argument("--surface-sigma", type=float, default=55)
-    p.add_argument("--surface-scale", type=float, default=30)
-    p.add_argument("--surface-detail-weight", type=float, default=0.35)
+    p.add_argument("--surface-radius", type=float, default=80)
+    p.add_argument("--surface-sigma", type=float, default=0)
+    p.add_argument("--surface-scale", type=float, default=120)
+    p.add_argument("--surface-detail-weight", type=float, default=0.70)
     p.add_argument("--surface-gain", type=float, default=1.0)
     return p.parse_args()
 
