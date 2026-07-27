@@ -1,8 +1,8 @@
 {
   "status": "ok",
-  "generated_at": "2026-07-18T07:13:49Z",
-  "source_dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG",
-  "latest_month": "2026-04",
+  "generated_at": "2026-07-27T12:33:28Z",
+  "source_dataset": "NASA/VIIRS/002/VNP46A2",
+  "latest_month": "2026-06",
   "latest_year": "2026",
   "months": [
     "2014-01",
@@ -152,7 +152,9 @@
     "2026-01",
     "2026-02",
     "2026-03",
-    "2026-04"
+    "2026-04",
+    "2026-05",
+    "2026-06"
   ],
   "years": [
     "2014",

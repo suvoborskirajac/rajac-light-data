@@ -1,10 +1,12 @@
 {
   "ok": true,
   "area": {
-    "slug": "pio-rajac",
-    "name": "ПИО Рајац",
-    "group": "Заштићена подручја",
-    "public_url": "https://piorajac.rs/monitoring-svetlosno-zagadjenje/"
+    "slug": "rajac",
+    "pa_id": "rajac",
+    "name": "ПИО „Рајац\"",
+    "name_lat": "Rajac",
+    "type": "ZP",
+    "group": "Заштићена подручја Србије"
   },
   "meta": {
     "id": "2026-03",
@@ -15,14 +17,12 @@
     "band": "DNB_BRDF_Corrected_NTL",
     "unit": "nW/cm²/sr",
     "scale_m": 500.0,
-    "date_start": "2026-03-01",
-    "date_end": "2026-04-01",
     "created_at": "2026-07-27T12:32:56Z",
     "placeholder": false,
     "months_in_composite": [
       "2026-03"
     ],
-    "interpretation": "Vrednosti su satelitska noćna radijansa u nW/cm²/sr, a ne SQM mag/arcsec². Javni heatmap prikaz je izglađena vizuelizacija; sirovi pikseli ostaju u JSON-u za statistiku."
+    "interpretation": "The public heatmap is a smoothed visualization from VNP46A2 pixel centres; raw sampled pixels remain in JSON for statistics."
   },
   "stats": {
     "overall": {

@@ -1,7 +1,7 @@
 {
   "status": "ok",
   "generated_at": "2026-07-09T22:11:59Z",
-  "source_dataset": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG",
+  "source_dataset": "NASA/VIIRS/002/VNP46A2",
   "description": "Pixel JSON files for SVG Rajac-style heatmap rendering.",
   "records": [
     {
@@ -4932,5 +4932,23 @@
       "pixels": 2901,
       "file": "public/results/protected-areas/pixels/years/2026/zlatibor.json"
     }
-  ]
+  ],
+  "ok": true,
+  "updated_at": "2026-07-27T12:33:28Z",
+  "areas": [
+    "rajac"
+  ],
+  "months": [
+    "2026-01",
+    "2026-02",
+    "2026-03",
+    "2026-04",
+    "2026-05",
+    "2026-06"
+  ],
+  "latest_month": "2026-06",
+  "years": [
+    "2026"
+  ],
+  "latest_year": "2026"
 }
