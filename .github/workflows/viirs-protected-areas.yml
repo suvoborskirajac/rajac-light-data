@@ -1,102 +1,16 @@
-name: VIIRS protected areas Serbia
+name: DEPRECATED — viirs-protected-areas (replaced by Black Marble VNP46A2)
 
 on:
   workflow_dispatch:
-    inputs:
-      mode:
-        description: "Обим обраде: latest за најновији месец, all за све од 2014, range за задати период"
-        required: true
-        default: "latest"
-        type: choice
-        options:
-          - latest
-          - all
-          - range
-      start:
-        description: "Почетни месец YYYY-MM за all/range"
-        required: false
-        default: "2014-01"
-      end:
-        description: "Крајњи месец YYYY-MM за range; auto за најновији доступан"
-        required: false
-        default: "auto"
-      overwrite:
-        description: "Препиши постојеће JSON резултате"
-        required: false
-        default: false
-        type: boolean
-
-  schedule:
-    - cron: "30 5 8,18,28 * *"
 
 permissions:
-  contents: write
-
-concurrency:
-  group: viirs-protected-areas-serbia
-  cancel-in-progress: false
+  contents: read
 
 jobs:
-  viirs-protected-areas:
+  deprecated:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
-
-    env:
-      EE_PROJECT_ID: deft-epigram-414409
-      EE_SERVICE_ACCOUNT: rajac-light-monitor@deft-epigram-414409.iam.gserviceaccount.com
-      EE_SERVICE_ACCOUNT_KEY_JSON: ${{ secrets.GEE_SERVICE_ACCOUNT_JSON }}
-      MODE: ${{ github.event.inputs.mode || 'latest' }}
-      START_MONTH: ${{ github.event.inputs.start || '2014-01' }}
-      END_MONTH: ${{ github.event.inputs.end || 'auto' }}
-      OVERWRITE: ${{ github.event.inputs.overwrite || 'false' }}
-
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-          cache: "pip"
-
-      - name: Install dependencies
+      - name: Notice
         run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements-protected-areas.txt
-
-      - name: Run VIIRS protected areas processor
-        run: |
-          EXTRA=""
-          if [ "$OVERWRITE" = "true" ]; then EXTRA="--overwrite"; fi
-
-          python protected_areas/protected_areas_processor.py \
-            --mode "$MODE" \
-            --start "$START_MONTH" \
-            --end "$END_MONTH" \
-            --yearly \
-            --areas-geojson protected_areas/zasticena_podrucja_srbije_gee.geojson \
-            --results-dir public/results/protected-areas \
-            --project "$EE_PROJECT_ID" \
-            --service-account "$EE_SERVICE_ACCOUNT" \
-            --key-json-env EE_SERVICE_ACCOUNT_KEY_JSON \
-            --scale 500 \
-            --tile-scale 4 \
-            --min-cf-cvg 1 \
-            --min-months-year 3 \
-            --ee-deadline 300000 \
-            $EXTRA
-
-      - name: Commit updated protected-area results
-        run: |
-          git config user.name "rajac-light-monitor"
-          git config user.email "actions@github.com"
-
-          git add public/results/protected-areas protected_areas/zasticena_podrucja_srbije_gee.geojson
-
-          if git diff --cached --quiet; then
-            echo "Нема нових VIIRS резултата за упис."
-          else
-            git commit -m "Update VIIRS protected areas results"
-            git push
-          fi
+          echo "Овај стари NOAA/EOG workflow је искључен."
+          echo "Користи: NASA Black Marble VNP46A2 — Rajac monthly maps."
