@@ -512,17 +512,35 @@ def pixel_stats(pixels: Sequence[Dict[str, Any]]) -> Dict[str, Any]:
 
 
 def sample_pixels(image: ee.Image, geometry: ee.Geometry, args: argparse.Namespace) -> List[Dict[str, Any]]:
+    """Sample pixel centres without exceeding Earth Engine's 5,000-element response limit.
+
+    Earth Engine aborts a direct FeatureCollection.getInfo() call when a sampled
+    protected area contains more than roughly 5,000 features.  The collection is
+    therefore counted once and downloaded in deterministic batches smaller than
+    that limit.  The final client-side sort keeps the public JSON stable.
+    """
     collection_pixels = image.select(OUTPUT_RAD).sample(
         region=geometry,
         scale=args.scale,
         geometries=True,
         tileScale=args.tile_scale,
+        dropNulls=True,
     )
+
+    total = int(collection_pixels.size().getInfo())
     if args.max_pixels_per_area > 0:
-        collection_pixels = collection_pixels.limit(args.max_pixels_per_area)
-    info = collection_pixels.getInfo()
+        total = min(total, args.max_pixels_per_area)
+
+    batch_size = max(1, min(int(args.pixel_batch_size), 4500))
+    features: List[Dict[str, Any]] = []
+    for offset in range(0, total, batch_size):
+        count = min(batch_size, total - offset)
+        batch = collection_pixels.toList(count, offset).getInfo()
+        if isinstance(batch, list):
+            features.extend(item for item in batch if isinstance(item, dict))
+
     pixels: List[Dict[str, Any]] = []
-    for feature in info.get("features", []):
+    for feature in features:
         props = feature.get("properties") or {}
         coordinates = (feature.get("geometry") or {}).get("coordinates") or []
         value = safe_float(props.get(OUTPUT_RAD))
@@ -692,14 +710,46 @@ def update_protected_index(root: Path, period_kind: str, period: str, payload: D
     write_json(path, index)
 
 
-def update_pixel_index(root: Path, period_kind: str, period: str, records: Sequence[Dict[str, Any]]) -> None:
+def update_pixel_index(
+    root: Path,
+    period_kind: str,
+    period: str,
+    generated_records: Sequence[Dict[str, Any]],
+) -> None:
+    """Update the pixel manifest with the exact files produced for this period."""
     path = root / "pixels" / "index.json"
     index = read_json(path, {}) or {}
+
+    existing_areas = set(index.get("areas") or [])
+    existing_areas.update(str(record.get("pa_id") or "") for record in generated_records)
+    existing_areas.discard("")
+
+    replacement_keys = {
+        (str(record.get("period_kind") or ""), str(record.get("period") or ""), str(record.get("pa_id") or ""))
+        for record in generated_records
+    }
+    manifest_records = [
+        record for record in (index.get("records") or [])
+        if isinstance(record, dict)
+        and (
+            str(record.get("period_kind") or ""),
+            str(record.get("period") or ""),
+            str(record.get("pa_id") or ""),
+        ) not in replacement_keys
+    ]
+    manifest_records.extend(dict(record) for record in generated_records)
+    manifest_records.sort(key=lambda record: (
+        str(record.get("period_kind") or ""),
+        str(record.get("period") or ""),
+        str(record.get("pa_id") or ""),
+    ))
+
     index.update({
         "ok": True,
         "updated_at": utc_now(),
         "source_dataset": DATASET_ID,
-        "areas": [record["properties"]["pa_id"] for record in records],
+        "areas": sorted(existing_areas),
+        "records": manifest_records,
     })
     key = "months" if period_kind == "monthly" else "years"
     values = set(index.get(key) or [])
@@ -762,19 +812,34 @@ def process_period(
     if args.pixels != "none":
         pixel_records = list(records_selected) if args.pixels == "all" else [rajac_record]
         folder = "months" if period_kind == "monthly" else "years"
+        manifest_records: List[Dict[str, Any]] = []
         for position, record in enumerate(pixel_records, start=1):
             pa_id = record["properties"]["pa_id"]
             out = protected_root / "pixels" / folder / period / f"{pa_id}.json"
             if out.exists() and not args.overwrite:
-                print(f"  SKIP pixels {pa_id}: exists")
-                continue
-            geometry = ee.Geometry(record["geometry"], None, False)
-            pixels = sample_pixels(image, geometry, args)
-            write_json(out, pixel_payload(record, period_kind, period, pixels, months, args))
-            print(f"  PIXELS {position}/{len(pixel_records)} {pa_id}: {len(pixels)}")
-            if args.pause_seconds > 0:
-                time.sleep(args.pause_seconds)
-        update_pixel_index(protected_root, period_kind, period, pixel_records)
+                existing = read_json(out, {}) or {}
+                pixel_count = len(existing.get("pixels") or [])
+                print(f"  SKIP pixels {pa_id}: exists ({pixel_count})")
+            else:
+                geometry = ee.Geometry(record["geometry"], None, False)
+                pixels = sample_pixels(image, geometry, args)
+                pixel_count = len(pixels)
+                write_json(out, pixel_payload(record, period_kind, period, pixels, months, args))
+                print(f"  PIXELS {position}/{len(pixel_records)} {pa_id}: {pixel_count}")
+                if args.pause_seconds > 0:
+                    time.sleep(args.pause_seconds)
+
+            manifest_records.append({
+                "status": "ok",
+                "period_kind": "month" if period_kind == "monthly" else "year",
+                "period": period,
+                "pa_id": pa_id,
+                "pixels": pixel_count,
+                "file": (
+                    f"public/results/protected-areas/pixels/{folder}/{period}/{pa_id}.json"
+                ),
+            })
+        update_pixel_index(protected_root, period_kind, period, manifest_records)
 
     print(f"OK {period}: protected rows={len(rows)}, Rajac pixels={len(rajac_pixels)}")
 
@@ -823,6 +888,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--max-cloud-detection", type=int, choices=[0, 1, 2, 3], default=1)
     parser.add_argument("--include-ephemeral", action="store_true")
     parser.add_argument("--max-pixels-per-area", type=int, default=20_000)
+    parser.add_argument(
+        "--pixel-batch-size",
+        type=int,
+        default=4_000,
+        help="Earth Engine pixel transfer batch; values above 4500 are capped.",
+    )
     parser.add_argument("--value-digits", type=int, default=4)
     parser.add_argument("--pause-seconds", type=float, default=0)
     return parser.parse_args()
