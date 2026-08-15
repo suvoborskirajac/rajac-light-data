@@ -721,7 +721,7 @@
       "period_kind": "month",
       "period": "2026-07",
       "pa_id": "deliblatska-pescara",
-      "pixels": 1994,
+      "pixels": 1995,
       "file": "public/results/protected-areas/pixels/months/2026-07/deliblatska-pescara.json"
     },
     {
@@ -825,7 +825,7 @@
       "period_kind": "month",
       "period": "2026-07",
       "pa_id": "nacionalni-park-djerdap",
-      "pixels": 3519,
+      "pixels": 3520,
       "file": "public/results/protected-areas/pixels/months/2026-07/nacionalni-park-djerdap.json"
     },
     {
@@ -913,7 +913,7 @@
       "period_kind": "month",
       "period": "2026-07",
       "pa_id": "potamisje",
-      "pixels": 1305,
+      "pixels": 1307,
       "file": "public/results/protected-areas/pixels/months/2026-07/potamisje.json"
     },
     {
@@ -5638,7 +5638,7 @@
     }
   ],
   "ok": true,
-  "updated_at": "2026-08-10T06:43:43Z",
+  "updated_at": "2026-08-15T05:42:39Z",
   "areas": [
     "carska-bara",
     "deliblatska-pescara",
