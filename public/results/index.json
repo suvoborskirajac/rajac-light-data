@@ -6,8 +6,15 @@
     "group": "Заштићена подручја",
     "public_url": "https://piorajac.rs/monitoring-svetlosno-zagadjenje/"
   },
-  "latest": "2026-07",
+  "latest": "2026-08",
   "periods": [
+    {
+      "id": "2026-08",
+      "label": "08/2026",
+      "source": "NASA Black Marble VNP46A2 Collection 2",
+      "dataset": "NASA/VIIRS/002/VNP46A2",
+      "kind": "monthly"
+    },
     {
       "id": "2026-07",
       "label": "07/2026",
@@ -319,11 +326,11 @@
       "kind": "yearly"
     }
   ],
-  "updated_at": "2026-09-05T09:06:21Z",
+  "updated_at": "2026-09-10T09:45:29Z",
   "coverage": {
-    "count": 31,
+    "count": 32,
     "first": "2024-01",
-    "last": "2026-07",
+    "last": "2026-08",
     "yearlyCount": 13,
     "yearlyFirst": "2014",
     "yearlyLast": "2026"
