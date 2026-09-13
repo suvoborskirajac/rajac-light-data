@@ -80,12 +80,12 @@ jobs:
           EXTRA=""
           if [ "$OVERWRITE" = "true" ]; then EXTRA="--overwrite"; fi
           if [ "$MODE" = "baseline" ]; then
-            python black_marble/build_serbia_viirs.py --period-kind year --period "$BASELINE_YEAR" $EXTRA
-            python black_marble/build_serbia_viirs.py --period-kind month --period auto $EXTRA
+            python -m black_marble.build_serbia_viirs --period-kind year --period "$BASELINE_YEAR" $EXTRA
+            python -m black_marble.build_serbia_viirs --period-kind month --period auto $EXTRA
           elif [ "$MODE" = "single" ]; then
-            python black_marble/build_serbia_viirs.py --period-kind "$PERIOD_KIND" --period "$PERIOD" $EXTRA
+            python -m black_marble.build_serbia_viirs --period-kind "$PERIOD_KIND" --period "$PERIOD" $EXTRA
           else
-            python black_marble/build_serbia_viirs.py --period-kind month --period auto $EXTRA
+            python -m black_marble.build_serbia_viirs --period-kind month --period auto $EXTRA
           fi
 
       - name: Validate generated JSON
