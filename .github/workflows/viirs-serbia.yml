@@ -65,6 +65,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements-black-marble.txt
+          pip install "Pillow>=10,<13"
 
       - name: Refresh detailed national clip mask
         run: |
@@ -76,7 +77,7 @@ jobs:
           test -n "$EE_SERVICE_ACCOUNT"
           test -n "$EE_SERVICE_ACCOUNT_KEY_JSON"
           test -f public/boundaries/granica_srbije.geojson
-          python -m py_compile black_marble/build_black_marble.py black_marble/build_serbia_boundary.py black_marble/build_serbia_viirs.py
+          python -m py_compile black_marble/build_black_marble.py black_marble/build_serbia_boundary.py black_marble/build_serbia_viirs.py black_marble/build_serbia_surface.py
 
       - name: Build Serbia national products
         shell: bash
@@ -92,6 +93,18 @@ jobs:
             python -m black_marble.build_serbia_viirs --period-kind month --period auto $EXTRA
           fi
 
+      - name: Build fast raster overlays
+        shell: bash
+        run: |
+          if [ "$MODE" = "baseline" ]; then
+            python -m black_marble.build_serbia_surface --kind year --period "$BASELINE_YEAR"
+            python -m black_marble.build_serbia_surface --kind month --period auto
+          elif [ "$MODE" = "single" ]; then
+            python -m black_marble.build_serbia_surface --kind "$PERIOD_KIND" --period "$PERIOD"
+          else
+            python -m black_marble.build_serbia_surface --kind month --period auto
+          fi
+
       - name: Validate generated JSON
         run: |
           python - <<'PY'
@@ -104,6 +117,8 @@ jobs:
               path = Path('public/results/serbia') / record['file']
               obj = json.loads(path.read_text(encoding='utf-8'))
               assert obj.get('ok') and obj.get('tiles')
+              surface = obj.get('surface') or {}
+              assert surface.get('heat_file') and surface.get('raw_file')
           print('OK', root, 'records=', len(data['records']))
           PY
 
@@ -114,6 +129,7 @@ jobs:
           git add \
             black_marble/build_serbia_boundary.py \
             black_marble/build_serbia_viirs.py \
+            black_marble/build_serbia_surface.py \
             public/boundaries/granica_srbije.geojson \
             public/results/serbia \
             .github/workflows/viirs-serbia.yml \
