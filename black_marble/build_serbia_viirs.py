@@ -165,6 +165,36 @@ def sample_compact(image: ee.Image, geometry: ee.Geometry, args: argparse.Namesp
     return pixels
 
 
+def preview_accumulate(bins: Dict[Tuple[int, int], List[float]], pixels: Sequence[Sequence[float]], step: float) -> None:
+    """Aggregate 500 m samples to a light national preview grid."""
+    for pixel in pixels:
+        if len(pixel) < 3:
+            continue
+        lon, lat, value = map(float, pixel[:3])
+        key = (math.floor(lon / step), math.floor(lat / step))
+        item = bins.get(key)
+        if item is None:
+            bins[key] = [value, 1.0]
+        else:
+            item[0] += value
+            item[1] += 1.0
+
+
+def preview_rows(bins: Dict[Tuple[int, int], List[float]], step: float, digits: int) -> List[List[float]]:
+    rows: List[List[float]] = []
+    for (ix, iy), (total, count) in bins.items():
+        if count <= 0:
+            continue
+        rows.append([
+            round((ix + 0.5) * step, 6),
+            round((iy + 0.5) * step, 6),
+            round(total / count, digits),
+            int(count),
+        ])
+    rows.sort(key=lambda row: (-row[1], row[0]))
+    return rows
+
+
 def compact_stats(pixels: Sequence[Sequence[float]]) -> Dict[str, Any]:
     vals = [float(p[2]) for p in pixels]
     if not vals:
@@ -273,6 +303,7 @@ def process(kind: str, period: str, latest_complete: str, country: Dict[str, Any
 
     manifests: List[Dict[str, Any]] = []
     all_values: List[float] = []
+    preview_bins: Dict[Tuple[int, int], List[float]] = {}
     for position, tile in enumerate(tiles, start=1):
         west, south, east, north = tile["bbox"]
         tile_geometry = ee.Geometry.Rectangle([west, south, east, north], None, False)
@@ -285,6 +316,7 @@ def process(kind: str, period: str, latest_complete: str, country: Dict[str, Any
             continue
         stats = compact_stats(pixels)
         all_values.extend(float(p[2]) for p in pixels)
+        preview_accumulate(preview_bins, pixels, args.preview_deg)
         tile_payload = {
             "ok": True,
             "meta": {
@@ -318,6 +350,7 @@ def process(kind: str, period: str, latest_complete: str, country: Dict[str, Any
     if not all_count:
         raise RuntimeError(f"No national pixels generated for {kind} {period}")
 
+    preview = preview_rows(preview_bins, args.preview_deg, args.value_digits)
     country_stats = country_row(image, country, kind, period, args)
     period_payload = {
         "ok": True,
@@ -331,6 +364,7 @@ def process(kind: str, period: str, latest_complete: str, country: Dict[str, Any
             "unit": bm.UNIT,
             "scale_m": args.scale,
             "grid_deg": args.grid_deg,
+            "preview_deg": args.preview_deg,
             "created_at": bm.utc_now(),
             "months_in_composite": months,
             "interpretation": "Сателитска ноћна радијанса у nW/cm²/sr; није SQM mag/arcsec².",
@@ -344,6 +378,8 @@ def process(kind: str, period: str, latest_complete: str, country: Dict[str, Any
             "sample_max": round(max(all_values), 4),
             "earth_engine": country_stats,
         },
+        "preview_format": ["lon", "lat", "mean_radiance", "source_pixel_count"],
+        "preview": preview,
         "tiles": manifests,
     }
     write_json(index_path, period_payload)
@@ -358,6 +394,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--country-geojson", default="public/boundaries/granica_srbije.geojson")
     parser.add_argument("--results-dir", default="public/results/serbia")
     parser.add_argument("--grid-deg", type=float, default=0.4)
+    parser.add_argument("--preview-deg", type=float, default=0.04, help="National preview grid spacing in degrees")
     parser.add_argument("--overwrite", action="store_true")
     parser.add_argument("--project", default=os.environ.get("EE_PROJECT_ID", ""))
     parser.add_argument("--service-account", default=os.environ.get("EE_SERVICE_ACCOUNT", ""))
@@ -386,6 +423,8 @@ def main() -> int:
     args = parse_args()
     if args.grid_deg <= 0 or args.grid_deg > 1:
         raise RuntimeError("--grid-deg must be > 0 and <= 1 degree")
+    if args.preview_deg <= 0 or args.preview_deg > args.grid_deg:
+        raise RuntimeError("--preview-deg must be > 0 and <= --grid-deg")
     bm.init_ee(args)
     latest_complete = bm.latest_complete_month()
     period = resolve_period(args.period_kind, args.period, latest_complete)
