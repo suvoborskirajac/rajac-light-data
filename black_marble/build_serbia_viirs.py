@@ -29,6 +29,15 @@ from typing import Any, Dict, Iterable, List, Sequence, Tuple
 
 import ee
 
+# GitHub Actions often executes this file directly (``python black_marble/build_serbia_viirs.py``).
+# In that mode Python puts ``black_marble/`` rather than the repository root on
+# sys.path, so the package-style import below would fail.  Add the repo root
+# explicitly; module execution (``python -m ...``) continues to work as well.
+import sys
+REPO_ROOT = Path(__file__).resolve().parents[1]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
 import black_marble.build_black_marble as bm
 
 JSON_FLAGS = dict(ensure_ascii=False, indent=2)
