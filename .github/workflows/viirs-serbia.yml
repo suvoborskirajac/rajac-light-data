@@ -66,13 +66,17 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements-black-marble.txt
 
+      - name: Refresh detailed national clip mask
+        run: |
+          python -m black_marble.build_serbia_boundary
+
       - name: Validate
         run: |
           test -n "$EE_PROJECT_ID"
           test -n "$EE_SERVICE_ACCOUNT"
           test -n "$EE_SERVICE_ACCOUNT_KEY_JSON"
           test -f public/boundaries/granica_srbije.geojson
-          python -m py_compile black_marble/build_black_marble.py black_marble/build_serbia_viirs.py
+          python -m py_compile black_marble/build_black_marble.py black_marble/build_serbia_boundary.py black_marble/build_serbia_viirs.py
 
       - name: Build Serbia national products
         shell: bash
@@ -108,6 +112,7 @@ jobs:
           git config user.name "rajac-light-monitor"
           git config user.email "actions@github.com"
           git add \
+            black_marble/build_serbia_boundary.py \
             black_marble/build_serbia_viirs.py \
             public/boundaries/granica_srbije.geojson \
             public/results/serbia \
