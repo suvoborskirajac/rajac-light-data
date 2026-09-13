@@ -86,13 +86,16 @@ def lerp(a: float, b: float, t: float) -> float:
 
 # Continuous display palette anchored on the public statistical class breaks.
 ANCHORS = [
+    # v1.3.3: stronger visual separation between public classes.
+    # Thresholds are unchanged; only the display palette is refined.
     (0.00, (15, 45, 31)),
     (0.25, (30, 68, 46)),
     (0.50, (77, 123, 56)),
-    (1.00, (199, 222, 89)),
-    (3.00, (233, 189, 85)),
-    (10.0, (238, 138, 85)),
-    (30.0, (238, 79, 85)),
+    (1.00, (174, 199, 66)),
+    (1.50, (244, 216, 64)),   # clear yellow inside the 1–3 class
+    (3.00, (240, 169, 62)),
+    (10.0, (238, 117, 70)),
+    (30.0, (226, 68, 76)),
 ]
 
 
