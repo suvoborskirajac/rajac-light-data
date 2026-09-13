@@ -1,0 +1,79 @@
+{
+  "ok": true,
+  "generated_at": "2026-09-13T10:53:51Z",
+  "source": "NASA Black Marble VNP46A2 Collection 2 — monthly mean of quality-filtered daily persistent nighttime-light observations",
+  "dataset": "NASA/VIIRS/002/VNP46A2",
+  "band": "DNB_BRDF_Corrected_NTL",
+  "unit": "nW/cm²/sr",
+  "scale_m": 500.0,
+  "grid_deg": 0.4,
+  "country": "Република Србија",
+  "boundary": "public/boundaries/granica_srbije.geojson",
+  "classes": [
+    {
+      "id": "very_dark_0_0.25",
+      "label": "врло тамно",
+      "min": 0.0,
+      "max": 0.25
+    },
+    {
+      "id": "dark_0.25_0.50",
+      "label": "тамно",
+      "min": 0.25,
+      "max": 0.5
+    },
+    {
+      "id": "low_0.50_1.00",
+      "label": "ниско",
+      "min": 0.5,
+      "max": 1.0
+    },
+    {
+      "id": "moderate_1.00_3.00",
+      "label": "умерено",
+      "min": 1.0,
+      "max": 3.0
+    },
+    {
+      "id": "elevated_3.00_10.00",
+      "label": "повишено",
+      "min": 3.0,
+      "max": 10.0
+    },
+    {
+      "id": "high_gt_10.00",
+      "label": "високо",
+      "min": 10.0,
+      "max": null
+    }
+  ],
+  "latest_month": "2026-08",
+  "latest_year": "2025",
+  "months": [
+    "2026-08"
+  ],
+  "years": [
+    "2025"
+  ],
+  "records": [
+    {
+      "kind": "year",
+      "period": "2025",
+      "label": "2025. (годишњи просек)",
+      "file": "years/2025/index.json",
+      "created_at": "2026-09-13T10:49:44Z",
+      "tiles": 84,
+      "pixels": 487507
+    },
+    {
+      "kind": "month",
+      "period": "2026-08",
+      "label": "2026-08",
+      "file": "months/2026-08/index.json",
+      "created_at": "2026-09-13T10:53:51Z",
+      "tiles": 84,
+      "pixels": 487506
+    }
+  ],
+  "note": "VIIRS/Black Marble radiance is satellite-observed upward nighttime radiance, not SQM sky brightness."
+}
