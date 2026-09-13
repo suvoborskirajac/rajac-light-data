@@ -40673,5 +40673,22 @@
       "min": 0.3255,
       "max": 9.6893
     }
-  ]
+  ],
+  "surface": {
+    "projection": "EPSG:3857",
+    "bbox_wgs84": [
+      18.814287500000034,
+      41.8576408,
+      23.006275,
+      46.19005240000007
+    ],
+    "width": 2048,
+    "height": 2946,
+    "heat_file": "surface.webp",
+    "raw_file": "raw.webp",
+    "source_scale_m": 500.0,
+    "render": "pre-rendered WebP overlay clipped to the national mask",
+    "heat_note": "Display-only smoothed raster. Point values are calculated from source VIIRS pixels, not read from image colors.",
+    "raw_note": "Display-only unsmoothed raster of the native pixel grid."
+  }
 }
