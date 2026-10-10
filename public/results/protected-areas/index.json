@@ -1,8 +1,8 @@
 {
   "status": "ok",
-  "generated_at": "2026-10-05T12:17:29Z",
+  "generated_at": "2026-10-10T11:11:28Z",
   "source_dataset": "NASA/VIIRS/002/VNP46A2",
-  "latest_month": "2026-08",
+  "latest_month": "2026-09",
   "latest_year": "2026",
   "months": [
     "2014-01",
@@ -156,7 +156,8 @@
     "2026-05",
     "2026-06",
     "2026-07",
-    "2026-08"
+    "2026-08",
+    "2026-09"
   ],
   "years": [
     "2014",
