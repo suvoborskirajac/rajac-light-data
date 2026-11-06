@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generated_at": "2026-10-12T16:08:29Z",
+  "generated_at": "2026-11-06T14:38:35Z",
   "source": "NASA Black Marble VNP46A2 Collection 2 — monthly mean of quality-filtered daily persistent nighttime-light observations",
   "dataset": "NASA/VIIRS/002/VNP46A2",
   "band": "DNB_BRDF_Corrected_NTL",
@@ -47,11 +47,12 @@
       "max": null
     }
   ],
-  "latest_month": "2026-09",
+  "latest_month": "2026-10",
   "latest_year": "2025",
   "months": [
     "2026-08",
-    "2026-09"
+    "2026-09",
+    "2026-10"
   ],
   "years": [
     "2025"
@@ -65,6 +66,15 @@
       "created_at": "2026-09-13T14:01:33Z",
       "tiles": 86,
       "pixels": 492521
+    },
+    {
+      "kind": "month",
+      "period": "2026-10",
+      "label": "2026-10",
+      "file": "months/2026-10/index.json",
+      "created_at": "2026-11-06T14:38:35Z",
+      "tiles": 86,
+      "pixels": 492516
     },
     {
       "kind": "month",
