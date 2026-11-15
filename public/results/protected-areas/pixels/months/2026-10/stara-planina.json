@@ -17,7 +17,7 @@
     "band": "DNB_BRDF_Corrected_NTL",
     "unit": "nW/cm²/sr",
     "scale_m": 500.0,
-    "created_at": "2026-11-10T13:29:15Z",
+    "created_at": "2026-11-15T12:45:26Z",
     "placeholder": false,
     "months_in_composite": [
       "2026-10"
@@ -32,7 +32,7 @@
       "median": 0.3208,
       "p90": 0.4319,
       "count": 6183,
-      "sum": 2109.8037
+      "sum": 2109.8704
     },
     "hotspots": [
       {
@@ -47896,7 +47896,7 @@
         22.840505,
         43.294305
       ],
-      "value": 0.3578,
+      "value": 0.4245,
       "class": "умерено",
       "id": "px-3679"
     },
