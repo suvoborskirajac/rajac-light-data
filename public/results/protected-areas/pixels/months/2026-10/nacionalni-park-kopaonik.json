@@ -17,7 +17,7 @@
     "band": "DNB_BRDF_Corrected_NTL",
     "unit": "nW/cm²/sr",
     "scale_m": 500.0,
-    "created_at": "2026-11-15T12:45:31Z",
+    "created_at": "2026-11-20T14:01:55Z",
     "placeholder": false,
     "months_in_composite": [
       "2026-10"
